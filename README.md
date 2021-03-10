@@ -1,2 +1,1 @@
-# vgrna-project-paper
-Scripts and data used in the vgrna project paper 
+Bash scripts and data used to generate the results shown in pantranscriptomic paper

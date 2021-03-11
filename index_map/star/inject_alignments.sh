@@ -1,13 +1,13 @@
 set -e
 
 # Set alignment prefix
-ALIGN_PREFIX="star_gencode100_sim_vg_SRR1153470"
+ALIGN_PREFIX="star_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1"
 
 # Set graph prefix
 GRAPH_PREFIX="gencode100"
 
 # Set output name prefix
-OUT_PREFIX="star_gencode100_sim_vg_SRR1153470"
+OUT_PREFIX="star_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1"
 
 # Set number of threads
 CPU=1

@@ -1,13 +1,13 @@
 set -e
 
 # Set alignment prefix
-ALIGN_PREFIX="hisat2_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470"
+ALIGN_PREFIX="hisat2_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1"
 
 # Set graph prefix
 GRAPH_PREFIX="1kg_nonCEU_af001_gencode100"
 
 # Set output name prefix
-OUT_PREFIX="hisat2_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470"
+OUT_PREFIX="hisat2_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1"
 
 # Set number of threads
 CPU=1

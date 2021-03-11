@@ -1,6 +1,9 @@
 set -e
 
-# Set mapping mode. "map": Use vg map, "mpmap": Use vg mpmap, "mpmap_nosplice": Use vg mpmap without novel splice-junction detection (used when mapping to gene-only graphs)
+# Set mapping mode. 
+# 	"map": Use vg map
+#	"mpmap": Use vg mpmap
+#	"mpmap_nosplice": Use vg mpmap without novel splice-junction detection (used when mapping to gene-only graphs)
 MODE="mpmap"
 
 # Set read files
@@ -14,7 +17,7 @@ GRAPH_PREFIX="1kg_nonCEU_af001_gencode100"
 INDEX_PREFIX="1kg_nonCEU_af001_gencode100_index"
 
 # Set output name prefix
-OUT_PREFIX="mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470"
+OUT_PREFIX="mpmap_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1"
 
 # Set number of threads
 CPU=1

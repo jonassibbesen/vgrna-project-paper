@@ -8,7 +8,7 @@ READ_2="sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_2.fq.gz"
 INDEX_PREFIX="1kg_nonCEU_af001_gencode100_index"
 
 # Set output name prefix
-OUT_PREFIX="hisat2_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470"
+OUT_PREFIX="hisat2_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1"
 
 # Set number of threads
 CPU=1

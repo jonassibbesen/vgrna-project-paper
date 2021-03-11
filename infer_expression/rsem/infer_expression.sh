@@ -4,7 +4,7 @@ set -e
 # 	"rsem": Use default
 # 	"rsem_k1k": Use more Bowtie2 mappings
 #	"rsem_strand_k1k": Use strand-specific and more Bowtie2 mappings
-QUANTER="rsem"
+MODE="rsem"
 
 # Set rng seed
 SEED=622797
@@ -23,19 +23,19 @@ OUT_PREFIX="rsem_1kg_EURnonCEU_af002_gencode100_sim_vg_ENCSR000AED_rep1_uni"
 CPU=1
 
 # Use stranded RSEM
-if [ "${QUANTER}" = "rsem_strand" ]; then
+if [ "${MODE}" = "rsem_strand" ]; then
 
 	# Infer expression
 	/usr/bin/time -v bash -c "rsem-calculate-expression -p ${CPU} --bowtie2 --seed ${SEED} --no-bam-output --strandedness reverse --paired-end ${READ_1} ${READ_2} ${INDEX_PREFIX} ${OUT_PREFIX}"
 
 # Use default RSEM with more Bowtie2 mappings
-elif [ "${QUANTER}" = "rsem_k1k" ]; then
+elif [ "${MODE}" = "rsem_k1k" ]; then
 
 	# Infer expression
 	/usr/bin/time -v bash -c "rsem-calculate-expression -p ${CPU} --bowtie2 --bowtie2-k 1000 --seed ${SEED} --no-bam-output --paired-end ${READ_1} ${READ_2} ${INDEX_PREFIX} ${OUT_PREFIX}"
 
 # Use stranded RSEM with many more Bowtie2 mappings
-elif [ "${QUANTER}" = "rsem_strand_k1k" ]; then
+elif [ "${MODE}" = "rsem_strand_k1k" ]; then
 
 	# Infer expression
 	/usr/bin/time -v bash -c "rsem-calculate-expression -p ${CPU} --bowtie2 --bowtie2-k 1000 --seed ${SEED} --no-bam-output --strandedness reverse --paired-end ${READ_1} ${READ_2} ${INDEX_PREFIX} ${OUT_PREFIX}"

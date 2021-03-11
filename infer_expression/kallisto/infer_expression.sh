@@ -4,7 +4,7 @@ set -e
 # 	"kallisto": Use default
 #	"kallisto_strand": Use strand-specific
 #	"kallisto_strand_bias": Use strand-specific and bias-correction
-QUANTER="kallisto"
+MODE="kallisto"
 
 # Set rng seed
 SEED=622797
@@ -23,19 +23,19 @@ OUT_PREFIX="kallisto_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni"
 CPU=1
 
 # Use Kallisto
-if [ "${QUANTER}" = "kallisto" ]; then
+if [ "${MODE}" = "kallisto" ]; then
 
 	# Infer expression
 	/usr/bin/time -v bash -c "kallisto quant -t ${CPU} --seed ${SEED} -i ${INDEX_PREFIX}.idx -o ${OUT_PREFIX} ${READ_1} ${READ_2}"
 
 # Use stranded Kallisto
-elif [ "${QUANTER}" = "kallisto_strand" ]; then
+elif [ "${MODE}" = "kallisto_strand" ]; then
 
 	# Infer expression
 	/usr/bin/time -v bash -c "kallisto quant -t ${CPU} --seed ${SEED} --rf-stranded -i ${INDEX_PREFIX}.idx -o ${OUT_PREFIX} ${READ_1} ${READ_2}"
 
 # Use Salmon with bias correction
-elif [ "${QUANTER}" = "kallisto_strand_bias" ]; then
+elif [ "${MODE}" = "kallisto_strand_bias" ]; then
 
 	# Infer expression
 	/usr/bin/time -v bash -c "kallisto quant -t ${CPU} --seed ${SEED} --rf-stranded --bias -i ${INDEX_PREFIX}.idx -o ${OUT_PREFIX} ${READ_1} ${READ_2}"

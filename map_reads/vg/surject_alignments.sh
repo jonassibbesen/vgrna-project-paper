@@ -18,12 +18,12 @@ CPU=1
 if [ -f "${ALIGN_PREFIX}.gamp" ]; then
 
 	# Surject gamp to bam
-	/usr/bin/time -v bash -c "vg surject -t ${CPU} -S -A -b -m -F reference_paths.txt -x ${GRAPH_PREFIX}.xg ${ALIGN_PREFIX}.gamp > ${OUT_PREFIX}.bam"
+	/usr/bin/time -v bash -c "vg surject -t ${CPU} -S -A -b -m -F reference_paths.txt -x ${GRAPH_PREFIX}.xg ${ALIGN_PREFIX}.gamp > ${OUT_PREFIX}.bam; rm reference_paths.txt"
 
 else
 
 	# Surject gam to bam
-	/usr/bin/time -v bash -c "vg surject -t ${CPU} -S -A -b -F reference_paths.txt -x ${GRAPH_PREFIX}.xg ${ALIGN_PREFIX}.gam > ${OUT_PREFIX}.bam"
+	/usr/bin/time -v bash -c "vg surject -t ${CPU} -S -A -b -F reference_paths.txt -x ${GRAPH_PREFIX}.xg ${ALIGN_PREFIX}.gam > ${OUT_PREFIX}.bam; rm reference_paths.txt"
 fi
 
 # Sort, compress and index alignments

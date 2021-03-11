@@ -3,8 +3,8 @@ set -e
 # Set inference mode. 
 # 	"kallisto": Use default
 #	"kallisto_strand": Use strand-specific
-#	"kallisto_strand_bias": Use strand-specific with bias-correction
-MODE="kallisto"
+#	"kallisto_strand_bias": Use strand-specific and bias-correction
+QUANTER="kallisto"
 
 # Set rng seed
 SEED=622797

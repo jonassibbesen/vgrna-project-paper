@@ -1,12 +1,16 @@
 set -e
 
-# Set input name prefixes
+# Set transcripts prefix
 TRANSCRIPTS_PREFIX="gencode.v29.primary_assembly.annotation_renamed_full"
-VARIANTS_PREFIX="1kg_all_exons_${CHR}"
-GRAPH_PREFIX="1kg_all_af001_gencode100_${CHR}"
 
-# Set output name prefixes
-OUT_PREFIX="1kg_all_af001_gencode100_${CHR}"
+# Set variants prefix
+VARIANTS_PREFIX="1kg_nonCEU_exons_${CHR}"
+
+# Set graph prefix
+GRAPH_PREFIX="1kg_nonCEU_af001_gencode100_${CHR}"
+
+# Set output name prefix
+OUT_PREFIX="1kg_nonCEU_af001_gencode100_${CHR}"
 
 # Set number of threads
 CPU=1

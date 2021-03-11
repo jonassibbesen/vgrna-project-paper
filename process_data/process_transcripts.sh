@@ -1,9 +1,9 @@
 set -e
 
-# Set input name prefixes
+# Set transcripts prefix
 TRANSCRIPTS_PREFIX="gencode.v29.primary_assembly.annotation"
 
-# Set output name prefixes
+# Set output name prefix
 OUT_PREFIX="${TRANSCRIPTS_PREFIX}_renamed_full"
 
 # Set number of threads

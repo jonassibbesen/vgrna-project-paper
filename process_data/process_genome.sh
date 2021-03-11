@@ -1,9 +1,9 @@
 set -e
 
-# Set input name prefixes
+# Set genome prefix
 GENOME_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly"
 
-# Set output name prefixes
+# Set output name prefix
 OUT_SCA_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly_scaffolds"
 OUT_CHR_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes"
 

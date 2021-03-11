@@ -1,10 +1,10 @@
 set -e
 
-# Set input name prefixes
-GRAPH_PREFIX="1kg_all_af001_gencode100"
+# Set graph prefix
+GRAPH_PREFIX="1kg_nonCEU_af001_gencode100"
 
-# Set output name prefixes
-OUT_PREFIX="1kg_all_af001_gencode100"
+# Set output name prefix
+OUT_PREFIX="1kg_nonCEU_af001_gencode100"
 
 # Set number of threads
 CPU=1

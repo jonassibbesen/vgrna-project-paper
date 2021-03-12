@@ -1,0 +1,150 @@
+---
+jas-project-txp-gc100-21-0526-1359
+TIME=20200526-1359 IMAGE=jsibbesen/vgdev-s3script:c861e23e-s1 MEMORY=4 CPU=4 DISK=8
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/project_transcripts.sh
+CPU=4 CHR=21
+---
+Completed 2.2 KiB/2.2 KiB (5.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/project_transcripts.sh to ./project_transcripts.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/21/gencode100_21.pg to ./gencode100_21.pg
+	Command being timed: "bash -c grep -P '^21\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > 21.gtf"
+	User time (seconds): 0.16
+	System time (seconds): 0.15
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3272
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 316
+	Voluntary context switches: 3
+	Involuntary context switches: 3
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 21464
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	1469698
+edges	1473698
+length	46709983
+node-id-range	87566471:89036168
+	Command being timed: "bash -c vg stats -z -l -r gencode100_21.pg"
+	User time (seconds): 0.11
+	System time (seconds): 0.17
+	Percent of CPU this job got: 133%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 127152
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4181
+	Voluntary context switches: 16997
+	Involuntary context switches: 2
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Graph parsed in 0.179472 seconds, 0.121262 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 2178 transcripts parsed, and graph augmented (no novel exon boundaries) in 2.45819 seconds, 0.742317 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 2178 haplotype-specfic transcripts projected in 2.37601 seconds, 0.898056 GB
+[vg rna] Adding reference transcripts as embedded paths in the splice graph ...
+[vg rna] 2178 paths added in 0.18901 seconds, 0.898056 GB
+[vg rna] Writing transcripts as bidirectional threads to GBWT index file ...
+[vg rna] Writing transcripts as sequences to fasta file ...
+[vg rna] Writing origin info on transcripts to tsv file ...
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph and 2178 transcripts written in 0.973913 seconds, 1.58158 GB
+	Command being timed: "bash -c vg rna -p -t 4 -e -o -r -u -g -n 21.gtf -b gencode100_21.gbwt -f gencode100_21.fa -i gencode100_21.txt gencode100_21.pg > gencode100_21_tmp.pg; mv gencode100_21_tmp.pg gencode100_21.pg"
+	User time (seconds): 5.66
+	System time (seconds): 1.01
+	Percent of CPU this job got: 107%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1658408
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 26090
+	Voluntary context switches: 28582
+	Involuntary context switches: 13
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 159192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	1469698
+edges	1473698
+length	46709983
+node-id-range	87566471:89036168
+	Command being timed: "bash -c vg stats -z -l -r gencode100_21.pg"
+	User time (seconds): 0.07
+	System time (seconds): 0.16
+	Percent of CPU this job got: 132%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 122268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3924
+	Voluntary context switches: 17487
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip gencode100_21.fa; gzip gencode100_21.txt"
+	User time (seconds): 0.39
+	System time (seconds): 0.00
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.39
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3292
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 489
+	Voluntary context switches: 5
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1928
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./gencode100_21.fa.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/21/gencode100_21.fa.gz
+upload: ./gencode100_21.gbwt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/21/gencode100_21.gbwt
+upload: ./gencode100_21.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/21/gencode100_21.txt.gz
+upload: ./gencode100_21.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/21/gencode100_21.pg
+---

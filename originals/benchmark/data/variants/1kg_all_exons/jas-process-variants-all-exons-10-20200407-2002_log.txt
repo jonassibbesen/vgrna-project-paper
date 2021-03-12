@@ -1,0 +1,65 @@
+---
+jas-process-variants-all-exons-10-20200407-2002
+IMAGE=jsibbesen/base-s3script:18.04-s1 MEMORY=2 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/process_variants.sh
+CHR=10
+---
+Completed 2.2 KiB/2.2 KiB (39.1 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/process_variants.sh to ./process_variants.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai
+download: s3://vg-data/1kg_GRCh38/variants/ALL.chr10_GRCh38.genotypes.20170504.vcf.gz to ./ALL.chr10_GRCh38.genotypes.20170504.vcf.gz
+download: s3://vg-data/1kg_GRCh38/variants/ALL.chr10_GRCh38.genotypes.20170504.vcf.gz.tbi to ./ALL.chr10_GRCh38.genotypes.20170504.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/meta/1000g/integrated_call_samples_v3.20130502.ALL.panel to ./integrated_call_samples_v3.20130502.ALL.panel
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full_exons.bed to ./gencode.v29.primary_assembly.annotation_renamed_full_exons.bed
+2504 samples.txt
+	Command being timed: "bash -c cat integrated_call_samples_v3.20130502.ALL.panel | grep -v sample | cut -f1 > samples.txt; wc -l samples.txt"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 133%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3276
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 631
+	Voluntary context switches: 10
+	Involuntary context switches: 2
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Lines   total/split/realigned/skipped:	3983717/36440/4977/0
+Lines   total/split/realigned/skipped:	151575/0/0/0
+	Command being timed: "bash -c bcftools annotate -x ^INFO/AC,^INFO/AF,^INFO/AN ALL.chr10_GRCh38.genotypes.20170504.vcf.gz | bcftools norm -m -any -O z -f Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa > all_variants.vcf.gz; tabix all_variants.vcf.gz; bcftools view -R gencode.v29.primary_assembly.annotation_renamed_full_exons.bed -S samples.txt -c 1 all_variants.vcf.gz | bcftools norm -m +any -O z -f Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa > 1kg_all_exons_10.vcf.gz; tabix 1kg_all_exons_10.vcf.gz"
+	User time (seconds): 2131.90
+	System time (seconds): 61.32
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 36:52.05
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 14020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3276715
+	Voluntary context switches: 858733
+	Involuntary context switches: 27409
+	Swaps: 0
+	File system inputs: 278352
+	File system outputs: 1348552
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_exons_10.vcf.gz.tbi to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/10/1kg_all_exons_10.vcf.gz.tbi
+upload: ./1kg_all_exons_10.vcf.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/10/1kg_all_exons_10.vcf.gz
+---

@@ -1,0 +1,146 @@
+---
+jas-prepare-align-encsr706any-mq30-1101-1924
+TIME=20201101-1924 IMAGE=jsibbesen/base-s3script:18.04-s1 MEMORY=12 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/prepare_alignments.sh
+CPU=1 MAPQ=30
+---
+Completed 1.8 KiB/1.8 KiB (33.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/prepare_alignments.sh to ./prepare_alignments.sh
+download: s3://encode-public/2019/11/20/79bacc96-a43f-4130-bfc3-1d05550545d2/ENCFF247TLH.bam to ./ENCFF247TLH.bam
+download: s3://encode-public/2019/11/20/fa2356af-4075-4fe8-bebc-553b71444d0f/ENCFF431IOE.bam to ./ENCFF431IOE.bam
+download: s3://encode-public/2019/11/20/b2de9f99-6c82-46bb-bf70-9cd535fc52a9/ENCFF520MMC.bam to ./ENCFF520MMC.bam
+download: s3://encode-public/2019/11/20/0363ca4c-0790-4c38-8829-f87341ec6129/ENCFF626GWM.bam to ./ENCFF626GWM.bam
+[W::bam_merge_core2] No @HD tag found.
+	Command being timed: "bash -c samtools merge -O BAM merged.bam ENCFF247TLH.bam ENCFF431IOE.bam ENCFF520MMC.bam ENCFF626GWM.bam"
+	User time (seconds): 187.21
+	System time (seconds): 5.77
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:13.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9656
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2753714
+	Voluntary context switches: 446
+	Involuntary context switches: 429
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 3115192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -H  merged.bam | sed -e 's/SN:chr/SN:/g' | sed -e 's/SN:M/SN:MT/g' | sed -e 's/_random//g' | sed -E 's/SN:.*_(.*)/SN:\1/g' | sed -E 's/v([1-2]{1})/.\1/g' > new_header.sam; samtools reheader new_header.sam merged.bam > merged_header.bam"
+	User time (seconds): 0.02
+	System time (seconds): 1.22
+	Percent of CPU this job got: 81%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.52
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2066
+	Voluntary context switches: 26850
+	Involuntary context switches: 7
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 3114536
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -F 256 -q 30 -O BAM merged_header.bam > merged_header_filter.bam"
+	User time (seconds): 170.20
+	System time (seconds): 5.79
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:56.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9164
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2919703
+	Voluntary context switches: 5843
+	Involuntary context switches: 394
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2794248
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 7 files and 1 in-memory blocks...
+2299830 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+2299830 + 0 mapped (100.00% : N/A)
+0 + 0 paired in sequencing
+0 + 0 read1
+0 + 0 read2
+0 + 0 properly paired (N/A : N/A)
+0 + 0 with itself and mate mapped
+0 + 0 singletons (N/A : N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5)
+	Command being timed: "bash -c samtools sort -O BAM merged_header_filter.bam > ENCSR706ANY_mq30.bam; samtools index ENCSR706ANY_mq30.bam; samtools flagstat ENCSR706ANY_mq30.bam"
+	User time (seconds): 140.84
+	System time (seconds): 1.99
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:22.99
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 810088
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 30209
+	Voluntary context switches: 10490
+	Involuntary context switches: 271
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1809920
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+153101 ENCSR706ANY_mq30.bed
+	Command being timed: "bash -c bedtools bamtobed -splitD -i ENCSR706ANY_mq30.bam | cut -f1-3 > exons.bed; bedtools sort -i exons.bed > exons_sort.bed; bedtools merge -i exons_sort.bed > ENCSR706ANY_mq30.bed; wc -l ENCSR706ANY_mq30.bed"
+	User time (seconds): 69.55
+	System time (seconds): 4.50
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:14.48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5097572
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 318473
+	Voluntary context switches: 262435
+	Involuntary context switches: 578
+	Swaps: 0
+	File system inputs: 16392
+	File system outputs: 1302056
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./ENCSR706ANY_mq30.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30.bam.bai
+upload: ./ENCSR706ANY_mq30.bed to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30.bed
+upload: ./ENCSR706ANY_mq30.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30.bam
+---

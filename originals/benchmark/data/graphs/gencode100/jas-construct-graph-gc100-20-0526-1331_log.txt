@@ -1,0 +1,116 @@
+---
+jas-construct-graph-gc100-20-0526-1331
+TIME=20200526-1331 IMAGE=jsibbesen/vgdev-s3script:c861e23e-s1 MEMORY=4 CPU=4 DISK=8
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/construct_graph.sh
+CPU=4 CHR=20
+---
+Completed 2.1 KiB/2.1 KiB (5.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/construct_graph.sh to ./construct_graph.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai
+Restricting to 20 from 1 to end
+ building graph for 20          [                       ]  0.0% building graph for 20          [=                      ]  1.6% building graph for 20          [=                      ]  3.3% building graph for 20          [==                     ]  4.9% building graph for 20          [==                     ]  6.5% building graph for 20          [==                     ]  8.1% building graph for 20          [===                    ]  9.8% building graph for 20          [===                    ] 11.4% building graph for 20          [===                    ] 13.0% building graph for 20          [====                   ] 14.6% building graph for 20          [====                   ] 16.3% building graph for 20          [=====                  ] 17.9% building graph for 20          [=====                  ] 19.5% building graph for 20          [=====                  ] 21.2% building graph for 20          [======                 ] 22.8% building graph for 20          [======                 ] 24.4% building graph for 20          [======                 ] 26.0% building graph for 20          [=======                ] 27.7% building graph for 20          [=======                ] 29.3% building graph for 20          [========               ] 30.9% building graph for 20          [========               ] 32.5% building graph for 20          [========               ] 34.2% building graph for 20          [=========              ] 35.8% building graph for 20          [=========              ] 37.4% building graph for 20          [=========              ] 39.1% building graph for 20          [==========             ] 40.7% building graph for 20          [==========             ] 42.3% building graph for 20          [===========            ] 43.9% building graph for 20          [===========            ] 45.6% building graph for 20          [===========            ] 47.2% building graph for 20          [============           ] 48.8% building graph for 20          [============           ] 50.4% building graph for 20          [============           ] 52.1% building graph for 20          [=============          ] 53.7% building graph for 20          [=============          ] 55.3% building graph for 20          [==============         ] 56.9% building graph for 20          [==============         ] 58.6% building graph for 20          [==============         ] 60.2% building graph for 20          [===============        ] 61.8% building graph for 20          [===============        ] 63.5% building graph for 20          [===============        ] 65.1% building graph for 20          [================       ] 66.7% building graph for 20          [================       ] 68.3% building graph for 20          [=================      ] 70.0% building graph for 20          [=================      ] 71.6% building graph for 20          [=================      ] 73.2% building graph for 20          [==================     ] 74.8% building graph for 20          [==================     ] 76.5% building graph for 20          [==================     ] 78.1% building graph for 20          [===================    ] 79.7% building graph for 20          [===================    ] 81.4% building graph for 20          [====================   ] 83.0% building graph for 20          [====================   ] 84.6% building graph for 20          [====================   ] 86.2% building graph for 20          [=====================  ] 87.9% building graph for 20          [=====================  ] 89.5% building graph for 20          [=====================  ] 91.1% building graph for 20          [====================== ] 92.7% building graph for 20          [====================== ] 94.4% building graph for 20          [=======================] 96.0% building graph for 20          [=======================] 97.6% building graph for 20          [=======================] 99.3% building graph for 20          [=======================]100.0% building graph for 20          [=======================]100.0%
+	Command being timed: "bash -c vg construct -p -t 4 -R 20 -C -r Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa > 20.vg"
+	User time (seconds): 4.65
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 58720
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 21027
+	Voluntary context switches: 2
+	Involuntary context switches: 9
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 75496
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg convert -p 20.vg > 20.pg"
+	User time (seconds): 23.96
+	System time (seconds): 1.36
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:24.97
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 780212
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 206967
+	Voluntary context switches: 17363
+	Involuntary context switches: 289
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 179664
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c grep -P '^20\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > 20.gtf"
+	User time (seconds): 0.14
+	System time (seconds): 0.46
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.61
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3168
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 312
+	Voluntary context switches: 28
+	Involuntary context switches: 10
+	Swaps: 0
+	File system inputs: 1623984
+	File system outputs: 44632
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Graph parsed in 0.237253 seconds, 0.120834 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 3904 transcripts parsed, and graph augmented in 7.06994 seconds, 0.980095 GB
+[vg rna] Topological sorting and compacting splice graph ...
+[vg rna] Splice graph sorted and compacted in 6.38815 seconds, 0.980095 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 3904 haplotype-specfic transcripts projected in 4.19823 seconds, 1.07682 GB
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph written in 0.532732 seconds, 1.07682 GB
+	Command being timed: "bash -c vg rna -p -t 4 -e -n 20.gtf 20.pg > gencode100_20.pg"
+	User time (seconds): 16.87
+	System time (seconds): 2.22
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:18.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1129128
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 525813
+	Voluntary context switches: 35719
+	Involuntary context switches: 323
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 186032
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./gencode100_20.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/20/gencode100_20.pg
+---

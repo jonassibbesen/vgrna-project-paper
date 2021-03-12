@@ -1,0 +1,40 @@
+---
+jas-calc-hst-stats-all-af001-gc100-14-1130-2201
+TIME=20201130-2201 IMAGE=jsibbesen/vgrna-s3script:71442ea4-s2 MEMORY=8 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/calculate_hst_stats.sh
+CPU=1 CHR=14
+---
+Completed 940 Bytes/940 Bytes (18.3 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/calculate_hst_stats.sh to ./calculate_hst_stats.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/meta/1000g/integrated_call_samples_v3.20130502.ALL.panel to ./integrated_call_samples_v3.20130502.ALL.panel
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/14/1kg_all_af001_gencode100_14.txt.gz to ./1kg_all_af001_gencode100_14.txt.gz
+b'HEAD' b'71442ea439950f705555e181f3ed0f33c39143c8'
+/scripts/vgrna/haplotype_transcript_stats.py integrated_call_samples_v3.20130502.ALL.panel /dev/fd/63
+
+2504
+399851
+2504
+	Command being timed: "bash -c python3 /scripts/vgrna/haplotype_transcript_stats.py integrated_call_samples_v3.20130502.ALL.panel <(zcat 1kg_all_af001_gencode100_14.txt.gz) > 1kg_all_af001_gencode100_14_hst_stats.txt"
+	User time (seconds): 152.47
+	System time (seconds): 3.96
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:36.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3363608
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1046484
+	Voluntary context switches: 38613
+	Involuntary context switches: 661
+	Swaps: 0
+	File system inputs: 32
+	File system outputs: 536
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_gencode100_14_hst_stats.txt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/14/1kg_all_af001_gencode100_14_hst_stats.txt
+---

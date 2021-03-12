@@ -1,0 +1,118 @@
+---
+jas-construct-graph-all-af001-gc100-y-0605-2210
+TIME=20200605-2210 IMAGE=jsibbesen/vgdev-s3script:c861e23e-s1 MEMORY=8 CPU=4 DISK=12
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/construct_graph.sh
+CPU=4 CHR=Y
+---
+Completed 3.4 KiB/3.4 KiB (9.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/construct_graph.sh to ./construct_graph.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_af001/Y/1kg_all_af001_Y.vcf.gz to ./1kg_all_af001_Y.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_af001/Y/1kg_all_af001_Y.vcf.gz.tbi to ./1kg_all_af001_Y.vcf.gz.tbi
+Restricting to Y from 1 to end
+ building graph for Y           [                       ]  0.0% building graph for Y           [=                      ]  1.8% building graph for Y           [=                      ]  3.7% building graph for Y           [==                     ]  5.5% building graph for Y           [==                     ]  7.3% building graph for Y           [===                    ]  9.2% building graph for Y           [===                    ] 11.0% building graph for Y           [===                    ] 12.8% building graph for Y           [====                   ] 14.7% building graph for Y           [====                   ] 16.5% building graph for Y           [=====                  ] 18.3% building graph for Y           [=====                  ] 20.2% building graph for Y           [======                 ] 22.0% building graph for Y           [======                 ] 23.8% building graph for Y           [======                 ] 25.7% building graph for Y           [=======                ] 27.5% building graph for Y           [=======                ] 29.3% building graph for Y           [========               ] 31.1% building graph for Y           [========               ] 33.0% building graph for Y           [=========              ] 34.8% building graph for Y           [=========              ] 36.6% building graph for Y           [=========              ] 38.5% building graph for Y           [==========             ] 40.3% building graph for Y           [==========             ] 42.1% building graph for Y           [===========            ] 44.0% building graph for Y           [===========            ] 45.8% building graph for Y           [===========            ] 47.6% building graph for Y           [============           ] 49.5% building graph for Y           [============           ] 51.3% building graph for Y           [=============          ] 53.1% building graph for Y           [=============          ] 55.0% building graph for Y           [==============         ] 56.8% building graph for Y           [==============         ] 58.6% building graph for Y           [==============         ] 60.5% building graph for Y           [===============        ] 62.3% building graph for Y           [===============        ] 64.1% building graph for Y           [================       ] 66.0% building graph for Y           [================       ] 67.8% building graph for Y           [=================      ] 69.6% building graph for Y           [=================      ] 71.5% building graph for Y           [=================      ] 73.3% building graph for Y           [==================     ] 75.1% building graph for Y           [==================     ] 77.0% building graph for Y           [===================    ] 78.8% building graph for Y           [===================    ] 80.6% building graph for Y           [===================    ] 82.5% building graph for Y           [====================   ] 84.3% building graph for Y           [====================   ] 86.1% building graph for Y           [=====================  ] 88.0% building graph for Y           [=====================  ] 89.8% building graph for Y           [====================== ] 91.6% building graph for Y           [====================== ] 93.4% building graph for Y           [====================== ] 95.3% building graph for Y           [=======================] 97.1% building graph for Y           [=======================] 98.9% building graph for Y           [=======================]100.0% building graph for Y           [=======================]100.0%
+	Command being timed: "bash -c vg construct -p -t 4 -R Y -C -a -v 1kg_all_af001_Y.vcf.gz -r Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa > Y.vg"
+	User time (seconds): 4.71
+	System time (seconds): 0.45
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 320564
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 149682
+	Voluntary context switches: 1
+	Involuntary context switches: 7
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 46072
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg convert -p Y.vg > Y.pg"
+	User time (seconds): 20.65
+	System time (seconds): 1.01
+	Percent of CPU this job got: 102%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:21.13
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 746924
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 28017
+	Voluntary context switches: 35869
+	Involuntary context switches: 32
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 161368
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c grep -P '^Y\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > Y.gtf"
+	User time (seconds): 0.12
+	System time (seconds): 0.18
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3120
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 310
+	Voluntary context switches: 3
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 7056
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Graph parsed in 0.236687 seconds, 0.127621 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 863 transcripts parsed, and graph augmented in 3.42564 seconds, 0.895885 GB
+[vg rna] Topological sorting and compacting splice graph ...
+[vg rna] Splice graph sorted and compacted in 4.58847 seconds, 0.895885 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 863 haplotype-specfic transcripts projected in 2.80222 seconds, 0.985153 GB
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph written in 0.662228 seconds, 0.985153 GB
+	Command being timed: "bash -c vg rna -p -t 4 -e -n Y.gtf Y.pg > 1kg_all_af001_gencode100_Y.pg"
+	User time (seconds): 11.06
+	System time (seconds): 1.29
+	Percent of CPU this job got: 105%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1033008
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42211
+	Voluntary context switches: 55119
+	Involuntary context switches: 16
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 162400
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_gencode100_Y.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/Y/1kg_all_af001_gencode100_Y.pg
+---

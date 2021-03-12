@@ -1,0 +1,33 @@
+---
+jas-create-rindex-all-af001-gc100-0115-1653
+TIME=20210115-1653 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-883f0f87-s1 MEMORY=32 CPU=8 DISK=128
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/create_rindex.sh
+CPU=8
+---
+Completed 529 Bytes/529 Bytes (6.5 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/create_rindex.sh to ./create_rindex.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/1kg_all_af001_gencode100.gbwt to ./1kg_all_af001_gencode100.gbwt
+	Command being timed: "bash -c vg gbwt --num-threads 8 -r 1kg_all_af001_gencode100.gbwt.ri 1kg_all_af001_gencode100.gbwt"
+	User time (seconds): 1864.94
+	System time (seconds): 14.26
+	Percent of CPU this job got: 706%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:25.95
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12862568
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 130143
+	Voluntary context switches: 1330567
+	Involuntary context switches: 9505
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 5736176
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_gencode100.gbwt.ri to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/1kg_all_af001_gencode100.gbwt.ri
+---

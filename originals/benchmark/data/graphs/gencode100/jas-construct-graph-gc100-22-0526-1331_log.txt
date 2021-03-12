@@ -1,0 +1,116 @@
+---
+jas-construct-graph-gc100-22-0526-1331
+TIME=20200526-1331 IMAGE=jsibbesen/vgdev-s3script:c861e23e-s1 MEMORY=4 CPU=4 DISK=8
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/construct_graph.sh
+CPU=4 CHR=22
+---
+Completed 2.1 KiB/2.1 KiB (5.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/construct_graph.sh to ./construct_graph.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai
+Restricting to 22 from 1 to end
+ building graph for 22          [                       ]  0.0% building graph for 22          [=                      ]  2.1% building graph for 22          [=                      ]  4.1% building graph for 22          [==                     ]  6.2% building graph for 22          [==                     ]  8.3% building graph for 22          [===                    ] 10.3% building graph for 22          [===                    ] 12.4% building graph for 22          [====                   ] 14.4% building graph for 22          [====                   ] 16.5% building graph for 22          [=====                  ] 18.6% building graph for 22          [=====                  ] 20.6% building graph for 22          [======                 ] 22.7% building graph for 22          [======                 ] 24.8% building graph for 22          [=======                ] 26.8% building graph for 22          [=======                ] 28.9% building graph for 22          [========               ] 31.0% building graph for 22          [========               ] 33.0% building graph for 22          [=========              ] 35.1% building graph for 22          [=========              ] 37.1% building graph for 22          [==========             ] 39.2% building graph for 22          [==========             ] 41.3% building graph for 22          [==========             ] 43.3% building graph for 22          [===========            ] 45.4% building graph for 22          [===========            ] 47.5% building graph for 22          [============           ] 49.5% building graph for 22          [============           ] 51.6% building graph for 22          [=============          ] 53.6% building graph for 22          [=============          ] 55.7% building graph for 22          [==============         ] 57.8% building graph for 22          [==============         ] 59.8% building graph for 22          [===============        ] 61.9% building graph for 22          [===============        ] 64.0% building graph for 22          [================       ] 66.0% building graph for 22          [================       ] 68.1% building graph for 22          [=================      ] 70.2% building graph for 22          [=================      ] 72.2% building graph for 22          [==================     ] 74.3% building graph for 22          [==================     ] 76.3% building graph for 22          [===================    ] 78.4% building graph for 22          [===================    ] 80.5% building graph for 22          [===================    ] 82.5% building graph for 22          [====================   ] 84.6% building graph for 22          [====================   ] 86.7% building graph for 22          [=====================  ] 88.7% building graph for 22          [=====================  ] 90.8% building graph for 22          [====================== ] 92.9% building graph for 22          [====================== ] 94.9% building graph for 22          [=======================] 97.0% building graph for 22          [=======================] 99.0% building graph for 22          [=======================]100.0% building graph for 22          [=======================]100.0%
+	Command being timed: "bash -c vg construct -p -t 4 -R 22 -C -r Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa > 22.vg"
+	User time (seconds): 3.31
+	System time (seconds): 0.05
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 61076
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 15613
+	Voluntary context switches: 3
+	Involuntary context switches: 8
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 51784
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg convert -p 22.vg > 22.pg"
+	User time (seconds): 18.66
+	System time (seconds): 0.96
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 610772
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 144869
+	Voluntary context switches: 16380
+	Involuntary context switches: 205
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 140584
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c grep -P '^22\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > 22.gtf"
+	User time (seconds): 0.12
+	System time (seconds): 0.38
+	Percent of CPU this job got: 70%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3124
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 309
+	Voluntary context switches: 422
+	Involuntary context switches: 21
+	Swaps: 0
+	File system inputs: 1109720
+	File system outputs: 42352
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Graph parsed in 0.191206 seconds, 0.108723 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 3887 transcripts parsed, and graph augmented in 5.87145 seconds, 0.779129 GB
+[vg rna] Topological sorting and compacting splice graph ...
+[vg rna] Splice graph sorted and compacted in 4.51251 seconds, 0.779129 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 3887 haplotype-specfic transcripts projected in 3.23763 seconds, 0.8601 GB
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph written in 0.434492 seconds, 0.865944 GB
+	Command being timed: "bash -c vg rna -p -t 4 -e -n 22.gtf 22.pg > gencode100_22.pg"
+	User time (seconds): 13.17
+	System time (seconds): 1.68
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:14.31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 908008
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 401040
+	Voluntary context switches: 32055
+	Involuntary context switches: 240
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 145144
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./gencode100_22.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/22/gencode100_22.pg
+---

@@ -1,0 +1,115 @@
+---
+jas-calc-exon-cov-encsr706any-mq30-1101-1941
+TIME=20201101-1941 IMAGE=jsibbesen/vgrna-s3script:71442ea4-s2 MEMORY=4 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/calculate_exon_coverage.sh
+CPU=1 MAPQ=30
+---
+Completed 1.3 KiB/1.3 KiB (14.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/calculate_exon_coverage.sh to ./calculate_exon_coverage.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30.bam to ./ENCSR706ANY_mq30.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30.bam.bai to ./ENCSR706ANY_mq30.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30.bed to ./ENCSR706ANY_mq30.bed
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full_exons.bed to ./exons_gc.bed
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_exon_read_coverage ENCSR706ANY_mq30.bam ENCSR706ANY_mq30.bed
+
+Number of analysed exons: 10000
+Number of analysed exons: 20000
+Number of analysed exons: 30000
+Number of analysed exons: 40000
+Number of analysed exons: 50000
+Number of analysed exons: 60000
+Number of analysed exons: 70000
+Number of analysed exons: 80000
+Number of analysed exons: 90000
+Number of analysed exons: 100000
+Number of analysed exons: 110000
+Number of analysed exons: 120000
+Number of analysed exons: 130000
+Number of analysed exons: 140000
+Number of analysed exons: 150000
+
+Total number of analysed exons: 153101
+	Command being timed: "bash -c calc_exon_read_coverage ENCSR706ANY_mq30.bam ENCSR706ANY_mq30.bed > ENCSR706ANY_mq30_exon_cov_bam.txt; gzip ENCSR706ANY_mq30_exon_cov_bam.txt"
+	User time (seconds): 461.00
+	System time (seconds): 3.46
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:44.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 14692
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3983
+	Voluntary context switches: 7
+	Involuntary context switches: 1094
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 23624
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_exon_read_coverage ENCSR706ANY_mq30.bam exons_gc.bed
+
+Number of analysed exons: 10000
+Number of analysed exons: 20000
+Number of analysed exons: 30000
+Number of analysed exons: 40000
+Number of analysed exons: 50000
+Number of analysed exons: 60000
+Number of analysed exons: 70000
+Number of analysed exons: 80000
+Number of analysed exons: 90000
+Number of analysed exons: 100000
+Number of analysed exons: 110000
+Number of analysed exons: 120000
+Number of analysed exons: 130000
+Number of analysed exons: 140000
+Number of analysed exons: 150000
+Number of analysed exons: 160000
+Number of analysed exons: 170000
+Number of analysed exons: 180000
+Number of analysed exons: 190000
+Number of analysed exons: 200000
+Number of analysed exons: 210000
+Number of analysed exons: 220000
+Number of analysed exons: 230000
+Number of analysed exons: 240000
+Number of analysed exons: 250000
+Number of analysed exons: 260000
+Number of analysed exons: 270000
+Number of analysed exons: 280000
+Number of analysed exons: 290000
+Number of analysed exons: 300000
+
+Total number of analysed exons: 303279
+	Command being timed: "bash -c calc_exon_read_coverage ENCSR706ANY_mq30.bam exons_gc.bed > ENCSR706ANY_mq30_exon_cov_gc.txt; gzip ENCSR706ANY_mq30_exon_cov_gc.txt"
+	User time (seconds): 683.95
+	System time (seconds): 5.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:29.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 18236
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3542
+	Voluntary context switches: 6
+	Involuntary context switches: 1818
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 39080
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./ENCSR706ANY_mq30_exon_cov_gc.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30_exon_cov_gc.txt.gz
+upload: ./ENCSR706ANY_mq30_exon_cov_bam.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30_exon_cov_bam.txt.gz
+---

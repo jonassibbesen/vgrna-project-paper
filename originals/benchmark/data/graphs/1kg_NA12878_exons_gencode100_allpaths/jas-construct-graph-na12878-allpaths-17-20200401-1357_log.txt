@@ -1,0 +1,118 @@
+---
+jas-construct-graph-na12878-allpaths-17-20200401-1357
+IMAGE=jsibbesen/vg-s3script:1.23.0-s1 MEMORY=4 CPU=4 DISK=8
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/construct_graph_chr.sh
+CHR=17 CPU=4
+---
+Completed 1.7 KiB/1.7 KiB (29.6 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/construct_graph_chr.sh to ./construct_graph_chr.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/17/1kg_NA12878_exons_17.vcf.gz to ./1kg_NA12878_exons_17.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/17/1kg_NA12878_exons_17.vcf.gz.tbi to ./1kg_NA12878_exons_17.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+Restricting to 17 from 1 to end
+ building graph for 17          [                       ]  0.0% building graph for 17          [=                      ]  1.3% building graph for 17          [=                      ]  2.5% building graph for 17          [=                      ]  3.8% building graph for 17          [==                     ]  5.0% building graph for 17          [==                     ]  6.3% building graph for 17          [==                     ]  7.6% building graph for 17          [===                    ]  8.8% building graph for 17          [===                    ] 10.1% building graph for 17          [===                    ] 11.3% building graph for 17          [===                    ] 12.6% building graph for 17          [====                   ] 13.9% building graph for 17          [====                   ] 15.1% building graph for 17          [====                   ] 16.4% building graph for 17          [=====                  ] 17.6% building graph for 17          [=====                  ] 18.9% building graph for 17          [=====                  ] 20.2% building graph for 17          [=====                  ] 21.4% building graph for 17          [======                 ] 22.7% building graph for 17          [======                 ] 23.9% building graph for 17          [======                 ] 25.2% building graph for 17          [=======                ] 26.4% building graph for 17          [=======                ] 27.7% building graph for 17          [=======                ] 29.0% building graph for 17          [=======                ] 30.2% building graph for 17          [========               ] 31.5% building graph for 17          [========               ] 32.7% building graph for 17          [========               ] 34.0% building graph for 17          [=========              ] 35.3% building graph for 17          [=========              ] 36.5% building graph for 17          [=========              ] 37.8% building graph for 17          [=========              ] 39.0% building graph for 17          [==========             ] 40.3% building graph for 17          [==========             ] 41.6% building graph for 17          [==========             ] 42.8% building graph for 17          [===========            ] 44.1% building graph for 17          [===========            ] 45.3% building graph for 17          [===========            ] 46.6% building graph for 17          [============           ] 47.9% building graph for 17          [============           ] 49.1% building graph for 17          [============           ] 50.4% building graph for 17          [============           ] 51.6% building graph for 17          [=============          ] 52.9% building graph for 17          [=============          ] 54.2% building graph for 17          [=============          ] 55.4% building graph for 17          [==============         ] 56.7% building graph for 17          [==============         ] 57.9% building graph for 17          [==============         ] 59.2% building graph for 17          [==============         ] 60.5% building graph for 17          [===============        ] 61.7% building graph for 17          [===============        ] 63.0% building graph for 17          [===============        ] 64.2% building graph for 17          [================       ] 65.5% building graph for 17          [================       ] 66.8% building graph for 17          [================       ] 68.0% building graph for 17          [================       ] 69.3% building graph for 17          [=================      ] 70.5% building graph for 17          [=================      ] 71.8% building graph for 17          [=================      ] 73.0% building graph for 17          [==================     ] 74.3% building graph for 17          [==================     ] 75.6% building graph for 17          [==================     ] 76.8% building graph for 17          [==================     ] 78.1% building graph for 17          [===================    ] 79.3% building graph for 17          [===================    ] 80.6% building graph for 17          [===================    ] 81.9% building graph for 17          [====================   ] 83.1% building graph for 17          [====================   ] 84.4% building graph for 17          [====================   ] 85.6% building graph for 17          [====================   ] 86.9% building graph for 17          [=====================  ] 88.2% building graph for 17          [=====================  ] 89.4% building graph for 17          [=====================  ] 90.7% building graph for 17          [====================== ] 91.9% building graph for 17          [====================== ] 93.2% building graph for 17          [====================== ] 94.5% building graph for 17          [=======================] 95.7% building graph for 17          [=======================] 97.0% building graph for 17          [=======================] 98.2% building graph for 17          [=======================] 99.5% building graph for 17          [=======================]100.0% building graph for 17          [=======================]100.0%
+	Command being timed: "bash -c vg construct -p -t 4 -R 17 -C -a -v 1kg_NA12878_exons_17.vcf.gz -r Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa > 17.vg"
+	User time (seconds): 6.39
+	System time (seconds): 0.19
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.58
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 52636
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 28073
+	Voluntary context switches: 2
+	Involuntary context switches: 16
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 98944
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg convert -p 17.vg > 17.pg"
+	User time (seconds): 30.72
+	System time (seconds): 2.17
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:32.27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 989424
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 320555
+	Voluntary context switches: 47713
+	Involuntary context switches: 380
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 237056
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c grep -P '^17\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > 17.gtf"
+	User time (seconds): 0.12
+	System time (seconds): 0.27
+	Percent of CPU this job got: 90%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3048
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 309
+	Voluntary context switches: 118
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 438776
+	File system outputs: 116744
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Graph parsed in 0.326742 seconds, 0.175892 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 10488 transcripts parsed, and graph augmented in 11.5742 seconds, 1.27706 GB
+[vg rna] Topological sorting and compacting splice graph ...
+[vg rna] Splice graph sorted and compacted in 7.4695 seconds, 1.27706 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 10488 haplotype-specfic transcripts projected in 5.88282 seconds, 1.49492 GB
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph written in 0.842929 seconds, 1.49492 GB
+	Command being timed: "bash -c vg rna -p -t 4 -e -n 17.gtf 17.pg > 1kg_NA12878_exons_gencode100_allpaths_17.pg"
+	User time (seconds): 24.74
+	System time (seconds): 2.64
+	Percent of CPU this job got: 104%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:26.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1567532
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 406723
+	Voluntary context switches: 75039
+	Involuntary context switches: 348
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 251136
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_NA12878_exons_gencode100_allpaths_17.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/17/1kg_NA12878_exons_gencode100_allpaths_17.pg
+---

@@ -1,0 +1,154 @@
+---
+jas-project-txp-eurnceu-af002-gc100-genes-9-0217-1153
+TIME=20210217-1153 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-8ff022c3-s1 MEMORY=24 CPU=6 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_EURnonCEU_af002_gencode100_genes/project_transcripts.sh
+CPU=6 CHR=9
+---
+Completed 2.8 KiB/2.8 KiB (8.0 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_EURnonCEU_af002_gencode100_genes/project_transcripts.sh to ./project_transcripts.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_EURnonCEU_af002_gencode100/9/1kg_EURnonCEU_af002_gencode100_9.pg to ./1kg_EURnonCEU_af002_gencode100_9.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_EURnonCEU_af002_gencode100/9/1kg_EURnonCEU_exons_9.gbwt to ./1kg_EURnonCEU_exons_9.gbwt
+	Command being timed: "bash -c grep -P '^9\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > 9.gtf"
+	User time (seconds): 0.13
+	System time (seconds): 0.23
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3220
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 313
+	Voluntary context switches: 3
+	Involuntary context switches: 3
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 71200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	5898342
+edges	6575822
+length	139055658
+node-id-range	67745189:73643530
+	Command being timed: "bash -c vg stats -z -l -r 1kg_EURnonCEU_af002_gencode100_9.pg"
+	User time (seconds): 9.89
+	System time (seconds): 0.91
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:10.39
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 909756
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 8515
+	Voluntary context switches: 118499
+	Involuntary context switches: 25
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Parsing haplotype GBWT index file ...
+[vg rna] Graph and GBWT index parsed in 10.2592 seconds, 0.994957 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 6045 transcripts parsed, and graph augmented (no novel exon boundaries) in 10.8724 seconds, 3.23961 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 101848 haplotype-specfic transcripts projected in 202.728 seconds, 3.38972 GB
+[vg rna] Removing non-transcribed regions ...
+[vg rna] Regions removed in 95.0443 seconds, 3.38972 GB
+[vg rna] Adding reference transcripts as embedded paths in the splice graph ...
+[vg rna] 6045 paths added in 0.896112 seconds, 3.38972 GB
+[vg rna] Writing transcripts as bidirectional threads to GBWT index file ...
+[vg rna] Writing transcripts as sequences to fasta file ...
+[vg rna] Writing origin info on transcripts to tsv file ...
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph and 101417 transcripts written in 49.6228 seconds, 3.38972 GB
+	Command being timed: "bash -c vg rna -p -t 6 -d -o -r -g -n 9.gtf -l 1kg_EURnonCEU_exons_9.gbwt -b 1kg_EURnonCEU_af002_gencode100_genes_9.gbwt -f 1kg_EURnonCEU_af002_gencode100_genes_9.fa -i 1kg_EURnonCEU_af002_gencode100_genes_9.txt 1kg_EURnonCEU_af002_gencode100_9.pg > 1kg_EURnonCEU_af002_gencode100_genes_9.pg"
+	User time (seconds): 1187.57
+	System time (seconds): 40.07
+	Percent of CPU this job got: 332%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:09.57
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3554376
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1530839
+	Voluntary context switches: 3380898
+	Involuntary context switches: 7015
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1585432
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	269016
+edges	254915
+length	5091287
+node-id-range	67745575:73643530
+	Command being timed: "bash -c vg stats -z -l -r 1kg_EURnonCEU_af002_gencode100_genes_9.pg"
+	User time (seconds): 0.72
+	System time (seconds): 0.51
+	Percent of CPU this job got: 122%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 528208
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4727
+	Voluntary context switches: 63028
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip 1kg_EURnonCEU_af002_gencode100_genes_9.fa; gzip 1kg_EURnonCEU_af002_gencode100_genes_9.txt"
+	User time (seconds): 7.59
+	System time (seconds): 0.14
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3236
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 507
+	Voluntary context switches: 5
+	Involuntary context switches: 15
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 38408
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_EURnonCEU_af002_gencode100_genes_9.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_EURnonCEU_af002_gencode100_genes/9/1kg_EURnonCEU_af002_gencode100_genes_9.txt.gz
+upload: ./1kg_EURnonCEU_af002_gencode100_genes_9.fa.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_EURnonCEU_af002_gencode100_genes/9/1kg_EURnonCEU_af002_gencode100_genes_9.fa.gz
+upload: ./1kg_EURnonCEU_af002_gencode100_genes_9.gbwt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_EURnonCEU_af002_gencode100_genes/9/1kg_EURnonCEU_af002_gencode100_genes_9.gbwt
+upload: ./1kg_EURnonCEU_af002_gencode100_genes_9.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_EURnonCEU_af002_gencode100_genes/9/1kg_EURnonCEU_af002_gencode100_genes_9.pg
+---

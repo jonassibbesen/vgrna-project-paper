@@ -1,0 +1,116 @@
+---
+jas-construct-graph-gc100-21-0526-1331
+TIME=20200526-1331 IMAGE=jsibbesen/vgdev-s3script:c861e23e-s1 MEMORY=4 CPU=4 DISK=8
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/construct_graph.sh
+CPU=4 CHR=21
+---
+Completed 2.1 KiB/2.1 KiB (5.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/construct_graph.sh to ./construct_graph.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai
+Restricting to 21 from 1 to end
+ building graph for 21          [                       ]  0.0% building graph for 21          [=                      ]  2.2% building graph for 21          [==                     ]  4.5% building graph for 21          [==                     ]  6.7% building graph for 21          [===                    ]  9.0% building graph for 21          [===                    ] 11.2% building graph for 21          [====                   ] 13.5% building graph for 21          [====                   ] 15.7% building graph for 21          [=====                  ] 18.0% building graph for 21          [=====                  ] 20.2% building graph for 21          [======                 ] 22.4% building graph for 21          [======                 ] 24.7% building graph for 21          [=======                ] 26.9% building graph for 21          [=======                ] 29.2% building graph for 21          [========               ] 31.4% building graph for 21          [========               ] 33.7% building graph for 21          [=========              ] 35.9% building graph for 21          [=========              ] 38.2% building graph for 21          [==========             ] 40.4% building graph for 21          [==========             ] 42.7% building graph for 21          [===========            ] 44.9% building graph for 21          [===========            ] 47.1% building graph for 21          [============           ] 49.4% building graph for 21          [============           ] 51.6% building graph for 21          [=============          ] 53.9% building graph for 21          [=============          ] 56.1% building graph for 21          [==============         ] 58.4% building graph for 21          [==============         ] 60.6% building graph for 21          [===============        ] 62.9% building graph for 21          [===============        ] 65.1% building graph for 21          [================       ] 67.3% building graph for 21          [=================      ] 69.6% building graph for 21          [=================      ] 71.8% building graph for 21          [==================     ] 74.1% building graph for 21          [==================     ] 76.3% building graph for 21          [===================    ] 78.6% building graph for 21          [===================    ] 80.8% building graph for 21          [====================   ] 83.1% building graph for 21          [====================   ] 85.3% building graph for 21          [=====================  ] 87.5% building graph for 21          [=====================  ] 89.8% building graph for 21          [====================== ] 92.0% building graph for 21          [====================== ] 94.3% building graph for 21          [=======================] 96.5% building graph for 21          [=======================] 98.8% building graph for 21          [=======================]100.0% building graph for 21          [=======================]100.0%
+	Command being timed: "bash -c vg construct -p -t 4 -R 21 -C -r Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa > 21.vg"
+	User time (seconds): 3.18
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.24
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 54588
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 14345
+	Voluntary context switches: 2
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 50456
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg convert -p 21.vg > 21.pg"
+	User time (seconds): 16.70
+	System time (seconds): 1.11
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:17.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 550268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 248440
+	Voluntary context switches: 11929
+	Involuntary context switches: 210
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 124632
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c grep -P '^21\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > 21.gtf"
+	User time (seconds): 0.12
+	System time (seconds): 0.29
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3292
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 314
+	Voluntary context switches: 27
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 984816
+	File system outputs: 21464
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Graph parsed in 0.156346 seconds, 0.1017 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 2178 transcripts parsed, and graph augmented in 4.30038 seconds, 0.716282 GB
+[vg rna] Topological sorting and compacting splice graph ...
+[vg rna] Splice graph sorted and compacted in 3.91518 seconds, 0.716282 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 2178 haplotype-specfic transcripts projected in 2.83144 seconds, 0.762512 GB
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph written in 0.334517 seconds, 0.762512 GB
+	Command being timed: "bash -c vg rna -p -t 4 -e -n 21.gtf 21.pg > gencode100_21.pg"
+	User time (seconds): 10.57
+	System time (seconds): 1.39
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.57
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 799552
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 348787
+	Voluntary context switches: 22329
+	Involuntary context switches: 201
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 126792
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./gencode100_21.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/21/gencode100_21.pg
+---

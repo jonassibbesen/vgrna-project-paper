@@ -1,0 +1,89 @@
+---
+jas-process-variants-nonceu-af001-8-20200331-1413
+IMAGE=jsibbesen/base-s3script:18.04-s1 MEMORY=2 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_nonCEU_af001/process_variants.sh
+CHR=8 MAF=0.001
+---
+Completed 2.6 KiB/2.6 KiB (46.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_nonCEU_af001/process_variants.sh to ./process_variants.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai
+download: s3://vg-data/1kg_GRCh38/variants/ALL.chr8_GRCh38.genotypes.20170504.vcf.gz to ./ALL.chr8_GRCh38.genotypes.20170504.vcf.gz
+download: s3://vg-data/1kg_GRCh38/variants/ALL.chr8_GRCh38.genotypes.20170504.vcf.gz.tbi to ./ALL.chr8_GRCh38.genotypes.20170504.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/meta/1000g/integrated_call_samples_v3.20130502.ALL.panel to ./integrated_call_samples_v3.20130502.ALL.panel
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_nonCEU_exons/8/1kg_nonCEU_exons_8.vcf.gz to ./1kg_nonCEU_exons_8.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_nonCEU_exons/8/1kg_nonCEU_exons_8.vcf.gz.tbi to ./1kg_nonCEU_exons_8.vcf.gz.tbi
+2405 samples.txt
+	Command being timed: "bash -c grep -v CEU integrated_call_samples_v3.20130502.ALL.panel | grep -v sample | cut -f1 > samples.txt; wc -l samples.txt"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 166%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3120
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 655
+	Voluntary context switches: 10
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 8
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Lines   total/split/realigned/skipped:	4592680/24560/5438/0
+Lines   total/split/realigned/skipped:	1725329/0/0/0
+	Command being timed: "bash -c bcftools annotate -x ^INFO/AC,^INFO/AF,^INFO/AN ALL.chr8_GRCh38.genotypes.20170504.vcf.gz | bcftools norm -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa | bcftools view -S samples.txt -q 0.001 | bcftools norm -m +any -O z -f Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa > all_variants.vcf.gz; tabix all_variants.vcf.gz"
+	User time (seconds): 3014.25
+	System time (seconds): 116.49
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 53:30.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12928
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 92
+	Minor (reclaiming a frame) page faults: 2017559
+	Voluntary context switches: 2750158
+	Involuntary context switches: 57510
+	Swaps: 0
+	File system inputs: 1170896
+	File system outputs: 1055104
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c bcftools concat -a -d all -O z 1kg_nonCEU_exons_8.vcf.gz all_variants.vcf.gz > 1kg_nonCEU_af001_8.vcf.gz; tabix 1kg_nonCEU_af001_8.vcf.gz"
+	User time (seconds): 1012.75
+	System time (seconds): 4.94
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 16:59.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 21
+	Minor (reclaiming a frame) page faults: 4348
+	Voluntary context switches: 96
+	Involuntary context switches: 3161
+	Swaps: 0
+	File system inputs: 12264
+	File system outputs: 1065584
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_nonCEU_af001_8.vcf.gz.tbi to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_nonCEU_af001/8/1kg_nonCEU_af001_8.vcf.gz.tbi
+upload: ./1kg_nonCEU_af001_8.vcf.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_nonCEU_af001/8/1kg_nonCEU_af001_8.vcf.gz
+---

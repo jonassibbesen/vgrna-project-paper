@@ -1,0 +1,62 @@
+---
+jas-generate-xg-gc100-0526-1401
+TIME=20200526-1401 IMAGE=jsibbesen/vgdev-s3script:c861e23e-s1 MEMORY=48 CPU=4 DISK=64
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/generate_xg.sh
+CPU=4
+---
+Completed 667 Bytes/667 Bytes (1.6 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/generate_xg.sh to ./generate_xg.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/13/gencode100_13.pg to 13/gencode100_13.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/10/gencode100_10.pg to 10/gencode100_10.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/11/gencode100_11.pg to 11/gencode100_11.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/12/gencode100_12.pg to 12/gencode100_12.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/1/gencode100_1.pg to 1/gencode100_1.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/14/gencode100_14.pg to 14/gencode100_14.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/16/gencode100_16.pg to 16/gencode100_16.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/15/gencode100_15.pg to 15/gencode100_15.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/17/gencode100_17.pg to 17/gencode100_17.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/18/gencode100_18.pg to 18/gencode100_18.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/19/gencode100_19.pg to 19/gencode100_19.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/21/gencode100_21.pg to 21/gencode100_21.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/20/gencode100_20.pg to 20/gencode100_20.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/22/gencode100_22.pg to 22/gencode100_22.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/2/gencode100_2.pg to 2/gencode100_2.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/3/gencode100_3.pg to 3/gencode100_3.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/4/gencode100_4.pg to 4/gencode100_4.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/5/gencode100_5.pg to 5/gencode100_5.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/6/gencode100_6.pg to 6/gencode100_6.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/MT/gencode100_MT.pg to MT/gencode100_MT.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/7/gencode100_7.pg to 7/gencode100_7.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/8/gencode100_8.pg to 8/gencode100_8.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/9/gencode100_9.pg to 9/gencode100_9.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/SCA/gencode100_SCA.pg to SCA/gencode100_SCA.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/X/gencode100_X.pg to X/gencode100_X.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/Y/gencode100_Y.pg to Y/gencode100_Y.pg
+Built base XG index
+Saving XG index to disk...
+Memory usage: 39.5605 GB
+172643
+	Command being timed: "bash -c vg index -p -t 4 -x gencode100.xg $(for i in $(seq 1 22; echo X; echo Y; echo MT; echo SCA); do echo ${i}/gencode100_${i}.pg; done); vg paths -L -x gencode100.xg | wc -l"
+	User time (seconds): 744.60
+	System time (seconds): 139.28
+	Percent of CPU this job got: 112%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:08.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 41482200
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 12027969
+	Voluntary context switches: 11817464
+	Involuntary context switches: 1350
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 98976992
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./gencode100.xg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg
+---

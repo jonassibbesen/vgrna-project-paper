@@ -1,0 +1,193 @@
+---
+jas-project-transcripts-na12878-allpaths-19-20200401-1409
+IMAGE=jsibbesen/vg-s3script:1.23.0-s1 MEMORY=6 CPU=4 DISK=8
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/project_transcripts.sh
+CHR=19 CPU=4
+---
+Completed 1.9 KiB/1.9 KiB (31.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/project_transcripts.sh to ./project_transcripts.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/19/1kg_NA12878_exons_19.vcf.gz to ./1kg_NA12878_exons_19.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/19/1kg_NA12878_exons_19.vcf.gz.tbi to ./1kg_NA12878_exons_19.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/19/1kg_NA12878_exons_gencode100_allpaths_19.pg to ./1kg_NA12878_exons_gencode100_allpaths_19.pg
+Built base XG index
+Maximum node id in graph: 85866044
+Node id width: 28
+GBWT parameters: buffer size 100, id interval 1024
+Opened variant file 1kg_NA12878_exons_19.vcf.gz
+Haplotype generation parameters:
+- Samples 0 to 0
+- Batch size 200
+- Phase homozygous genotypes
+Processing path 19 as VCF contig 19
+- Moving variants from 19 to 19
+- Parsed 8948 variants
+- Phasing information: 0.017067 MB
+- Processed samples 0 to 0
+GBWT metadata: 19 paths with names, 1 samples with names, 2 haplotypes, 1 contigs with names
+Saving GBWT to disk...
+Memory usage: 2.05176 GB
+	Command being timed: "bash -c vg index -p -t 4 -G 19.gbwt -v 1kg_NA12878_exons_19.vcf.gz 1kg_NA12878_exons_gencode100_allpaths_19.pg"
+	User time (seconds): 18.99
+	System time (seconds): 2.26
+	Percent of CPU this job got: 108%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2151428
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 131604
+	Voluntary context switches: 170498
+	Involuntary context switches: 33
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1247728
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c grep -P '^19\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > 19.gtf"
+	User time (seconds): 0.12
+	System time (seconds): 0.21
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3228
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 314
+	Voluntary context switches: 3
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 114248
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	1899200
+edges	1926233
+length	58626935
+node-id-range	83966845:85866044
+	Command being timed: "bash -c vg stats -z -l -r 1kg_NA12878_exons_gencode100_allpaths_19.pg"
+	User time (seconds): 0.18
+	System time (seconds): 0.18
+	Percent of CPU this job got: 124%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.30
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 144992
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4605
+	Voluntary context switches: 23394
+	Involuntary context switches: 2
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Parsing haplotype GBWT index file ...
+[vg rna] Graph and GBWT index parsed in 0.344445 seconds, 0.167889 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 10245 transcripts parsed, and graph augmented (no novel exon boundaries) in 3.96653 seconds, 0.99139 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 30615 haplotype-specfic transcripts projected in 8.80692 seconds, 1.55909 GB
+[vg rna] Adding transcripts as embedded paths in the splice graph ...
+[vg rna] 30615 paths added in 2.54416 seconds, 1.55909 GB
+[vg rna] Writing transcripts as bidirectional threads to GBWT index file ...
+[vg rna] Writing transcripts as sequences to fasta file ...
+[vg rna] Writing origin info on transcripts to tsv file ...
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph and 30615 transcripts written in 4.29289 seconds, 1.55909 GB
+	Command being timed: "bash -c vg rna -p -t 4 -o -c -r -a -u -g -n 19.gtf -l 19.gbwt -b 1kg_NA12878_exons_gencode100_allpaths_19.gbwt -f 1kg_NA12878_exons_gencode100_allpaths_19.fa -i 1kg_NA12878_exons_gencode100_allpaths_19.txt 1kg_NA12878_exons_gencode100_allpaths_19.pg > 1kg_NA12878_exons_gencode100_allpaths_19_tmp.pg; mv 1kg_NA12878_exons_gencode100_allpaths_19_tmp.pg 1kg_NA12878_exons_gencode100_allpaths_19.pg"
+	User time (seconds): 32.91
+	System time (seconds): 2.87
+	Percent of CPU this job got: 179%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1634828
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 63778
+	Voluntary context switches: 136942
+	Involuntary context switches: 156
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 355392
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	1899200
+edges	1926268
+length	58626935
+node-id-range	83966845:85866044
+	Command being timed: "bash -c vg stats -z -l -r 1kg_NA12878_exons_gencode100_allpaths_19.pg"
+	User time (seconds): 0.26
+	System time (seconds): 0.23
+	Percent of CPU this job got: 122%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.40
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 184972
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4888
+	Voluntary context switches: 29139
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip 1kg_NA12878_exons_gencode100_allpaths_19.fa; gzip 1kg_NA12878_exons_gencode100_allpaths_19.txt"
+	User time (seconds): 2.03
+	System time (seconds): 0.02
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3264
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 504
+	Voluntary context switches: 5
+	Involuntary context switches: 3
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 10032
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_NA12878_exons_gencode100_allpaths_19.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/19/1kg_NA12878_exons_gencode100_allpaths_19.txt.gz
+upload: ./1kg_NA12878_exons_gencode100_allpaths_19.fa.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/19/1kg_NA12878_exons_gencode100_allpaths_19.fa.gz
+upload: ./1kg_NA12878_exons_gencode100_allpaths_19.gbwt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/19/1kg_NA12878_exons_gencode100_allpaths_19.gbwt
+upload: ./1kg_NA12878_exons_gencode100_allpaths_19.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/19/1kg_NA12878_exons_gencode100_allpaths_19.pg
+---

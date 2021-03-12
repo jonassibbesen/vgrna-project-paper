@@ -1,0 +1,154 @@
+---
+jas-project-txp-na12878-gc100-genes-22-0529-1615
+TIME=20200529-1615 IMAGE=jsibbesen/vgdev-s3script:8ff022c3-s1 MEMORY=6 CPU=4 DISK=8
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_gencode100_genes/project_transcripts.sh
+CPU=4 CHR=22
+---
+Completed 2.8 KiB/2.8 KiB (8.0 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_gencode100_genes/project_transcripts.sh to ./project_transcripts.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_gencode100/22/1kg_NA12878_gencode100_22.pg to ./1kg_NA12878_gencode100_22.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_gencode100/22/1kg_NA12878_exons_22.gbwt to ./1kg_NA12878_exons_22.gbwt
+	Command being timed: "bash -c grep -P '^22\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > 22.gtf"
+	User time (seconds): 0.16
+	System time (seconds): 0.19
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3272
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 317
+	Voluntary context switches: 3
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 42352
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	1735713
+edges	1799303
+length	50876727
+node-id-range	98534079:100269791
+	Command being timed: "bash -c vg stats -z -l -r 1kg_NA12878_gencode100_22.pg"
+	User time (seconds): 0.92
+	System time (seconds): 0.31
+	Percent of CPU this job got: 108%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 192340
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5449
+	Voluntary context switches: 25341
+	Involuntary context switches: 2
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Parsing haplotype GBWT index file ...
+[vg rna] Graph and GBWT index parsed in 1.14009 seconds, 0.208153 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 3887 transcripts parsed, and graph augmented (no novel exon boundaries) in 3.2033 seconds, 0.924454 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 6857 haplotype-specfic transcripts projected in 6.13109 seconds, 0.991154 GB
+[vg rna] Removing non-transcribed regions ...
+[vg rna] Regions removed in 20.4949 seconds, 0.991154 GB
+[vg rna] Adding reference transcripts as embedded paths in the splice graph ...
+[vg rna] 3887 paths added in 0.512276 seconds, 0.991154 GB
+[vg rna] Writing transcripts as bidirectional threads to GBWT index file ...
+[vg rna] Writing transcripts as sequences to fasta file ...
+[vg rna] Writing origin info on transcripts to tsv file ...
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph and 5644 transcripts written in 3.63328 seconds, 1.16394 GB
+	Command being timed: "bash -c vg rna -p -t 4 -d -o -r -g -n 22.gtf -l 1kg_NA12878_exons_22.gbwt -b 1kg_NA12878_gencode100_genes_22.gbwt -f 1kg_NA12878_gencode100_genes_22.fa -i 1kg_NA12878_gencode100_genes_22.txt 1kg_NA12878_gencode100_22.pg > 1kg_NA12878_gencode100_genes_22.pg"
+	User time (seconds): 42.35
+	System time (seconds): 4.16
+	Percent of CPU this job got: 132%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:35.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1220484
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 128006
+	Voluntary context switches: 320231
+	Involuntary context switches: 140
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 134600
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	119382
+edges	94026
+length	3132822
+node-id-range	98869585:100269791
+	Command being timed: "bash -c vg stats -z -l -r 1kg_NA12878_gencode100_genes_22.pg"
+	User time (seconds): 0.08
+	System time (seconds): 0.11
+	Percent of CPU this job got: 125%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 111108
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2660
+	Voluntary context switches: 12163
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip 1kg_NA12878_gencode100_genes_22.fa; gzip 1kg_NA12878_gencode100_genes_22.txt"
+	User time (seconds): 0.80
+	System time (seconds): 0.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.81
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3172
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 496
+	Voluntary context switches: 5
+	Involuntary context switches: 9
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 4024
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_NA12878_gencode100_genes_22.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_gencode100_genes/22/1kg_NA12878_gencode100_genes_22.txt.gz
+upload: ./1kg_NA12878_gencode100_genes_22.fa.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_gencode100_genes/22/1kg_NA12878_gencode100_genes_22.fa.gz
+upload: ./1kg_NA12878_gencode100_genes_22.gbwt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_gencode100_genes/22/1kg_NA12878_gencode100_genes_22.gbwt
+upload: ./1kg_NA12878_gencode100_genes_22.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_gencode100_genes/22/1kg_NA12878_gencode100_genes_22.pg
+---

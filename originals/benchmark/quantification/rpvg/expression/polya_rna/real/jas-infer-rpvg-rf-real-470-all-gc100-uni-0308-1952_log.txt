@@ -1,0 +1,118 @@
+---
+jas-infer-rpvg-rf-real-470-all-gc100-uni-0308-1952
+TIME=20210308-1952 IMAGE=quay.io/jsibbesen/rpvg-s3script:rpvg-a7a79697-s9 MEMORY=104 CPU=24 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/rpvg/expression/polya_rna/real/infer_expression.sh
+CPU=24 GRAPH=1kg_all_af001_gencode100 TRANSCRIPTS=1kg_all_af001_gencode100_unidi REAL=SRR1153470 SEED=622797 MAPPER=mpmap QUANTER=rpvg_strand
+---
+Completed 2.7 KiB/2.7 KiB (43.7 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/rpvg/expression/polya_rna/real/infer_expression.sh to ./infer_expression.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/SRR1153470/mpmap/1kg_all_af001_gencode100/mpmap_1kg_all_af001_gencode100_real_SRR1153470.gamp to ./mpmap_1kg_all_af001_gencode100_real_SRR1153470.gamp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/1kg_all_af001_gencode100.xg to ./1kg_all_af001_gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/1kg_all_af001_gencode100_unidi.gbwt to ./1kg_all_af001_gencode100_unidi.gbwt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/1kg_all_af001_gencode100_unidi.gbwt.ri to ./1kg_all_af001_gencode100_unidi.gbwt.ri
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/13/1kg_all_af001_gencode100_unidi_13.txt.gz to 13/1kg_all_af001_gencode100_unidi_13.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/10/1kg_all_af001_gencode100_unidi_10.txt.gz to 10/1kg_all_af001_gencode100_unidi_10.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/11/1kg_all_af001_gencode100_unidi_11.txt.gz to 11/1kg_all_af001_gencode100_unidi_11.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/14/1kg_all_af001_gencode100_unidi_14.txt.gz to 14/1kg_all_af001_gencode100_unidi_14.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/12/1kg_all_af001_gencode100_unidi_12.txt.gz to 12/1kg_all_af001_gencode100_unidi_12.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/15/1kg_all_af001_gencode100_unidi_15.txt.gz to 15/1kg_all_af001_gencode100_unidi_15.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/18/1kg_all_af001_gencode100_unidi_18.txt.gz to 18/1kg_all_af001_gencode100_unidi_18.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/1/1kg_all_af001_gencode100_unidi_1.txt.gz to 1/1kg_all_af001_gencode100_unidi_1.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/16/1kg_all_af001_gencode100_unidi_16.txt.gz to 16/1kg_all_af001_gencode100_unidi_16.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/20/1kg_all_af001_gencode100_unidi_20.txt.gz to 20/1kg_all_af001_gencode100_unidi_20.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/17/1kg_all_af001_gencode100_unidi_17.txt.gz to 17/1kg_all_af001_gencode100_unidi_17.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/21/1kg_all_af001_gencode100_unidi_21.txt.gz to 21/1kg_all_af001_gencode100_unidi_21.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/22/1kg_all_af001_gencode100_unidi_22.txt.gz to 22/1kg_all_af001_gencode100_unidi_22.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/19/1kg_all_af001_gencode100_unidi_19.txt.gz to 19/1kg_all_af001_gencode100_unidi_19.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/2/1kg_all_af001_gencode100_unidi_2.txt.gz to 2/1kg_all_af001_gencode100_unidi_2.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/4/1kg_all_af001_gencode100_unidi_4.txt.gz to 4/1kg_all_af001_gencode100_unidi_4.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/3/1kg_all_af001_gencode100_unidi_3.txt.gz to 3/1kg_all_af001_gencode100_unidi_3.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/6/1kg_all_af001_gencode100_unidi_6.txt.gz to 6/1kg_all_af001_gencode100_unidi_6.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/5/1kg_all_af001_gencode100_unidi_5.txt.gz to 5/1kg_all_af001_gencode100_unidi_5.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/Y/1kg_all_af001_gencode100_unidi_Y.txt.gz to Y/1kg_all_af001_gencode100_unidi_Y.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/8/1kg_all_af001_gencode100_unidi_8.txt.gz to 8/1kg_all_af001_gencode100_unidi_8.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/7/1kg_all_af001_gencode100_unidi_7.txt.gz to 7/1kg_all_af001_gencode100_unidi_7.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/9/1kg_all_af001_gencode100_unidi_9.txt.gz to 9/1kg_all_af001_gencode100_unidi_9.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/X/1kg_all_af001_gencode100_unidi_X.txt.gz to X/1kg_all_af001_gencode100_unidi_X.txt.gz
+11835580 transcript_info.txt
+	Command being timed: "bash -c zcat */*.txt.gz | grep -v ^Name > transcript_info.txt; wc -l transcript_info.txt"
+	User time (seconds): 104.71
+	System time (seconds): 24.93
+	Percent of CPU this job got: 130%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:39.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3204
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 751
+	Voluntary context switches: 572440
+	Involuntary context switches: 322
+	Swaps: 0
+	File system inputs: 632
+	File system outputs: 38419216
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Running rpvg (commit: a7a79697e235259d0a3eb9643e872b2e8f68705a)
+Random number generator seed: 622797
+Fragment length distribution parameters found in alignment (mean: 268.857, standard deviation: 49.9858)
+
+Loaded graph, GBWT and r-index (36.7326 seconds, 13.5315 GB)
+65696667
+Fragment length distribution parameters re-estimated from alignment paths (mean: 275.742, standard deviation: 43.0066)
+Found alignment paths (4527.38 seconds, 53.7749 GB)
+2530981
+Clustered alignment paths (573.536 seconds, 56.2096 GB)
+Inferred path posterior probabilities and abundances (11996.6 seconds, 91.4243 GB)
+	Command being timed: "bash -c /rpvg/bin/rpvg -t 24 -r 622797 -e rf -i haplotype-transcripts -g 1kg_all_af001_gencode100.xg -p 1kg_all_af001_gencode100_unidi.gbwt -a mpmap_1kg_all_af001_gencode100_real_SRR1153470.gamp -f transcript_info.txt -o rpvg_strand_mpmap_1kg_all_af001_gencode100_unidi_real_SRR1153470"
+	User time (seconds): 215829.99
+	System time (seconds): 832.63
+	Percent of CPU this job got: 1257%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:47:14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 95865288
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 73
+	Minor (reclaiming a frame) page faults: 288122268
+	Voluntary context switches: 17927210
+	Involuntary context switches: 1364716
+	Swaps: 0
+	File system inputs: 47372584
+	File system outputs: 1093560
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip rpvg_strand_mpmap_1kg_all_af001_gencode100_unidi_real_SRR1153470.txt"
+	User time (seconds): 11.19
+	System time (seconds): 0.16
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3060
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5
+	Minor (reclaiming a frame) page faults: 267
+	Voluntary context switches: 6
+	Involuntary context switches: 16
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 115840
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./rpvg_strand_mpmap_1kg_all_af001_gencode100_unidi_real_SRR1153470.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/rpvg/expression/polya_rna/real/SRR1153470/rpvg_strand/1kg_all_af001_gencode100_unidi/rpvg_strand_mpmap_1kg_all_af001_gencode100_unidi_real_SRR1153470.txt.gz
+---

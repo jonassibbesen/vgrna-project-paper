@@ -1,0 +1,75 @@
+---
+jas-infer-exp-kallisto-s-real-t2t1-all-gc100-0223-0825
+TIME=20210223-0825 IMAGE=quay.io/jsibbesen/kallisto-s3script:kallisto-0.46.1-s1 MEMORY=208 CPU=24 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real/infer_expression.sh
+CPU=24 REF=1kg_all_af001_gencode100 REAL=CHM13_rep1 READS_1=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz READS_2=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz SEED=622797 QUANTER=kallisto_strand
+---
+Completed 1.9 KiB/1.9 KiB (16.5 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real/infer_expression.sh to ./infer_expression.sh
+2021-02-23 16:30:12 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz [6473127051/6473127051] -> "reads_1.fq.gz" [1]
+2021-02-23 16:35:43 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz [6810978043/6810978043] -> "reads_2.fq.gz" [1]
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/indexes/1kg_all_af001_gencode100/kallisto_index_1kg_all_af001_gencode100.idx to ./kallisto_index_1kg_all_af001_gencode100.idx
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 11,835,580
+[index] number of k-mers: 241,587,457
+[index] number of equivalence classes: 21,554,104
+[quant] running in paired-end mode
+[quant] will process pair 1: reads_1.fq.gz
+                             reads_2.fq.gz
+[quant] finding pseudoalignments for the reads ... done
+[quant] processed 90,930,105 reads, 55,396,798 reads pseudoaligned
+[quant] estimated average fragment length: 173.172
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 2,615 rounds
+
+	Command being timed: "bash -c kallisto quant -t 24 --seed 622797 --rf-stranded -i kallisto_index_1kg_all_af001_gencode100.idx -o kallisto_strand_1kg_all_af001_gencode100_real_CHM13_rep1 reads_1.fq.gz reads_2.fq.gz"
+	User time (seconds): 118044.08
+	System time (seconds): 2081.72
+	Percent of CPU this job got: 194%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:08:23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 193882980
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 15
+	Minor (reclaiming a frame) page faults: 648247226
+	Voluntary context switches: 72973
+	Involuntary context switches: 370874
+	Swaps: 0
+	File system inputs: 34648
+	File system outputs: 1002848
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip kallisto_strand_1kg_all_af001_gencode100_real_CHM13_rep1/abundance.tsv"
+	User time (seconds): 6.28
+	System time (seconds): 0.19
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3060
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 7
+	Minor (reclaiming a frame) page faults: 274
+	Voluntary context switches: 17
+	Involuntary context switches: 9
+	Swaps: 0
+	File system inputs: 3184
+	File system outputs: 76016
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: kallisto_strand_1kg_all_af001_gencode100_real_CHM13_rep1/run_info.json to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real/CHM13_rep1/kallisto_strand/1kg_all_af001_gencode100/kallisto_strand_1kg_all_af001_gencode100_real_CHM13_rep1/run_info.json
+upload: kallisto_strand_1kg_all_af001_gencode100_real_CHM13_rep1/abundance.tsv.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real/CHM13_rep1/kallisto_strand/1kg_all_af001_gencode100/kallisto_strand_1kg_all_af001_gencode100_real_CHM13_rep1/abundance.tsv.gz
+upload: kallisto_strand_1kg_all_af001_gencode100_real_CHM13_rep1/abundance.h5 to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real/CHM13_rep1/kallisto_strand/1kg_all_af001_gencode100/kallisto_strand_1kg_all_af001_gencode100_real_CHM13_rep1/abundance.h5
+---

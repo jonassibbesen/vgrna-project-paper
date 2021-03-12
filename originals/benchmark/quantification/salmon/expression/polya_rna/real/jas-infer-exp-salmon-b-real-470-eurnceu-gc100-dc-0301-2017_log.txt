@@ -1,0 +1,544 @@
+---
+jas-infer-exp-salmon-b-real-470-eurnceu-gc100-dc-0301-2017
+TIME=20210301-2017 IMAGE=quay.io/jsibbesen/salmon-s3script:salmon-1.2.1-s1 MEMORY=128 CPU=24 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/infer_expression.sh
+CPU=24 REF=1kg_EURnonCEU_af002_gencode100_decoy REAL=SRR1153470 READS_1=s3://vg-k8s/users/jsibbesen/vgrna/data/reads/SRP036136/SRR1153470_1.fastq.gz READS_2=s3://vg-k8s/users/jsibbesen/vgrna/data/reads/SRP036136/SRR1153470_2.fastq.gz QUANTER=salmon_bias
+---
+Completed 1.6 KiB/1.6 KiB (15.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/infer_expression.sh to ./infer_expression.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/reads/SRP036136/SRR1153470_1.fastq.gz to ./reads_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/reads/SRP036136/SRR1153470_2.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/info.json to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/info.json
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/duplicate_clusters.tsv to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/duplicate_clusters.tsv
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/pre_indexing.log to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/pre_indexing.log
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/complete_ref_lens.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/complete_ref_lens.bin
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/ctg_offsets.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/ctg_offsets.bin
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/refAccumLengths.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/refAccumLengths.bin
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/ref_indexing.log to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/ref_indexing.log
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/reflengths.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/reflengths.bin
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/rank.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/rank.bin
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/seq.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/seq.bin
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/versionInfo.json to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/versionInfo.json
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/mphf.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/mphf.bin
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/refseq.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/refseq.bin
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/ctable.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/ctable.bin
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/indexes/1kg_EURnonCEU_af002_gencode100_decoy/salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/pos.bin to salmon_index_1kg_EURnonCEU_af002_gencode100_decoy/pos.bin
+Version Info: Could not resolve upgrade information in the alotted time.
+Check for upgrades manually at https://combine-lab.github.io/salmon
+### salmon (mapping-based) v1.2.1
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ threads ] => { 24 }
+### [ libType ] => { A }
+### [ seqBias ] => { }
+### [ gcBias ] => { }
+### [ index ] => { salmon_index_1kg_EURnonCEU_af002_gencode100_decoy }
+### [ output ] => { salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470 }
+### [ mates1 ] => { reads_1.fq.gz }
+### [ mates2 ] => { reads_2.fq.gz }
+Logs will be written to salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/logs
+[2021-03-02 04:21:23.395] [jointLog] [info] setting maxHashResizeThreads to 24
+[2021-03-02 04:21:23.395] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2021-03-02 04:21:23.395] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2021-03-02 04:21:23.395] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2021-03-02 04:21:23.395] [jointLog] [info] parsing read library format
+[2021-03-02 04:21:23.395] [jointLog] [info] There is 1 library.
+[2021-03-02 04:21:23.443] [jointLog] [info] Loading pufferfish index
+[2021-03-02 04:21:23.443] [jointLog] [info] Loading dense pufferfish index.
+-----------------------------------------
+| Loading contig table | Time = 27.138 s
+-----------------------------------------
+size = 39980855
+-----------------------------------------
+| Loading contig offsets | Time = 92.835 ms
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 8.3934 ms
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 1.1524 s
+-----------------------------------------
+size = 3891427747
+Number of ones: 39980854
+Number of ones per inventory item: 512
+Inventory entries filled: 78088
+-----------------------------------------
+| Loading contig boundaries | Time = 7.0679 s
+-----------------------------------------
+size = 3891427747
+-----------------------------------------
+| Loading sequence | Time = 587.54 ms
+-----------------------------------------
+size = 2692002127
+-----------------------------------------
+| Loading positions | Time = 7.2077 s
+-----------------------------------------
+size = 12982991140
+-----------------------------------------
+| Loading reference sequence | Time = 2.8088 s
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 19.599 ms
+-----------------------------------------
+[2021-03-02 04:22:09.534] [jointLog] [info] done
+[2021-03-02 04:22:09.534] [jointLog] [info] Index contained 2515602 targets
+[2021-03-02 04:23:27.627] [jointLog] [info] Number of decoys : 194
+[2021-03-02 04:23:27.627] [jointLog] [info] First decoy index : 2515401 
+
+
+
+
+[2021-03-02 04:23:30.093] [jointLog] [info] Automatically detected most likely library type as ISR
+[A[32mprocessed[31m 500000 [32mfragments[0m
+hits: 29584129, hits per frag:  65.4406[A[32mprocessed[31m 1000000 [32mfragments[0m
+hits: 59030329, hits per frag:  65.4727[A[32mprocessed[31m 1500000 [32mfragments[0m
+hits: 88476996, hits per frag:  64.1251[A[32mprocessed[31m 2000000 [32mfragments[0m
+hits: 118025199, hits per frag:  60.2516[A[32mprocessed[31m 2500000 [32mfragments[0m
+hits: 147563884, hits per frag:  61.7743[A[32mprocessed[31m 3000000 [32mfragments[0m
+hits: 177062936, hits per frag:  61.1868[A[32mprocessed[31m 3500000 [32mfragments[0m
+hits: 206592900, hits per frag:  59.844[A[32mprocessed[31m 4000000 [32mfragments[0m
+hits: 236129330, hits per frag:  59.7235[A[32mprocessed[31m 4500000 [32mfragments[0m
+hits: 265703683, hits per frag:  60.0719[A[32mprocessed[31m 5000000 [32mfragments[0m
+hits: 295072564, hits per frag:  59.633[A[32mprocessed[31m 5500000 [32mfragments[0m
+hits: 324562822, hits per frag:  59.6176[A[32mprocessed[31m 6000000 [32mfragments[0m
+hits: 354046908, hits per frag:  59.7007[A[32mprocessed[31m 6500000 [32mfragments[0m
+hits: 383495746, hits per frag:  59.8917[A[32mprocessed[31m 7000000 [32mfragments[0m
+hits: 412789601, hits per frag:  59.1908[A[32mprocessed[31m 7500000 [32mfragments[0m
+hits: 442227243, hits per frag:  59.2079[A[32mprocessed[31m 8000000 [32mfragments[0m
+hits: 471667767, hits per frag:  59.5704[A[32mprocessed[31m 8500000 [32mfragments[0m
+hits: 501137517, hits per frag:  59.2331[A[32mprocessed[31m 9000000 [32mfragments[0m
+hits: 530625107, hits per frag:  59.2987[A[32mprocessed[31m 9500000 [32mfragments[0m
+hits: 560159641, hits per frag:  59.3467[A[32mprocessed[31m 10000000 [32mfragments[0m
+hits: 589690433, hits per frag:  59.5069[A[32mprocessed[31m 10500000 [32mfragments[0m
+hits: 619096855, hits per frag:  59.537[A[32mprocessed[31m 11000000 [32mfragments[0m
+hits: 648536982, hits per frag:  59.5294[A[32mprocessed[31m 11500000 [32mfragments[0m
+hits: 678028246, hits per frag:  59.469[A[32mprocessed[31m 12000000 [32mfragments[0m
+hits: 707551450, hits per frag:  59.7495[A[32mprocessed[31m 12500000 [32mfragments[0m
+hits: 736977945, hits per frag:  59.3112[A[32mprocessed[31m 13000000 [32mfragments[0m
+hits: 766349602, hits per frag:  59.1351[A[32mprocessed[31m 13500001 [32mfragments[0m
+hits: 795841643, hits per frag:  59.0452[A[32mprocessed[31m 14000000 [32mfragments[0m
+hits: 825149071, hits per frag:  59.3825[A[32mprocessed[31m 14500000 [32mfragments[0m
+hits: 854688958, hits per frag:  59.03[A[32mprocessed[31m 15000000 [32mfragments[0m
+hits: 884279049, hits per frag:  59.144[A[32mprocessed[31m 15500000 [32mfragments[0m
+hits: 913687453, hits per frag:  59.2597[A[32mprocessed[31m 16000000 [32mfragments[0m
+hits: 943204097, hits per frag:  59.4081[A[32mprocessed[31m 16500000 [32mfragments[0m
+hits: 972641521, hits per frag:  59.0377[A[32mprocessed[31m 17000000 [32mfragments[0m
+hits: 1002172608, hits per frag:  59.0673[A[32mprocessed[31m 17500000 [32mfragments[0m
+hits: 1031577374, hits per frag:  59.0394[A[32mprocessed[31m 18000000 [32mfragments[0m
+hits: 1060958639, hits per frag:  59.2285[A[32mprocessed[31m 18500000 [32mfragments[0m
+hits: 1090415514, hits per frag:  59.1008[A[32mprocessed[31m 19000000 [32mfragments[0m
+hits: 1119831912, hits per frag:  58.997[A[32mprocessed[31m 19500001 [32mfragments[0m
+hits: 1149206511, hits per frag:  59.1578[A[32mprocessed[31m 20000000 [32mfragments[0m
+hits: 1178704218, hits per frag:  59.0971[A[32mprocessed[31m 20500000 [32mfragments[0m
+hits: 1208216612, hits per frag:  59.2069[A[32mprocessed[31m 21000000 [32mfragments[0m
+hits: 1237694041, hits per frag:  59.1422[A[32mprocessed[31m 21500000 [32mfragments[0m
+hits: 1267057414, hits per frag:  59.2031[A[32mprocessed[31m 22000000 [32mfragments[0m
+hits: 1296501230, hits per frag:  59.2049[A[32mprocessed[31m 22500000 [32mfragments[0m
+hits: 1325911982, hits per frag:  58.9924[A[32mprocessed[31m 23000000 [32mfragments[0m
+hits: 1355314817, hits per frag:  59.2242[A[32mprocessed[31m 23500000 [32mfragments[0m
+hits: 1384736747, hits per frag:  59.0354[A[32mprocessed[31m 24000000 [32mfragments[0m
+hits: 1414061902, hits per frag:  59.0702[A[32mprocessed[31m 24500000 [32mfragments[0m
+hits: 1443407225, hits per frag:  59.1767[A[32mprocessed[31m 25000000 [32mfragments[0m
+hits: 1472744425, hits per frag:  59.148[A[32mprocessed[31m 25500000 [32mfragments[0m
+hits: 1502142552, hits per frag:  59.0786[A[32mprocessed[31m 26000000 [32mfragments[0m
+hits: 1531542673, hits per frag:  58.9764[A[32mprocessed[31m 26500000 [32mfragments[0m
+hits: 1560801460, hits per frag:  58.9443[A[32mprocessed[31m 27000000 [32mfragments[0m
+hits: 1590106161, hits per frag:  59.0119[A[32mprocessed[31m 27500000 [32mfragments[0m
+hits: 1619263638, hits per frag:  59.1025[A[32mprocessed[31m 28000000 [32mfragments[0m
+hits: 1648608646, hits per frag:  58.9774[A[32mprocessed[31m 28500000 [32mfragments[0m
+hits: 1677706404, hits per frag:  58.8872[A[32mprocessed[31m 29000000 [32mfragments[0m
+hits: 1707245365, hits per frag:  59.0694[A[32mprocessed[31m 29500000 [32mfragments[0m
+hits: 1736791466, hits per frag:  59.1006[A[32mprocessed[31m 30000000 [32mfragments[0m
+hits: 1766345463, hits per frag:  58.9533[A[32mprocessed[31m 30500000 [32mfragments[0m
+hits: 1795859951, hits per frag:  58.9885[A[32mprocessed[31m 31000001 [32mfragments[0m
+hits: 1825356069, hits per frag:  59.0163[A[32mprocessed[31m 31500000 [32mfragments[0m
+hits: 1854815488, hits per frag:  58.9726[A[32mprocessed[31m 32000000 [32mfragments[0m
+hits: 1884138331, hits per frag:  59.0434[A[32mprocessed[31m 32500000 [32mfragments[0m
+hits: 1913528324, hits per frag:  59.037[A[32mprocessed[31m 33000000 [32mfragments[0m
+hits: 1943027735, hits per frag:  59.01[A[32mprocessed[31m 33500000 [32mfragments[0m
+hits: 1972496534, hits per frag:  58.9638[A[32mprocessed[31m 34000000 [32mfragments[0m
+hits: 2001956498, hits per frag:  59.0404[A[32mprocessed[31m 34500000 [32mfragments[0m
+hits: 2031399565, hits per frag:  59.0843[A[32mprocessed[31m 35000000 [32mfragments[0m
+hits: 2060926166, hits per frag:  59.0076[A[32mprocessed[31m 35500000 [32mfragments[0m
+hits: 2090412067, hits per frag:  58.9374[A[32mprocessed[31m 36000000 [32mfragments[0m
+hits: 2119873602, hits per frag:  58.9805[A[32mprocessed[31m 36500000 [32mfragments[0m
+hits: 2149293235, hits per frag:  58.9438[A[32mprocessed[31m 37000001 [32mfragments[0m
+hits: 2178674381, hits per frag:  58.9329[A[32mprocessed[31m 37500000 [32mfragments[0m
+hits: 2208098582, hits per frag:  59.0412[A[32mprocessed[31m 38000000 [32mfragments[0m
+hits: 2237639362, hits per frag:  59.0298[A[32mprocessed[31m 38500000 [32mfragments[0m
+hits: 2267125938, hits per frag:  58.939[A[32mprocessed[31m 39000000 [32mfragments[0m
+hits: 2296456553, hits per frag:  59.0522[A[32mprocessed[31m 39500000 [32mfragments[0m
+hits: 2325883056, hits per frag:  59.0079[A[32mprocessed[31m 40000000 [32mfragments[0m
+hits: 2355326452, hits per frag:  58.942[A[32mprocessed[31m 40500000 [32mfragments[0m
+hits: 2384785079, hits per frag:  59.0071[A[32mprocessed[31m 41000000 [32mfragments[0m
+hits: 2414223429, hits per frag:  58.9841[A[32mprocessed[31m 41500000 [32mfragments[0m
+hits: 2443637394, hits per frag:  58.9698[A[32mprocessed[31m 42000000 [32mfragments[0m
+hits: 2473171927, hits per frag:  58.9475[A[32mprocessed[31m 42500000 [32mfragments[0m
+hits: 2502534533, hits per frag:  59.0177[A[32mprocessed[31m 43000000 [32mfragments[0m
+hits: 2531919245, hits per frag:  58.9955[A[32mprocessed[31m 43500000 [32mfragments[0m
+hits: 2561310506, hits per frag:  59.0363[A[32mprocessed[31m 44000000 [32mfragments[0m
+hits: 2590688253, hits per frag:  58.9258[A[32mprocessed[31m 44500000 [32mfragments[0m
+hits: 2620198373, hits per frag:  59.0003[A[32mprocessed[31m 45000000 [32mfragments[0m
+hits: 2649628142, hits per frag:  58.9912[A[32mprocessed[31m 45500000 [32mfragments[0m
+hits: 2679140535, hits per frag:  58.9073[A[32mprocessed[31m 46000000 [32mfragments[0m
+hits: 2708533140, hits per frag:  59.0213[A[32mprocessed[31m 46500001 [32mfragments[0m
+hits: 2737748715, hits per frag:  58.917[A[32mprocessed[31m 47000000 [32mfragments[0m
+hits: 2767152965, hits per frag:  58.9418[A[32mprocessed[31m 47500000 [32mfragments[0m
+hits: 2796482032, hits per frag:  59.0037[A[32mprocessed[31m 48000000 [32mfragments[0m
+hits: 2825814115, hits per frag:  58.9404[A[32mprocessed[31m 48500000 [32mfragments[0m
+hits: 2855174750, hits per frag:  58.9336[A[32mprocessed[31m 49000000 [32mfragments[0m
+hits: 2884682616, hits per frag:  58.9549[A[32mprocessed[31m 49500000 [32mfragments[0m
+hits: 2914041140, hits per frag:  58.8981[A[32mprocessed[31m 50000000 [32mfragments[0m
+hits: 2943324961, hits per frag:  58.9069[A[32mprocessed[31m 50500000 [32mfragments[0m
+hits: 2972863058, hits per frag:  58.9695[A[32mprocessed[31m 51000000 [32mfragments[0m
+hits: 3002356892, hits per frag:  58.9808[A[32mprocessed[31m 51500000 [32mfragments[0m
+hits: 3031724442, hits per frag:  58.929[A[32mprocessed[31m 52000000 [32mfragments[0m
+hits: 3061140734, hits per frag:  58.9072[A[32mprocessed[31m 52500000 [32mfragments[0m
+hits: 3090522435, hits per frag:  58.9343[A[32mprocessed[31m 53000000 [32mfragments[0m
+hits: 3119924186, hits per frag:  58.9187[A[32mprocessed[31m 53500000 [32mfragments[0m
+hits: 3149239728, hits per frag:  58.9297[A[32mprocessed[31m 54000000 [32mfragments[0m
+hits: 3178531973, hits per frag:  58.9192[A[32mprocessed[31m 54500000 [32mfragments[0m
+hits: 3207972124, hits per frag:  58.9191[A[32mprocessed[31m 55000000 [32mfragments[0m
+hits: 3237274115, hits per frag:  58.9535[A[32mprocessed[31m 55500000 [32mfragments[0m
+hits: 3266557350, hits per frag:  58.9209[A[32mprocessed[31m 56000000 [32mfragments[0m
+hits: 3295586969, hits per frag:  58.9509[A[32mprocessed[31m 56500000 [32mfragments[0m
+hits: 3324692489, hits per frag:  58.8696[A[32mprocessed[31m 57000000 [32mfragments[0m
+hits: 3354039661, hits per frag:  58.8704[A[32mprocessed[31m 57500000 [32mfragments[0m
+hits: 3383472673, hits per frag:  58.8869[A[32mprocessed[31m 58000000 [32mfragments[0m
+hits: 3412995344, hits per frag:  58.9069[A[32mprocessed[31m 58500000 [32mfragments[0m
+hits: 3442600650, hits per frag:  58.9619[A[32mprocessed[31m 59000000 [32mfragments[0m
+hits: 3472128280, hits per frag:  58.9733[A[32mprocessed[31m 59500000 [32mfragments[0m
+hits: 3501724333, hits per frag:  58.9587[A[32mprocessed[31m 60000000 [32mfragments[0m
+hits: 3531258527, hits per frag:  58.9627[A[32mprocessed[31m 60500000 [32mfragments[0m
+hits: 3560610132, hits per frag:  58.8824[A[32mprocessed[31m 61000000 [32mfragments[0m
+hits: 3590135342, hits per frag:  58.8856[A[32mprocessed[31m 61500000 [32mfragments[0m
+hits: 3619769745, hits per frag:  58.9162[A[32mprocessed[31m 62000000 [32mfragments[0m
+hits: 3649280476, hits per frag:  58.9292[A[32mprocessed[31m 62500000 [32mfragments[0m
+hits: 3678868375, hits per frag:  58.9605[A[32mprocessed[31m 63000000 [32mfragments[0m
+hits: 3708391840, hits per frag:  58.9461[A[32mprocessed[31m 63500001 [32mfragments[0m
+hits: 3737999865, hits per frag:  58.9552[A[32mprocessed[31m 64000000 [32mfragments[0m
+hits: 3767376002, hits per frag:  58.9275[A[32mprocessed[31m 64500001 [32mfragments[0m
+hits: 3796921903, hits per frag:  58.936[A[32mprocessed[31m 65000000 [32mfragments[0m
+hits: 3826429829, hits per frag:  58.9713[A[32mprocessed[31m 65500001 [32mfragments[0m
+hits: 3855873971, hits per frag:  58.895[A[32mprocessed[31m 66000000 [32mfragments[0m
+hits: 3885371544, hits per frag:  58.8948[A[32mprocessed[31m 66500000 [32mfragments[0m
+hits: 3914910100, hits per frag:  58.8941[A[32mprocessed[31m 67000000 [32mfragments[0m
+hits: 3944547370, hits per frag:  58.9252[A[32mprocessed[31m 67500000 [32mfragments[0m
+hits: 3973924346, hits per frag:  58.9516[A[32mprocessed[31m 68000001 [32mfragments[0m
+hits: 4003333649, hits per frag:  58.9598[A[32mprocessed[31m 68500000 [32mfragments[0m
+hits: 4032834871, hits per frag:  58.8949[A[32mprocessed[31m 69000000 [32mfragments[0m
+hits: 4062296611, hits per frag:  58.9097[A[32mprocessed[31m 69500000 [32mfragments[0m
+hits: 4091781856, hits per frag:  58.9554[A[32mprocessed[31m 70000000 [32mfragments[0m
+hits: 4121447841, hits per frag:  58.8954[A[32mprocessed[31m 70500001 [32mfragments[0m
+hits: 4150984847, hits per frag:  58.9307[A[32mprocessed[31m 71000000 [32mfragments[0m
+hits: 4180460282, hits per frag:  58.898[A[32mprocessed[31m 71500000 [32mfragments[0m
+hits: 4209867683, hits per frag:  58.9504[A[32mprocessed[31m 72000000 [32mfragments[0m
+hits: 4239394715, hits per frag:  58.931[A[32mprocessed[31m 72500000 [32mfragments[0m
+hits: 4268892995, hits per frag:  58.9346[A[32mprocessed[31m 73000000 [32mfragments[0m
+hits: 4298460136, hits per frag:  58.9238[A[32mprocessed[31m 73500000 [32mfragments[0m
+hits: 4327857860, hits per frag:  58.9029[A[32mprocessed[31m 74000000 [32mfragments[0m
+hits: 4357368495, hits per frag:  58.9595[A[32mprocessed[31m 74500000 [32mfragments[0m
+hits: 4386810299, hits per frag:  58.9159[A[32mprocessed[31m 75000000 [32mfragments[0m
+hits: 4416230343, hits per frag:  58.8976[A[32mprocessed[31m 75500000 [32mfragments[0m
+hits: 4445701949, hits per frag:  58.9304[A[32mprocessed[31m 76000000 [32mfragments[0m
+hits: 4475188022, hits per frag:  58.9034[A[32mprocessed[31m 76500000 [32mfragments[0m
+hits: 4504652120, hits per frag:  58.966[A[32mprocessed[31m 77000000 [32mfragments[0m
+hits: 4534030444, hits per frag:  58.9223[A[32mprocessed[31m 77500000 [32mfragments[0m
+hits: 4563603829, hits per frag:  58.9366[A[32mprocessed[31m 78000000 [32mfragments[0m
+hits: 4593017411, hits per frag:  58.953[A[32mprocessed[31m 78500000 [32mfragments[0m
+hits: 4622389080, hits per frag:  58.9633[A[32mprocessed[31m 79000000 [32mfragments[0m
+hits: 4651888954, hits per frag:  58.9374[A[32mprocessed[31m 79500000 [32mfragments[0m
+hits: 4681416498, hits per frag:  58.966[A[32mprocessed[31m 80000000 [32mfragments[0m
+hits: 4710894932, hits per frag:  58.9564[A[32mprocessed[31m 80500000 [32mfragments[0m
+hits: 4740306462, hits per frag:  58.9032[A[32mprocessed[31m 81000000 [32mfragments[0m
+hits: 4769865064, hits per frag:  58.931[A[32mprocessed[31m 81500000 [32mfragments[0m
+hits: 4799353728, hits per frag:  58.9264[A[32mprocessed[31m 82000000 [32mfragments[0m
+hits: 4828952397, hits per frag:  58.9719[A[32mprocessed[31m 82500000 [32mfragments[0m
+hits: 4858235595, hits per frag:  58.9022[A[32mprocessed[31m 83000000 [32mfragments[0m
+hits: 4887691597, hits per frag:  58.918[A[32mprocessed[31m 83500000 [32mfragments[0m
+hits: 4917084174, hits per frag:  58.9175[A[32mprocessed[31m 84000000 [32mfragments[0m
+hits: 4946675237, hits per frag:  58.9088[A[32mprocessed[31m 84500000 [32mfragments[0m
+hits: 4976067276, hits per frag:  58.9165[A[32mprocessed[31m 85000000 [32mfragments[0m
+hits: 5005316966, hits per frag:  58.9431[A[32mprocessed[31m 85500000 [32mfragments[0m
+hits: 5034612902, hits per frag:  58.9054[A[32mprocessed[31m 86000000 [32mfragments[0m
+hits: 5064046421, hits per frag:  58.9312[A[32mprocessed[31m 86500000 [32mfragments[0m
+hits: 5093515636, hits per frag:  58.9027[A[32mprocessed[31m 87000000 [32mfragments[0m
+hits: 5123106578, hits per frag:  58.9563[A[32mprocessed[31m 87500001 [32mfragments[0m
+hits: 5152670039, hits per frag:  58.9064[A[32mprocessed[31m 88000000 [32mfragments[0m
+hits: 5182271601, hits per frag:  58.9483[A[32mprocessed[31m 88500000 [32mfragments[0m
+hits: 5211896577, hits per frag:  58.9393[A[32mprocessed[31m 89000000 [32mfragments[0m
+hits: 5241449128, hits per frag:  58.9108[A[32mprocessed[31m 89500000 [32mfragments[0m
+hits: 5270967053, hits per frag:  58.9294[A[32mprocessed[31m 90000000 [32mfragments[0m
+hits: 5300515187, hits per frag:  58.9271[A[32mprocessed[31m 90500000 [32mfragments[0m
+hits: 5330131841, hits per frag:  58.9507[A[32mprocessed[31m 91000000 [32mfragments[0m
+hits: 5359620886, hits per frag:  58.9135[A[32mprocessed[31m 91500000 [32mfragments[0m
+hits: 5389123870, hits per frag:  58.9239[A[32mprocessed[31m 92000000 [32mfragments[0m
+hits: 5418728972, hits per frag:  58.9529[A[32mprocessed[31m 92500000 [32mfragments[0m
+hits: 5448194680, hits per frag:  58.938[A[32mprocessed[31m 93000000 [32mfragments[0m
+hits: 5477549315, hits per frag:  58.9344[A[32mprocessed[31m 93500000 [32mfragments[0m
+hits: 5507045398, hits per frag:  58.9391[A[32mprocessed[31m 94000000 [32mfragments[0m
+hits: 5536562984, hits per frag:  58.9537[A[32mprocessed[31m 94500000 [32mfragments[0m
+hits: 5566031565, hits per frag:  58.9673[A[32mprocessed[31m 95000000 [32mfragments[0m
+hits: 5595629825, hits per frag:  58.9618[A[32mprocessed[31m 95500000 [32mfragments[0m
+hits: 5625139858, hits per frag:  58.9674[A[32mprocessed[31m 96000000 [32mfragments[0m
+hits: 5654543141, hits per frag:  58.9595[A[32mprocessed[31m 96500000 [32mfragments[0m
+hits: 5683988310, hits per frag:  58.9706[A[32mprocessed[31m 97000000 [32mfragments[0m
+hits: 5713387992, hits per frag:  58.9147[A[32mprocessed[31m 97500000 [32mfragments[0m
+hits: 5743028859, hits per frag:  58.9535[A[32mprocessed[31m 98000000 [32mfragments[0m
+hits: 5772479728, hits per frag:  58.977[A[32mprocessed[31m 98500000 [32mfragments[0m
+hits: 5801847618, hits per frag:  58.9392[A[32mprocessed[31m 99000000 [32mfragments[0m
+hits: 5831276356, hits per frag:  58.944[A[32mprocessed[31m 99500000 [32mfragments[0m
+hits: 5860837772, hits per frag:  58.9195[A[32mprocessed[31m 100000000 [32mfragments[0m
+hits: 5890423347, hits per frag:  58.961[A[32mprocessed[31m 100500001 [32mfragments[0m
+hits: 5919834698, hits per frag:  58.9354[A[32mprocessed[31m 101000000 [32mfragments[0m
+hits: 5949265959, hits per frag:  58.9625[A[32mprocessed[31m 101500000 [32mfragments[0m
+hits: 5978843511, hits per frag:  58.9383[A[32mprocessed[31m 102000000 [32mfragments[0m
+hits: 6008307431, hits per frag:  58.93[A[32mprocessed[31m 102500000 [32mfragments[0m
+hits: 6037683875, hits per frag:  58.9454[A[32mprocessed[31m 103000000 [32mfragments[0m
+hits: 6067146927, hits per frag:  58.9301[A[32mprocessed[31m 103500000 [32mfragments[0m
+hits: 6096682239, hits per frag:  58.9183[A[32mprocessed[31m 104000000 [32mfragments[0m
+hits: 6126104366, hits per frag:  58.9485[A[32mprocessed[31m 104500000 [32mfragments[0m
+hits: 6155442091, hits per frag:  58.9237[A[32mprocessed[31m 105000000 [32mfragments[0m
+hits: 6184866854, hits per frag:  58.9219[A[32mprocessed[31m 105500000 [32mfragments[0m
+hits: 6214268807, hits per frag:  58.9598[A[32mprocessed[31m 106000000 [32mfragments[0m
+hits: 6243631852, hits per frag:  58.9181[A[32mprocessed[31m 106500000 [32mfragments[0m
+hits: 6273045169, hits per frag:  58.9212[A[32mprocessed[31m 107000000 [32mfragments[0m
+hits: 6302416095, hits per frag:  58.9126[A[32mprocessed[31m 107500000 [32mfragments[0m
+hits: 6331932707, hits per frag:  58.9182[A[32mprocessed[31m 108000000 [32mfragments[0m
+hits: 6361295682, hits per frag:  58.9334[A[32mprocessed[31m 108500000 [32mfragments[0m
+hits: 6390825175, hits per frag:  58.9609[A[32mprocessed[31m 109000000 [32mfragments[0m
+hits: 6420274554, hits per frag:  58.9209[A[32mprocessed[31m 109500000 [32mfragments[0m
+hits: 6449886100, hits per frag:  58.9559[A[32mprocessed[31m 110000000 [32mfragments[0m
+hits: 6479252464, hits per frag:  58.9211[A[32mprocessed[31m 110500000 [32mfragments[0m
+hits: 6508758285, hits per frag:  58.931[A[32mprocessed[31m 111000000 [32mfragments[0m
+hits: 6538198111, hits per frag:  58.9236[A[32mprocessed[31m 111500000 [32mfragments[0m
+hits: 6567614887, hits per frag:  58.9413[A[32mprocessed[31m 112000000 [32mfragments[0m
+hits: 6596969868, hits per frag:  58.9322[A[32mprocessed[31m 112500000 [32mfragments[0m
+hits: 6626456329, hits per frag:  58.9583[A[32mprocessed[31m 113000000 [32mfragments[0m
+hits: 6655936372, hits per frag:  58.9515[A[32mprocessed[31m 113500000 [32mfragments[0m
+hits: 6685342933, hits per frag:  58.9333[A[32mprocessed[31m 114000000 [32mfragments[0m
+hits: 6714417962, hits per frag:  58.9201[A[32mprocessed[31m 114500000 [32mfragments[0m
+hits: 6742970639, hits per frag:  58.9387[A[32mprocessed[31m 115000000 [32mfragments[0m
+hits: 6771787437, hits per frag:  58.9352[2021-03-02 04:49:24.999] [jointLog] [info] Thread saw mini-batch with a maximum of 1.54% zero probability fragments
+[2021-03-02 04:49:25.002] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2021-03-02 04:49:25.014] [jointLog] [info] Thread saw mini-batch with a maximum of 1.62% zero probability fragments
+[2021-03-02 04:49:25.039] [jointLog] [info] Thread saw mini-batch with a maximum of 1.46% zero probability fragments
+[2021-03-02 04:49:25.050] [jointLog] [info] Thread saw mini-batch with a maximum of 1.60% zero probability fragments
+[2021-03-02 04:49:25.112] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2021-03-02 04:49:25.128] [jointLog] [info] Thread saw mini-batch with a maximum of 1.52% zero probability fragments
+[2021-03-02 04:49:25.384] [jointLog] [info] Thread saw mini-batch with a maximum of 1.58% zero probability fragments
+[2021-03-02 04:49:25.450] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2021-03-02 04:49:25.520] [jointLog] [info] Thread saw mini-batch with a maximum of 1.52% zero probability fragments
+[2021-03-02 04:49:25.535] [jointLog] [info] Thread saw mini-batch with a maximum of 1.44% zero probability fragments
+[2021-03-02 04:49:25.535] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2021-03-02 04:49:25.742] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2021-03-02 04:49:25.745] [jointLog] [info] Thread saw mini-batch with a maximum of 1.50% zero probability fragments
+[2021-03-02 04:49:25.781] [jointLog] [info] Thread saw mini-batch with a maximum of 1.54% zero probability fragments
+[2021-03-02 04:49:25.796] [jointLog] [info] Thread saw mini-batch with a maximum of 1.44% zero probability fragments
+[2021-03-02 04:49:25.830] [jointLog] [info] Thread saw mini-batch with a maximum of 1.46% zero probability fragments
+[2021-03-02 04:49:25.851] [jointLog] [info] Thread saw mini-batch with a maximum of 1.50% zero probability fragments
+[2021-03-02 04:49:25.877] [jointLog] [info] Thread saw mini-batch with a maximum of 1.46% zero probability fragments
+[2021-03-02 04:49:25.890] [jointLog] [info] Thread saw mini-batch with a maximum of 1.48% zero probability fragments
+[2021-03-02 04:49:25.921] [jointLog] [info] Thread saw mini-batch with a maximum of 1.52% zero probability fragments
+[2021-03-02 04:49:25.982] [jointLog] [info] Thread saw mini-batch with a maximum of 1.40% zero probability fragments
+[2021-03-02 04:49:26.087] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2021-03-02 04:49:26.289] [jointLog] [info] Thread saw mini-batch with a maximum of 1.46% zero probability fragments
+
+
+
+
+[2021-03-02 04:49:34.926] [jointLog] [info] Computed 1889535 rich equivalence classes for further processing
+[2021-03-02 04:49:34.926] [jointLog] [info] Counted 94363539 total reads in the equivalence classes 
+
+
+
+
+[2021-03-02 04:49:35.400] [jointLog] [info] Number of mappings discarded because of alignment score : 574756776
+[2021-03-02 04:49:35.400] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 11891662
+[2021-03-02 04:49:35.400] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 8583748
+[2021-03-02 04:49:35.400] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 578092
+[2021-03-02 04:49:35.400] [jointLog] [info] Mapping rate = 81.7993%
+
+[2021-03-02 04:49:35.400] [jointLog] [info] finished quantifyLibrary()
+[2021-03-02 04:49:35.400] [jointLog] [info] Starting optimizer
+[2021-03-02 04:49:38.904] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2021-03-02 04:49:39.103] [jointLog] [info] iteration = 0 | max rel diff. = 37.458
+[2021-03-02 04:49:40.966] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2021-03-02 04:50:46.112] [jointLog] [info] Computed expected counts (for bias correction)
+[2021-03-02 04:50:46.112] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2021-03-02 04:50:52.593] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2021-03-02 04:50:59.745] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2021-03-02 04:51:07.549] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2021-03-02 04:51:14.735] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2021-03-02 04:51:21.971] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2021-03-02 04:51:29.203] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2021-03-02 04:51:36.874] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2021-03-02 04:51:46.625] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2021-03-02 04:51:56.763] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2021-03-02 04:52:04.706] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2021-03-02 04:52:21.048] [jointLog] [info] iteration = 100 | max rel diff. = 20.9369
+[2021-03-02 04:52:38.557] [jointLog] [info] iteration = 200 | max rel diff. = 20.6917
+[2021-03-02 04:52:56.058] [jointLog] [info] iteration = 300 | max rel diff. = 20.3118
+[2021-03-02 04:53:13.635] [jointLog] [info] iteration = 400 | max rel diff. = 18.2347
+[2021-03-02 04:53:31.238] [jointLog] [info] iteration = 500 | max rel diff. = 17.2572
+[2021-03-02 04:53:48.801] [jointLog] [info] iteration = 600 | max rel diff. = 20.9536
+[2021-03-02 04:54:10.366] [jointLog] [info] iteration = 700 | max rel diff. = 13.3185
+[2021-03-02 04:54:28.676] [jointLog] [info] iteration = 800 | max rel diff. = 20.3662
+[2021-03-02 04:54:46.405] [jointLog] [info] iteration = 900 | max rel diff. = 20.8173
+[2021-03-02 04:55:03.854] [jointLog] [info] iteration = 1000 | max rel diff. = 11.1945
+[2021-03-02 04:55:21.864] [jointLog] [info] iteration = 1100 | max rel diff. = 19.9756
+[2021-03-02 04:55:39.458] [jointLog] [info] iteration = 1200 | max rel diff. = 20.4703
+[2021-03-02 04:55:57.237] [jointLog] [info] iteration = 1300 | max rel diff. = 13.0845
+[2021-03-02 04:56:16.321] [jointLog] [info] iteration = 1400 | max rel diff. = 9.9159
+[2021-03-02 04:56:36.364] [jointLog] [info] iteration = 1500 | max rel diff. = 3.03446
+[2021-03-02 04:56:53.913] [jointLog] [info] iteration = 1600 | max rel diff. = 7.53061
+[2021-03-02 04:57:11.784] [jointLog] [info] iteration = 1700 | max rel diff. = 11.8408
+[2021-03-02 04:57:29.430] [jointLog] [info] iteration = 1800 | max rel diff. = 9.45645
+[2021-03-02 04:57:47.224] [jointLog] [info] iteration = 1900 | max rel diff. = 6.02797
+[2021-03-02 04:58:04.943] [jointLog] [info] iteration = 2000 | max rel diff. = 6.50547
+[2021-03-02 04:58:22.863] [jointLog] [info] iteration = 2100 | max rel diff. = 7.6482
+[2021-03-02 04:58:43.739] [jointLog] [info] iteration = 2200 | max rel diff. = 8.01946
+[2021-03-02 04:59:01.653] [jointLog] [info] iteration = 2300 | max rel diff. = 20.6673
+[2021-03-02 04:59:19.384] [jointLog] [info] iteration = 2400 | max rel diff. = 7.36554
+[2021-03-02 04:59:37.226] [jointLog] [info] iteration = 2500 | max rel diff. = 7.41739
+[2021-03-02 04:59:54.826] [jointLog] [info] iteration = 2600 | max rel diff. = 19.8232
+[2021-03-02 05:00:12.423] [jointLog] [info] iteration = 2700 | max rel diff. = 17.0406
+[2021-03-02 05:00:30.413] [jointLog] [info] iteration = 2800 | max rel diff. = 1.04123
+[2021-03-02 05:00:49.941] [jointLog] [info] iteration = 2900 | max rel diff. = 8.4937
+[2021-03-02 05:01:09.664] [jointLog] [info] iteration = 3000 | max rel diff. = 2.35888
+[2021-03-02 05:01:27.598] [jointLog] [info] iteration = 3100 | max rel diff. = 0.730839
+[2021-03-02 05:01:45.011] [jointLog] [info] iteration = 3200 | max rel diff. = 12.8298
+[2021-03-02 05:02:02.679] [jointLog] [info] iteration = 3300 | max rel diff. = 1.89149
+[2021-03-02 05:02:20.281] [jointLog] [info] iteration = 3400 | max rel diff. = 11.1532
+[2021-03-02 05:02:37.755] [jointLog] [info] iteration = 3500 | max rel diff. = 13.0511
+[2021-03-02 05:02:55.490] [jointLog] [info] iteration = 3600 | max rel diff. = 0.593921
+[2021-03-02 05:03:17.009] [jointLog] [info] iteration = 3700 | max rel diff. = 14.8026
+[2021-03-02 05:03:34.858] [jointLog] [info] iteration = 3800 | max rel diff. = 0.903083
+[2021-03-02 05:03:52.533] [jointLog] [info] iteration = 3900 | max rel diff. = 1.18888
+[2021-03-02 05:04:10.291] [jointLog] [info] iteration = 4000 | max rel diff. = 2.36114
+[2021-03-02 05:04:27.950] [jointLog] [info] iteration = 4100 | max rel diff. = 2.43062
+[2021-03-02 05:04:45.720] [jointLog] [info] iteration = 4200 | max rel diff. = 0.463231
+[2021-03-02 05:05:03.300] [jointLog] [info] iteration = 4300 | max rel diff. = 1.52527
+[2021-03-02 05:05:23.606] [jointLog] [info] iteration = 4400 | max rel diff. = 1.26863
+[2021-03-02 05:05:41.715] [jointLog] [info] iteration = 4500 | max rel diff. = 1.79947
+[2021-03-02 05:05:59.153] [jointLog] [info] iteration = 4600 | max rel diff. = 0.75214
+[2021-03-02 05:06:16.831] [jointLog] [info] iteration = 4700 | max rel diff. = 13.9786
+[2021-03-02 05:06:34.605] [jointLog] [info] iteration = 4800 | max rel diff. = 0.653119
+[2021-03-02 05:06:52.519] [jointLog] [info] iteration = 4900 | max rel diff. = 0.577287
+[2021-03-02 05:07:10.066] [jointLog] [info] iteration = 5000 | max rel diff. = 0.7398
+[2021-03-02 05:07:28.361] [jointLog] [info] iteration = 5100 | max rel diff. = 0.36685
+[2021-03-02 05:07:49.565] [jointLog] [info] iteration = 5200 | max rel diff. = 0.285913
+[2021-03-02 05:08:07.573] [jointLog] [info] iteration = 5300 | max rel diff. = 1.73145
+[2021-03-02 05:08:25.609] [jointLog] [info] iteration = 5400 | max rel diff. = 0.244565
+[2021-03-02 05:08:44.031] [jointLog] [info] iteration = 5500 | max rel diff. = 1.98502
+[2021-03-02 05:09:02.189] [jointLog] [info] iteration = 5600 | max rel diff. = 1.61905
+[2021-03-02 05:09:19.873] [jointLog] [info] iteration = 5700 | max rel diff. = 4.54482
+[2021-03-02 05:09:38.409] [jointLog] [info] iteration = 5800 | max rel diff. = 0.42021
+[2021-03-02 05:09:59.537] [jointLog] [info] iteration = 5900 | max rel diff. = 0.481462
+[2021-03-02 05:10:17.491] [jointLog] [info] iteration = 6000 | max rel diff. = 0.151884
+[2021-03-02 05:10:35.477] [jointLog] [info] iteration = 6100 | max rel diff. = 0.139807
+[2021-03-02 05:10:53.540] [jointLog] [info] iteration = 6200 | max rel diff. = 0.341987
+[2021-03-02 05:11:11.071] [jointLog] [info] iteration = 6300 | max rel diff. = 1.6417
+[2021-03-02 05:11:28.906] [jointLog] [info] iteration = 6400 | max rel diff. = 1.05581
+[2021-03-02 05:11:46.721] [jointLog] [info] iteration = 6500 | max rel diff. = 0.211556
+[2021-03-02 05:12:06.799] [jointLog] [info] iteration = 6600 | max rel diff. = 9.29239
+[2021-03-02 05:12:25.619] [jointLog] [info] iteration = 6700 | max rel diff. = 0.464899
+[2021-03-02 05:12:43.912] [jointLog] [info] iteration = 6800 | max rel diff. = 1.04873
+[2021-03-02 05:13:01.306] [jointLog] [info] iteration = 6900 | max rel diff. = 0.885028
+[2021-03-02 05:13:18.783] [jointLog] [info] iteration = 7000 | max rel diff. = 0.864536
+[2021-03-02 05:13:35.921] [jointLog] [info] iteration = 7100 | max rel diff. = 0.740035
+[2021-03-02 05:13:53.674] [jointLog] [info] iteration = 7200 | max rel diff. = 0.307686
+[2021-03-02 05:14:11.388] [jointLog] [info] iteration = 7300 | max rel diff. = 0.919828
+[2021-03-02 05:14:32.294] [jointLog] [info] iteration = 7400 | max rel diff. = 0.0597232
+[2021-03-02 05:14:50.083] [jointLog] [info] iteration = 7500 | max rel diff. = 0.129593
+[2021-03-02 05:15:07.579] [jointLog] [info] iteration = 7600 | max rel diff. = 1.67886
+[2021-03-02 05:15:24.917] [jointLog] [info] iteration = 7700 | max rel diff. = 0.518926
+[2021-03-02 05:15:42.202] [jointLog] [info] iteration = 7800 | max rel diff. = 0.586878
+[2021-03-02 05:15:59.758] [jointLog] [info] iteration = 7900 | max rel diff. = 0.165623
+[2021-03-02 05:16:17.729] [jointLog] [info] iteration = 8000 | max rel diff. = 0.406683
+[2021-03-02 05:16:38.451] [jointLog] [info] iteration = 8100 | max rel diff. = 15.5204
+[2021-03-02 05:16:56.271] [jointLog] [info] iteration = 8200 | max rel diff. = 0.0776122
+[2021-03-02 05:17:13.211] [jointLog] [info] iteration = 8300 | max rel diff. = 1.54114
+[2021-03-02 05:17:30.146] [jointLog] [info] iteration = 8400 | max rel diff. = 0.0959985
+[2021-03-02 05:17:47.204] [jointLog] [info] iteration = 8500 | max rel diff. = 0.152346
+[2021-03-02 05:18:04.605] [jointLog] [info] iteration = 8600 | max rel diff. = 0.363711
+[2021-03-02 05:18:22.000] [jointLog] [info] iteration = 8700 | max rel diff. = 0.186489
+[2021-03-02 05:18:38.956] [jointLog] [info] iteration = 8800 | max rel diff. = 0.145023
+[2021-03-02 05:18:59.979] [jointLog] [info] iteration = 8900 | max rel diff. = 1.52216
+[2021-03-02 05:19:17.209] [jointLog] [info] iteration = 9000 | max rel diff. = 0.204256
+[2021-03-02 05:19:34.883] [jointLog] [info] iteration = 9100 | max rel diff. = 0.0471196
+[2021-03-02 05:19:53.305] [jointLog] [info] iteration = 9200 | max rel diff. = 0.135282
+[2021-03-02 05:20:10.883] [jointLog] [info] iteration = 9300 | max rel diff. = 1.08888
+[2021-03-02 05:20:28.409] [jointLog] [info] iteration = 9400 | max rel diff. = 0.198712
+[2021-03-02 05:20:45.892] [jointLog] [info] iteration = 9500 | max rel diff. = 0.149678
+[2021-03-02 05:21:04.589] [jointLog] [info] iteration = 9600 | max rel diff. = 0.100735
+[2021-03-02 05:21:25.005] [jointLog] [info] iteration = 9700 | max rel diff. = 0.31913
+[2021-03-02 05:21:42.620] [jointLog] [info] iteration = 9800 | max rel diff. = 0.269687
+[2021-03-02 05:22:00.128] [jointLog] [info] iteration = 9900 | max rel diff. = 0.271798
+[2021-03-02 05:22:17.489] [jointLog] [info] iteration = 10000 | max rel diff. = 0.12337
+[2021-03-02 05:22:17.737] [jointLog] [info] Finished optimizer
+[2021-03-02 05:22:17.737] [jointLog] [info] writing output 
+
+	Command being timed: "bash -c salmon quant -p 24 -l A --seqBias --gcBias -i salmon_index_1kg_EURnonCEU_af002_gencode100_decoy -o salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470 -1 reads_1.fq.gz -2 reads_2.fq.gz"
+	User time (seconds): 80434.27
+	System time (seconds): 208.60
+	Percent of CPU this job got: 2196%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:01:12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 94472368
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6
+	Minor (reclaiming a frame) page faults: 71086670
+	Voluntary context switches: 5709191
+	Involuntary context switches: 1325415
+	Swaps: 0
+	File system inputs: 7265568
+	File system outputs: 269080
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/quant.sf"
+	User time (seconds): 2.01
+	System time (seconds): 0.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.05
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3168
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 279
+	Voluntary context switches: 12
+	Involuntary context switches: 6
+	Swaps: 0
+	File system inputs: 2216
+	File system outputs: 24128
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/exp3_seq.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/exp3_seq.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/meta_info.json to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/meta_info.json
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/expected_bias.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/expected_bias.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/obs3_seq.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/obs3_seq.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/fld.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/fld.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/exp5_seq.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/exp5_seq.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/obs_gc.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/obs_gc.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/exp_gc.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/exp_gc.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/observed_bias.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/observed_bias.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/observed_bias_3p.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/observed_bias_3p.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/cmd_info.json to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/cmd_info.json
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/lib_format_counts.json to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/lib_format_counts.json
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/obs5_seq.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/obs5_seq.gz
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/libParams/flenDist.txt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/libParams/flenDist.txt
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/logs/salmon_quant.log to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/logs/salmon_quant.log
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/ambig_info.tsv to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/aux_info/ambig_info.tsv
+upload: salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/quant.sf.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/salmon/expression/polya_rna/real/SRR1153470/salmon_bias/1kg_EURnonCEU_af002_gencode100_decoy/salmon_bias_1kg_EURnonCEU_af002_gencode100_decoy_real_SRR1153470/quant.sf.gz
+---

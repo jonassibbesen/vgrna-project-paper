@@ -1,0 +1,89 @@
+---
+jas-prepare-variants-hisat2-all-af001-2-0711-1135
+TIME=20200711-1135 IMAGE=jsibbesen/hisat2-s3script:2.2.0-s2 MEMORY=4 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh
+CPU=1 CHR=2 VARIANTS=1kg_all_af001
+---
+Completed 1.5 KiB/1.5 KiB (22.0 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh to ./prepare_variants.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_af001/2/1kg_all_af001_2.vcf.gz to ./variants.vcf.gz
+Lines   total/split/realigned/skipped:	2641925/20342/7486/0
+	Command being timed: "bash -c bcftools norm -c x -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly.fa variants.vcf.gz > variants_biallelic.vcf"
+	User time (seconds): 510.52
+	System time (seconds): 38.32
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:10.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12844
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6265
+	Voluntary context switches: 7
+	Involuntary context switches: 14869
+	Swaps: 0
+	File system inputs: 1845920
+	File system outputs: 52466872
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2664124
+Warning) ref allele (G) and alt allele (CT in CT) at chr2:678424 are excluded.
+	2:741988	2:1413718Warning) ref allele (A) and alt allele (CC in CC) at chr2:1505507 are excluded.
+Warning) ref allele (G) and alt allele (CC in CC) at chr2:1706004 are excluded.
+	2:2051083	2:2825178	2:3575321	2:4338124	2:5138751Warning) ref allele (A) and alt allele (CT in CT) at chr2:5272566 are excluded.
+	2:5940865	2:6710363	2:7558113	2:8435924	2:9323962	2:10061458	2:10786783	2:11563870	2:12387079Warning) ref allele (AG) and alt allele (T in T) at chr2:12970353 are excluded.
+	2:13292521	2:14113380	2:15002012	2:15848946	2:16701582	2:17692200	2:18525325	2:19536139	2:20399904	2:21172392	2:22159636	2:23115670	2:24054838	2:25087360	2:26108624	2:26962693	2:27816806	2:28830837	2:29611304	2:30463213	2:31231090	2:32197515	2:33053059	2:33740661	2:34350607	2:35068093	2:35807056	2:36570001	2:37290951	2:37997378	2:38704010	2:39588921Warning) ref allele (TC) and alt allele (A in A) at chr2:40244664 are excluded.
+	2:40312682	2:41151127Warning) ref allele (T) and alt allele (GC in GC) at chr2:41744127 are excluded.
+	2:41861476	2:42688335	2:43456874	2:44136285	2:44974575	2:45810824Warning) ref allele (G) and alt allele (TC in TC) at chr2:45988533 are excluded.
+	2:46591611	2:47288373	2:48054059	2:48915267	2:49709459	2:50527856	2:51439897Warning) ref allele (ATTT) and alt allele (C in C) at chr2:52060088 are excluded.
+	2:52191070	2:52861628	2:53589824	2:54447862	2:55241228	2:56065188	2:56817462	2:57554020	2:58526408	2:59558944	2:60451905	2:61396891	2:62376493	2:63657457Warning) ref allele (AAG) and alt allele (T in T) at chr2:63940745 are excluded.
+	2:64642507	2:65513964	2:66425579	2:67354334	2:68190497	2:69000545	2:69904658	2:70716883	2:71475400	2:72399530	2:73490315	2:74370398	2:75212762	2:76010051	2:76782923	2:77535122	2:78331016	2:79190083	2:80011248	2:80885666	2:81763152	2:82724077	2:83660556Warning) ref allele (TG) and alt allele (C in C) at chr2:83839186 are excluded.
+Warning) ref allele (C) and alt allele (AA in AA) at chr2:84590498 are excluded.
+	2:84591641	2:85476746	2:86260308	2:87445695	2:88627807	2:90134485	2:94956254	2:96329764Warning) ref allele (T) and alt allele (AG in AG) at chr2:96476926 are excluded.
+	2:97646509	2:98651650Warning) ref allele (A) and alt allele (GT in GT) at chr2:98667120 are excluded.
+	2:99743238	2:100632793	2:101456260	2:102337070	2:103302667	2:104291830	2:105214595	2:106010152	2:106880780	2:107792209	2:108715977	2:109563332	2:111220463	2:112213557	2:113125852	2:114002232	2:114997325	2:115985918	2:116861719	2:117652056	2:118572462	2:119415917	2:120425483	2:121220118	2:122185335	2:123112124Warning) ref allele (AG) and alt allele (T in T) at chr2:123129763 are excluded.
+	2:123931781	2:124820470	2:125724683	2:126624391	2:127385864	2:128187511	2:129019390	2:129891950Warning) ref allele (TA) and alt allele (G in G) at chr2:130214801 are excluded.
+	2:130730099	2:131485022	2:132226780	2:133103642	2:134035160	2:134940166	2:135985968	2:136875314	2:137729259	2:138652077	2:139552141	2:140424046	2:141202973	2:142037626	2:142987104	2:144082888	2:145340061	2:146356354	2:147590396	2:148672117	2:149673257	2:150685369	2:151559102Warning) ref allele (C) and alt allele (AA in AA) at chr2:152290601 are excluded.
+	2:152510838Warning) ref allele (GATTT) and alt allele (A in A) at chr2:152745552 are excluded.
+	2:153405898	2:154416024	2:155416296	2:156630578	2:158674138	2:159532598	2:160529472	2:161569322	2:162654641	2:163639856	2:164697479Warning) ref allele (T) and alt allele (CA in CA) at chr2:164794759 are excluded.
+	2:165683567	2:166536543	2:167376726	2:168253854	2:169140143	2:169966941	2:170779275	2:171715942	2:172597284	2:173479627	2:174404282	2:175367737	2:176339151	2:177233236	2:178135563	2:178890380	2:179771712	2:180708335	2:181684868	2:182669963	2:183528868	2:184462937	2:185565179	2:186670758	2:187572138	2:188594969Warning) ref allele (CA) and alt allele (G in G) at chr2:189444566 are excluded.
+	2:189607864	2:190575040	2:191563224Warning) ref allele (A) and alt allele (TT in TT) at chr2:192190889 are excluded.
+	2:192542147	2:193696167	2:194693913	2:195594226	2:196491368	2:197521245	2:198574896	2:199732090	2:200825365	2:201724344Warning) ref allele (GC) and alt allele (A in A) at chr2:202005187 are excluded.
+	2:202777749	2:203913370Warning) ref allele (TC) and alt allele (G in G) at chr2:204562842 are excluded.
+	2:204902718	2:205869748	2:206780765	2:207774097	2:208650042	2:209487172	2:210550698	2:211361087	2:212192065	2:213143363	2:214118937	2:215034646	2:215909803	2:216755415	2:217616088	2:218427513	2:219279912Warning) ref allele (G) and alt allele (TTTTT in TTTTT) at chr2:220014587 are excluded.
+	2:220042571	2:220959633	2:221913844	2:222846864	2:223726495	2:224598231	2:225558048Warning) ref allele (CT) and alt allele (A in A) at chr2:226187680 are excluded.
+	2:226567785	2:227419357Warning) ref allele (TC) and alt allele (A in A) at chr2:227773241 are excluded.
+	2:228158588	2:229092566	2:230026315	2:230786904	2:231579462	2:232446366	2:233185107	2:233932064	2:234691956	2:236200211	2:236989453	2:237656639	2:238371735	2:239134145	2:239907059	2:240558423	2:241180668	2:2418650222630494 1kg_all_af001_2.snp
+2698240 1kg_all_af001_2.haplotype
+	Command being timed: "bash -c grep -v '^#' variants_biallelic.vcf | wc -l; hisat2_extract_snps_haplotypes_VCF.py --non-rs Homo_sapiens.GRCh38.dna.primary_assembly.fa variants_biallelic.vcf 1kg_all_af001_2; wc -l 1kg_all_af001_2.snp; wc -l 1kg_all_af001_2.haplotype"
+	User time (seconds): 3084.86
+	System time (seconds): 221.62
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 55:31.95
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3038832
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5962099
+	Voluntary context switches: 3510376
+	Involuntary context switches: 49049
+	Swaps: 0
+	File system inputs: 111300320
+	File system outputs: 396528
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_2.haplotype to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/2/1kg_all_af001_2.haplotype
+upload: ./1kg_all_af001_2.snp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/2/1kg_all_af001_2.snp
+---

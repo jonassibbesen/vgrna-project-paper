@@ -1,0 +1,69 @@
+---
+jas-prepare-variants-hisat2-all-af001-22-0710-2149
+TIME=20200710-2149 IMAGE=jsibbesen/hisat2-s3script:2.2.0-s2 MEMORY=4 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh
+CPU=1 CHR=22 VARIANTS=1kg_all_af001
+---
+Completed 1.5 KiB/1.5 KiB (20.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh to ./prepare_variants.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_af001/22/1kg_all_af001_22.vcf.gz to ./variants.vcf.gz
+Lines   total/split/realigned/skipped:	465978/4000/1265/0
+	Command being timed: "bash -c bcftools norm -c x -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly.fa variants.vcf.gz > variants_biallelic.vcf"
+	User time (seconds): 88.94
+	System time (seconds): 5.62
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:34.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12752
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1585
+	Voluntary context switches: 3
+	Involuntary context switches: 2069
+	Swaps: 0
+	File system inputs: 48800
+	File system outputs: 9262600
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+470316
+	22:16815556	22:17498165Warning) ref allele (T) and alt allele (AC in AC) at chr22:17728255 are excluded.
+	22:18114282	22:19278119	22:20019468	22:20705424	22:21695200	22:22297562	22:22919822Warning) ref allele (G) and alt allele (TT in TT) at chr22:23479777 are excluded.
+	22:23570781	22:24197563	22:24893388	22:25537806	22:26355040	22:27077342	22:27866875	22:29031125	22:29842196	22:30622829	22:31506421	22:32304301	22:33106180	22:33922535	22:36302710	22:37052645	22:37710217	22:38414240	22:39156928	22:39982912	22:41024137Warning) ref allele (G) and alt allele (CC in CC) at chr22:41129169 are excluded.
+Warning) ref allele (GA) and alt allele (T in T) at chr22:41879974 are excluded.
+	22:41925246	22:42634514	22:43308899	22:44109011	22:44693511Warning) ref allele (GC) and alt allele (T in T) at chr22:44796585 are excluded.
+	22:45270636Warning) ref allele (T) and alt allele (AG in AG) at chr22:45526556 are excluded.
+	22:46007099	22:46576792	22:47236254	22:47917154	22:48563866	22:49089429	22:49627161	22:50217522	22:50769840463986 1kg_all_af001_22.snp
+483085 1kg_all_af001_22.haplotype
+	Command being timed: "bash -c grep -v '^#' variants_biallelic.vcf | wc -l; hisat2_extract_snps_haplotypes_VCF.py --non-rs Homo_sapiens.GRCh38.dna.primary_assembly.fa variants_biallelic.vcf 1kg_all_af001_22; wc -l 1kg_all_af001_22.snp; wc -l 1kg_all_af001_22.haplotype"
+	User time (seconds): 543.57
+	System time (seconds): 60.55
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:08.57
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3038572
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1215490
+	Voluntary context switches: 617147
+	Involuntary context switches: 9176
+	Swaps: 0
+	File system inputs: 21398760
+	File system outputs: 70432
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_22.snp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/22/1kg_all_af001_22.snp
+upload: ./1kg_all_af001_22.haplotype to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/22/1kg_all_af001_22.haplotype
+---

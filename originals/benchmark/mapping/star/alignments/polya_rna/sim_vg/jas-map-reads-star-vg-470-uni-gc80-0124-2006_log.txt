@@ -1,0 +1,143 @@
+---
+jas-map-reads-star-vg-470-uni-gc80-0124-2006
+TIME=20210124-2006 IMAGE=quay.io/jsibbesen/star-s3script:star-2.7.3a-s1 MEMORY=40 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/map_reads.sh
+CPU=16 REF=gencode80 SIM=SRR1153470_uni MAPPER=star
+---
+Completed 1.3 KiB/1.3 KiB (16.4 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/map_reads.sh to ./map_reads.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_1.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_2.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_1.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_2.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/chrName.txt to ./chrName.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/chrLength.txt to ./chrLength.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/chrNameLength.txt to ./chrNameLength.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/chrStart.txt to ./chrStart.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/geneInfo.tab to ./geneInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/exonInfo.tab to ./exonInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/exonGeTrInfo.tab to ./exonGeTrInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/genomeParameters.txt to ./genomeParameters.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/sjdbInfo.txt to ./sjdbInfo.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/sjdbList.fromGTF.out.tab to ./sjdbList.fromGTF.out.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/sjdbList.out.tab to ./sjdbList.out.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/transcriptInfo.tab to ./transcriptInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/SAindex to ./SAindex
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/Genome to ./Genome
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/SA to ./SA
+Jan 25 04:08:49 ..... started STAR run
+Jan 25 04:08:49 ..... loading genome
+Jan 25 04:09:26 ..... started mapping
+Jan 25 04:14:14 ..... finished mapping
+Jan 25 04:14:16 ..... finished successfully
+	Command being timed: "bash -c STAR --runThreadN 16 --genomeDir . --readFilesCommand zcat --readFilesIn sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_1.fq.gz sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_2.fq.gz --outSAMunmapped Within --outSAMtype BAM Unsorted --outFileNamePrefix star_gencode80_sim_vg_SRR1153470_uni_h1_; mv star_gencode80_sim_vg_SRR1153470_uni_h1_Aligned.out.bam star_gencode80_sim_vg_SRR1153470_uni_h1.bam"
+	User time (seconds): 2337.51
+	System time (seconds): 148.95
+	Percent of CPU this job got: 760%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:27.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 33000052
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 52895196
+	Voluntary context switches: 173689
+	Involuntary context switches: 15359
+	Swaps: 0
+	File system inputs: 17996736
+	File system outputs: 11556504
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 16 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 star_gencode80_sim_vg_SRR1153470_uni_h1.bam > star_gencode80_sim_vg_SRR1153470_uni_h1_sort.bam; mv star_gencode80_sim_vg_SRR1153470_uni_h1_sort.bam star_gencode80_sim_vg_SRR1153470_uni_h1.bam; samtools index star_gencode80_sim_vg_SRR1153470_uni_h1.bam"
+	User time (seconds): 886.83
+	System time (seconds): 36.42
+	Percent of CPU this job got: 598%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:34.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13830580
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 10263244
+	Voluntary context switches: 725690
+	Involuntary context switches: 2494
+	Swaps: 0
+	File system inputs: 8678088
+	File system outputs: 16853832
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Jan 25 04:16:51 ..... started STAR run
+Jan 25 04:16:51 ..... loading genome
+Jan 25 04:17:24 ..... started mapping
+Jan 25 04:22:19 ..... finished mapping
+Jan 25 04:22:22 ..... finished successfully
+	Command being timed: "bash -c STAR --runThreadN 16 --genomeDir . --readFilesCommand zcat --readFilesIn sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_1.fq.gz sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_2.fq.gz --outSAMunmapped Within --outSAMtype BAM Unsorted --outFileNamePrefix star_gencode80_sim_vg_SRR1153470_uni_h2_; mv star_gencode80_sim_vg_SRR1153470_uni_h2_Aligned.out.bam star_gencode80_sim_vg_SRR1153470_uni_h2.bam"
+	User time (seconds): 2365.78
+	System time (seconds): 175.44
+	Percent of CPU this job got: 766%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:31.42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 32999972
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 52051206
+	Voluntary context switches: 180400
+	Involuntary context switches: 13728
+	Swaps: 0
+	File system inputs: 45429464
+	File system outputs: 11556632
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 16 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 star_gencode80_sim_vg_SRR1153470_uni_h2.bam > star_gencode80_sim_vg_SRR1153470_uni_h2_sort.bam; mv star_gencode80_sim_vg_SRR1153470_uni_h2_sort.bam star_gencode80_sim_vg_SRR1153470_uni_h2.bam; samtools index star_gencode80_sim_vg_SRR1153470_uni_h2.bam"
+	User time (seconds): 915.31
+	System time (seconds): 42.82
+	Percent of CPU this job got: 606%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:37.97
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13876296
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9905184
+	Voluntary context switches: 748186
+	Involuntary context switches: 2820
+	Swaps: 0
+	File system inputs: 8175544
+	File system outputs: 16854344
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h1_Log.progress.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h1_Log.progress.out
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h1_Log.final.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h1_Log.final.out
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h1_Log.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h1_Log.out
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h2_Log.progress.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h2_Log.progress.out
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h2_Log.final.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h2_Log.final.out
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h2_Log.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h2_Log.out
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h2.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h2.bam.bai
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h1.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h1.bam.bai
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h1_SJ.out.tab to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h1_SJ.out.tab
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h2_SJ.out.tab to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h2_SJ.out.tab
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h2.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h2.bam
+upload: ./star_gencode80_sim_vg_SRR1153470_uni_h1.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode80/star_gencode80_sim_vg_SRR1153470_uni_h1.bam
+---

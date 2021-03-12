@@ -1,0 +1,76 @@
+---
+jas-prepare-variants-hisat2-nceu-af001-10-0711-0038
+TIME=20200711-0038 IMAGE=jsibbesen/hisat2-s3script:2.2.0-s2 MEMORY=4 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh
+CPU=1 CHR=10 VARIANTS=1kg_nonCEU_af001
+---
+Completed 1.5 KiB/1.5 KiB (23.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh to ./prepare_variants.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_nonCEU_af001/10/1kg_nonCEU_af001_10.vcf.gz to ./variants.vcf.gz
+Lines   total/split/realigned/skipped:	1629482/18103/4566/0
+	Command being timed: "bash -c bcftools norm -c x -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly.fa variants.vcf.gz > variants_biallelic.vcf"
+	User time (seconds): 301.69
+	System time (seconds): 22.67
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:25.08
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 14408
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3400
+	Voluntary context switches: 34
+	Involuntary context switches: 8470
+	Swaps: 0
+	File system inputs: 922264
+	File system outputs: 31196200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+1648739
+	10:720122	10:1364975	10:2014620	10:2647085	10:3205434	10:3947338	10:4640008	10:5226517	10:5872339	10:6537763	10:7191441	10:7870217	10:9471459	10:10312033	10:11123984	10:11861992	10:12536466	10:13187872	10:13843183	10:14549706	10:15210423	10:15963522	10:16669930	10:17350775	10:18208445	10:18922264	10:19587877	10:20310650Warning) ref allele (C) and alt allele (AAA in AAA) at chr10:20708642 are excluded.
+	10:21002994	10:21957193	10:22861162	10:23665831	10:24459267	10:25309851	10:26041288	10:26788717	10:27501583	10:28357890Warning) ref allele (C) and alt allele (TG in TG) at chr10:28547854 are excluded.
+	10:29088002	10:29790433Warning) ref allele (G) and alt allele (TT in TT) at chr10:30135133 are excluded.
+	10:30518800	10:31236434	10:32148349	10:32950446	10:33797687	10:34656505	10:35582154	10:36408247	10:37213371	10:38104763	10:38748549	10:42113141	10:42760487	10:43533942	10:44271627	10:45029270	10:45788377	10:46444500	10:47150507	10:47418593	10:48779480	10:49500767	10:50472066	10:51349507	10:52114879	10:52930920	10:53669433	10:54360447	10:55153100	10:55993593	10:56793171	10:57513229Warning) ref allele (C) and alt allele (AA in AA) at chr10:57982709 are excluded.
+	10:58319072Warning) ref allele (AC) and alt allele (G in G) at chr10:59169686 are excluded.
+	10:59282920	10:60120705Warning) ref allele (T) and alt allele (AAA in AAA) at chr10:60584462 are excluded.
+	10:60964496	10:61883243	10:62777699	10:63737902	10:64621155	10:65374581	10:66113196Warning) ref allele (T) and alt allele (AAG in AAG) at chr10:66620352 are excluded.
+	10:66818662	10:67705193	10:68500306	10:69281933	10:69979649	10:70715071	10:71428141	10:72144269	10:73141428	10:74052947	10:75115917	10:76132962	10:77027076	10:77910697	10:78689921	10:79476000Warning) ref allele (T) and alt allele (GA in GA) at chr10:79935626 are excluded.
+	10:80162729	10:80905508	10:81716716	10:82593820Warning) ref allele (GGC) and alt allele (T in T) at chr10:82867855 are excluded.
+	10:84204216	10:85036822	10:85750016	10:86631344	10:87542818	10:88476245	10:89377433	10:90181118	10:91037097	10:91989424Warning) ref allele (T) and alt allele (ACACACA in ACACACA) at chr10:92048387 are excluded.
+	10:93043194	10:93809002	10:94744346	10:95525133	10:96492619	10:97371547	10:99132476	10:100054877	10:100883639	10:101889506	10:102944638	10:103919094	10:104825354Warning) ref allele (A) and alt allele (GACACAC in GACACAC) at chr10:105214365 are excluded.
+	10:105757024	10:106636522	10:107495737Warning) ref allele (A) and alt allele (CT in CT) at chr10:108293313 are excluded.
+	10:108306308	10:109063183	10:109845836	10:110714282	10:111496802	10:112283003	10:113196058	10:114010619	10:114815041	10:115715462	10:116553823	10:117441436	10:118344917	10:119137132	10:119935496	10:120717281	10:121480372	10:122229831	10:122986137	10:123786979Warning) ref allele (T) and alt allele (CC in CC) at chr10:123921939 are excluded.
+	10:124590464	10:125384525	10:126147193	10:126907587	10:127682190	10:128382818	10:129120298	10:129873495	10:130628594	10:131248780	10:131987116	10:132573229	10:1331422471622738 1kg_nonCEU_af001_10.snp
+1673180 1kg_nonCEU_af001_10.haplotype
+	Command being timed: "bash -c grep -v '^#' variants_biallelic.vcf | wc -l; hisat2_extract_snps_haplotypes_VCF.py --non-rs Homo_sapiens.GRCh38.dna.primary_assembly.fa variants_biallelic.vcf 1kg_nonCEU_af001_10; wc -l 1kg_nonCEU_af001_10.snp; wc -l 1kg_nonCEU_af001_10.haplotype"
+	User time (seconds): 1819.55
+	System time (seconds): 138.66
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 32:52.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3038804
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3240894
+	Voluntary context switches: 2106970
+	Involuntary context switches: 29276
+	Swaps: 0
+	File system inputs: 68518752
+	File system outputs: 249376
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_nonCEU_af001_10.snp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_nonCEU_af001/10/1kg_nonCEU_af001_10.snp
+upload: ./1kg_nonCEU_af001_10.haplotype to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_nonCEU_af001/10/1kg_nonCEU_af001_10.haplotype
+---

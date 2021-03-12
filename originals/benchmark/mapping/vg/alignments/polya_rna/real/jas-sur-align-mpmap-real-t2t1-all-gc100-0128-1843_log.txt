@@ -1,0 +1,83 @@
+---
+jas-sur-align-mpmap-real-t2t1-all-gc100-0128-1843
+TIME=20210128-1843 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=48 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/surject_alignments.sh
+CPU=16 REF=1kg_all_af001_gencode100 REAL=CHM13_rep1 MAPPER=mpmap
+---
+Completed 1.4 KiB/1.4 KiB (25.3 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/surject_alignments.sh to ./surject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/CHM13_rep1/mpmap/1kg_all_af001_gencode100/mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.gamp to ./mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.gamp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/1kg_all_af001_gencode100.xg to ./1kg_all_af001_gencode100.xg
+194 reference_paths.txt
+	Command being timed: "bash -c vg paths -L -x 1kg_all_af001_gencode100.xg | grep -v ENST > reference_paths.txt; wc -l reference_paths.txt"
+	User time (seconds): 5.06
+	System time (seconds): 21.93
+	Percent of CPU this job got: 141%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9844068
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 19
+	Minor (reclaiming a frame) page faults: 937930
+	Voluntary context switches: 2442854
+	Involuntary context switches: 120
+	Swaps: 0
+	File system inputs: 68176
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg surject -t 16 -S -A -b -m -F reference_paths.txt -x 1kg_all_af001_gencode100.xg mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.gamp > mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.bam"
+	User time (seconds): 58347.70
+	System time (seconds): 5324.31
+	Percent of CPU this job got: 1591%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:06:41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 16839356
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 25
+	Minor (reclaiming a frame) page faults: 1866097373
+	Voluntary context switches: 2419605
+	Involuntary context switches: 854729
+	Swaps: 0
+	File system inputs: 29072120
+	File system outputs: 25604360
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 64 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.bam > mpmap_1kg_all_af001_gencode100_real_CHM13_rep1_sort.bam; mv mpmap_1kg_all_af001_gencode100_real_CHM13_rep1_sort.bam mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.bam; samtools index mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.bam"
+	User time (seconds): 1871.21
+	System time (seconds): 67.40
+	Percent of CPU this job got: 481%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:42.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13803120
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 93
+	Minor (reclaiming a frame) page faults: 9887464
+	Voluntary context switches: 2833274
+	Involuntary context switches: 19200
+	Swaps: 0
+	File system inputs: 33579336
+	File system outputs: 25848536
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/CHM13_rep1/mpmap/1kg_all_af001_gencode100/mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.bam.bai
+upload: ./mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/CHM13_rep1/mpmap/1kg_all_af001_gencode100/mpmap_1kg_all_af001_gencode100_real_CHM13_rep1.bam
+---

@@ -1,0 +1,85 @@
+---
+jas-prepare-variants-hisat2-all-af001-7-0711-1135
+TIME=20200711-1135 IMAGE=jsibbesen/hisat2-s3script:2.2.0-s2 MEMORY=4 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh
+CPU=1 CHR=7 VARIANTS=1kg_all_af001
+---
+Completed 1.5 KiB/1.5 KiB (27.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh to ./prepare_variants.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_af001/7/1kg_all_af001_7.vcf.gz to ./variants.vcf.gz
+Lines   total/split/realigned/skipped:	1819763/14753/5060/0
+	Command being timed: "bash -c bcftools norm -c x -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly.fa variants.vcf.gz > variants_biallelic.vcf"
+	User time (seconds): 353.26
+	System time (seconds): 27.02
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:21.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13736
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4627
+	Voluntary context switches: 10
+	Involuntary context switches: 10232
+	Swaps: 0
+	File system inputs: 1234216
+	File system outputs: 36152864
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+1835782
+	7:540086	7:1059665Warning) ref allele (AC) and alt allele (T in T) at chr7:1166819 are excluded.
+	7:1587332	7:2227486	7:2743709Warning) ref allele (T) and alt allele (AA in AA) at chr7:3222368 are excluded.
+	7:3334699	7:3960341	7:4522878	7:5085134	7:5633573	7:6333514	7:6940679	7:7542029	7:8264378	7:8938109	7:9604950	7:10297366	7:11067625Warning) ref allele (AGAT) and alt allele (G in G) at chr7:11145956 are excluded.
+	7:11808686Warning) ref allele (AG) and alt allele (T in T) at chr7:12387888 are excluded.
+	7:12439828	7:13101414	7:13812293	7:14552752	7:15308008	7:16013526Warning) ref allele (TC) and alt allele (G in G) at chr7:16029806 are excluded.
+	7:16797133	7:17596117	7:18477108	7:19300061	7:20009040	7:20743347	7:21577248	7:22284302	7:23096386	7:23918822	7:24748320	7:25561270	7:26508251	7:27402471	7:28281378	7:29169857	7:30025433	7:30879618	7:31755714	7:32538893	7:33406146	7:34365893	7:35290626	7:36179829	7:37060877	7:37960162	7:38770312	7:39762549	7:40757338	7:41714053	7:42594694	7:43489704	7:44337078	7:45167222	7:46001667	7:46861695	7:48548541	7:49364078	7:50276882Warning) ref allele (GC) and alt allele (T in T) at chr7:51047886 are excluded.
+	7:51145073Warning) ref allele (TTG) and alt allele (C in C) at chr7:51931620 are excluded.
+	7:51946381	7:52675105	7:53348897	7:54129700	7:54883487	7:55681422	7:56469774	7:57236250	7:57951985	7:62438042	7:62992442	7:64005223	7:64809690	7:65727931	7:66664966	7:67477413	7:68224509Warning) ref allele (TCTGTGTGTGTGTGTGTGTGTGTGTG) and alt allele (C in C) at chr7:68514898 are excluded.
+	7:68951967	7:70013762	7:71058824	7:71852095	7:72722901Warning) ref allele (TG) and alt allele (A in A) at chr7:73512845 are excluded.
+Warning) ref allele (C) and alt allele (GA in GA) at chr7:73816731 are excluded.
+	7:73914219Warning) ref allele (C) and alt allele (TT in TT) at chr7:74362528 are excluded.
+	7:75142030Warning) ref allele (GC) and alt allele (T in T) at chr7:76165727 are excluded.
+	7:76177160	7:77142374	7:78085209	7:78891829	7:79769591	7:80666751	7:81466499	7:82391681	7:83304263	7:84155665	7:85145640	7:86059486	7:87089346	7:88087330	7:89068345	7:89928518	7:90824640	7:91841149	7:92975100	7:94016661	7:95044511	7:95992431	7:97036231	7:97915731	7:98739430	7:99600424	7:100518458	7:101133649	7:101880775	7:102983627	7:103824009	7:104615205	7:105554192Warning) ref allele (TC) and alt allele (A in A) at chr7:105939720 are excluded.
+	7:106483673Warning) ref allele (G) and alt allele (AA in AA) at chr7:106934624 are excluded.
+	7:107474142	7:108295179	7:109207681	7:110055507	7:111002519	7:112036529	7:113044784Warning) ref allele (C) and alt allele (TG in TG) at chr7:113357738 are excluded.
+	7:114114936Warning) ref allele (T) and alt allele (AAG in AAG) at chr7:115155245 are excluded.
+	7:116305813	7:117461227	7:118597905	7:119609542	7:120711693	7:121696580	7:122776597Warning) ref allele (AG) and alt allele (T in T) at chr7:123226876 are excluded.
+	7:123784901	7:124776921	7:125631705	7:126474300	7:127489929	7:128492675	7:129303209	7:130267074	7:131242236	7:132123158	7:133062727Warning) ref allele (CG) and alt allele (T in T) at chr7:133257238 are excluded.
+	7:134208790	7:135134582	7:136005532	7:136938067	7:137885906	7:138676945	7:139463509	7:140324281	7:141257919	7:142083569Warning) ref allele (G) and alt allele (CA in CA) at chr7:142253632 are excluded.
+	7:142943836	7:144095076	7:145119689	7:145999412	7:146825889	7:147623937	7:148362334Warning) ref allele (C) and alt allele (AA in AA) at chr7:149060162 are excluded.
+	7:149144690	7:149860078	7:150551769	7:151219497Warning) ref allele (T) and alt allele (GA in GA) at chr7:151937336 are excluded.
+	7:151958671Warning) ref allele (G) and alt allele (TC in TC) at chr7:152072651 are excluded.
+	7:152815467	7:153525600	7:154268016	7:155008075	7:155641993	7:156355275	7:157105001	7:157737013	7:158283431	7:1589537191812017 1kg_all_af001_7.snp
+1869953 1kg_all_af001_7.haplotype
+	Command being timed: "bash -c grep -v '^#' variants_biallelic.vcf | wc -l; hisat2_extract_snps_haplotypes_VCF.py --non-rs Homo_sapiens.GRCh38.dna.primary_assembly.fa variants_biallelic.vcf 1kg_all_af001_7; wc -l 1kg_all_af001_7.snp; wc -l 1kg_all_af001_7.haplotype"
+	User time (seconds): 2145.25
+	System time (seconds): 152.28
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 38:35.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3039784
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3122177
+	Voluntary context switches: 2413249
+	Involuntary context switches: 42409
+	Swaps: 0
+	File system inputs: 78405072
+	File system outputs: 272224
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_7.snp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/7/1kg_all_af001_7.snp
+upload: ./1kg_all_af001_7.haplotype to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/7/1kg_all_af001_7.haplotype
+---

@@ -1,0 +1,73 @@
+---
+jas-prepare-variants-hisat2-all-af001-17-0710-2149
+TIME=20200710-2149 IMAGE=jsibbesen/hisat2-s3script:2.2.0-s2 MEMORY=4 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh
+CPU=1 CHR=17 VARIANTS=1kg_all_af001
+---
+Completed 1.5 KiB/1.5 KiB (27.4 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh to ./prepare_variants.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_af001/17/1kg_all_af001_17.vcf.gz to ./variants.vcf.gz
+Lines   total/split/realigned/skipped:	957273/7472/2787/0
+	Command being timed: "bash -c bcftools norm -c x -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly.fa variants.vcf.gz > variants_biallelic.vcf"
+	User time (seconds): 183.02
+	System time (seconds): 13.24
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:16.61
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2433
+	Voluntary context switches: 15
+	Involuntary context switches: 4924
+	Swaps: 0
+	File system inputs: 468616
+	File system outputs: 19014072
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+965464
+	17:794068	17:1936318	17:2696042	17:3376800	17:3980125	17:4643965	17:5304387	17:6023344	17:6725638	17:7383294	17:8053707	17:8789709	17:9543332Warning) ref allele (C) and alt allele (GG in GG) at chr17:9571488 are excluded.
+Warning) ref allele (T) and alt allele (AG in AG) at chr17:9918301 are excluded.
+	17:10227538	17:10993426	17:11820482	17:12657797	17:13384921	17:14149994	17:14838196	17:15596068	17:16421394	17:17216575	17:18067627	17:18892744	17:19916206	17:20824108	17:21604215	17:27031174	17:27879925	17:28837431	17:29859538	17:31686748	17:32504874	17:33451506Warning) ref allele (T) and alt allele (AG in AG) at chr17:33457556 are excluded.
+	17:34282916	17:35159418	17:35928426	17:36939208	17:38237084	17:39046536	17:39909719	17:41419210	17:42155907	17:43002628	17:43939840	17:44796002	17:45608569	17:46543685	17:47641427	17:48593700	17:49459775	17:50291135	17:51064640	17:52002782	17:52980798	17:53890264	17:54837444	17:55752518	17:56746054Warning) ref allele (T) and alt allele (GGA in GGA) at chr17:56951431 are excluded.
+Warning) ref allele (C) and alt allele (GG in GG) at chr17:57527467 are excluded.
+	17:57604839Warning) ref allele (GGA) and alt allele (T in T) at chr17:57639759 are excluded.
+	17:58402690	17:59565484	17:60676249	17:61753796Warning) ref allele (T) and alt allele (AA in AA) at chr17:62531271 are excluded.
+	17:62697361	17:63694174	17:64545209Warning) ref allele (CAGGGAGTGG) and alt allele (A in A) at chr17:65157133 are excluded.
+	17:65466206	17:66341594	17:68091725	17:68862535Warning) ref allele (A) and alt allele (CC in CC) at chr17:69480935 are excluded.
+	17:69757354	17:70713955	17:71597807Warning) ref allele (C) and alt allele (AAGA in AAGA) at chr17:72147162 are excluded.
+	17:72464746	17:73216979	17:73964433	17:74614428	17:75320246	17:76625013	17:77281347	17:77946832	17:78527474	17:79143941	17:79952802	17:80522705	17:81155394	17:81696015	17:82265731	17:82855486953063 1kg_all_af001_17.snp
+985805 1kg_all_af001_17.haplotype
+	Command being timed: "bash -c grep -v '^#' variants_biallelic.vcf | wc -l; hisat2_extract_snps_haplotypes_VCF.py --non-rs Homo_sapiens.GRCh38.dna.primary_assembly.fa variants_biallelic.vcf 1kg_all_af001_17; wc -l 1kg_all_af001_17.snp; wc -l 1kg_all_af001_17.haplotype"
+	User time (seconds): 1120.22
+	System time (seconds): 97.57
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 20:26.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3038804
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1425014
+	Voluntary context switches: 1269229
+	Involuntary context switches: 18804
+	Swaps: 0
+	File system inputs: 44105496
+	File system outputs: 143488
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_17.snp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/17/1kg_all_af001_17.snp
+upload: ./1kg_all_af001_17.haplotype to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/17/1kg_all_af001_17.haplotype
+---

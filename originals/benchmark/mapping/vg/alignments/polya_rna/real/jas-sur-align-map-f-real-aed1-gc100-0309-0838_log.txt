@@ -1,0 +1,83 @@
+---
+jas-sur-align-map-f-real-aed1-gc100-0309-0838
+TIME=20210309-0838 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=48 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/surject_alignments.sh
+CPU=16 REF=gencode100 REAL=ENCSR000AED_rep1 MAPPER=map_fast
+---
+Completed 1.4 KiB/1.4 KiB (14.5 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/surject_alignments.sh to ./surject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/ENCSR000AED_rep1/map_fast/gencode100/map_fast_gencode100_real_ENCSR000AED_rep1.gam to ./map_fast_gencode100_real_ENCSR000AED_rep1.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg to ./gencode100.xg
+194 reference_paths.txt
+	Command being timed: "bash -c vg paths -L -x gencode100.xg | grep -v ENST > reference_paths.txt; wc -l reference_paths.txt"
+	User time (seconds): 4.37
+	System time (seconds): 14.15
+	Percent of CPU this job got: 139%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:13.31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6062520
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 17
+	Minor (reclaiming a frame) page faults: 1521446
+	Voluntary context switches: 1517475
+	Involuntary context switches: 12
+	Swaps: 0
+	File system inputs: 68056
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg surject -t 16 -S -A -b -F reference_paths.txt -x gencode100.xg map_fast_gencode100_real_ENCSR000AED_rep1.gam > map_fast_gencode100_real_ENCSR000AED_rep1.bam"
+	User time (seconds): 53849.46
+	System time (seconds): 5264.60
+	Percent of CPU this job got: 1592%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:01:51
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6692024
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5
+	Minor (reclaiming a frame) page faults: 2103573328
+	Voluntary context switches: 1502852
+	Involuntary context switches: 864632
+	Swaps: 0
+	File system inputs: 37240256
+	File system outputs: 35056400
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 64 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 map_fast_gencode100_real_ENCSR000AED_rep1.bam > map_fast_gencode100_real_ENCSR000AED_rep1_sort.bam; mv map_fast_gencode100_real_ENCSR000AED_rep1_sort.bam map_fast_gencode100_real_ENCSR000AED_rep1.bam; samtools index map_fast_gencode100_real_ENCSR000AED_rep1.bam"
+	User time (seconds): 2762.30
+	System time (seconds): 162.59
+	Percent of CPU this job got: 538%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:02.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13800248
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 93
+	Minor (reclaiming a frame) page faults: 25030325
+	Voluntary context switches: 2207728
+	Involuntary context switches: 49658
+	Swaps: 0
+	File system inputs: 72795152
+	File system outputs: 51303104
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./map_fast_gencode100_real_ENCSR000AED_rep1.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/ENCSR000AED_rep1/map_fast/gencode100/map_fast_gencode100_real_ENCSR000AED_rep1.bam.bai
+upload: ./map_fast_gencode100_real_ENCSR000AED_rep1.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/ENCSR000AED_rep1/map_fast/gencode100/map_fast_gencode100_real_ENCSR000AED_rep1.bam
+---

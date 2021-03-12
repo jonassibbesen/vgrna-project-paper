@@ -1,0 +1,156 @@
+---
+jas-calc-b-stats-mpmap-real-t2t1-gc100-0128-2229
+TIME=20210128-2229 IMAGE=quay.io/jsibbesen/vgrna-s3script:vgrna-71442ea4-s2 MEMORY=4 CPU=1 DISK=128
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real/calculate_bam_stats.sh
+CPU=1 REF=gencode100 REAL=CHM13_rep1 MAPPER=mpmap
+---
+Completed 2.3 KiB/2.3 KiB (47.5 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real/calculate_bam_stats.sh to ./calculate_bam_stats.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/CHM13_rep1/mpmap/gencode100/mpmap_gencode100_real_CHM13_rep1.bam.bai to ./mpmap_gencode100_real_CHM13_rep1.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/CHM13_rep1/mpmap/gencode100/mpmap_gencode100_real_CHM13_rep1.bam to ./mpmap_gencode100_real_CHM13_rep1.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full_exons.bed to ./gencode_exons.bed
+181860210 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+181858690 + 0 mapped (100.00% : N/A)
+0 + 0 paired in sequencing
+0 + 0 read1
+0 + 0 read2
+0 + 0 properly paired (N/A : N/A)
+0 + 0 with itself and mate mapped
+0 + 0 singletons (N/A : N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5)
+	Command being timed: "bash -c samtools flagstat mpmap_gencode100_real_CHM13_rep1.bam"
+	User time (seconds): 152.66
+	System time (seconds): 5.37
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:39.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 20840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 33
+	Minor (reclaiming a frame) page faults: 4726
+	Voluntary context switches: 108
+	Involuntary context switches: 2107
+	Swaps: 0
+	File system inputs: 5242224
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_read_regions_overlap_stats mpmap_gencode100_real_CHM13_rep1.bam gencode_exons.bed
+
+Total length of regions: 131340583
+
+Number of analysed reads: 10000000
+Number of analysed reads: 20000000
+Number of analysed reads: 30000000
+Number of analysed reads: 40000000
+Number of analysed reads: 50000000
+Number of analysed reads: 60000000
+Number of analysed reads: 70000000
+Number of analysed reads: 80000000
+Number of analysed reads: 90000000
+Number of analysed reads: 100000000
+Number of analysed reads: 110000000
+Number of analysed reads: 120000000
+Number of analysed reads: 130000000
+Number of analysed reads: 140000000
+Number of analysed reads: 150000000
+Number of analysed reads: 160000000
+Number of analysed reads: 170000000
+Number of analysed reads: 180000000
+
+Total number of analysed reads: 181860210
+Average overlap: 0.655268
+	Command being timed: "bash -c calc_read_regions_overlap_stats mpmap_gencode100_real_CHM13_rep1.bam gencode_exons.bed > mpmap_gencode100_real_CHM13_rep1_exon_ovl_gc.txt; gzip mpmap_gencode100_real_CHM13_rep1_exon_ovl_gc.txt"
+	User time (seconds): 638.85
+	System time (seconds): 5.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:44.79
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 63984
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 10
+	Minor (reclaiming a frame) page faults: 31851
+	Voluntary context switches: 225
+	Involuntary context switches: 3517
+	Swaps: 0
+	File system inputs: 5428376
+	File system outputs: 4928
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_exon_read_coverage mpmap_gencode100_real_CHM13_rep1.bam gencode_exons.bed
+
+Number of analysed exons: 10000
+Number of analysed exons: 20000
+Number of analysed exons: 30000
+Number of analysed exons: 40000
+Number of analysed exons: 50000
+Number of analysed exons: 60000
+Number of analysed exons: 70000
+Number of analysed exons: 80000
+Number of analysed exons: 90000
+Number of analysed exons: 100000
+Number of analysed exons: 110000
+Number of analysed exons: 120000
+Number of analysed exons: 130000
+Number of analysed exons: 140000
+Number of analysed exons: 150000
+Number of analysed exons: 160000
+Number of analysed exons: 170000
+Number of analysed exons: 180000
+Number of analysed exons: 190000
+Number of analysed exons: 200000
+Number of analysed exons: 210000
+Number of analysed exons: 220000
+Number of analysed exons: 230000
+Number of analysed exons: 240000
+Number of analysed exons: 250000
+Number of analysed exons: 260000
+Number of analysed exons: 270000
+Number of analysed exons: 280000
+Number of analysed exons: 290000
+Number of analysed exons: 300000
+
+Total number of analysed exons: 303279
+	Command being timed: "bash -c calc_exon_read_coverage mpmap_gencode100_real_CHM13_rep1.bam gencode_exons.bed > mpmap_gencode100_real_CHM13_rep1_exon_cov_gc.txt; gzip mpmap_gencode100_real_CHM13_rep1_exon_cov_gc.txt"
+	User time (seconds): 1063.44
+	System time (seconds): 14.02
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:58.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 65004
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 67
+	Minor (reclaiming a frame) page faults: 31553
+	Voluntary context switches: 1865
+	Involuntary context switches: 4318
+	Swaps: 0
+	File system inputs: 5870056
+	File system outputs: 48512
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_gencode100_real_CHM13_rep1_exon_ovl_gc.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real/CHM13_rep1/mpmap/gencode100/mpmap_gencode100_real_CHM13_rep1_exon_ovl_gc.txt.gz
+upload: ./mpmap_gencode100_real_CHM13_rep1_exon_cov_gc.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real/CHM13_rep1/mpmap/gencode100/mpmap_gencode100_real_CHM13_rep1_exon_cov_gc.txt.gz
+---

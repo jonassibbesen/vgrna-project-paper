@@ -1,0 +1,65 @@
+---
+jas-map-reads-map-f-vg-aed1-uni-nceu-gc100-0218-2328
+TIME=20210218-2328 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=40 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/map_reads.sh
+CPU=16 REF=1kg_nonCEU_af001_gencode100 SIM=ENCSR000AED_rep1_uni MAPPER=map_fast
+---
+Completed 3.3 KiB/3.3 KiB (43.1 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/map_reads.sh to ./map_reads.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_1.fq.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2_1.fq.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2_2.fq.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_2.fq.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_nopaths.xg to ./1kg_nonCEU_af001_gencode100_nopaths.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100.xg to ./1kg_nonCEU_af001_gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa.lcp to ./1kg_nonCEU_af001_gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.dist to ./1kg_nonCEU_af001_gencode100_index.dist
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa to ./1kg_nonCEU_af001_gencode100_index.gcsa
+	Command being timed: "bash -c vg map -t 16 --try-up-to 16 --mate-rescues 32 -x 1kg_nonCEU_af001_gencode100.xg -g 1kg_nonCEU_af001_gencode100_index.gcsa -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_1.fq.gz -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_2.fq.gz > map_fast_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1.gam"
+	User time (seconds): 55984.38
+	System time (seconds): 1691.39
+	Percent of CPU this job got: 1537%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:02:32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31350696
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 149473567
+	Voluntary context switches: 7472687
+	Involuntary context switches: 705006
+	Swaps: 0
+	File system inputs: 66200056
+	File system outputs: 24584392
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg map -t 16 --try-up-to 16 --mate-rescues 32 -x 1kg_nonCEU_af001_gencode100.xg -g 1kg_nonCEU_af001_gencode100_index.gcsa -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2_1.fq.gz -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2_2.fq.gz > map_fast_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h2.gam"
+	User time (seconds): 56818.74
+	System time (seconds): 1646.85
+	Percent of CPU this job got: 1541%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:03:13
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31337524
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 126732518
+	Voluntary context switches: 7475985
+	Involuntary context switches: 709376
+	Swaps: 0
+	File system inputs: 68537872
+	File system outputs: 24570544
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./map_fast_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h2.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/ENCSR000AED_rep1_uni/map_fast/1kg_nonCEU_af001_gencode100/map_fast_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h2.gam
+upload: ./map_fast_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/ENCSR000AED_rep1_uni/map_fast/1kg_nonCEU_af001_gencode100/map_fast_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1.gam
+---

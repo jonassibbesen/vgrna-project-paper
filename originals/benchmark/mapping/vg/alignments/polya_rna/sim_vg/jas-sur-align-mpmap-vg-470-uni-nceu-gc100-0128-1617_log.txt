@@ -1,0 +1,157 @@
+---
+jas-sur-align-mpmap-vg-470-uni-nceu-gc100-0128-1617
+TIME=20210128-1617 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=48 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/surject_alignments.sh
+CPU=16 REF=1kg_nonCEU_af001_gencode100 SIM=SRR1153470_uni MAPPER=mpmap
+---
+Completed 1.5 KiB/1.5 KiB (18.5 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/surject_alignments.sh to ./surject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/SRR1153470_uni/mpmap/1kg_nonCEU_af001_gencode100/mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.gamp to ./mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.gamp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/SRR1153470_uni/mpmap/1kg_nonCEU_af001_gencode100/mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.gamp to ./mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.gamp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100.xg to ./1kg_nonCEU_af001_gencode100.xg
+194 reference_paths.txt
+	Command being timed: "bash -c vg paths -L -x 1kg_nonCEU_af001_gencode100.xg | grep -v ENST > reference_paths.txt; wc -l reference_paths.txt"
+	User time (seconds): 6.48
+	System time (seconds): 25.68
+	Percent of CPU this job got: 140%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:22.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9999052
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1898507
+	Voluntary context switches: 2480260
+	Involuntary context switches: 57
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg surject -t 16 -S -A -b -m -F reference_paths.txt -x 1kg_nonCEU_af001_gencode100.xg mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.gamp > mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.bam"
+	User time (seconds): 21643.87
+	System time (seconds): 2390.25
+	Percent of CPU this job got: 1573%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 25:27.60
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 17366640
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 675449059
+	Voluntary context switches: 2447765
+	Involuntary context switches: 351587
+	Swaps: 0
+	File system inputs: 9120
+	File system outputs: 9388544
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 16 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.bam > mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1_sort.bam; mv mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1_sort.bam mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.bam; samtools index mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.bam"
+	User time (seconds): 812.04
+	System time (seconds): 26.20
+	Percent of CPU this job got: 557%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:30.42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13864848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 36
+	Minor (reclaiming a frame) page faults: 4972612
+	Voluntary context switches: 686206
+	Involuntary context switches: 3696
+	Swaps: 0
+	File system inputs: 33224
+	File system outputs: 15488152
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+194 reference_paths.txt
+	Command being timed: "bash -c vg paths -L -x 1kg_nonCEU_af001_gencode100.xg | grep -v ENST > reference_paths.txt; wc -l reference_paths.txt"
+	User time (seconds): 5.46
+	System time (seconds): 22.29
+	Percent of CPU this job got: 142%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.51
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10033112
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6
+	Minor (reclaiming a frame) page faults: 718215
+	Voluntary context switches: 2458130
+	Involuntary context switches: 28
+	Swaps: 0
+	File system inputs: 13160
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg surject -t 16 -S -A -b -m -F reference_paths.txt -x 1kg_nonCEU_af001_gencode100.xg mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.gamp > mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.bam"
+	User time (seconds): 19142.10
+	System time (seconds): 2107.21
+	Percent of CPU this job got: 1569%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 22:34.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 17530956
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 664873238
+	Voluntary context switches: 2450993
+	Involuntary context switches: 329047
+	Swaps: 0
+	File system inputs: 20379040
+	File system outputs: 9389000
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 16 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.bam > mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2_sort.bam; mv mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2_sort.bam mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.bam; samtools index mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.bam"
+	User time (seconds): 810.45
+	System time (seconds): 23.80
+	Percent of CPU this job got: 578%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:24.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13949256
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 42
+	Minor (reclaiming a frame) page faults: 3673667
+	Voluntary context switches: 734502
+	Involuntary context switches: 2690
+	Swaps: 0
+	File system inputs: 4290896
+	File system outputs: 15490288
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/SRR1153470_uni/mpmap/1kg_nonCEU_af001_gencode100/mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.bam.bai
+upload: ./mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/SRR1153470_uni/mpmap/1kg_nonCEU_af001_gencode100/mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.bam.bai
+upload: ./mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/SRR1153470_uni/mpmap/1kg_nonCEU_af001_gencode100/mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h2.bam
+upload: ./mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/SRR1153470_uni/mpmap/1kg_nonCEU_af001_gencode100/mpmap_1kg_nonCEU_af001_gencode100_sim_vg_SRR1153470_uni_h1.bam
+---

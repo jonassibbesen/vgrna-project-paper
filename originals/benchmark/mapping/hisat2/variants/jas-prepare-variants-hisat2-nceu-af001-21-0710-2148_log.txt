@@ -1,0 +1,70 @@
+---
+jas-prepare-variants-hisat2-nceu-af001-21-0710-2148
+TIME=20200710-2148 IMAGE=jsibbesen/hisat2-s3script:2.2.0-s2 MEMORY=4 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh
+CPU=1 CHR=21 VARIANTS=1kg_nonCEU_af001
+---
+Completed 1.5 KiB/1.5 KiB (23.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh to ./prepare_variants.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_nonCEU_af001/21/1kg_nonCEU_af001_21.vcf.gz to ./variants.vcf.gz
+Lines   total/split/realigned/skipped:	458761/4125/1431/0
+	Command being timed: "bash -c bcftools norm -c x -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly.fa variants.vcf.gz > variants_biallelic.vcf"
+	User time (seconds): 84.64
+	System time (seconds): 5.90
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:30.75
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12516
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2005
+	Voluntary context switches: 8
+	Involuntary context switches: 2095
+	Swaps: 0
+	File system inputs: 158176
+	File system outputs: 8764504
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+463218
+	21:13118646	21:14024032	21:14703697	21:15523142Warning) ref allele (A) and alt allele (GT in GT) at chr21:16190586 are excluded.
+	21:16365587	21:17098222	21:17772598	21:18570844	21:19317339	21:20078895Warning) ref allele (GC) and alt allele (A in A) at chr21:20716973 are excluded.
+	21:20763422	21:21527593Warning) ref allele (TTG) and alt allele (A in A) at chr21:21755686 are excluded.
+	21:22283143	21:23019853Warning) ref allele (T) and alt allele (AA in AA) at chr21:23160467 are excluded.
+	21:23730736	21:24367582Warning) ref allele (AGTGT) and alt allele (G in G) at chr21:24627669 are excluded.
+	21:25162363	21:26857505	21:27662801	21:28398237	21:30040669	21:30829503	21:31615987	21:32400939	21:33247809	21:34046798Warning) ref allele (A) and alt allele (CT in CT) at chr21:34567140 are excluded.
+	21:34789085	21:35629471	21:36417196	21:37142716	21:37955302	21:38819063	21:39528955	21:40217365	21:40956000	21:41650904	21:42241375	21:42852111Warning) ref allele (CA) and alt allele (G in G) at chr21:43301489 are excluded.
+	21:43571597	21:44214724	21:44685457	21:45288823	21:45901431	21:46443357456583 1kg_nonCEU_af001_21.snp
+471224 1kg_nonCEU_af001_21.haplotype
+	Command being timed: "bash -c grep -v '^#' variants_biallelic.vcf | wc -l; hisat2_extract_snps_haplotypes_VCF.py --non-rs Homo_sapiens.GRCh38.dna.primary_assembly.fa variants_biallelic.vcf 1kg_nonCEU_af001_21; wc -l 1kg_nonCEU_af001_21.snp; wc -l 1kg_nonCEU_af001_21.haplotype"
+	User time (seconds): 523.90
+	System time (seconds): 63.47
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:52.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3038344
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2663426
+	Voluntary context switches: 593283
+	Involuntary context switches: 9436
+	Swaps: 0
+	File system inputs: 21795920
+	File system outputs: 68968
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_nonCEU_af001_21.snp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_nonCEU_af001/21/1kg_nonCEU_af001_21.snp
+upload: ./1kg_nonCEU_af001_21.haplotype to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_nonCEU_af001/21/1kg_nonCEU_af001_21.haplotype
+---

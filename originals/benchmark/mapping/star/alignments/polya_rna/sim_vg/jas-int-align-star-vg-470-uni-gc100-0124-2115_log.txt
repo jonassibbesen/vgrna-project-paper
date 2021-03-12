@@ -1,0 +1,107 @@
+---
+jas-int-align-star-vg-470-uni-gc100-0124-2115
+TIME=20210124-2115 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=16 CPU=8 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/inject_alignments.sh
+CPU=8 REF=gencode100 GRAPH=gencode100 SIM=SRR1153470_uni MAPPER=star
+---
+Completed 1.1 KiB/1.1 KiB (7.4 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/inject_alignments.sh to ./inject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode100/star_gencode100_sim_vg_SRR1153470_uni_h1.bam.bai to ./star_gencode100_sim_vg_SRR1153470_uni_h1.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode100/star_gencode100_sim_vg_SRR1153470_uni_h2.bam.bai to ./star_gencode100_sim_vg_SRR1153470_uni_h2.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode100/star_gencode100_sim_vg_SRR1153470_uni_h2.bam to ./star_gencode100_sim_vg_SRR1153470_uni_h2.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode100/star_gencode100_sim_vg_SRR1153470_uni_h1.bam to ./star_gencode100_sim_vg_SRR1153470_uni_h1.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg to ./gencode100.xg
+	Command being timed: "bash -c samtools view -F 256 -b star_gencode100_sim_vg_SRR1153470_uni_h1.bam > star_gencode100_sim_vg_SRR1153470_uni_h1_primary.bam"
+	User time (seconds): 545.64
+	System time (seconds): 14.17
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:19.85
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9300
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 25
+	Minor (reclaiming a frame) page faults: 6174115
+	Voluntary context switches: 5978
+	Involuntary context switches: 1412
+	Swaps: 0
+	File system inputs: 20192
+	File system outputs: 7504832
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg inject -t 8 -x gencode100.xg star_gencode100_sim_vg_SRR1153470_uni_h1_primary.bam | vg view -a - | sed 's/\/1",/",/g' | sed 's/_1\/2",/_2",/g' | vg view -a -G -J - > star_gencode100_sim_vg_SRR1153470_uni_h1.gam"
+	User time (seconds): 44933.93
+	System time (seconds): 1509.22
+	Percent of CPU this job got: 274%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:42:21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6250384
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 51
+	Minor (reclaiming a frame) page faults: 117417656
+	Voluntary context switches: 96029500
+	Involuntary context switches: 261215
+	Swaps: 0
+	File system inputs: 12253816
+	File system outputs: 15164368
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -F 256 -b star_gencode100_sim_vg_SRR1153470_uni_h2.bam > star_gencode100_sim_vg_SRR1153470_uni_h2_primary.bam"
+	User time (seconds): 581.17
+	System time (seconds): 18.03
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:59.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9600
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 33
+	Minor (reclaiming a frame) page faults: 6182048
+	Voluntary context switches: 1782
+	Involuntary context switches: 2869
+	Swaps: 0
+	File system inputs: 7736720
+	File system outputs: 7505760
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg inject -t 8 -x gencode100.xg star_gencode100_sim_vg_SRR1153470_uni_h2_primary.bam | vg view -a - | sed 's/\/1",/",/g' | sed 's/_1\/2",/_2",/g' | vg view -a -G -J - > star_gencode100_sim_vg_SRR1153470_uni_h2.gam"
+	User time (seconds): 40843.67
+	System time (seconds): 1420.58
+	Percent of CPU this job got: 272%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:18:37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6250240
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 116007263
+	Voluntary context switches: 95232777
+	Involuntary context switches: 230350
+	Swaps: 0
+	File system inputs: 15495136
+	File system outputs: 15173552
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./star_gencode100_sim_vg_SRR1153470_uni_h1.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode100/star_gencode100_sim_vg_SRR1153470_uni_h1.gam
+upload: ./star_gencode100_sim_vg_SRR1153470_uni_h2.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg/SRR1153470_uni/star/gencode100/star_gencode100_sim_vg_SRR1153470_uni_h2.gam
+---

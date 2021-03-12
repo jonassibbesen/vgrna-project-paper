@@ -1,0 +1,92 @@
+---
+jas-prepare-variants-hisat2-all-af001-x-0710-2129
+TIME=20200710-2129 IMAGE=jsibbesen/hisat2-s3script:2.2.0-s2 MEMORY=4 CPU=1 DISK=128
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh
+CPU=1 CHR=X VARIANTS=1kg_all_af001
+---
+Completed 1.5 KiB/1.5 KiB (17.7 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh to ./prepare_variants.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_af001/X/1kg_all_af001_X.vcf.gz to ./variants.vcf.gz
+Lines   total/split/realigned/skipped:	954472/6565/2242/0
+	Command being timed: "bash -c bcftools norm -c x -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly.fa variants.vcf.gz > variants_biallelic.vcf"
+	User time (seconds): 181.91
+	System time (seconds): 11.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:13.24
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11008
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1705
+	Voluntary context switches: 30
+	Involuntary context switches: 3925
+	Swaps: 0
+	File system inputs: 1041128
+	File system outputs: 14307784
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c head -n 10000 variants_biallelic.vcf | grep '^#' > variants_biallelic_tmp.vcf; grep -v '^#' variants_biallelic.vcf | awk -v OFS='\t' '{for (i = 10; i <= NF; i++) {if (($i !~ "\\/") && ($i !~ "\\|")) $i = $i "|" $i} {print}}' >> variants_biallelic_tmp.vcf; mv variants_biallelic_tmp.vcf variants_biallelic.vcf"
+	User time (seconds): 17032.65
+	System time (seconds): 73.55
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:47:19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3192
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3060
+	Voluntary context switches: 970824
+	Involuntary context switches: 214346
+	Swaps: 0
+	File system inputs: 14307736
+	File system outputs: 18963456
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+961830
+	X:3799461	X:5064709	X:7817788Warning) ref allele (GT) and alt allele (C in C) at chrX:8052919 are excluded.
+Warning) ref allele (C) and alt allele (AAAA in AAAA) at chrX:8389831 are excluded.
+	X:9316635	X:10634534	X:12369937	X:13775349	X:15376510	X:16981226	X:18863809	X:20540016	X:22284581	X:23440629	X:25041143	X:26697719	X:28311670	X:29897952	X:31305347	X:32549651	X:33665488	X:35057445	X:36588697	X:38356456	X:39974993	X:41484438	X:43220648	X:44880567	X:46457373	X:48101718	X:50296174Warning) ref allele (T) and alt allele (AA in AA) at chrX:50425357 are excluded.
+	X:52162703	X:54647791	X:56287735	X:57767895	X:63076097	X:64821248Warning) ref allele (G) and alt allele (CACAAA in CACAAA) at chrX:66290444 are excluded.
+	X:66381567	X:67835933	X:69436399	X:71101073	X:73214112	X:74976428	X:76346406	X:77666727	X:79287949	X:80567228	X:82078531	X:83414711	X:84915201	X:86102068	X:87246495Warning) ref allele (TA) and alt allele (C in C) at chrX:87988863 are excluded.
+	X:88379112	X:89565174	X:90910369	X:92306019	X:93720613Warning) ref allele (T) and alt allele (CAAC in CAAC) at chrX:94857780 are excluded.
+	X:94972905	X:96285095	X:97847081	X:99506435	X:101127185	X:103039603	X:105031782	X:107003858	X:108878575	X:110549256	X:112259440	X:113650853	X:115348403	X:116819881	X:117908182	X:119310956	X:120784887	X:122345286	X:123790210	X:125279440	X:126645460	X:128116598	X:129727110	X:131523747	X:133421716	X:135445945	X:137466816	X:139089447	X:140641922	X:142109793	X:143293712	X:144695787	X:145930605	X:147203238	X:148750358	X:150509854	X:151893851	X:153435647	X:155229639954260 1kg_all_af001_X.snp
+972399 1kg_all_af001_X.haplotype
+	Command being timed: "bash -c grep -v '^#' variants_biallelic.vcf | wc -l; hisat2_extract_snps_haplotypes_VCF.py --non-rs Homo_sapiens.GRCh38.dna.primary_assembly.fa variants_biallelic.vcf 1kg_all_af001_X; wc -l 1kg_all_af001_X.snp; wc -l 1kg_all_af001_X.haplotype"
+	User time (seconds): 1085.50
+	System time (seconds): 103.95
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 19:57.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3037616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4257882
+	Voluntary context switches: 1261679
+	Involuntary context switches: 18259
+	Swaps: 0
+	File system inputs: 43826176
+	File system outputs: 139456
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_X.haplotype to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/X/1kg_all_af001_X.haplotype
+upload: ./1kg_all_af001_X.snp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_all_af001/X/1kg_all_af001_X.snp
+---

@@ -1,0 +1,68 @@
+---
+jas-prepare-variants-hisat2-nceu-af001-20-0710-2148
+TIME=20200710-2148 IMAGE=jsibbesen/hisat2-s3script:2.2.0-s2 MEMORY=4 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh
+CPU=1 CHR=20 VARIANTS=1kg_nonCEU_af001
+---
+Completed 1.5 KiB/1.5 KiB (24.1 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/prepare_variants.sh to ./prepare_variants.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_nonCEU_af001/20/1kg_nonCEU_af001_20.vcf.gz to ./variants.vcf.gz
+Lines   total/split/realigned/skipped:	734900/5709/2109/0
+	Command being timed: "bash -c bcftools norm -c x -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly.fa variants.vcf.gz > variants_biallelic.vcf"
+	User time (seconds): 135.38
+	System time (seconds): 10.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:25.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11204
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1667
+	Voluntary context switches: 29
+	Involuntary context switches: 3390
+	Swaps: 0
+	File system inputs: 212712
+	File system outputs: 14023112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+741161
+	20:749322	20:1491784	20:2259800	20:3060406	20:3800217	20:4555779	20:5280793	20:5958362	20:6756736	20:7564234	20:8399592	20:9352511	20:10199908	20:11089411	20:11975907	20:12744838	20:13647460	20:14668384	20:15579891	20:16361874Warning) ref allele (TA) and alt allele (G in G) at chr20:17050419 are excluded.
+	20:17148076	20:17912212	20:18676956	20:19510889	20:20309824	20:21298010	20:22262805	20:23724584	20:24335736Warning) ref allele (AT) and alt allele (C in C) at chr20:24946107 are excluded.
+	20:25080871	20:25939128	20:31287117	20:32220470	20:33083196	20:33931211	20:35004487	20:35868947	20:36912167	20:37813411Warning) ref allele (C) and alt allele (GG in GG) at chr20:38325279 are excluded.
+	20:38616273	20:39588607	20:40583006	20:41495042	20:42393488	20:43219706	20:44055601	20:44884334	20:45648471	20:46409242	20:47190800	20:47989927Warning) ref allele (A) and alt allele (CT in CT) at chr20:47995824 are excluded.
+	20:48738471	20:49609653	20:50418410	20:51214245	20:51969780	20:52880072	20:53732136Warning) ref allele (G) and alt allele (CC in CC) at chr20:54093739 are excluded.
+	20:54531163	20:55303769	20:56099299	20:56848615	20:57561541	20:58282263	20:59026515	20:59841375	20:60615619	20:61324816	20:61945432	20:62512959	20:63088163	20:63571258	20:64208705731857 1kg_nonCEU_af001_20.snp
+750727 1kg_nonCEU_af001_20.haplotype
+	Command being timed: "bash -c grep -v '^#' variants_biallelic.vcf | wc -l; hisat2_extract_snps_haplotypes_VCF.py --non-rs Homo_sapiens.GRCh38.dna.primary_assembly.fa variants_biallelic.vcf 1kg_nonCEU_af001_20; wc -l 1kg_nonCEU_af001_20.snp; wc -l 1kg_nonCEU_af001_20.haplotype"
+	User time (seconds): 823.40
+	System time (seconds): 83.30
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:13.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3037832
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3734454
+	Voluntary context switches: 945248
+	Involuntary context switches: 13805
+	Swaps: 0
+	File system inputs: 28959904
+	File system outputs: 108560
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_nonCEU_af001_20.haplotype to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_nonCEU_af001/20/1kg_nonCEU_af001_20.haplotype
+upload: ./1kg_nonCEU_af001_20.snp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_nonCEU_af001/20/1kg_nonCEU_af001_20.snp
+---

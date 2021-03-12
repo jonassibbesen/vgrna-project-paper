@@ -1,0 +1,361 @@
+---
+jas-calc-b-stats-hisat2-real-470-nceu-gc100-0128-1626
+TIME=20210128-1626 IMAGE=quay.io/jsibbesen/vgrna-s3script:vgrna-71442ea4-s2 MEMORY=4 CPU=1 DISK=128
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/stats/polya_rna/real/calculate_bam_stats.sh
+CPU=1 REF=1kg_nonCEU_af001_gencode100 REAL=SRR1153470 TRANSCRIPTS=ENCSR706ANY MAPPER=hisat2
+---
+Completed 2.4 KiB/2.4 KiB (42.6 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/stats/polya_rna/real/calculate_bam_stats.sh to ./calculate_bam_stats.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real/SRR1153470/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam.bai to ./hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real/SRR1153470/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam to ./hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full_exons.bed to ./gencode_exons.bed
+258363655 + 0 in total (QC-passed reads + QC-failed reads)
+27644109 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+247490159 + 0 mapped (95.79% : N/A)
+230719546 + 0 paired in sequencing
+115359773 + 0 read1
+115359773 + 0 read2
+208731780 + 0 properly paired (90.47% : N/A)
+211821724 + 0 with itself and mate mapped
+8024326 + 0 singletons (3.48% : N/A)
+2108136 + 0 with mate mapped to a different chr
+1950310 + 0 with mate mapped to a different chr (mapQ>=5)
+	Command being timed: "bash -c samtools flagstat hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam"
+	User time (seconds): 260.73
+	System time (seconds): 14.58
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:36.95
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9648
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 863
+	Voluntary context switches: 3
+	Involuntary context switches: 7828
+	Swaps: 0
+	File system inputs: 32059384
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_read_regions_overlap_stats hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam gencode_exons.bed
+
+Total length of regions: 131340583
+
+Number of analysed reads: 10000000
+Number of analysed reads: 20000000
+Number of analysed reads: 30000000
+Number of analysed reads: 40000000
+Number of analysed reads: 50000000
+Number of analysed reads: 60000000
+Number of analysed reads: 70000000
+Number of analysed reads: 80000000
+Number of analysed reads: 90000000
+Number of analysed reads: 100000000
+Number of analysed reads: 110000000
+Number of analysed reads: 120000000
+Number of analysed reads: 130000000
+Number of analysed reads: 140000000
+Number of analysed reads: 150000000
+Number of analysed reads: 160000000
+Number of analysed reads: 170000000
+Number of analysed reads: 180000000
+Number of analysed reads: 190000000
+Number of analysed reads: 200000000
+Number of analysed reads: 210000000
+Number of analysed reads: 220000000
+Number of analysed reads: 230000000
+
+Total number of analysed reads: 230719546
+Average overlap: 0.863645
+	Command being timed: "bash -c calc_read_regions_overlap_stats hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam gencode_exons.bed > hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_gc.txt; gzip hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_gc.txt"
+	User time (seconds): 793.47
+	System time (seconds): 15.36
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:30.87
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31136
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 10820
+	Voluntary context switches: 7
+	Involuntary context switches: 10947
+	Swaps: 0
+	File system inputs: 32071736
+	File system outputs: 424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_exon_read_coverage hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam gencode_exons.bed
+
+Number of analysed exons: 10000
+Number of analysed exons: 20000
+Number of analysed exons: 30000
+Number of analysed exons: 40000
+Number of analysed exons: 50000
+Number of analysed exons: 60000
+Number of analysed exons: 70000
+Number of analysed exons: 80000
+Number of analysed exons: 90000
+Number of analysed exons: 100000
+Number of analysed exons: 110000
+Number of analysed exons: 120000
+Number of analysed exons: 130000
+Number of analysed exons: 140000
+Number of analysed exons: 150000
+Number of analysed exons: 160000
+Number of analysed exons: 170000
+Number of analysed exons: 180000
+Number of analysed exons: 190000
+Number of analysed exons: 200000
+Number of analysed exons: 210000
+Number of analysed exons: 220000
+Number of analysed exons: 230000
+Number of analysed exons: 240000
+Number of analysed exons: 250000
+Number of analysed exons: 260000
+Number of analysed exons: 270000
+Number of analysed exons: 280000
+Number of analysed exons: 290000
+Number of analysed exons: 300000
+
+Total number of analysed exons: 303279
+	Command being timed: "bash -c calc_exon_read_coverage hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam gencode_exons.bed > hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_gc.txt; gzip hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_gc.txt"
+	User time (seconds): 2377.04
+	System time (seconds): 38.31
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 40:18.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 23568
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 19
+	Minor (reclaiming a frame) page faults: 7179
+	Voluntary context switches: 295
+	Involuntary context switches: 14796
+	Swaps: 0
+	File system inputs: 31313768
+	File system outputs: 51264
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq0.bed to ./ENCSR706ANY_mq0.bed
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30.bed to ./ENCSR706ANY_mq30.bed
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_read_regions_overlap_stats hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam ENCSR706ANY_mq0.bed
+
+Total length of regions: 79527437
+
+Number of analysed reads: 10000000
+Number of analysed reads: 20000000
+Number of analysed reads: 30000000
+Number of analysed reads: 40000000
+Number of analysed reads: 50000000
+Number of analysed reads: 60000000
+Number of analysed reads: 70000000
+Number of analysed reads: 80000000
+Number of analysed reads: 90000000
+Number of analysed reads: 100000000
+Number of analysed reads: 110000000
+Number of analysed reads: 120000000
+Number of analysed reads: 130000000
+Number of analysed reads: 140000000
+Number of analysed reads: 150000000
+Number of analysed reads: 160000000
+Number of analysed reads: 170000000
+Number of analysed reads: 180000000
+Number of analysed reads: 190000000
+Number of analysed reads: 200000000
+Number of analysed reads: 210000000
+Number of analysed reads: 220000000
+Number of analysed reads: 230000000
+
+Total number of analysed reads: 230719546
+Average overlap: 0.85115
+	Command being timed: "bash -c calc_read_regions_overlap_stats hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam ENCSR706ANY_mq0.bed > hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_ENCSR706ANY_mq0.txt; gzip hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_ENCSR706ANY_mq0.txt"
+	User time (seconds): 802.61
+	System time (seconds): 12.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:36.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19068
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 8
+	Minor (reclaiming a frame) page faults: 7063
+	Voluntary context switches: 724
+	Involuntary context switches: 9053
+	Swaps: 0
+	File system inputs: 27696272
+	File system outputs: 440
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_read_regions_overlap_stats hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam ENCSR706ANY_mq30.bed
+
+Total length of regions: 77921696
+
+Number of analysed reads: 10000000
+Number of analysed reads: 20000000
+Number of analysed reads: 30000000
+Number of analysed reads: 40000000
+Number of analysed reads: 50000000
+Number of analysed reads: 60000000
+Number of analysed reads: 70000000
+Number of analysed reads: 80000000
+Number of analysed reads: 90000000
+Number of analysed reads: 100000000
+Number of analysed reads: 110000000
+Number of analysed reads: 120000000
+Number of analysed reads: 130000000
+Number of analysed reads: 140000000
+Number of analysed reads: 150000000
+Number of analysed reads: 160000000
+Number of analysed reads: 170000000
+Number of analysed reads: 180000000
+Number of analysed reads: 190000000
+Number of analysed reads: 200000000
+Number of analysed reads: 210000000
+Number of analysed reads: 220000000
+Number of analysed reads: 230000000
+
+Total number of analysed reads: 230719546
+Average overlap: 0.841669
+	Command being timed: "bash -c calc_read_regions_overlap_stats hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam ENCSR706ANY_mq30.bed > hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_ENCSR706ANY_mq30.txt; gzip hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_ENCSR706ANY_mq30.txt"
+	User time (seconds): 793.24
+	System time (seconds): 12.72
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:27.76
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 18976
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 23
+	Minor (reclaiming a frame) page faults: 7958
+	Voluntary context switches: 355
+	Involuntary context switches: 9513
+	Swaps: 0
+	File system inputs: 29081768
+	File system outputs: 400
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_exon_read_coverage hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam ENCSR706ANY_mq0.bed
+
+Number of analysed exons: 10000
+Number of analysed exons: 20000
+Number of analysed exons: 30000
+Number of analysed exons: 40000
+Number of analysed exons: 50000
+Number of analysed exons: 60000
+Number of analysed exons: 70000
+Number of analysed exons: 80000
+Number of analysed exons: 90000
+Number of analysed exons: 100000
+Number of analysed exons: 110000
+Number of analysed exons: 120000
+Number of analysed exons: 130000
+Number of analysed exons: 140000
+Number of analysed exons: 150000
+
+Total number of analysed exons: 155730
+	Command being timed: "bash -c calc_exon_read_coverage hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam ENCSR706ANY_mq0.bed > hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_ENCSR706ANY_mq0.txt; gzip hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_ENCSR706ANY_mq0.txt"
+	User time (seconds): 1944.85
+	System time (seconds): 33.75
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 33:01.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19668
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 43
+	Minor (reclaiming a frame) page faults: 10498
+	Voluntary context switches: 139
+	Involuntary context switches: 13517
+	Swaps: 0
+	File system inputs: 31604920
+	File system outputs: 33744
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+71442ea439950f705555e181f3ed0f33c39143c8
+calc_exon_read_coverage hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam ENCSR706ANY_mq30.bed
+
+Number of analysed exons: 10000
+Number of analysed exons: 20000
+Number of analysed exons: 30000
+Number of analysed exons: 40000
+Number of analysed exons: 50000
+Number of analysed exons: 60000
+Number of analysed exons: 70000
+Number of analysed exons: 80000
+Number of analysed exons: 90000
+Number of analysed exons: 100000
+Number of analysed exons: 110000
+Number of analysed exons: 120000
+Number of analysed exons: 130000
+Number of analysed exons: 140000
+Number of analysed exons: 150000
+
+Total number of analysed exons: 153051
+	Command being timed: "bash -c calc_exon_read_coverage hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470.bam ENCSR706ANY_mq30.bed > hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_ENCSR706ANY_mq30.txt; gzip hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_ENCSR706ANY_mq30.txt"
+	User time (seconds): 1875.84
+	System time (seconds): 33.72
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 31:52.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 26
+	Minor (reclaiming a frame) page faults: 13110
+	Voluntary context switches: 170
+	Involuntary context switches: 13829
+	Swaps: 0
+	File system inputs: 29970624
+	File system outputs: 32864
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_ENCSR706ANY_mq30.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/stats/polya_rna/real/SRR1153470/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_ENCSR706ANY_mq30.txt.gz
+upload: ./hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_gc.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/stats/polya_rna/real/SRR1153470/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_gc.txt.gz
+upload: ./hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_ENCSR706ANY_mq0.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/stats/polya_rna/real/SRR1153470/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_ovl_ENCSR706ANY_mq0.txt.gz
+upload: ./hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_ENCSR706ANY_mq30.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/stats/polya_rna/real/SRR1153470/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_ENCSR706ANY_mq30.txt.gz
+upload: ./hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_gc.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/stats/polya_rna/real/SRR1153470/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_gc.txt.gz
+upload: ./hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_ENCSR706ANY_mq0.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/stats/polya_rna/real/SRR1153470/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_real_SRR1153470_exon_cov_ENCSR706ANY_mq0.txt.gz
+---

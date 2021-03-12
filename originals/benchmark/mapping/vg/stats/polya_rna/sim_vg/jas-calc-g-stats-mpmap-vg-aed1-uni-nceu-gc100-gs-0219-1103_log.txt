@@ -1,0 +1,225 @@
+---
+jas-calc-g-stats-mpmap-vg-aed1-uni-nceu-gc100-gs-0219-1103
+TIME=20210219-1103 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=144 CPU=24 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg/calculate_gamp_stats.sh
+CPU=24 REF=1kg_nonCEU_af001_gencode100_genes GRAPH=1kg_nonCEU_af001_gencode100_genes SIM=ENCSR000AED_rep1_uni MAPPER=mpmap
+---
+Completed 1.9 KiB/1.9 KiB (26.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg/calculate_gamp_stats.sh to ./calculate_gamp_stats.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/ENCSR000AED_rep1_uni/mpmap/1kg_nonCEU_af001_gencode100_genes/mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h2.gamp to ./mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h2.gamp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg/ENCSR000AED_rep1_uni/mpmap/1kg_nonCEU_af001_gencode100_genes/mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h1.gamp to ./mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h1.gamp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_genes/1kg_nonCEU_af001_gencode100_genes.xg to ./1kg_nonCEU_af001_gencode100_genes.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2.gam to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1.gam to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1.gam
+	Command being timed: "bash -c vg view -K -G mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h1.gamp > mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h1.gam"
+	User time (seconds): 1217.73
+	System time (seconds): 9.97
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 20:27.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 34288
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 539861
+	Voluntary context switches: 7
+	Involuntary context switches: 1702
+	Swaps: 0
+	File system inputs: 328
+	File system outputs: 15066064
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Total alignments: 50000000
+Total primary: 50000000
+Total secondary: 0
+Total aligned: 49982944
+Total perfect: 38070198
+Total gapless (softclips allowed): 49971072
+Insertions: 9784 bp in 7252 read events
+Deletions: 12636 bp in 6350 read events
+Substitutions: 8693028 bp in 8244686 read events
+Softclips: 108525366 bp in 5535881 read events
+	Command being timed: "bash -c vg stats -a mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h1.gam"
+	User time (seconds): 1441.45
+	System time (seconds): 12.63
+	Percent of CPU this job got: 1316%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:50.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8044512
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 10234654
+	Voluntary context switches: 185
+	Involuntary context switches: 7962
+	Swaps: 0
+	File system inputs: 584
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+49475163 reads correct
+	Command being timed: "bash -c vg gampcompare -t 24 -d -a mpmap -G 1kg_nonCEU_af001_gencode100_genes.xg mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h1.gam sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1.gam | grep -v ^distance | cut -f1-4 | sort -k1n -k2n -k3n | uniq -c > mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gam_h1.txt; gzip mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gam_h1.txt"
+	User time (seconds): 8449.13
+	System time (seconds): 266.27
+	Percent of CPU this job got: 1370%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:36.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 128878600
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 10
+	Minor (reclaiming a frame) page faults: 60352339
+	Voluntary context switches: 5330887
+	Involuntary context switches: 126372
+	Swaps: 0
+	File system inputs: 1308264
+	File system outputs: 3362480
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+49475310 reads correct
+	Command being timed: "bash -c vg gampcompare -t 24 -d -a mpmap 1kg_nonCEU_af001_gencode100_genes.xg mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h1.gamp sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1.gam | grep -v ^distance | cut -f1-4 | sort -k1n -k2n -k3n | uniq -c > mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gamp_h1.txt; gzip mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gamp_h1.txt"
+	User time (seconds): 9905.85
+	System time (seconds): 267.58
+	Percent of CPU this job got: 1454%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:39.41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 128925164
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6
+	Minor (reclaiming a frame) page faults: 57791180
+	Voluntary context switches: 4572011
+	Involuntary context switches: 84020
+	Swaps: 0
+	File system inputs: 30959544
+	File system outputs: 3362480
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg view -K -G mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h2.gamp > mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h2.gam"
+	User time (seconds): 1192.60
+	System time (seconds): 12.63
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 20:05.24
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 29400
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6
+	Minor (reclaiming a frame) page faults: 293039
+	Voluntary context switches: 10
+	Involuntary context switches: 1784
+	Swaps: 0
+	File system inputs: 20305752
+	File system outputs: 15067032
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Total alignments: 50000000
+Total primary: 50000000
+Total secondary: 0
+Total aligned: 49982946
+Total perfect: 38073047
+Total gapless (softclips allowed): 49971260
+Insertions: 10292 bp in 7337 read events
+Deletions: 10859 bp in 5846 read events
+Substitutions: 8689703 bp in 8242609 read events
+Softclips: 108478153 bp in 5534941 read events
+	Command being timed: "bash -c vg stats -a mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h2.gam"
+	User time (seconds): 1413.68
+	System time (seconds): 6.98
+	Percent of CPU this job got: 1317%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:47.83
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7429732
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 4503426
+	Voluntary context switches: 187
+	Involuntary context switches: 7436
+	Swaps: 0
+	File system inputs: 7384
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+49476653 reads correct
+	Command being timed: "bash -c vg gampcompare -t 24 -d -a mpmap -G 1kg_nonCEU_af001_gencode100_genes.xg mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h2.gam sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2.gam | grep -v ^distance | cut -f1-4 | sort -k1n -k2n -k3n | uniq -c > mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gam_h2.txt; gzip mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gam_h2.txt"
+	User time (seconds): 8994.14
+	System time (seconds): 389.11
+	Percent of CPU this job got: 1322%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:49.40
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 128777744
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 62232426
+	Voluntary context switches: 9021279
+	Involuntary context switches: 159062
+	Swaps: 0
+	File system inputs: 42114712
+	File system outputs: 3362368
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+49476826 reads correct
+	Command being timed: "bash -c vg gampcompare -t 24 -d -a mpmap 1kg_nonCEU_af001_gencode100_genes.xg mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_h2.gamp sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h2.gam | grep -v ^distance | cut -f1-4 | sort -k1n -k2n -k3n | uniq -c > mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gamp_h2.txt; gzip mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gamp_h2.txt"
+	User time (seconds): 9502.51
+	System time (seconds): 248.52
+	Percent of CPU this job got: 1450%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:12.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 128806356
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 13
+	Minor (reclaiming a frame) page faults: 57939094
+	Voluntary context switches: 3713324
+	Involuntary context switches: 68068
+	Swaps: 0
+	File system inputs: 46328121
+	File system outputs: 3362360
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gam_h1.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg/ENCSR000AED_rep1_uni/mpmap/1kg_nonCEU_af001_gencode100_genes/mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gam_h1.txt.gz
+upload: ./mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gam_h2.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg/ENCSR000AED_rep1_uni/mpmap/1kg_nonCEU_af001_gencode100_genes/mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gam_h2.txt.gz
+upload: ./mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gamp_h2.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg/ENCSR000AED_rep1_uni/mpmap/1kg_nonCEU_af001_gencode100_genes/mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gamp_h2.txt.gz
+upload: ./mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gamp_h1.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg/ENCSR000AED_rep1_uni/mpmap/1kg_nonCEU_af001_gencode100_genes/mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni_dist_gamp_h1.txt.gz
+---

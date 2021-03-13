@@ -1,6 +1,6 @@
 set -e
 
-# Set genome prefix
+# Set genome FASTA prefix
 GENOME_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly"
 
 # Set output name prefix

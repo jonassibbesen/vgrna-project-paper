@@ -7,13 +7,13 @@ MAF_SUFFIX=$(echo ${MAF} | cut -d '.' -f2)
 # Set samples file
 SAMPLES="samples.txt"
 
-# Set genome prefix
+# Set genome FASTA prefix
 GENOME_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes"
 
-# Set exons prefix
+# Set exons BED prefix
 EXONS_PREFIX="gencode.v29.primary_assembly.annotation_renamed_full_exons"
 
-# Set variants prefix
+# Set variants VCF prefix
 VARIANTS_22_PREFIX="ALL.chr22_GRCh38.genotypes.20170504"
 VARIANTS_CHR_PREFIX="ALL.chr${CHR}_GRCh38.genotypes.20170504"
 

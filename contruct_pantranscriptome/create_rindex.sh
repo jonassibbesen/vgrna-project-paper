@@ -1,6 +1,6 @@
 set -e
 
-# Set graph prefix
+# Set graph (PG) prefix
 GRAPH_PREFIX="1kg_nonCEU_af001_gencode100"
 
 # Set output name prefix

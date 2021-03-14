@@ -1,8 +1,8 @@
 ## Processing the raw data
 
-Each script includes a header with input and output file variables that should be set before running the scripts. The number of threads can be set using `CPU`. 
+Each script includes a header with input and output file variables. These variables should be set before running the scripts. The number of threads can be set using `CPU`. 
 
-Note that the Docker image suggested is not necessarily the same version of the container that was used in the paper. For information on which version was used exactly see scripts and log files in the [originals](https://github.com/jonassibbesen/vgrna-project-paper/tree/main/originals) folder. 
+Note that the Docker image suggested is not necessarily the same version of the container that was used in the paper. For information on which exact version was used see log files in the [originals](https://github.com/jonassibbesen/vgrna-project-paper/tree/main/originals) folder. 
 
 
 
@@ -24,11 +24,13 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 #### 3. Process variants
 
-`process_variants.sh`: Subsets, filter and normalises variants for a chromosome (`CHR`).
+`process_variants.sh`: Subsets, filter and normalises variants on a chromosome. Run this script on all chromosomes (`seq 1 22; echo "X"; echo "Y"`).
 
 * Docker image: jsibbesen/base-s3script:18.04-s1
 
-Important parameters:
+Important variables:
+
+* `CHR`: Chromosome
 
 * `MAF`: Minimum allele frequency in intergenic regions
 * `SAMPLES`: File containing the samples to subset

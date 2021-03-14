@@ -1,12 +1,12 @@
 set -e
 
-# Set transcripts prefix
+# Set transcripts (GTF) prefix
 TRANSCRIPTS_PREFIX="gencode.v29.primary_assembly.annotation_renamed_full"
 
-# Set variants prefix
+# Set variants (VCF) prefix
 VARIANTS_PREFIX="1kg_nonCEU_exons_${CHR}"
 
-# Set graph prefix
+# Set graph (PG) prefix
 GRAPH_PREFIX="1kg_nonCEU_af001_gencode100_${CHR}"
 
 # Set output name prefix

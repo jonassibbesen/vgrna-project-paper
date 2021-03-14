@@ -1,6 +1,6 @@
 set -e
 
-# Set transcripts GTF prefix
+# Set transcripts (GTF) prefix
 TRANSCRIPTS_PREFIX="gencode.v29.primary_assembly.annotation"
 
 # Set output name prefix

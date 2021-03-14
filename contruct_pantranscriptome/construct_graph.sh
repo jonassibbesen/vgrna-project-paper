@@ -1,13 +1,13 @@
 set -e
 
-# Set genome prefixes
+# Set genome (FASTA) prefixes
 GENOME_SCA_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly_scaffolds"
 GENOME_CHR_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes"
 
-# Set transcripts prefix
+# Set transcripts (GTF) prefix
 TRANSCRIPTS_PREFIX="gencode.v29.primary_assembly.annotation_renamed_full"
 
-# Set variants prefix
+# Set variants (VCF) prefix
 VARIANTS_PREFIX="1kg_nonCEU_af001_${CHR}"
 
 # Set output name prefix
@@ -23,7 +23,7 @@ if [ "${CHR}" = "SCA" ]; then
 	/usr/bin/time -v bash -c "vg construct -p -t ${CPU} -r ${GENOME_SCA_PREFIX}.fa > ${CHR}.vg"
 
 	# Convert variation graph to PackedGraph format
-	/usr/bin/time -v bash -c "vg convert -p ${CHR}.vg > ${CHR}.pg"
+	/usr/bin/time -v bash -c "vg convert -p ${CHR}.vg > ${CHR}.pg; rm ${CHR}.vg"
 
 	# Find contig transcripts
 	/usr/bin/time -v bash -c "grep '^KI\|^GL' ${TRANSCRIPTS_PREFIX}.gtf > ${CHR}.gtf"
@@ -39,7 +39,7 @@ elif [ "${CHR}" = "MT" ]; then
 	/usr/bin/time -v bash -c "vg construct -p -t ${CPU} -R ${CHR} -C -r ${GENOME_CHR_PREFIX}.fa > ${CHR}.vg"
 
 	# Convert variation graph to PackedGraph format
-	/usr/bin/time -v bash -c "vg convert -p ${CHR}.vg > ${CHR}.pg"
+	/usr/bin/time -v bash -c "vg convert -p ${CHR}.vg > ${CHR}.pg; rm ${CHR}.vg"
 
 	# Find contig transcripts
 	/usr/bin/time -v bash -c "grep -P '^${CHR}\t' ${TRANSCRIPTS_PREFIX}.gtf > ${CHR}.gtf"
@@ -54,7 +54,7 @@ else
 	/usr/bin/time -v bash -c "vg construct -p -t ${CPU} -R ${CHR} -C -a -v ${VARIANTS_PREFIX}.vcf.gz -r ${GENOME_CHR_PREFIX}.fa > ${CHR}.vg"
 
 	# Convert variation graph to PackedGraph format
-	/usr/bin/time -v bash -c "vg convert -p ${CHR}.vg > ${CHR}.pg"
+	/usr/bin/time -v bash -c "vg convert -p ${CHR}.vg > ${CHR}.pg; rm ${CHR}.vg"
 
 	# Find contig transcripts
 	/usr/bin/time -v bash -c "grep -P '^${CHR}\t' ${TRANSCRIPTS_PREFIX}.gtf > ${CHR}.gtf"

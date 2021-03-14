@@ -1,9 +1,9 @@
 set -e
 
-# Set simulated transcript prefix
+# Set simulated transcript (FASTA) prefix
 SIM_PREFIX="1kg_NA12878_exons_gencode100_allpaths"
 
-# Set transcript prefix
+# Set transcript (FASTA) prefix
 TRANSCRIPTS_PREFIX="1kg_nonCEU_af001_gencode100"
 
 # Set output name prefix

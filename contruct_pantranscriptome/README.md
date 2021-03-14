@@ -60,3 +60,11 @@ Important variables:
 
 * Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
 
+
+
+### (7. Calculate pantranscriptome stats)
+
+`calculate_hst_stats.sh`: Calculate population uniqueness statistics for haplotype-specific transcripts in the pantranscriptome. Use this population information file for 1000 Genomes Project data: https://ftp-trace.ncbi.nlm.nih.gov/1000genomes//ftp/release/20130502/integrated_call_samples_v3.20130502.ALL.panel
+
+* Docker image: quay.io/jsibbesen/vgrna-s3script:vgrna-71442ea4-s2
+

@@ -20,7 +20,7 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 Important variables:
 
-* `SEED`: Seed for the random number generators
+* `SEED`: Seed for the random number generator
 
 
 
@@ -40,7 +40,7 @@ Important variables:
 
 Important variables:
 
-* `SEED`: Seed for the random number generators
+* `SEED`: Seed for the random number generator
 * `MEAN`: Mean of fragment length distribution
 * `SD`: Standard deviation of fragment length distribution
 

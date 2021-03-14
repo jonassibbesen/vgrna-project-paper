@@ -1,6 +1,6 @@
 set -e
 
-# Set transcripts prefix
+# Set transcripts (FASTA) prefix
 TRANSCRIPTS_PREFIX="1kg_EURnonCEU_af002_gencode100"
 
 # Set output name prefix

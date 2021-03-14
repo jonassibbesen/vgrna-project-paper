@@ -9,11 +9,11 @@ MODE="kallisto"
 # Set rng seed
 SEED=622797
 
-# Set read files
+# Set read (FASTQ) files
 READ_1="sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_1.fq.gz"
 READ_2="sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_2.fq.gz"
 
-# Set index prefix
+# Set index (IDX) prefix
 INDEX_PREFIX="kallisto_index_1kg_nonCEU_af001_gencode100"
 
 # Set output name prefix

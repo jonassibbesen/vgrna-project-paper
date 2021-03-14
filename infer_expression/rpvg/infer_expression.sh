@@ -14,16 +14,16 @@ SD=28.0846
 # Set rng seed
 SEED=622797
 
-# Set alignment prefix
+# Set alignment (GAM or GAMP) prefix
 ALIGN_PREFIX="mpmap_1kg_nonCEU_af001_gencode100_genes_sim_vg_ENCSR000AED_rep1_uni"
 
-# Set graph prefix
+# Set graph (XG) prefix
 GRAPH_PREFIX="1kg_nonCEU_af001_gencode100_genes"
 
-# Set trancript index prefix
+# Set trancript index (GBWT) prefix
 INDEX_PREFIX="1kg_nonCEU_af001_gencode100_genes"
 
-# Set trancript info prefix
+# Set trancript info (txt) prefix
 INFO_PREFIX="1kg_nonCEU_af001_gencode100_genes"
 
 # Set output name prefix

@@ -3,13 +3,13 @@ set -e
 # Set mapper name
 MAPPER="mpmap"
 
-# Set alignment prefix
+# Set alignment (GAM or GAMP) prefix
 ALIGN_PREFIX="mpmap_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1"
 
-# Set graph prefix
+# Set graph (XG) prefix
 GRAPH_PREFIX="1kg_nonCEU_af001_gencode100"
 
-# Set simulated alignment prefix
+# Set simulated alignment (GAM) prefix
 SIM_PREFIX="sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1"
 
 # Set output name prefix

@@ -8,13 +8,13 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 ### 1. Prepare variants
 
-`prepare_variants.sh`: Construct variant and haplotype list for a chromosome. Run this script on all chromosomes (`seq 1 22; echo "X"; echo "Y"`).
+`prepare_variants.sh`: Construct variant and haplotype list for a chromosome. Run this script on each chromosome (`seq 1 22; echo "X"; echo "Y"`).
 
 * Docker image: quay.io/jsibbesen/hisat2-s3script:hisat2-2.2.1-s2
 
 Important variables:
 
-* `CHR`: Chromosome
+* `CHR`: Chromosome name
 
 
 

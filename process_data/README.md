@@ -24,13 +24,13 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 ### 3. Process variants
 
-`process_variants.sh`: Subsets, filter and normalises variants on a chromosome. Run this script on all chromosomes (`seq 1 22; echo "X"; echo "Y"`).
+`process_variants.sh`: Subset, filter and normalise variants on a chromosome. Run this script on each chromosome (`seq 1 22; echo "X"; echo "Y"`).
 
 * Docker image: jsibbesen/base-s3script:18.04-s1
 
 Important variables:
 
-* `CHR`: Chromosome
+* `CHR`: Chromosome name
 * `MAF`: Minimum allele frequency in intergenic regions
 * `SAMPLES`: File containing the samples to subset
 

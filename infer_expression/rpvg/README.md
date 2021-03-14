@@ -14,7 +14,7 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 Important variables:
 
-* `SEED`: Seed for the random number generator
 * `MODE`: Inference mode to use (see script for more details)
+* `SEED`: Seed for the random number generator
 * `MEAN`: Mean of fragment length distribution (only used in single-path mode)
 * `SD`: Standard deviation of fragment length distribution (only used in single-path mode)

@@ -8,13 +8,13 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 ### 1. Construct graphs
 
-`construct_graph.sh`: Construct spliced pangenome graph for a chromosome. Run this script on all chromosomes including the scaffolds (`seq 1 22; echo "X"; echo "Y"; echo "MT"; echo "SCA"`).
+`construct_graph.sh`: Construct spliced pangenome graph for a chromosome. Run this script on each chromosome including mitochondria and the scaffolds (`seq 1 22; echo "X"; echo "Y"; echo "MT"; echo "SCA"`).
 
 * Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
 
 Important variables:
 
-* `CHR`: Chromosome
+* `CHR`: Chromosome name
 
   
 
@@ -28,14 +28,14 @@ Important variables:
 
 ### 3. Project transcripts
 
-`project_transcripts.sh`: Project transcripts onto haplotypes and create pantranscriptome (haplotype-specifc trasncripts) for a chromosome. Run this script on all chromosomes including the scaffolds (`seq 1 22; echo "X"; echo "Y"`). Use `project_transcripts_gene.sh` instead if an exon-only splice graph is wanted.
+`project_transcripts.sh`: Project transcripts onto haplotypes and create pantranscriptome (haplotype-specifc trasncripts) for a chromosome. Run this script on each chromosome (`seq 1 22; echo "X"; echo "Y"`). Use `project_transcripts_gene.sh` instead if an exon-only splice graph is wanted.
 
 * Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
 
 Important variables:
 
 * `MODE`: Type of pantranscriptome to create (see script for more details)
-
+* `CHR`: Chromosome name
 
 
 ### 4. Generate xg graph

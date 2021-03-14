@@ -1,12 +1,12 @@
 set -e
 
-# Set alignment prefix
+# Set alignment (BAM) prefix
 ALIGN_PREFIX="mpmap_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep1"
 
-# Set exons prefix
+# Set exons (BED) prefix
 EXONS_PREFIX="gencode.v29.primary_assembly.annotation_renamed_full_exons"
 
-# Set regions prefix
+# Set regions (BED) prefix
 REGIONS_PREFIX="ENCSR706ANY_mq30_exon_cov"
 
 # Set output name prefix

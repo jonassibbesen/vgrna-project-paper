@@ -1,10 +1,10 @@
 set -e
 
-# Set alignment prefixes
+# Set alignment (BAM) prefixes
 ALIGN1_PREFIX="mpmap_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1"
 ALIGN2_PREFIX="mpmap_1kg_nonCEU_af001_gencode100_sim_vg_ENCSR000AED_rep1_uni_h2"
 
-# Set variants prefix
+# Set variants (VCF) prefix
 VARIANTS_PREFIX="1kg_NA12878_exons_${CHR}"
 
 # Set output name prefix

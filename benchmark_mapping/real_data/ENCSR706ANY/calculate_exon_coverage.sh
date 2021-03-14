@@ -1,9 +1,9 @@
 set -e
 
-# Set alignment prefix
+# Set alignment (BAM and BED) prefix
 ALIGN_PREFIX="ENCSR706ANY_mq30"
 
-# Set exons prefix
+# Set exons (BED) prefix
 EXONS_PREFIX="gencode.v29.primary_assembly.annotation_renamed_full_exons"
 
 # Set output name prefix

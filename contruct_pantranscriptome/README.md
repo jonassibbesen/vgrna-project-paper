@@ -6,7 +6,7 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 
 
-#### 1. Construct graphs
+### 1. Construct graphs
 
 `construct_graph.sh`: Construct spliced pangenome graph for a chromosome. Run this script on all chromosomes including the scaffolds (`seq 1 22; echo "X"; echo "Y"; echo "MT"; echo "SCA"`).
 
@@ -18,7 +18,7 @@ Important variables:
 
   
 
-#### 2. Join graphs
+### 2. Join graphs
 
 `join_graphs`: Join the id space of the chromosome graphs. 
 
@@ -26,7 +26,7 @@ Important variables:
 
 
 
-#### 3. Project transcripts
+### 3. Project transcripts
 
 `project_transcripts.sh`: Project transcripts onto haplotypes and create pantranscriptome (haplotype-specifc trasncripts) for a chromosome. Run this script on all chromosomes including the scaffolds (`seq 1 22; echo "X"; echo "Y"`). Use `project_transcripts_gene.sh` instead if an exon-only splice graph is wanted.
 
@@ -38,7 +38,7 @@ Important variables:
 
 
 
-#### 4. Generate xg graph
+### 4. Generate xg graph
 
 `generate_xg.sh`: Combine chromosome graphs and create a xg graph for the whole genome
 
@@ -46,7 +46,7 @@ Important variables:
 
   
 
-#### 5. Merge pantranscriptomes
+### 5. Merge pantranscriptomes
 
 `merge.sh`: Merge chromosome pantranscriptomes (GBWT indexes, FASTA sequences and haplotype-specifc transcript info files).
 
@@ -54,7 +54,7 @@ Important variables:
 
 
 
-#### 6. Create r-index
+### 6. Create r-index
 
 `generate_xg.sh`: Create r-index of the merged GBWT index.
 

@@ -6,7 +6,7 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 
 
-#### 1. Process genome
+### 1. Process genome
 
 `process_genome.sh`: Split genome into two files containing chromosomes and scaffolds, respectively.
 
@@ -14,7 +14,7 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
   
 
-#### 2. Process transcripts
+### 2. Process transcripts
 
 `process_transcripts.sh`: Filter for full length transcripts, rename contigs and create exon region BED file. 
 
@@ -22,7 +22,7 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 
 
-#### 3. Process variants
+### 3. Process variants
 
 `process_variants.sh`: Subsets, filter and normalises variants on a chromosome. Run this script on all chromosomes (`seq 1 22; echo "X"; echo "Y"`).
 

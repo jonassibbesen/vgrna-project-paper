@@ -1,6 +1,6 @@
 set -e
 
-# Set expression profile prefix
+# Set expression profile (isoforms.results) prefix
 PROFILE_PREFIX="1kg_NA12878_gencode100_ENCSR000AED_rep1_rsem"
 
 # Set output name prefix

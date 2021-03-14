@@ -14,13 +14,13 @@ There are two types of script in this repository:
 
 Here you can find links to the data used in the paper. This includes both the raw data and data constructed as part of the analyses in the paper. The constructed data included here is either the data that are not guaranteed to be reproducible (subsampled transcript annotation and simulated reads) or that are deemed potentially useful in other projects (graphs and pantranscriptomes).
 
-#### Genome
+### Genome
 
 The GRCh38 (primary assembly) reference genome:
 
 * ftp://ftp.ensembl.org/pub/release-94/fasta/homo_sapiens/dna/
 
-#### Transcripts
+### Transcripts
 
 The GENCODE v29 (primary assembly) transcript annotation:
 
@@ -30,13 +30,13 @@ The subsampled (80%) GENCODE v29 transcript annotation:
 
 * **Add link**
 
-#### Variants
+### Variants
 
 The 1000 Genomes Project variants and haplotypes lifted to GRCh38:
 
 * http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/supporting/GRCh38_positions/ 
 
-#### Reads
+### Reads
 
 The simulated RNA-seq reads: 
 
@@ -52,7 +52,7 @@ The Iso-Seq alignments:
 
 * https://www.encodeproject.org/experiments/ENCSR706ANY/ (all replicates)
 
-#### Graphs and pantranscriptomes
+### Graphs and pantranscriptomes
 
 The spliced pangenome graphs and pantranscriptomes:
 

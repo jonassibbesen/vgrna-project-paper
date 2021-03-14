@@ -1,6 +1,6 @@
 set -e
 
-# Set graph prefix
+# Set graph (XG) prefix
 GRAPH_PREFIX="1kg_NA12878_exons_gencode100_allpaths"
 
 # Set output name prefix

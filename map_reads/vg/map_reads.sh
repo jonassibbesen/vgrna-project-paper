@@ -6,14 +6,14 @@ set -e
 #	"mpmap_nosplice": Use vg mpmap without novel splice-junction detection (used when mapping to gene-only graphs)
 MODE="mpmap"
 
-# Set read files
+# Set read (FASTQ) files
 READ_1="sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_1.fq.gz"
 READ_2="sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_2.fq.gz"
 
-# Set graph prefix
+# Set graph (XG) prefix
 GRAPH_PREFIX="1kg_nonCEU_af001_gencode100"
 
-# Set index prefix
+# Set index (GCSA and disance) prefix
 INDEX_PREFIX="1kg_nonCEU_af001_gencode100_index"
 
 # Set output name prefix

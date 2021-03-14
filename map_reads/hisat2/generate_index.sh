@@ -1,12 +1,12 @@
 set -e
 
-# Set genome prefix
+# Set genome (FASTA) prefix
 GENOME_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly"
 
-# Set transcripts prefix
+# Set transcripts (GTF) prefix
 TRANSCRIPTS_PREFIX="gencode.v29.primary_assembly.annotation_renamed_full"
 
-# Set variants prefix
+# Set variants (VCF) prefix
 VARIANTS_PREFIX="1kg_nonCEU_af001"
 
 # Set output name prefix
@@ -16,10 +16,10 @@ OUT_PREFIX="1kg_nonCEU_af001_gencode100_index"
 CPU=1
 
 # Construct exon list
-/usr/bin/time -v bash -c "hisat2_extract_exons.py ${TRANSCRIPTS}.gtf > ${OUT_PREFIX}_exons.txt; wc -l ${OUT_PREFIX}_exons.txt"
+/usr/bin/time -v bash -c "hisat2_extract_exons.py ${TRANSCRIPTS_PREFIX}.gtf > ${OUT_PREFIX}_exons.txt; wc -l ${OUT_PREFIX}_exons.txt"
 
 # Construct splice-site list
-/usr/bin/time -v bash -c "hisat2_extract_splice_sites.py ${TRANSCRIPTS}.gtf > ${OUT_PREFIX}_splice_sites.txt; wc -l ${OUT_PREFIX}_splice_sites.txt"
+/usr/bin/time -v bash -c "hisat2_extract_splice_sites.py ${TRANSCRIPTS_PREFIX}.gtf > ${OUT_PREFIX}_splice_sites.txt; wc -l ${OUT_PREFIX}_splice_sites.txt"
 
 if [ "${VARIANTS_PREFIX}" = "" ]; then
 

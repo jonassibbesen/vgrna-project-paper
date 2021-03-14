@@ -11,17 +11,10 @@ Note that the Docker image suggested is not necessarily the same version of the 
 `construct_graph.sh`: Construct graph and haplotype-specific transcripts for a single sample using pipeline described under [contruct_pantranscriptome](https://github.com/jonassibbesen/vgrna-project-paper/tree/main/contruct_pantranscriptome).
 
 
-### (1. Surject transcripts)
-
-`surject_transcripts.sh`: Optionally surject haplotype-specific transcripts to reference genome (needed for reference-based mapping evaluation).
-
-* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
-
-
 
 ### 2. Infer expression
 
-`join_graphs`: Infer expression profile of haplotype-specific transcripts.
+`infer_expression.sh`: Infer expression profile of haplotype-specific transcripts.
 
 * Docker image: quay.io/jsibbesen/rsem-s3script:rsem-1.3.1-s1
 
@@ -31,7 +24,7 @@ Important variables:
 
 
 
-### (2. Uniform expression)
+### (2+. Uniform expression)
 
 `uniform_expression.sh`: Optionally convert expression profile to uniform expression across all transcripts.
 
@@ -51,3 +44,10 @@ Important variables:
 * `MEAN`: Mean of fragment length distribution
 * `SD`: Standard deviation of fragment length distribution
 
+
+
+### (4. Surject transcripts)
+
+`surject_transcripts.sh`: Optionally surject haplotype-specific transcripts to reference coordinates (needed for reference-based mapping evaluation).
+
+* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1

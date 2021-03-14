@@ -1,6 +1,6 @@
 set -e
 
-# Set graph prefix
+# Set graph (PG) prefix
 GRAPH_PREFIX="1kg_nonCEU_af001_gencode100"
 
 # Set output name prefix
@@ -10,7 +10,7 @@ OUT_PREFIX="1kg_nonCEU_af001_gencode100_index"
 CPU=1
 
 # Generate trivial snarls
-/usr/bin/time -v bash -c 'for i in $(seq 1 22; echo X; echo Y; echo MT; echo SCA); do echo ${i}; vg snarls -t '"${CPU}"' --algorithm integrated -T ${i}/'"${GRAPH_PREFIX}"'_${i}.pg > ${i}_trivial.snarls; done'
+/usr/bin/time -v bash -c 'for i in $(seq 1 22; echo X; echo Y; echo MT; echo SCA); do echo ${i}; vg snarls -t '"${CPU}"' --algorithm integrated -T '"${GRAPH_PREFIX}"'_${i}.pg > ${i}_trivial.snarls; done'
 
 # Combine trivial snarls
 /usr/bin/time -v bash -c 'cat $(for i in $(seq 1 22; echo X; echo Y; echo MT; echo SCA); do echo ${i}_trivial.snarls; done) > trivial.snarls; rm *_trivial.snarls'

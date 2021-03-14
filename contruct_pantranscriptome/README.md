@@ -20,7 +20,7 @@ Important variables:
 
 ### 2. Join graphs
 
-`join_graphs`: Join the id space of the chromosome graphs. 
+`join_graphs.sh`: Join the id space of the chromosome graphs. 
 
 * Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
 
@@ -34,7 +34,7 @@ Important variables:
 
 Important variables:
 
-* `MODE`: Type of pantranscriptome (see script for more details)
+* `MODE`: Type of pantranscriptome to create (see script for more details)
 
 
 
@@ -56,7 +56,7 @@ Important variables:
 
 ### 6. Create r-index
 
-`generate_xg.sh`: Create r-index of the merged GBWT index.
+`create_rindex.sh`: Create r-index of the merged GBWT index.
 
 * Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
 

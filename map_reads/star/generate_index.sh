@@ -1,9 +1,9 @@
 set -e
 
-# Set genome prefix
+# Set genome (FASTA) prefix
 GENOME_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly"
 
-# Set transcripts prefix
+# Set transcripts (GTF) prefix
 TRANSCRIPTS_PREFIX="gencode.v29.primary_assembly.annotation_renamed_full"
 
 # Set output name prefix

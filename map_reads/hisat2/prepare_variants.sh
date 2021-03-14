@@ -1,9 +1,9 @@
 set -e
 
-# Set genome prefix
+# Set genome (FASTA) prefix
 GENOME_PREFIX="Homo_sapiens.GRCh38.dna.primary_assembly"
 
-# Set variants prefix
+# Set variants (VCF) prefix
 VARIANTS_PREFIX="1kg_nonCEU_af001_${CHR}"
 
 # Set output name prefix

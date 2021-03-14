@@ -1,9 +1,9 @@
 set -e
 
-# Set alignment prefix
+# Set alignment (BAM) prefix
 ALIGN_PREFIX="star_gencode100_sim_vg_ENCSR000AED_rep1_uni_h1"
 
-# Set graph prefix
+# Set graph (XG) prefix
 GRAPH_PREFIX="gencode100"
 
 # Set output name prefix

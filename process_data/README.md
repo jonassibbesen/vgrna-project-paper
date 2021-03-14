@@ -31,7 +31,6 @@ Note that the Docker image suggested is not necessarily the same version of the 
 Important variables:
 
 * `CHR`: Chromosome
-
 * `MAF`: Minimum allele frequency in intergenic regions
 * `SAMPLES`: File containing the samples to subset
 

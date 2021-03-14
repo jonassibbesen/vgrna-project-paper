@@ -1,6 +1,6 @@
 set -e
 
-# Set read files
+# Set read (FASTQ) files
 READ_1="sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_1.fq.gz"
 READ_2="sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_h1_2.fq.gz"
 

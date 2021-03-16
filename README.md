@@ -38,11 +38,7 @@ The 1000 Genomes Project variants and haplotypes lifted to GRCh38:
 
 ### Reads
 
-The simulated RNA-seq reads: 
-
-* **Add link**
-
-The real RNA-seq reads:
+The RNA-seq reads:
 
 * https://www.ncbi.nlm.nih.gov/sra/?term=SRR1153470
 * https://www.encodeproject.org/experiments/ENCSR000AED/ (replicate 1)

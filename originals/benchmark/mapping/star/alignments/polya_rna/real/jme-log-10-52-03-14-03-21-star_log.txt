@@ -1,0 +1,53 @@
+---
+jme-log-10-52-03-14-03-21-star
+
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/map_reads.sh
+MAPPER=star REF=gencode100 NOUPLOAD=1 CPU=16 REAL=ENCSR000AED_rep1 READS_1=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz READS_2=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz
+---
+Completed 1.6 KiB/1.6 KiB (26.1 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/map_reads.sh to ./map_reads.sh
+2021-03-14 03:57:05 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz [6473127051/6473127051] -> "reads_1.fq.gz" [1]
+2021-03-14 04:02:13 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz [6810978043/6810978043] -> "reads_2.fq.gz" [1]
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/chrLength.txt to ./chrLength.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/chrNameLength.txt to ./chrNameLength.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/chrName.txt to ./chrName.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/chrStart.txt to ./chrStart.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/exonInfo.tab to ./exonInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/genomeParameters.txt to ./genomeParameters.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/geneInfo.tab to ./geneInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/exonGeTrInfo.tab to ./exonGeTrInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/sjdbList.fromGTF.out.tab to ./sjdbList.fromGTF.out.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/sjdbInfo.txt to ./sjdbInfo.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/sjdbList.out.tab to ./sjdbList.out.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/transcriptInfo.tab to ./transcriptInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/SAindex to ./SAindex
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/Genome to ./Genome
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/SA to ./SA
+Mar 14 04:03:47 ..... started STAR run
+Mar 14 04:03:47 ..... loading genome
+Mar 14 04:04:03 ..... started mapping
+Mar 14 04:36:14 ..... finished mapping
+Mar 14 04:36:16 ..... finished successfully
+	Command being timed: "bash -c STAR --runThreadN 16 --genomeDir . --readFilesCommand zcat --readFilesIn reads_1.fq.gz reads_2.fq.gz --outSAMunmapped Within --outSAMtype BAM Unsorted --outFileNamePrefix star_gencode100_real_ENCSR000AED_rep1_; mv star_gencode100_real_ENCSR000AED_rep1_Aligned.out.bam star_gencode100_real_ENCSR000AED_rep1.bam"
+	User time (seconds): 18048.39
+	System time (seconds): 148.42
+	Percent of CPU this job got: 933%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 32:28.83
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 33133168
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 39
+	Minor (reclaiming a frame) page faults: 28314190
+	Voluntary context switches: 547380
+	Involuntary context switches: 57399
+	Swaps: 0
+	File system inputs: 8952
+	File system outputs: 48604488
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+---

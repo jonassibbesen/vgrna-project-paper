@@ -1,0 +1,75 @@
+---
+jme-log-05-44-22-15-03-21-mpmap
+
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh
+MAPPER=mpmap REF=1kg_nonCEU_af001_gencode100 NOUPLOAD=1 CPU=16 REAL=ENCSR000AED_rep1 READS_1=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz READS_2=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz
+---
+Completed 2.7 KiB/2.7 KiB (16.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh to ./map_reads.sh
+2021-03-15 22:49:32 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz [6473127051/6473127051] -> "reads_1.fq.gz" [1]
+2021-03-15 22:54:22 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz [6810978043/6810978043] -> "reads_2.fq.gz" [1]
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_nopaths.xg to ./1kg_nonCEU_af001_gencode100_nopaths.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100.xg to ./1kg_nonCEU_af001_gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa.lcp to ./1kg_nonCEU_af001_gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.dist to ./1kg_nonCEU_af001_gencode100_index.dist
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa to ./1kg_nonCEU_af001_gencode100_index.gcsa
+[vg mpmap] elapsed time 0.0 s: Executing command: vg mpmap -t 16 -n rna -x 1kg_nonCEU_af001_gencode100.xg -g 1kg_nonCEU_af001_gencode100_index.gcsa -d 1kg_nonCEU_af001_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz
+[vg mpmap] elapsed time 0.0 s: Loading graph from 1kg_nonCEU_af001_gencode100.xg
+[vg mpmap] elapsed time 21.0 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 21.0 s: Loading GCSA2 from 1kg_nonCEU_af001_gencode100_index.gcsa
+[vg mpmap] elapsed time 49.0 s: Loading LCP from 1kg_nonCEU_af001_gencode100_index.gcsa.lcp
+[vg mpmap] elapsed time 1.1 m: Loading distance index from 1kg_nonCEU_af001_gencode100_index.dist
+[vg mpmap] elapsed time 2.0 m: Building null model to calibrate mismapping detection (can take some time).
+[vg mpmap] elapsed time 2.1 m: Mapping reads from reads_1.fq.gz and reads_2.fq.gz using 16 threads
+[vg mpmap] elapsed time 36.3 m: Mapped 5000000 read pairs
+warning[vg::Watchdog]: Thread 11 has been checked in for 300 seconds processing: A00351:383:H7YWTDSXY:2:1217:13078:4319
+[vg mpmap] elapsed time 1.2 h: Mapped 10000000 read pairs
+warning[vg::Watchdog]: Thread 11 finally checked out after 436 seconds and 0 kb memory growth processing: A00351:383:H7YWTDSXY:2:1217:13078:4319
+[vg mpmap] elapsed time 1.7 h: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 2.3 h: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 2.8 h: Mapped 25000000 read pairs
+[vg mpmap] elapsed time 3.4 h: Mapped 30000000 read pairs
+warning[vg::Watchdog]: Thread 14 has been checked in for 300 seconds processing: A00351:383:H7YWTDSXY:2:1520:30969:15170
+warning[vg::Watchdog]: Thread 14 finally checked out after 364 seconds and 0 kb memory growth processing: A00351:383:H7YWTDSXY:2:1520:30969:15170
+[vg mpmap] elapsed time 3.9 h: Mapped 35000000 read pairs
+[vg mpmap] elapsed time 4.5 h: Mapped 40000000 read pairs
+[vg mpmap] elapsed time 5.0 h: Mapped 45000000 read pairs
+[vg mpmap] elapsed time 5.6 h: Mapped 50000000 read pairs
+[vg mpmap] elapsed time 6.1 h: Mapped 55000000 read pairs
+warning[vg::Watchdog]: Thread 9 has been checked in for 300 seconds processing: A00351:383:H7YWTDSXY:2:2219:24641:1611
+warning[vg::Watchdog]: Thread 9 finally checked out after 317 seconds and 0 kb memory growth processing: A00351:383:H7YWTDSXY:2:2219:24641:1611
+[vg mpmap] elapsed time 6.7 h: Mapped 60000000 read pairs
+warning[vg::Watchdog]: Thread 9 has been checked in for 300 seconds processing: A00351:383:H7YWTDSXY:2:2273:25572:10927
+warning[vg::Watchdog]: Thread 9 finally checked out after 371 seconds and 0 kb memory growth processing: A00351:383:H7YWTDSXY:2:2273:25572:10927
+[vg mpmap] elapsed time 7.3 h: Mapped 65000000 read pairs
+[vg mpmap] elapsed time 7.8 h: Mapped 70000000 read pairs
+[vg mpmap] elapsed time 8.4 h: Mapped 75000000 read pairs
+[vg mpmap] elapsed time 8.9 h: Mapped 80000000 read pairs
+[vg mpmap] elapsed time 9.4 h: Mapped 85000000 read pairs
+warning[vg::Watchdog]: Thread 9 has been checked in for 300 seconds processing: A00351:383:H7YWTDSXY:2:2622:11270:7012
+warning[vg::Watchdog]: Thread 9 finally checked out after 1053 seconds and 0 kb memory growth processing: A00351:383:H7YWTDSXY:2:2622:11270:7012
+[vg mpmap] elapsed time 10.0 h: Mapped 90000000 read pairs
+[vg mpmap] elapsed time 10.1 h: Mapping finished. Mapped 90930105 read pairs.
+	Command being timed: "bash -c vg mpmap -t 16 -n rna -x 1kg_nonCEU_af001_gencode100.xg -g 1kg_nonCEU_af001_gencode100_index.gcsa -d 1kg_nonCEU_af001_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz > mpmap_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep1.gamp"
+	User time (seconds): 567556.73
+	System time (seconds): 11759.04
+	Percent of CPU this job got: 1592%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:06:21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 48271332
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 207496737
+	Voluntary context switches: 9292932
+	Involuntary context switches: 4878978
+	Swaps: 0
+	File system inputs: 25945872
+	File system outputs: 67962960
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+---

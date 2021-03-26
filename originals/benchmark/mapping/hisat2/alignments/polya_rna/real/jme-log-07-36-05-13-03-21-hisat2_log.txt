@@ -1,0 +1,84 @@
+---
+jme-log-07-36-05-13-03-21-hisat2
+
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real/map_reads.sh
+MAPPER=hisat2 REF=1kg_nonCEU_af001_gencode100 NOUPLOAD=1 CPU=16 REAL=ENCSR000AED_rep1 READS_1=s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz READS_2=s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz
+---
+Completed 1.6 KiB/1.6 KiB (15.4 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real/map_reads.sh to ./map_reads.sh
+download: s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz to ./reads_1.fq.gz
+download: s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.3.ht2 to ./1kg_nonCEU_af001_gencode100_index.3.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.4.ht2 to ./1kg_nonCEU_af001_gencode100_index.4.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.6.ht2 to ./1kg_nonCEU_af001_gencode100_index.6.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.2.ht2 to ./1kg_nonCEU_af001_gencode100_index.2.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.8.ht2 to ./1kg_nonCEU_af001_gencode100_index.8.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.7.ht2 to ./1kg_nonCEU_af001_gencode100_index.7.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.5.ht2 to ./1kg_nonCEU_af001_gencode100_index.5.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.1.ht2 to ./1kg_nonCEU_af001_gencode100_index.1.ht2
+Time loading forward index: 00:00:03
+Time loading reference: 00:00:00
+Multiseed full-index search: 00:40:37
+97548052 reads; of these:
+  97548052 (100.00%) were paired; of these:
+    6316352 (6.48%) aligned concordantly 0 times
+    80012896 (82.02%) aligned concordantly exactly 1 time
+    11218804 (11.50%) aligned concordantly >1 times
+    ----
+    6316352 pairs aligned concordantly 0 times; of these:
+      153278 (2.43%) aligned discordantly 1 time
+    ----
+    6163074 pairs aligned 0 times concordantly or discordantly; of these:
+      12326148 mates make up the pairs; of these:
+        8958465 (72.68%) aligned 0 times
+        2702897 (21.93%) aligned exactly 1 time
+        664786 (5.39%) aligned >1 times
+95.41% overall alignment rate
+Time searching: 00:40:39
+Overall time: 00:41:06
+	Command being timed: "bash -c hisat2 -p 16 -t -x 1kg_nonCEU_af001_gencode100_index -1 reads_1.fq.gz -2 reads_2.fq.gz -S hisat2_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep1.sam"
+	User time (seconds): 30927.61
+	System time (seconds): 6820.97
+	Percent of CPU this job got: 1530%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 41:06.95
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11396324
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 7
+	Minor (reclaiming a frame) page faults: 4084478
+	Voluntary context switches: 1724694
+	Involuntary context switches: 46326770
+	Swaps: 0
+	File system inputs: 1272
+	File system outputs: 237422280
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -O BAM --threads 16 hisat2_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep1.sam > hisat2_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep1.bam"
+	User time (seconds): 3488.53
+	System time (seconds): 210.08
+	Percent of CPU this job got: 575%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:42.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11856
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 8
+	Minor (reclaiming a frame) page faults: 47310125
+	Voluntary context switches: 2225390
+	Involuntary context switches: 9843
+	Swaps: 0
+	File system inputs: 237425136
+	File system outputs: 46715832
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 128 files and 16 in-memory blocks...

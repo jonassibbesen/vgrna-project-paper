@@ -1,0 +1,84 @@
+---
+jme-log-58-08-00-17-03-21-hisat2
+
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real/map_reads.sh
+MAPPER=hisat2 REF=gencode100 NOUPLOAD=1 CPU=16 REAL=ENCSR000AED_rep1 READS_1=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz READS_2=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz
+---
+Completed 1.6 KiB/1.6 KiB (18.7 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real/map_reads.sh to ./map_reads.sh
+2021-03-17 00:14:03 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz [6473127051/6473127051] -> "reads_1.fq.gz" [1]
+2021-03-17 00:18:41 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz [6810978043/6810978043] -> "reads_2.fq.gz" [1]
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.3.ht2 to ./gencode100_index.3.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.4.ht2 to ./gencode100_index.4.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.8.ht2 to ./gencode100_index.8.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.7.ht2 to ./gencode100_index.7.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.6.ht2 to ./gencode100_index.6.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.2.ht2 to ./gencode100_index.2.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.5.ht2 to ./gencode100_index.5.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.1.ht2 to ./gencode100_index.1.ht2
+Time loading forward index: 00:00:02
+Time loading reference: 00:00:01
+Multiseed full-index search: 04:37:47
+90930105 reads; of these:
+  90930105 (100.00%) were paired; of these:
+    12492429 (13.74%) aligned concordantly 0 times
+    53211908 (58.52%) aligned concordantly exactly 1 time
+    25225768 (27.74%) aligned concordantly >1 times
+    ----
+    12492429 pairs aligned concordantly 0 times; of these:
+      2253006 (18.03%) aligned discordantly 1 time
+    ----
+    10239423 pairs aligned 0 times concordantly or discordantly; of these:
+      20478846 mates make up the pairs; of these:
+        15732991 (76.83%) aligned 0 times
+        3378901 (16.50%) aligned exactly 1 time
+        1366954 (6.67%) aligned >1 times
+91.35% overall alignment rate
+Time searching: 04:37:48
+Overall time: 04:37:54
+	Command being timed: "bash -c hisat2 -p 16 -t -x gencode100_index -1 reads_1.fq.gz -2 reads_2.fq.gz -S hisat2_gencode100_real_ENCSR000AED_rep1.sam"
+	User time (seconds): 126800.79
+	System time (seconds): 138186.52
+	Percent of CPU this job got: 1589%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:37:54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7297028
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6
+	Minor (reclaiming a frame) page faults: 1840809
+	Voluntary context switches: 1933313
+	Involuntary context switches: 291040156
+	Swaps: 0
+	File system inputs: 1208
+	File system outputs: 466555360
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -O BAM --threads 16 hisat2_gencode100_real_ENCSR000AED_rep1.sam > hisat2_gencode100_real_ENCSR000AED_rep1.bam"
+	User time (seconds): 4995.47
+	System time (seconds): 487.22
+	Percent of CPU this job got: 384%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 23:45.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5688
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 24
+	Minor (reclaiming a frame) page faults: 74524584
+	Voluntary context switches: 4047993
+	Involuntary context switches: 25070
+	Swaps: 0
+	File system inputs: 466561448
+	File system outputs: 43504296
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+---

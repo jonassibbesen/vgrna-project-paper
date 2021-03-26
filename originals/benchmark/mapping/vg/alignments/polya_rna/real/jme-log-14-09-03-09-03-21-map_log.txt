@@ -1,0 +1,39 @@
+---
+jme-log-14-09-03-09-03-21-map
+
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh
+MAPPER=map_fast REF=1kg_nonCEU_af001_gencode100 NOUPLOAD=1 CPU=16 REAL=ENCSR000AED_rep1 READS_1=s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz READS_2=s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz
+---
+Completed 2.7 KiB/2.7 KiB (28.7 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh to ./map_reads.sh
+download: s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz to ./reads_1.fq.gz
+download: s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_nopaths.xg to ./1kg_nonCEU_af001_gencode100_nopaths.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100.xg to ./1kg_nonCEU_af001_gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa.lcp to ./1kg_nonCEU_af001_gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.dist to ./1kg_nonCEU_af001_gencode100_index.dist
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa to ./1kg_nonCEU_af001_gencode100_index.gcsa
+	Command being timed: "bash -c vg map -t 16 --try-up-to 16 --mate-rescues 32 -x 1kg_nonCEU_af001_gencode100.xg -g 1kg_nonCEU_af001_gencode100_index.gcsa -f reads_1.fq.gz -f reads_2.fq.gz > map_fast_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep1.gam"
+	User time (seconds): 2401500.88
+	System time (seconds): 53805.87
+	Percent of CPU this job got: 1598%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 42:40:00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31427356
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 191
+	Minor (reclaiming a frame) page faults: 1318941985
+	Voluntary context switches: 5563780
+	Involuntary context switches: 18467958
+	Swaps: 0
+	File system inputs: 31066648
+	File system outputs: 86185976
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./map_fast_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep1.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/ENCSR000AED_rep1/map_fast/1kg_nonCEU_af001_gencode100/map_fast_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep1.gam
+---

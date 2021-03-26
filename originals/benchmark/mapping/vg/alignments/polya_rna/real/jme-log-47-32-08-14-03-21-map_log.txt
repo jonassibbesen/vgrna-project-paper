@@ -1,0 +1,37 @@
+---
+jme-log-47-32-08-14-03-21-map
+
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh
+MAPPER=map_fast REF=gencode100 NOUPLOAD=1 CPU=16 REAL=ENCSR000AED_rep1 READS_1=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz READS_2=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz
+---
+Completed 2.7 KiB/2.7 KiB (26.6 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh to ./map_reads.sh
+2021-03-14 08:37:09 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz [6473127051/6473127051] -> "reads_1.fq.gz" [1]
+2021-03-14 08:41:48 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz [6810978043/6810978043] -> "reads_2.fq.gz" [1]
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg to ./gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/gencode100/gencode100_index.gcsa.lcp to ./gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/gencode100/gencode100_index.gcsa to ./gencode100_index.gcsa
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/gencode100/gencode100_index.dist to ./gencode100_index.dist
+	Command being timed: "bash -c vg map -t 16 --try-up-to 16 --mate-rescues 32 -x gencode100.xg -g gencode100_index.gcsa -f reads_1.fq.gz -f reads_2.fq.gz > map_fast_gencode100_real_ENCSR000AED_rep1.gam"
+	User time (seconds): 545543.95
+	System time (seconds): 12085.16
+	Percent of CPU this job got: 1596%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:42:13
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 21170724
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 191
+	Minor (reclaiming a frame) page faults: 549673369
+	Voluntary context switches: 4570954
+	Involuntary context switches: 4550420
+	Swaps: 0
+	File system inputs: 23586952
+	File system outputs: 66040496
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+---

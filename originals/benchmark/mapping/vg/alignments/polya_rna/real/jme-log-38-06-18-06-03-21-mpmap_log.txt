@@ -1,0 +1,66 @@
+---
+jme-log-38-06-18-06-03-21-mpmap
+
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh
+MAPPER=mpmap CPU=16 REF=gencode100 REAL=ENCSR000AED_rep1 READS_1=s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz READS_2=s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz
+---
+Completed 2.7 KiB/2.7 KiB (39.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh to ./map_reads.sh
+download: s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz to ./reads_1.fq.gz
+download: s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg to ./gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/gencode100/gencode100_index.gcsa.lcp to ./gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/gencode100/gencode100_index.gcsa to ./gencode100_index.gcsa
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/gencode100/gencode100_index.dist to ./gencode100_index.dist
+[vg mpmap] elapsed time 0.0 s: Executing command: vg mpmap -t 16 -n rna -x gencode100.xg -g gencode100_index.gcsa -d gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz
+[vg mpmap] elapsed time 0.0 s: Loading graph from gencode100.xg
+[vg mpmap] elapsed time 37.0 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 37.0 s: Loading GCSA2 from gencode100_index.gcsa
+[vg mpmap] elapsed time 1.4 m: Loading LCP from gencode100_index.gcsa.lcp
+[vg mpmap] elapsed time 2.0 m: Loading distance index from gencode100_index.dist
+[vg mpmap] elapsed time 3.3 m: Building null model to calibrate mismapping detection (can take some time).
+[vg mpmap] elapsed time 3.4 m: Mapping reads from reads_1.fq.gz and reads_2.fq.gz using 16 threads
+[vg mpmap] elapsed time 12.4 m: Mapped 5000000 read pairs
+[vg mpmap] elapsed time 21.4 m: Mapped 10000000 read pairs
+[vg mpmap] elapsed time 30.5 m: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 39.5 m: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 48.5 m: Mapped 25000000 read pairs
+[vg mpmap] elapsed time 57.5 m: Mapped 30000000 read pairs
+[vg mpmap] elapsed time 1.1 h: Mapped 35000000 read pairs
+[vg mpmap] elapsed time 1.3 h: Mapped 40000000 read pairs
+[vg mpmap] elapsed time 1.4 h: Mapped 45000000 read pairs
+[vg mpmap] elapsed time 1.6 h: Mapped 50000000 read pairs
+[vg mpmap] elapsed time 1.7 h: Mapped 55000000 read pairs
+[vg mpmap] elapsed time 1.9 h: Mapped 60000000 read pairs
+[vg mpmap] elapsed time 2.0 h: Mapped 65000000 read pairs
+[vg mpmap] elapsed time 2.2 h: Mapped 70000000 read pairs
+[vg mpmap] elapsed time 2.3 h: Mapped 75000000 read pairs
+[vg mpmap] elapsed time 2.5 h: Mapped 80000000 read pairs
+[vg mpmap] elapsed time 2.6 h: Mapped 85000000 read pairs
+[vg mpmap] elapsed time 2.8 h: Mapped 90000000 read pairs
+[vg mpmap] elapsed time 2.9 h: Mapped 95000000 read pairs
+[vg mpmap] elapsed time 3.0 h: Mapping finished. Mapped 97548052 read pairs.
+	Command being timed: "bash -c vg mpmap -t 16 -n rna -x gencode100.xg -g gencode100_index.gcsa -d gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz > mpmap_gencode100_real_ENCSR000AED_rep1.gamp"
+	User time (seconds): 166675.46
+	System time (seconds): 3195.00
+	Percent of CPU this job got: 1570%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:00:19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 34039224
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 183
+	Minor (reclaiming a frame) page faults: 32545835
+	Voluntary context switches: 7009758
+	Involuntary context switches: 1742035
+	Swaps: 0
+	File system inputs: 89240376
+	File system outputs: 51001616
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_gencode100_real_ENCSR000AED_rep1.gamp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/ENCSR000AED_rep1/mpmap/gencode100/mpmap_gencode100_real_ENCSR000AED_rep1.gamp
+---

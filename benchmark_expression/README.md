@@ -22,4 +22,4 @@ All expression benchmark plots presented in the paper were created using the fol
 * plot_expression_data.R
 * plot_haploid_expression_data.R
 
-Please note that some of the scripts assume that the data is structured in a specific set of folders. They might therefore require a bit of reworking before they can be used in other environments. If there is a demand for it we can look into creating more user-friendly versions of the scripts. 
+Please note that some of the scripts assume that the data is structured in a specific set of folders. They might therefore require a bit of reworking before they can be used in other environments. If there is an interest for it we can look into creating more user-friendly versions of the scripts. 

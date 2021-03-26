@@ -12,7 +12,7 @@ There are two types of script in this repository:
 
 ## Data
 
-Here you can find links to the data used in the paper. This includes both the raw data and data constructed as part of the analyses in the paper. The constructed data included here is either the data that are not guaranteed to be reproducible (subsampled transcript annotation and simulated reads) or that are deemed potentially useful in other projects (graphs, pantranscriptomes and indexes).
+Here you can find links to the data used in the paper. This includes both raw data and data constructed as part of the analyses in the paper. The constructed data included here is data that are either not guaranteed to be reproducible (subsampled transcript annotation and simulated reads) or that are deemed potentially useful in other projects (graphs, pantranscriptomes and indexes).
 
 ### Genome
 

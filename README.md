@@ -28,7 +28,7 @@ The GENCODE v29 (primary assembly) transcript annotation:
 
 The subsampled (80%) GENCODE v29 transcript annotation:
 
-* http://cgl.gi.ucsc.edu/data/vgrna/
+* http://cgl.gi.ucsc.edu/data/vgrna/transcript_annotation/
 
 ### Variants
 
@@ -40,7 +40,7 @@ The 1000 Genomes Project variants and haplotypes lifted to GRCh38:
 
 The simulated RNA-seq reads:
 
-* http://cgl.gi.ucsc.edu/data/vgrna/
+* http://cgl.gi.ucsc.edu/data/vgrna/simulated_data/
 
 The real RNA-seq reads:
 
@@ -56,4 +56,4 @@ The Iso-Seq alignments:
 
 The spliced pangenome graphs, pantranscriptomes and indexes:
 
-* http://cgl.gi.ucsc.edu/data/vgrna/
+* http://cgl.gi.ucsc.edu/data/vgrna/pantranscriptomes/

@@ -23,3 +23,4 @@ Note that the Docker image suggested is not necessarily the same version of the 
 Important variables:
 
 * `MODE`: Inference mode to use (see script for more details)
+* `SEED`: Seed for the random number generator

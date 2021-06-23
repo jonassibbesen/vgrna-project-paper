@@ -1,0 +1,33 @@
+---
+jas-create-rindex-all-af001-hla-p10k-non2-a100-gc100-0607-2258
+TIME=20210607-2258 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=32 CPU=8 DISK=128
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100/create_rindex.sh
+CPU=8
+---
+Completed 569 Bytes/569 Bytes (8.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100/create_rindex.sh to ./create_rindex.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100/6/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_6.gbwt to ./1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_6.gbwt
+	Command being timed: "bash -c vg gbwt --num-threads 8 -r 1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_6.gbwt.ri 1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_6.gbwt"
+	User time (seconds): 185.97
+	System time (seconds): 1.87
+	Percent of CPU this job got: 765%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:24.53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 251524
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9262
+	Voluntary context switches: 27636
+	Involuntary context switches: 851
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 109600
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_6.gbwt.ri to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100/6/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_6.gbwt.ri
+---

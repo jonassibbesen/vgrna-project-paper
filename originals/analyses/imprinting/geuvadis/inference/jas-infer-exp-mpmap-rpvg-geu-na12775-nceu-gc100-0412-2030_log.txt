@@ -1,0 +1,164 @@
+---
+jas-infer-exp-mpmap-rpvg-geu-na12775-nceu-gc100-0412-2030
+TIME=20210412-2030 IMAGE=quay.io/jsibbesen/rpvg-s3script:rpvg-ab4268da-s10 MEMORY=64 CPU=24 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/analyses/imprinting/geuvadis/inference/infer_expression.sh
+CPU=24 NAME=NA12775 READS_1=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR188/ERR188354/ERR188354_1.fastq.gz READS_2=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR188/ERR188354/ERR188354_2.fastq.gz GRAPH=1kg_nonCEU_af001_gencode100 TRANSCRIPTS=1kg_nonCEU_af001_gencode100 SEED=141760513
+---
+Completed 1.6 KiB/1.6 KiB (19.0 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/analyses/imprinting/geuvadis/inference/infer_expression.sh to ./infer_expression.sh
+2021-04-13 03:36:42 URL: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR188/ERR188354/ERR188354_1.fastq.gz [3456445655] -> "reads_1.fq.gz" [1]
+2021-04-13 03:42:46 URL: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR188/ERR188354/ERR188354_2.fastq.gz [3544117913] -> "reads_2.fq.gz" [1]
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100.xg to ./1kg_nonCEU_af001_gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa.lcp to ./1kg_nonCEU_af001_gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.dist to ./1kg_nonCEU_af001_gencode100_index.dist
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa to ./1kg_nonCEU_af001_gencode100_index.gcsa
+[vg mpmap] elapsed time 0.0 s: Executing command: vg mpmap -t 24 -n rna -x 1kg_nonCEU_af001_gencode100.xg -g 1kg_nonCEU_af001_gencode100_index.gcsa -d 1kg_nonCEU_af001_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz
+[vg mpmap] elapsed time 0.0 s: Loading graph from 1kg_nonCEU_af001_gencode100.xg
+[vg mpmap] elapsed time 18.0 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 18.0 s: Loading GCSA2 from 1kg_nonCEU_af001_gencode100_index.gcsa
+[vg mpmap] elapsed time 43.0 s: Loading LCP from 1kg_nonCEU_af001_gencode100_index.gcsa.lcp
+[vg mpmap] elapsed time 1.0 m: Loading distance index from 1kg_nonCEU_af001_gencode100_index.dist
+[vg mpmap] elapsed time 2.0 m: Building null model to calibrate mismapping detection (can take some time).
+[vg mpmap] elapsed time 2.1 m: Mapping reads from reads_1.fq.gz and reads_2.fq.gz using 24 threads
+[vg mpmap] elapsed time 6.8 m: Mapped 5000000 read pairs
+[vg mpmap] elapsed time 11.8 m: Mapped 10000000 read pairs
+[vg mpmap] elapsed time 16.8 m: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 22.0 m: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 27.6 m: Mapped 25000000 read pairs
+[vg mpmap] elapsed time 32.4 m: Mapped 30000000 read pairs
+[vg mpmap] elapsed time 37.3 m: Mapped 35000000 read pairs
+[vg mpmap] elapsed time 42.4 m: Mapped 40000000 read pairs
+[vg mpmap] elapsed time 47.7 m: Mapped 45000000 read pairs
+[vg mpmap] elapsed time 52.0 m: Mapping finished. Mapped 48606058 read pairs.
+	Command being timed: "bash -c vg mpmap -t 24 -n rna -x 1kg_nonCEU_af001_gencode100.xg -g 1kg_nonCEU_af001_gencode100_index.gcsa -d 1kg_nonCEU_af001_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz > alignments.gamp"
+	User time (seconds): 70474.17
+	System time (seconds): 1515.36
+	Percent of CPU this job got: 2299%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 52:11.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 47716276
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 8
+	Minor (reclaiming a frame) page faults: 143718747
+	Voluntary context switches: 10273630
+	Involuntary context switches: 944313
+	Swaps: 0
+	File system inputs: 36590592
+	File system outputs: 30394960
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100.gbwt to ./1kg_nonCEU_af001_gencode100.gbwt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/13/1kg_nonCEU_af001_gencode100_13.txt.gz to 13/1kg_nonCEU_af001_gencode100_13.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/10/1kg_nonCEU_af001_gencode100_10.txt.gz to 10/1kg_nonCEU_af001_gencode100_10.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/14/1kg_nonCEU_af001_gencode100_14.txt.gz to 14/1kg_nonCEU_af001_gencode100_14.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/12/1kg_nonCEU_af001_gencode100_12.txt.gz to 12/1kg_nonCEU_af001_gencode100_12.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/11/1kg_nonCEU_af001_gencode100_11.txt.gz to 11/1kg_nonCEU_af001_gencode100_11.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/15/1kg_nonCEU_af001_gencode100_15.txt.gz to 15/1kg_nonCEU_af001_gencode100_15.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/18/1kg_nonCEU_af001_gencode100_18.txt.gz to 18/1kg_nonCEU_af001_gencode100_18.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1/1kg_nonCEU_af001_gencode100_1.txt.gz to 1/1kg_nonCEU_af001_gencode100_1.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/16/1kg_nonCEU_af001_gencode100_16.txt.gz to 16/1kg_nonCEU_af001_gencode100_16.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/21/1kg_nonCEU_af001_gencode100_21.txt.gz to 21/1kg_nonCEU_af001_gencode100_21.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/20/1kg_nonCEU_af001_gencode100_20.txt.gz to 20/1kg_nonCEU_af001_gencode100_20.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/17/1kg_nonCEU_af001_gencode100_17.txt.gz to 17/1kg_nonCEU_af001_gencode100_17.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/22/1kg_nonCEU_af001_gencode100_22.txt.gz to 22/1kg_nonCEU_af001_gencode100_22.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/19/1kg_nonCEU_af001_gencode100_19.txt.gz to 19/1kg_nonCEU_af001_gencode100_19.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/2/1kg_nonCEU_af001_gencode100_2.txt.gz to 2/1kg_nonCEU_af001_gencode100_2.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/4/1kg_nonCEU_af001_gencode100_4.txt.gz to 4/1kg_nonCEU_af001_gencode100_4.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/3/1kg_nonCEU_af001_gencode100_3.txt.gz to 3/1kg_nonCEU_af001_gencode100_3.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/6/1kg_nonCEU_af001_gencode100_6.txt.gz to 6/1kg_nonCEU_af001_gencode100_6.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/5/1kg_nonCEU_af001_gencode100_5.txt.gz to 5/1kg_nonCEU_af001_gencode100_5.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/Y/1kg_nonCEU_af001_gencode100_Y.txt.gz to Y/1kg_nonCEU_af001_gencode100_Y.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/7/1kg_nonCEU_af001_gencode100_7.txt.gz to 7/1kg_nonCEU_af001_gencode100_7.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/8/1kg_nonCEU_af001_gencode100_8.txt.gz to 8/1kg_nonCEU_af001_gencode100_8.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/9/1kg_nonCEU_af001_gencode100_9.txt.gz to 9/1kg_nonCEU_af001_gencode100_9.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/X/1kg_nonCEU_af001_gencode100_X.txt.gz to X/1kg_nonCEU_af001_gencode100_X.txt.gz
+11626948 transcript_info.txt
+	Command being timed: "bash -c zcat */*.txt.gz | grep -v ^Name > transcript_info.txt; wc -l transcript_info.txt"
+	User time (seconds): 101.14
+	System time (seconds): 24.19
+	Percent of CPU this job got: 132%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:34.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3076
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 9
+	Minor (reclaiming a frame) page faults: 692
+	Voluntary context switches: 550960
+	Involuntary context switches: 363
+	Swaps: 0
+	File system inputs: 1936
+	File system outputs: 36922696
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Running rpvg (commit: ab4268daf6a77ab9732ec1892b377c497e62e9eb)
+Random number generator seed: 141760513
+Fragment length distribution parameters found in alignment (mean: 161.176, standard deviation: 44.7061)
+
+Loaded graph and GBWT (37.2336 seconds, 12.8073 GB)
+30958587
+Fragment length distribution parameters re-estimated from alignment paths (mean: 162.513, standard deviation: 43.3505)
+Found alignment paths (1630.75 seconds, 19.2196 GB)
+2371322
+Clustered alignment paths (1024.71 seconds, 22.0298 GB)
+Inferred path posterior probabilities and abundances (8165.05 seconds, 48.6511 GB)
+	Command being timed: "bash -c /rpvg/bin/rpvg -t 24 -r 141760513 -n 1 -i haplotype-transcripts -g 1kg_nonCEU_af001_gencode100.xg -p 1kg_nonCEU_af001_gencode100.gbwt -a alignments.gamp -f transcript_info.txt -o rpvg_mpmap_NA12775_1kg_nonCEU_af001_gencode100"
+	User time (seconds): 148170.06
+	System time (seconds): 423.55
+	Percent of CPU this job got: 1360%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:02:01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 51014324
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 59
+	Minor (reclaiming a frame) page faults: 160187632
+	Voluntary context switches: 5617942
+	Involuntary context switches: 877200
+	Swaps: 0
+	File system inputs: 87147040
+	File system outputs: 3678232
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip rpvg_mpmap_NA12775_1kg_nonCEU_af001_gencode100.txt; gzip rpvg_mpmap_NA12775_1kg_nonCEU_af001_gencode100_haps.txt"
+	User time (seconds): 14.74
+	System time (seconds): 0.24
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:14.99
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3264
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 505
+	Voluntary context switches: 5
+	Involuntary context switches: 19
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 152384
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./rpvg_mpmap_NA12775_1kg_nonCEU_af001_gencode100_haps.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/analyses/imprinting/geuvadis/inference/NA12775/1kg_nonCEU_af001_gencode100/rpvg_mpmap_NA12775_1kg_nonCEU_af001_gencode100_haps.txt.gz
+upload: ./rpvg_mpmap_NA12775_1kg_nonCEU_af001_gencode100.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/analyses/imprinting/geuvadis/inference/NA12775/1kg_nonCEU_af001_gencode100/rpvg_mpmap_NA12775_1kg_nonCEU_af001_gencode100.txt.gz
+upload: ./rpvg_mpmap_NA12775_1kg_nonCEU_af001_gencode100_gibbs.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/analyses/imprinting/geuvadis/inference/NA12775/1kg_nonCEU_af001_gencode100/rpvg_mpmap_NA12775_1kg_nonCEU_af001_gencode100_gibbs.txt.gz
+---

@@ -1,0 +1,66 @@
+---
+jas-map-reads-mpmap-real-aed2-nceu-gc100-0519-1538
+TIME=20210519-1538 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=56 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh
+CPU=16 REF=1kg_nonCEU_af001_gencode100 REAL=ENCSR000AED_rep2 READS_1=s3://encode-public/2013/06/13/03d46224-0f40-4796-a519-80c626163e47/ENCFF001REI.fastq.gz READS_2=s3://encode-public/2013/06/13/36025369-4965-460b-9e17-7fb6b72e4888/ENCFF001REH.fastq.gz MAPPER=mpmap
+---
+Completed 2.7 KiB/2.7 KiB (20.4 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/map_reads.sh to ./map_reads.sh
+download: s3://encode-public/2013/06/13/03d46224-0f40-4796-a519-80c626163e47/ENCFF001REI.fastq.gz to ./reads_1.fq.gz
+download: s3://encode-public/2013/06/13/36025369-4965-460b-9e17-7fb6b72e4888/ENCFF001REH.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_nopaths.xg to ./1kg_nonCEU_af001_gencode100_nopaths.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100.xg to ./1kg_nonCEU_af001_gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa.lcp to ./1kg_nonCEU_af001_gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.dist to ./1kg_nonCEU_af001_gencode100_index.dist
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100_index.gcsa to ./1kg_nonCEU_af001_gencode100_index.gcsa
+[vg mpmap] elapsed time 0.0 s: Executing command: vg mpmap -t 16 -n rna -x 1kg_nonCEU_af001_gencode100.xg -g 1kg_nonCEU_af001_gencode100_index.gcsa -d 1kg_nonCEU_af001_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz
+[vg mpmap] elapsed time 0.0 s: Loading graph from 1kg_nonCEU_af001_gencode100.xg
+[vg mpmap] elapsed time 22.0 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 22.0 s: Loading GCSA2 from 1kg_nonCEU_af001_gencode100_index.gcsa
+[vg mpmap] elapsed time 51.0 s: Loading LCP from 1kg_nonCEU_af001_gencode100_index.gcsa.lcp
+[vg mpmap] elapsed time 1.2 m: Loading distance index from 1kg_nonCEU_af001_gencode100_index.dist
+[vg mpmap] elapsed time 2.1 m: Building null model to calibrate mismapping detection (can take some time).
+[vg mpmap] elapsed time 2.2 m: Mapping reads from reads_1.fq.gz and reads_2.fq.gz using 16 threads
+[vg mpmap] elapsed time 11.8 m: Mapped 5000000 read pairs
+[vg mpmap] elapsed time 21.1 m: Mapped 10000000 read pairs
+[vg mpmap] elapsed time 30.3 m: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 39.5 m: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 48.7 m: Mapped 25000000 read pairs
+[vg mpmap] elapsed time 58.0 m: Mapped 30000000 read pairs
+[vg mpmap] elapsed time 1.1 h: Mapped 35000000 read pairs
+[vg mpmap] elapsed time 1.3 h: Mapped 40000000 read pairs
+[vg mpmap] elapsed time 1.4 h: Mapped 45000000 read pairs
+[vg mpmap] elapsed time 1.6 h: Mapped 50000000 read pairs
+[vg mpmap] elapsed time 1.7 h: Mapped 55000000 read pairs
+[vg mpmap] elapsed time 1.9 h: Mapped 60000000 read pairs
+[vg mpmap] elapsed time 2.1 h: Mapped 65000000 read pairs
+[vg mpmap] elapsed time 2.2 h: Mapped 70000000 read pairs
+[vg mpmap] elapsed time 2.4 h: Mapped 75000000 read pairs
+[vg mpmap] elapsed time 2.5 h: Mapped 80000000 read pairs
+[vg mpmap] elapsed time 2.7 h: Mapped 85000000 read pairs
+[vg mpmap] elapsed time 2.8 h: Mapped 90000000 read pairs
+[vg mpmap] elapsed time 2.9 h: Mapping finished. Mapped 93555584 read pairs.
+	Command being timed: "bash -c vg mpmap -t 16 -n rna -x 1kg_nonCEU_af001_gencode100.xg -g 1kg_nonCEU_af001_gencode100_index.gcsa -d 1kg_nonCEU_af001_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz > mpmap_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep2.gamp"
+	User time (seconds): 162196.42
+	System time (seconds): 4821.12
+	Percent of CPU this job got: 1579%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:56:17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 47694036
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 375126502
+	Voluntary context switches: 10254043
+	Involuntary context switches: 2097153
+	Swaps: 0
+	File system inputs: 61018848
+	File system outputs: 71304696
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep2.gamp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real/ENCSR000AED_rep2/mpmap/1kg_nonCEU_af001_gencode100/mpmap_1kg_nonCEU_af001_gencode100_real_ENCSR000AED_rep2.gamp
+---

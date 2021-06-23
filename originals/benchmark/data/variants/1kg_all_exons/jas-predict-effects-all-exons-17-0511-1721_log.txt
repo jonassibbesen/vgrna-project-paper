@@ -1,0 +1,133 @@
+---
+jas-predict-effects-all-exons-17-0511-1721
+TIME=20210511-1721 IMAGE=quay.io/jsibbesen/vep-s3script:vep-103.1-s1 MEMORY=8 CPU=1 DISK=64
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/predict_effects.sh
+CPU=1 CHR=17
+---
+Completed 2.1 KiB/2.1 KiB (28.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/predict_effects.sh to ./predict_effects.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/databases/vep/homo_sapiens_vep_103_GRCh38.tar.gz to ./homo_sapiens_vep_103_GRCh38.tar.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/17/1kg_all_exons_17.vcf.gz to ./1kg_all_exons_17.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/17/1kg_all_exons_17.vcf.gz.tbi to ./1kg_all_exons_17.vcf.gz.tbi
+	Command being timed: "bash -c tar -xzf homo_sapiens_vep_103_GRCh38.tar.gz"
+	User time (seconds): 105.76
+	System time (seconds): 40.77
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:30.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3476
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 712
+	Voluntary context switches: 481605
+	Involuntary context switches: 8897
+	Swaps: 0
+	File system inputs: 30730184
+	File system outputs: 30797136
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c grep -P '^17\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf | sort -k1,1 -k4,4n -k5,5n -t$'\t' | bgzip -c > 17.gtf.gz; tabix -p gff 17.gtf.gz"
+	User time (seconds): 1.87
+	System time (seconds): 1.03
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 16328
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 26801
+	Voluntary context switches: 13741
+	Involuntary context switches: 205
+	Swaps: 0
+	File system inputs: 1932768
+	File system outputs: 121680
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools faidx Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa 17 > 17.fa; samtools faidx 17.fa"
+	User time (seconds): 0.60
+	System time (seconds): 0.19
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.82
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 89156
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 13912
+	Voluntary context switches: 12
+	Involuntary context switches: 42
+	Swaps: 0
+	File system inputs: 179888
+	File system outputs: 165336
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+WARNING: No input file format specified - detected vcf format
+	Command being timed: "bash -c /opt/vep/src/ensembl-vep/vep --verbose --species homo_sapiens --everything --check_existing --offline --tab --minimal --allele_number --show_ref_allele --cache --dir_cache . -i 1kg_all_exons_17.vcf.gz --gtf 17.gtf.gz --fasta 17.fa -o 1kg_all_exons_17_vep.txt"
+	User time (seconds): 3724.58
+	System time (seconds): 23.29
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:02:32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4339224
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1103303
+	Voluntary context switches: 236450
+	Involuntary context switches: 13560
+	Swaps: 0
+	File system inputs: 1155552
+	File system outputs: 2985000
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip 1kg_all_exons_17_vep.txt"
+	User time (seconds): 14.36
+	System time (seconds): 0.40
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:14.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3476
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 288
+	Voluntary context switches: 1
+	Involuntary context switches: 29
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 132184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_exons_17_vep.txt_summary.html to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/17/1kg_all_exons_17_vep.txt_summary.html
+upload: ./1kg_all_exons_17_vep.txt_warnings.txt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/17/1kg_all_exons_17_vep.txt_warnings.txt
+upload: ./1kg_all_exons_17_vep.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/17/1kg_all_exons_17_vep.txt.gz
+---

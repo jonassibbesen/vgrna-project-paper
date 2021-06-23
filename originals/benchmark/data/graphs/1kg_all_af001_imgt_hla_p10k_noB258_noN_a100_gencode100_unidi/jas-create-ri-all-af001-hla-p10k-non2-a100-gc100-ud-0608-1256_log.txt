@@ -1,0 +1,33 @@
+---
+jas-create-ri-all-af001-hla-p10k-non2-a100-gc100-ud-0608-1256
+TIME=20210608-1256 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=32 CPU=8 DISK=128
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi/create_rindex.sh
+CPU=8
+---
+Completed 575 Bytes/575 Bytes (8.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi/create_rindex.sh to ./create_rindex.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi/6/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi_6.gbwt to ./1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi_6.gbwt
+	Command being timed: "bash -c vg gbwt --num-threads 8 -r 1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi_6.gbwt.ri 1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi_6.gbwt"
+	User time (seconds): 86.07
+	System time (seconds): 0.28
+	Percent of CPU this job got: 737%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.71
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 216372
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6351
+	Voluntary context switches: 22143
+	Involuntary context switches: 422
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 91120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi_6.gbwt.ri to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi/6/1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi_6.gbwt.ri
+---

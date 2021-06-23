@@ -25,6 +25,12 @@ elif [ "${QUANTER}" = "rsem_k1k" ]; then
 	# Infer expression
 	/usr/bin/time -v bash -c "rsem-calculate-expression -p ${CPU} --bowtie2 --bowtie2-k 1000 --seed ${SEED} --no-bam-output --paired-end ${READS_PREFIX}_1.fq.gz ${READS_PREFIX}_2.fq.gz rsem_index_${REF} ${OUT_PREFIX}"
 
+# Use default RSEM with more Bowtie2 mappings and gibbs sampling pme
+elif [ "${QUANTER}" = "rsem_k1k_pme" ]; then
+
+	# Infer expression
+	/usr/bin/time -v bash -c "rsem-calculate-expression -p ${CPU} --bowtie2 --bowtie2-k 1000 --calc-pme --seed ${SEED} --no-bam-output --paired-end ${READS_PREFIX}_1.fq.gz ${READS_PREFIX}_2.fq.gz rsem_index_${REF} ${OUT_PREFIX}"
+
 # Use default RSEM with many more Bowtie2 mappings
 elif [ "${QUANTER}" = "rsem_k2k" ]; then
 

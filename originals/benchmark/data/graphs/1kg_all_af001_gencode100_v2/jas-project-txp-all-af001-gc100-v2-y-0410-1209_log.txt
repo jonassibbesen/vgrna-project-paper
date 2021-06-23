@@ -1,0 +1,195 @@
+---
+jas-project-txp-all-af001-gc100-v2-y-0410-1209
+TIME=20210410-1209 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1 MEMORY=12 CPU=4 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_v2/project_transcripts.sh
+CPU=4 CHR=Y
+---
+Completed 2.0 KiB/2.0 KiB (46.6 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_v2/project_transcripts.sh to ./project_transcripts.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/Y/1kg_all_exons_Y.vcf.gz to ./1kg_all_exons_Y.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_all_exons/Y/1kg_all_exons_Y.vcf.gz.tbi to ./1kg_all_exons_Y.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_v2/Y/1kg_all_af001_gencode100_v2_Y.pg to ./1kg_all_af001_gencode100_v2_Y.pg
+Building input GBWTs
+Loading input graph from 1kg_all_af001_gencode100_v2_Y.pg
+Input type: VCF
+Parsing 1 VCF files using up to 2 parallel jobs
+Job 0: File 1kg_all_exons_Y.vcf.gz, paths { Y }
+Job 0: Parsing VCF file 1kg_all_exons_Y.vcf.gz with options --discard-overlaps
+Job 0: Samples 0 to 2503, batch size 200
+Job 0: Path Y matches VCF contig Y
+Job 0: Processed 199 variants on path Y, 0.0347652 MiB phasing information
+Job 0: Saving the VCF parse for path Y to /tmp/parse_jas-project-txp-all-af001-gc100_67_0
+Building 1 GBWTs using up to 2 parallel jobs
+Job 0: Generating haplotypes for path Y from file /tmp/parse_jas-project-txp-all-af001-gc100_67_0
+Job 0: 2504 paths with names, 2504 samples with names, 2504 haplotypes, 1 contigs with names
+GBWTs built in 436.478 seconds, 1.62166 GiB
+
+Serializing the GBWT to 1kg_all_exons_Y.gbwt
+GBWT serialized in 0.610955 seconds, 1.62166 GiB
+
+	Command being timed: "bash -c vg gbwt -p --num-threads 4 --discard-overlaps -v 1kg_all_exons_Y.vcf.gz -x 1kg_all_af001_gencode100_v2_Y.pg -o 1kg_all_exons_Y.gbwt"
+	User time (seconds): 491.51
+	System time (seconds): 3.43
+	Percent of CPU this job got: 113%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:17.27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1700432
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1980271
+	Voluntary context switches: 14148
+	Involuntary context switches: 1085
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 129904
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c grep -P '^Y\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > Y.gtf"
+	User time (seconds): 0.12
+	System time (seconds): 0.21
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3156
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 313
+	Voluntary context switches: 4
+	Involuntary context switches: 5
+	Swaps: 0
+	File system inputs: 16
+	File system outputs: 7056
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	1808421
+edges	1816586
+length	57233480
+node-id-range	173425174:175233594
+	Command being timed: "bash -c vg stats -z -l -r 1kg_all_af001_gencode100_v2_Y.pg"
+	User time (seconds): 0.12
+	System time (seconds): 0.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 126360
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4372
+	Voluntary context switches: 1
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Parsing haplotype GBWT index file ...
+[vg rna] Graph and GBWT index parsed in 0.255693 seconds, 0.189102 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 863 transcripts parsed, and graph augmented (no novel exon boundaries) in 0.978334 seconds, 0.419903 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 1256 haplotype-specfic transcripts projected in 103.241 seconds, 0.42313 GB
+[vg rna] Adding reference transcripts as embedded paths in the splice graph ...
+[vg rna] 863 paths added in 0.0781863 seconds, 0.42313 GB
+[vg rna] Writing transcripts as bidirectional threads to GBWT index file ...
+[vg rna] Writing transcripts as sequences to fasta file ...
+[vg rna] Writing origin info on transcripts to tsv file ...
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph and 1256 transcripts written in 2.22307 seconds, 1.48308 GB
+	Command being timed: "bash -c vg rna -p -t 4 -o -r -g -n Y.gtf -l 1kg_all_exons_Y.gbwt -b 1kg_all_af001_gencode100_v2_Y.gbwt -f 1kg_all_af001_gencode100_v2_Y.fa -i 1kg_all_af001_gencode100_v2_Y.txt 1kg_all_af001_gencode100_v2_Y.pg > 1kg_all_af001_gencode100_v2_Y_tmp.pg; mv 1kg_all_af001_gencode100_v2_Y_tmp.pg 1kg_all_af001_gencode100_v2_Y.pg"
+	User time (seconds): 399.86
+	System time (seconds): 0.65
+	Percent of CPU this job got: 375%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:46.80
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1555120
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 52968
+	Voluntary context switches: 15626
+	Involuntary context switches: 2542
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 289880
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	1808421
+edges	1816587
+length	57233480
+node-id-range	173425174:175233594
+	Command being timed: "bash -c vg stats -z -l -r 1kg_all_af001_gencode100_v2_Y.pg"
+	User time (seconds): 0.12
+	System time (seconds): 0.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 128416
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4373
+	Voluntary context switches: 1
+	Involuntary context switches: 2
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip 1kg_all_af001_gencode100_v2_Y.fa; gzip 1kg_all_af001_gencode100_v2_Y.txt"
+	User time (seconds): 1.09
+	System time (seconds): 0.01
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3252
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 500
+	Voluntary context switches: 5
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 12320
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_gencode100_v2_Y.fa.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_v2/Y/1kg_all_af001_gencode100_v2_Y.fa.gz
+upload: ./1kg_all_af001_gencode100_v2_Y.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_v2/Y/1kg_all_af001_gencode100_v2_Y.txt.gz
+upload: ./1kg_all_af001_gencode100_v2_Y.gbwt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_v2/Y/1kg_all_af001_gencode100_v2_Y.gbwt
+upload: ./1kg_all_af001_gencode100_v2_Y.pg to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_v2/Y/1kg_all_af001_gencode100_v2_Y.pg
+upload: ./1kg_all_exons_Y.gbwt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_v2/Y/1kg_all_exons_Y.gbwt
+---

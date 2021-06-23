@@ -18,7 +18,14 @@ if [ "${QUANTER}" = "kallisto" ]; then
 
 	# Infer expression
 	/usr/bin/time -v bash -c "kallisto quant -t ${CPU} --seed ${SEED} -i kallisto_index_${REF}.idx -o ${OUT_PREFIX} ${READS_PREFIX}_1.fq.gz ${READS_PREFIX}_2.fq.gz"
+
+# Use Kallisto with bootstraping (100 samples)
+elif [ "${QUANTER}" = "kallisto_boot100" ]; then
+
+	# Infer expression
+	/usr/bin/time -v bash -c "kallisto quant -t ${CPU} --seed ${SEED} -b 100 -i kallisto_index_${REF}.idx -o ${OUT_PREFIX} ${READS_PREFIX}_1.fq.gz ${READS_PREFIX}_2.fq.gz"
 fi
+
 
 # Compress expression values
 /usr/bin/time -v bash -c "gzip ${OUT_PREFIX}/abundance.tsv"

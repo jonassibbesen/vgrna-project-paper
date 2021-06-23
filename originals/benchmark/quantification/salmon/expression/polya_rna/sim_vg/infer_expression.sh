@@ -25,11 +25,35 @@ elif [ "${QUANTER}" = "salmon_w5k" ]; then
 	# Infer expression
 	/usr/bin/time -v bash -c "salmon quant -p ${CPU} -l A -w 5000 -i salmon_index_${REF} -o ${OUT_PREFIX} -1 ${READS_PREFIX}_1.fq.gz -2 ${READS_PREFIX}_2.fq.gz"
 
-# Use Salmon with gibbs sampling
+# Use Salmon with gibbs sampling (100 samples)
 elif [ "${QUANTER}" = "salmon_gibbs100" ]; then
 
 	# Infer expression
 	/usr/bin/time -v bash -c "salmon quant -p ${CPU} -l A --numGibbsSamples 100 -i salmon_index_${REF} -o ${OUT_PREFIX} -1 ${READS_PREFIX}_1.fq.gz -2 ${READS_PREFIX}_2.fq.gz"
+
+# Use Salmon with gibbs sampling (1000 samples)
+elif [ "${QUANTER}" = "salmon_gibbs1000" ]; then
+
+	# Infer expression
+	/usr/bin/time -v bash -c "salmon quant -p ${CPU} -l A --numGibbsSamples 1000 -i salmon_index_${REF} -o ${OUT_PREFIX} -1 ${READS_PREFIX}_1.fq.gz -2 ${READS_PREFIX}_2.fq.gz"
+
+# Use Salmon with traditional EM algorithm
+elif [ "${QUANTER}" = "salmon_em" ]; then
+
+	# Infer expression
+	/usr/bin/time -v bash -c "salmon quant -p ${CPU} -l A --useEM -i salmon_index_${REF} -o ${OUT_PREFIX} -1 ${READS_PREFIX}_1.fq.gz -2 ${READS_PREFIX}_2.fq.gz"
+
+# Use Salmon with a transcript-level VB prior of 0.1
+elif [ "${QUANTER}" = "salmon_vbp01" ]; then
+
+	# Infer expression
+	/usr/bin/time -v bash -c "salmon quant -p ${CPU} -l A --perTranscriptPrior --vbPrior 0.1 -i salmon_index_${REF} -o ${OUT_PREFIX} -1 ${READS_PREFIX}_1.fq.gz -2 ${READS_PREFIX}_2.fq.gz"
+
+# Use Salmon with a transcript-level VB prior of 1
+elif [ "${QUANTER}" = "salmon_vbp1" ]; then
+
+	# Infer expression
+	/usr/bin/time -v bash -c "salmon quant -p ${CPU} -l A --perTranscriptPrior --vbPrior 1 -i salmon_index_${REF} -o ${OUT_PREFIX} -1 ${READS_PREFIX}_1.fq.gz -2 ${READS_PREFIX}_2.fq.gz"
 fi
 
 # Compress expression values

@@ -2,9 +2,9 @@
 
 This repository contains the bash scripts that were used to generate the results presented in *Haplotype-aware pantranscriptome analyses using spliced pangenome graphs, [bioRxiv](https://doi.org/10.1101/2021.03.26.437240) (2021)*.  
 
-For more up-to-date information on how to run the different methods please go to github pages of the [vg toolkit](https://github.com/vgteam/vg) and [rpvg](https://github.com/jonassibbesen/rpvg). The spliced pangenome graphs and pantranscriptomes (haplotype-specific transcripts) presented in the paper are avaliable to download in the [Data](#Data) section for use in other projects.
+For more up-to-date information on how to run the different methods please go to the github page of the [vg toolkit](https://github.com/vgteam/vg) and [rpvg](https://github.com/jonassibbesen/rpvg). The spliced pangenome graphs and pantranscriptomes (haplotype-specific transcripts) presented in the paper are avaliable to download in the [Data](#Data) section for use in other projects.
 
-For the Python and C++ scripts used in the analyses see [vgrna-project-scripts](https://github.com/jonassibbesen/vgrna-project-scripts) repository.  
+For the Python and C++ scripts used in the analyses see the [vgrna-project-scripts](https://github.com/jonassibbesen/vgrna-project-scripts) repository.  
 
 There are two types of script in this repository: 
 

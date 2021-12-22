@@ -1,0 +1,1 @@
+for GENE in $(grep -v "^#" database/IMGTHLA/Allelelist.txt | grep -v "^AlleleID" | cut -d ',' -f2 | cut -d '*' -f1 | uniq | sort); do echo ${GENE}; Rscript /public/groups/vg/jsibbese/vgrna/code/vgrna-project-scripts/R/impute_hla_cds_alleles.R ${GENE} database/IMGTHLA/ null.txt; done; rm null.txt

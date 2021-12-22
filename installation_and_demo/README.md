@@ -122,4 +122,54 @@ A docker container of the latest commit to master is available on [Docker Hub](h
 
 # Demo
 
-##
+`vg` has a number of tools to support transcriptomic analyses with spliced graphs (i.e. graphs that have annotated splice junctions added as edges into the graph). These edges can be added into an existing graph using `vg rna`. We can then perform splice-aware mapping to these graphs using `vg mpmap`. The mapped reads can be used for haplotype-aware transcript quantification based on these tools in `rpvg`. 
+
+### Construct and index spliced pangenome graph
+
+The easiest way to start this pipeline is to use the `vg autoindex` subcommand to make indexes for `vg mpmap`. `vg autoindex` creates indexes for mapping from common interchange formats like FASTA, VCF, and GTF. It effectively combines the `vg rna` step and the indexing for `vg mpmap`.
+
+More information is available in the [wiki page on transcriptomics](https://github.com/vgteam/vg/wiki/Transcriptomic-analyses).
+
+Working from this directory, the following example shows how to create a spliced pangenome graph and indexes using `vg autoindex` with 4 threads:
+
+```
+# Create spliced pangenome graph and indexes for vg mpmap
+vg autoindex --workflow mpmap -t 4 --prefix vg_rna --ref-fasta example_data/x.fa --vcf example_data/x.vcf.gz --tx-gff example_data/x.gtf
+```
+
+This will create several files with the prefix `vg_rna`, which can be used in `rpvg` and `vg mpmap`.
+
+### Map reads to the spliced pangenome graph
+
+RNA-seq reads can be mapped to the spliced pangenome graph using `vg mpmap` with 4 threads:
+
+```sh
+# Map simulated RNA-seq reads using vg mpmap
+vg mpmap -t 4 -x vg_rna.spliced.xg -g vg_rna.spliced.gcsa -d vg_rna.spliced.dist -f example_data/x_rna_1.fq -f example_data/x_rna_2.fq > mpmap.gamp
+```
+
+This will create a multipath alignment file called `mpmap.gamp`.
+
+### Perform haplotype-specific expression inferrence
+
+rpvg* requires the following five arguments:
+
+```
+rpvg -g graph.xg -p paths.gbwt -a alignments.gamp -o rpvg_results -i <inference-model>
+```
+
+The prefix used for all output files are given using `-o`. The number of threads can be given using `-t`. 
+
+A small example dataset containing 36,120 haplotype-specific transcripts and 100,000 read pairs is available as example data.
+
+```
+rpvg -t 4 -g example_data/graph.xg -p example_data/pantranscriptome.gbwt -f <(zcat example_data/pantranscriptome.txt.gz) -a example_data/mpmap_align.gamp -o rpvg --inference-model haplotype-transcripts
+```
+
+This should take less than a minute to run and will create two files: 
+
+* *rpvg.txt*: Contains the estimated haplotype probability and transcript expression for each haplotype-specific transcript in the pantranscriptome.
+* *rpvg_haps.txt*: Contains the estimated probability of each haplotype combination (e.g. diplotype) for all transcripts (only combinations with a probability above zero are shown).
+
+
+

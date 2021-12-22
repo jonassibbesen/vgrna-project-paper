@@ -1,0 +1,135 @@
+---
+jas-calc-g-stats-map-f-vg-r1-470-uni-nceu-gc100-gs-1115-2210
+TIME=20211115-2210 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2 MEMORY=144 CPU=24 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg_r1/calculate_gamp_stats.sh
+CPU=24 REF=1kg_nonCEU_af001_gencode100_genes GRAPH=1kg_nonCEU_af001_gencode100_genes SIM=SRR1153470_uni MAPPER=map_fast
+---
+Completed 1.9 KiB/1.9 KiB (25.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg_r1/calculate_gamp_stats.sh to ./calculate_gamp_stats.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/SRR1153470_uni/map_fast/1kg_nonCEU_af001_gencode100_genes/map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h1.gam to ./map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h1.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/SRR1153470_uni/map_fast/1kg_nonCEU_af001_gencode100_genes/map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h2.gam to ./map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h2.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_genes/1kg_nonCEU_af001_gencode100_genes.xg to ./1kg_nonCEU_af001_gencode100_genes.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1.gam to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2.gam to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2.gam
+Total alignments: 50000000
+Total primary: 50000000
+Total secondary: 0
+Total aligned: 49500690
+Total perfect: 30917429
+Total gapless (softclips allowed): 49385077
+Total paired: 50000000
+Total properly paired: 47817816
+Insertions: 108547 bp in 66336 read events
+Deletions: 100435 bp in 64882 read events
+Substitutions: 9922947 bp in 9922947 read events
+Softclips: 270581204 bp in 11216894 read events
+	Command being timed: "bash -c vg stats -a map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h1.gam"
+	User time (seconds): 2240.53
+	System time (seconds): 9.81
+	Percent of CPU this job got: 1660%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:15.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7869088
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3771163
+	Voluntary context switches: 132
+	Involuntary context switches: 13440
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+49060954 reads correct
+	Command being timed: "bash -c vg gampcompare -t 24 -d -a map_fast -G 1kg_nonCEU_af001_gencode100_genes.xg map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h1.gam sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1.gam | grep -v ^distance | cut -f1-4 | sort -k1n -k2n -k3n | uniq -c > map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_dist_gam_h1.txt; gzip map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_dist_gam_h1.txt"
+	User time (seconds): 7685.91
+	System time (seconds): 250.88
+	Percent of CPU this job got: 1377%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:35.97
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 129069744
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 13
+	Minor (reclaiming a frame) page faults: 36904584
+	Voluntary context switches: 5079579
+	Involuntary context switches: 94993
+	Swaps: 0
+	File system inputs: 11390128
+	File system outputs: 4804976
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Total alignments: 50000000
+Total primary: 50000000
+Total secondary: 0
+Total aligned: 49501580
+Total perfect: 30920867
+Total gapless (softclips allowed): 49386463
+Total paired: 50000000
+Total properly paired: 49005702
+Insertions: 107754 bp in 65693 read events
+Deletions: 97918 bp in 64391 read events
+Substitutions: 9920023 bp in 9920023 read events
+Softclips: 270514214 bp in 11214838 read events
+	Command being timed: "bash -c vg stats -a map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h2.gam"
+	User time (seconds): 2372.05
+	System time (seconds): 12.55
+	Percent of CPU this job got: 1711%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:19.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7652000
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 4527493
+	Voluntary context switches: 120
+	Involuntary context switches: 10548
+	Swaps: 0
+	File system inputs: 23512808
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+49063002 reads correct
+	Command being timed: "bash -c vg gampcompare -t 24 -d -a map_fast -G 1kg_nonCEU_af001_gencode100_genes.xg map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h2.gam sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2.gam | grep -v ^distance | cut -f1-4 | sort -k1n -k2n -k3n | uniq -c > map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_dist_gam_h2.txt; gzip map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_dist_gam_h2.txt"
+	User time (seconds): 7618.45
+	System time (seconds): 218.03
+	Percent of CPU this job got: 1395%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:21.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 129091580
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 36599672
+	Voluntary context switches: 5325998
+	Involuntary context switches: 78564
+	Swaps: 0
+	File system inputs: 50352032
+	File system outputs: 4804664
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_dist_gam_h2.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg_r1/SRR1153470_uni/map_fast/1kg_nonCEU_af001_gencode100_genes/map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_dist_gam_h2.txt.gz
+upload: ./map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_dist_gam_h1.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg_r1/SRR1153470_uni/map_fast/1kg_nonCEU_af001_gencode100_genes/map_fast_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_dist_gam_h1.txt.gz
+---

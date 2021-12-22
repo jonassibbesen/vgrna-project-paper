@@ -1,0 +1,204 @@
+---
+jas-map-reads-hisat2-vg-470-uni-gc100-0924-1327
+TIME=20210924-1327 IMAGE=quay.io/jsibbesen/hisat2-s3script:hisat2-2.2.1-s2 MEMORY=20 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg/map_reads.sh
+CPU=16 REF=gencode100 SIM=SRR1153470_uni MAPPER=hisat2
+---
+Completed 1.3 KiB/1.3 KiB (20.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg/map_reads.sh to ./map_reads.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_2.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_2.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_1.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_1.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.3.ht2 to ./gencode100_index.3.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.4.ht2 to ./gencode100_index.4.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.2.ht2 to ./gencode100_index.2.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.8.ht2 to ./gencode100_index.8.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.7.ht2 to ./gencode100_index.7.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.6.ht2 to ./gencode100_index.6.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.5.ht2 to ./gencode100_index.5.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.1.ht2 to ./gencode100_index.1.ht2
+Time loading forward index: 00:00:03
+Time loading reference: 00:00:01
+Multiseed full-index search: 00:04:39
+25000000 reads; of these:
+  25000000 (100.00%) were paired; of these:
+    5566695 (22.27%) aligned concordantly 0 times
+    18932157 (75.73%) aligned concordantly exactly 1 time
+    501148 (2.00%) aligned concordantly >1 times
+    ----
+    5566695 pairs aligned concordantly 0 times; of these:
+      43025 (0.77%) aligned discordantly 1 time
+    ----
+    5523670 pairs aligned 0 times concordantly or discordantly; of these:
+      11047340 mates make up the pairs; of these:
+        5912340 (53.52%) aligned 0 times
+        4968543 (44.98%) aligned exactly 1 time
+        166457 (1.51%) aligned >1 times
+88.18% overall alignment rate
+Time searching: 00:04:40
+Overall time: 00:04:43
+	Command being timed: "bash -c hisat2 -p 16 -t -x gencode100_index -1 sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_1.fq.gz -2 sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h1_2.fq.gz -S hisat2_gencode100_sim_vg_SRR1153470_uni_h1.sam"
+	User time (seconds): 3688.02
+	System time (seconds): 616.93
+	Percent of CPU this job got: 1521%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:42.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6246644
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6
+	Minor (reclaiming a frame) page faults: 7260661
+	Voluntary context switches: 1098995
+	Involuntary context switches: 85647
+	Swaps: 0
+	File system inputs: 8168
+	File system outputs: 35352104
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -O BAM --threads 16 hisat2_gencode100_sim_vg_SRR1153470_uni_h1.sam > hisat2_gencode100_sim_vg_SRR1153470_uni_h1.bam"
+	User time (seconds): 751.30
+	System time (seconds): 37.36
+	Percent of CPU this job got: 1114%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:10.79
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 15860
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 67
+	Minor (reclaiming a frame) page faults: 7379665
+	Voluntary context switches: 301061
+	Involuntary context switches: 34164
+	Swaps: 0
+	File system inputs: 35407600
+	File system outputs: 11053040
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 16 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 hisat2_gencode100_sim_vg_SRR1153470_uni_h1.bam > hisat2_gencode100_sim_vg_SRR1153470_uni_h1_sort.bam; mv hisat2_gencode100_sim_vg_SRR1153470_uni_h1_sort.bam hisat2_gencode100_sim_vg_SRR1153470_uni_h1.bam; samtools index hisat2_gencode100_sim_vg_SRR1153470_uni_h1.bam"
+	User time (seconds): 925.33
+	System time (seconds): 57.36
+	Percent of CPU this job got: 569%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:52.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13592016
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 23
+	Minor (reclaiming a frame) page faults: 15302870
+	Voluntary context switches: 735776
+	Involuntary context switches: 17052
+	Swaps: 0
+	File system inputs: 11294808
+	File system outputs: 16799688
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Time loading forward index: 00:00:04
+Time loading reference: 00:00:00
+Multiseed full-index search: 00:04:28
+25000000 reads; of these:
+  25000000 (100.00%) were paired; of these:
+    5563906 (22.26%) aligned concordantly 0 times
+    18934366 (75.74%) aligned concordantly exactly 1 time
+    501728 (2.01%) aligned concordantly >1 times
+    ----
+    5563906 pairs aligned concordantly 0 times; of these:
+      42937 (0.77%) aligned discordantly 1 time
+    ----
+    5520969 pairs aligned 0 times concordantly or discordantly; of these:
+      11041938 mates make up the pairs; of these:
+        5909976 (53.52%) aligned 0 times
+        4966286 (44.98%) aligned exactly 1 time
+        165676 (1.50%) aligned >1 times
+88.18% overall alignment rate
+Time searching: 00:04:28
+Overall time: 00:04:32
+	Command being timed: "bash -c hisat2 -p 16 -t -x gencode100_index -1 sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_1.fq.gz -2 sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_h2_2.fq.gz -S hisat2_gencode100_sim_vg_SRR1153470_uni_h2.sam"
+	User time (seconds): 3508.90
+	System time (seconds): 626.36
+	Percent of CPU this job got: 1515%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:32.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6220324
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 12
+	Minor (reclaiming a frame) page faults: 7227952
+	Voluntary context switches: 1097941
+	Involuntary context switches: 57878
+	Swaps: 0
+	File system inputs: 8639320
+	File system outputs: 35347816
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -O BAM --threads 16 hisat2_gencode100_sim_vg_SRR1153470_uni_h2.sam > hisat2_gencode100_sim_vg_SRR1153470_uni_h2.bam"
+	User time (seconds): 751.74
+	System time (seconds): 37.10
+	Percent of CPU this job got: 1109%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:11.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 17072
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 45
+	Minor (reclaiming a frame) page faults: 7377486
+	Voluntary context switches: 306875
+	Involuntary context switches: 31370
+	Swaps: 0
+	File system inputs: 35372792
+	File system outputs: 11053912
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 16 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 hisat2_gencode100_sim_vg_SRR1153470_uni_h2.bam > hisat2_gencode100_sim_vg_SRR1153470_uni_h2_sort.bam; mv hisat2_gencode100_sim_vg_SRR1153470_uni_h2_sort.bam hisat2_gencode100_sim_vg_SRR1153470_uni_h2.bam; samtools index hisat2_gencode100_sim_vg_SRR1153470_uni_h2.bam"
+	User time (seconds): 923.85
+	System time (seconds): 54.98
+	Percent of CPU this job got: 563%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:53.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13718100
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 45
+	Minor (reclaiming a frame) page faults: 17490451
+	Voluntary context switches: 704815
+	Involuntary context switches: 16201
+	Swaps: 0
+	File system inputs: 10712936
+	File system outputs: 16802928
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./hisat2_gencode100_sim_vg_SRR1153470_uni_h1.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg/SRR1153470_uni/hisat2/gencode100/hisat2_gencode100_sim_vg_SRR1153470_uni_h1.bam.bai
+upload: ./hisat2_gencode100_sim_vg_SRR1153470_uni_h2.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg/SRR1153470_uni/hisat2/gencode100/hisat2_gencode100_sim_vg_SRR1153470_uni_h2.bam.bai
+upload: ./hisat2_gencode100_sim_vg_SRR1153470_uni_h1.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg/SRR1153470_uni/hisat2/gencode100/hisat2_gencode100_sim_vg_SRR1153470_uni_h1.bam
+upload: ./hisat2_gencode100_sim_vg_SRR1153470_uni_h2.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg/SRR1153470_uni/hisat2/gencode100/hisat2_gencode100_sim_vg_SRR1153470_uni_h2.bam
+---

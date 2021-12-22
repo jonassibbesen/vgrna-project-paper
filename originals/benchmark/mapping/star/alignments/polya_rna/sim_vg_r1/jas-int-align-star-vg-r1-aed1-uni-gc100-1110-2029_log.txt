@@ -1,0 +1,109 @@
+---
+jas-int-align-star-vg-r1-aed1-uni-gc100-1110-2029
+TIME=20211110-2029 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2 MEMORY=16 CPU=8 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r1/inject_alignments.sh
+CPU=8 REF=gencode100 GRAPH=gencode100 SIM=ENCSR000AED_rep1_uni MAPPER=star
+---
+Completed 1.1 KiB/1.1 KiB (11.3 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r1/inject_alignments.sh to ./inject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/star/gencode100/star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam.bai to ./star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/star/gencode100/star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam.bai to ./star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/star/gencode100/star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam to ./star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/star/gencode100/star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam to ./star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg to ./gencode100.xg
+	Command being timed: "bash -c samtools view -F 256 -b star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam > star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1_primary.bam"
+	User time (seconds): 558.68
+	System time (seconds): 11.82
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:30.53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10144
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6173449
+	Voluntary context switches: 4466
+	Involuntary context switches: 724
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 7025112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg inject -t 8 -x gencode100.xg star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1_primary.bam | vg view -a - | sed 's/\/1",/",/g' | sed 's/_1\/2",/_2",/g' | vg view -a -G -J - > star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.gam"
+	User time (seconds): 41744.40
+	System time (seconds): 1325.50
+	Percent of CPU this job got: 255%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:40:42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6251184
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 87066752
+	Voluntary context switches: 99178816
+	Involuntary context switches: 163166
+	Swaps: 0
+	File system inputs: 5673664
+	File system outputs: 15089416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -F 256 -b star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam > star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2_primary.bam"
+	User time (seconds): 569.31
+	System time (seconds): 13.60
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:42.94
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10124
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6173912
+	Voluntary context switches: 1478
+	Involuntary context switches: 1172
+	Swaps: 0
+	File system inputs: 7224792
+	File system outputs: 7025112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg inject -t 8 -x gencode100.xg star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2_primary.bam | vg view -a - | sed 's/\/1",/",/g' | sed 's/_1\/2",/_2",/g' | vg view -a -G -J - > star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.gam"
+	User time (seconds): 39148.44
+	System time (seconds): 1179.15
+	Percent of CPU this job got: 258%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:19:58
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6226816
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 80256663
+	Voluntary context switches: 95993480
+	Involuntary context switches: 97358
+	Swaps: 0
+	File system inputs: 12750984
+	File system outputs: 15074472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/star/gencode100/star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.gam
+upload: ./star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/star/gencode100/star_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.gam
+---

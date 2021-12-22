@@ -1,0 +1,110 @@
+---
+jas-map-reads-hisat2-real-r1-aed1-na-ex-gc100-1110-1920
+TIME=20211110-1920 IMAGE=quay.io/jsibbesen/hisat2-s3script:hisat2-2.2.1-s2 MEMORY=24 CPU=16 DISK=512
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real_r1/map_reads.sh
+CPU=16 REF=1kg_NA12878_exons_gencode100 REAL=ENCSR000AED_rep1 READS_1=s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz READS_2=s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz MAPPER=hisat2
+---
+Completed 1.6 KiB/1.6 KiB (17.7 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real_r1/map_reads.sh to ./map_reads.sh
+download: s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz to ./reads_1.fq.gz
+download: s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_NA12878_exons_gencode100/1kg_NA12878_exons_gencode100_index.3.ht2 to ./1kg_NA12878_exons_gencode100_index.3.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_NA12878_exons_gencode100/1kg_NA12878_exons_gencode100_index.4.ht2 to ./1kg_NA12878_exons_gencode100_index.4.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_NA12878_exons_gencode100/1kg_NA12878_exons_gencode100_index.2.ht2 to ./1kg_NA12878_exons_gencode100_index.2.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_NA12878_exons_gencode100/1kg_NA12878_exons_gencode100_index.8.ht2 to ./1kg_NA12878_exons_gencode100_index.8.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_NA12878_exons_gencode100/1kg_NA12878_exons_gencode100_index.7.ht2 to ./1kg_NA12878_exons_gencode100_index.7.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_NA12878_exons_gencode100/1kg_NA12878_exons_gencode100_index.6.ht2 to ./1kg_NA12878_exons_gencode100_index.6.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_NA12878_exons_gencode100/1kg_NA12878_exons_gencode100_index.5.ht2 to ./1kg_NA12878_exons_gencode100_index.5.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/1kg_NA12878_exons_gencode100/1kg_NA12878_exons_gencode100_index.1.ht2 to ./1kg_NA12878_exons_gencode100_index.1.ht2
+Time loading forward index: 00:00:04
+Time loading reference: 00:00:00
+Multiseed full-index search: 00:33:02
+97548052 reads; of these:
+  97548052 (100.00%) were paired; of these:
+    6367678 (6.53%) aligned concordantly 0 times
+    80194760 (82.21%) aligned concordantly exactly 1 time
+    10985614 (11.26%) aligned concordantly >1 times
+    ----
+    6367678 pairs aligned concordantly 0 times; of these:
+      126169 (1.98%) aligned discordantly 1 time
+    ----
+    6241509 pairs aligned 0 times concordantly or discordantly; of these:
+      12483018 mates make up the pairs; of these:
+        9080986 (72.75%) aligned 0 times
+        2760365 (22.11%) aligned exactly 1 time
+        641667 (5.14%) aligned >1 times
+95.35% overall alignment rate
+Time searching: 00:33:04
+Overall time: 00:33:08
+	Command being timed: "bash -c hisat2 -p 16 -t -x 1kg_NA12878_exons_gencode100_index -1 reads_1.fq.gz -2 reads_2.fq.gz -S hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.sam"
+	User time (seconds): 24671.11
+	System time (seconds): 6128.48
+	Percent of CPU this job got: 1549%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 33:07.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6510896
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 26210538
+	Voluntary context switches: 4661116
+	Involuntary context switches: 1898782
+	Swaps: 0
+	File system inputs: 16
+	File system outputs: 236680688
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -O BAM --threads 16 hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.sam > hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.bam"
+	User time (seconds): 3751.61
+	System time (seconds): 277.50
+	Percent of CPU this job got: 790%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:29.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 17096
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 47163919
+	Voluntary context switches: 1587559
+	Involuntary context switches: 168727
+	Swaps: 0
+	File system inputs: 236680688
+	File system outputs: 46548600
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 128 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.bam > hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1_sort.bam; mv hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1_sort.bam hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.bam; samtools index hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.bam"
+	User time (seconds): 4899.57
+	System time (seconds): 314.60
+	Percent of CPU this job got: 508%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:06.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13823364
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 83433778
+	Voluntary context switches: 4749462
+	Involuntary context switches: 69139
+	Swaps: 0
+	File system inputs: 128092928
+	File system outputs: 83430768
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real_r1/ENCSR000AED_rep1/hisat2/1kg_NA12878_exons_gencode100/hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.bam.bai
+upload: ./hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real_r1/ENCSR000AED_rep1/hisat2/1kg_NA12878_exons_gencode100/hisat2_1kg_NA12878_exons_gencode100_real_r1_ENCSR000AED_rep1.bam
+---

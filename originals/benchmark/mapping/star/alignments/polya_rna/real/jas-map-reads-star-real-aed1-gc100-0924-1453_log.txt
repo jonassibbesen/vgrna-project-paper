@@ -1,0 +1,83 @@
+---
+jas-map-reads-star-real-aed1-gc100-0924-1453
+TIME=20210924-1453 IMAGE=quay.io/jsibbesen/star-s3script:star-2.7.3a-s1 MEMORY=40 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/map_reads.sh
+CPU=16 REF=gencode100 REAL=ENCSR000AED_rep1 READS_1=s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz READS_2=s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz MAPPER=star
+---
+Completed 1.6 KiB/1.6 KiB (18.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/map_reads.sh to ./map_reads.sh
+download: s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz to ./reads_1.fq.gz
+download: s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/chrLength.txt to ./chrLength.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/chrNameLength.txt to ./chrNameLength.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/chrName.txt to ./chrName.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/chrStart.txt to ./chrStart.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/exonInfo.tab to ./exonInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/genomeParameters.txt to ./genomeParameters.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/geneInfo.tab to ./geneInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/exonGeTrInfo.tab to ./exonGeTrInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/sjdbList.out.tab to ./sjdbList.out.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/sjdbList.fromGTF.out.tab to ./sjdbList.fromGTF.out.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/sjdbInfo.txt to ./sjdbInfo.txt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/transcriptInfo.tab to ./transcriptInfo.tab
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/SAindex to ./SAindex
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/Genome to ./Genome
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode100/SA to ./SA
+Sep 24 12:56:19 ..... started STAR run
+Sep 24 12:56:19 ..... loading genome
+Sep 24 12:56:58 ..... started mapping
+Sep 24 13:17:29 ..... finished mapping
+Sep 24 13:17:32 ..... finished successfully
+	Command being timed: "bash -c STAR --runThreadN 16 --genomeDir . --readFilesCommand zcat --readFilesIn reads_1.fq.gz reads_2.fq.gz --outSAMunmapped Within --outSAMtype BAM Unsorted --outFileNamePrefix star_gencode100_real_ENCSR000AED_rep1_; mv star_gencode100_real_ENCSR000AED_rep1_Aligned.out.bam star_gencode100_real_ENCSR000AED_rep1.bam"
+	User time (seconds): 9936.86
+	System time (seconds): 302.90
+	Percent of CPU this job got: 803%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 21:13.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 33134404
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 116851759
+	Voluntary context switches: 726303
+	Involuntary context switches: 43230
+	Swaps: 0
+	File system inputs: 41835336
+	File system outputs: 49443320
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 112 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 star_gencode100_real_ENCSR000AED_rep1.bam > star_gencode100_real_ENCSR000AED_rep1_sort.bam; mv star_gencode100_real_ENCSR000AED_rep1_sort.bam star_gencode100_real_ENCSR000AED_rep1.bam; samtools index star_gencode100_real_ENCSR000AED_rep1.bam"
+	User time (seconds): 4867.64
+	System time (seconds): 192.41
+	Percent of CPU this job got: 542%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:33.41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 14027392
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 41918340
+	Voluntary context switches: 4238606
+	Involuntary context switches: 68184
+	Swaps: 0
+	File system inputs: 107056304
+	File system outputs: 88369688
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./star_gencode100_real_ENCSR000AED_rep1_Log.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/ENCSR000AED_rep1/star/gencode100/star_gencode100_real_ENCSR000AED_rep1_Log.out
+upload: ./star_gencode100_real_ENCSR000AED_rep1_Log.progress.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/ENCSR000AED_rep1/star/gencode100/star_gencode100_real_ENCSR000AED_rep1_Log.progress.out
+upload: ./star_gencode100_real_ENCSR000AED_rep1_Log.final.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/ENCSR000AED_rep1/star/gencode100/star_gencode100_real_ENCSR000AED_rep1_Log.final.out
+upload: ./star_gencode100_real_ENCSR000AED_rep1.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/ENCSR000AED_rep1/star/gencode100/star_gencode100_real_ENCSR000AED_rep1.bam.bai
+upload: ./star_gencode100_real_ENCSR000AED_rep1_SJ.out.tab to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/ENCSR000AED_rep1/star/gencode100/star_gencode100_real_ENCSR000AED_rep1_SJ.out.tab
+upload: ./star_gencode100_real_ENCSR000AED_rep1.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/real/ENCSR000AED_rep1/star/gencode100/star_gencode100_real_ENCSR000AED_rep1.bam
+---

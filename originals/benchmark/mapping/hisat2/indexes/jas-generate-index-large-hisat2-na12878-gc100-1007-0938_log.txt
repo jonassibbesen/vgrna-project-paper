@@ -1,0 +1,231 @@
+---
+jas-generate-index-large-hisat2-na12878-gc100-1007-0938
+TIME=20211007-0938 IMAGE=jsibbesen/hisat2-s3script:2.2.1-s2 MEMORY=312 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/generate_large_index.sh
+CPU=16 REF=1kg_NA12878_gencode100 TRANSCRIPTS=gencode.v29.primary_assembly.annotation_renamed_full.gtf VARIANTS=1kg_NA12878
+---
+Completed 1.6 KiB/1.6 KiB (14.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/generate_large_index.sh to ./generate_large_index.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+303499 exons.txt
+	Command being timed: "bash -c hisat2_extract_exons.py gencode.v29.primary_assembly.annotation_renamed_full.gtf > exons.txt; wc -l exons.txt"
+	User time (seconds): 12.34
+	System time (seconds): 0.40
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.75
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 299628
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 87422
+	Voluntary context switches: 7
+	Involuntary context switches: 16
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 13560
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+328248 splice_sites.txt
+	Command being timed: "bash -c hisat2_extract_splice_sites.py gencode.v29.primary_assembly.annotation_renamed_full.gtf > splice_sites.txt; wc -l splice_sites.txt"
+	User time (seconds): 12.15
+	System time (seconds): 0.49
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 274780
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 112429
+	Voluntary context switches: 6
+	Involuntary context switches: 21
+	Swaps: 0
+	File system inputs: 16
+	File system outputs: 14664
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/10/1kg_NA12878_10.snp to 10/1kg_NA12878_10.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/12/1kg_NA12878_12.haplotype to 12/1kg_NA12878_12.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/1/1kg_NA12878_1.snp to 1/1kg_NA12878_1.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/12/1kg_NA12878_12.snp to 12/1kg_NA12878_12.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/11/1kg_NA12878_11.snp to 11/1kg_NA12878_11.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/10/1kg_NA12878_10.haplotype to 10/1kg_NA12878_10.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/11/1kg_NA12878_11.haplotype to 11/1kg_NA12878_11.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/1/1kg_NA12878_1.haplotype to 1/1kg_NA12878_1.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/13/1kg_NA12878_13.haplotype to 13/1kg_NA12878_13.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/13/1kg_NA12878_13.snp to 13/1kg_NA12878_13.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/15/1kg_NA12878_15.snp to 15/1kg_NA12878_15.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/14/1kg_NA12878_14.haplotype to 14/1kg_NA12878_14.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/14/1kg_NA12878_14.snp to 14/1kg_NA12878_14.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/15/1kg_NA12878_15.haplotype to 15/1kg_NA12878_15.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/18/1kg_NA12878_18.snp to 18/1kg_NA12878_18.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/17/1kg_NA12878_17.snp to 17/1kg_NA12878_17.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/17/1kg_NA12878_17.haplotype to 17/1kg_NA12878_17.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/19/1kg_NA12878_19.snp to 19/1kg_NA12878_19.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/18/1kg_NA12878_18.haplotype to 18/1kg_NA12878_18.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/16/1kg_NA12878_16.snp to 16/1kg_NA12878_16.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/19/1kg_NA12878_19.haplotype to 19/1kg_NA12878_19.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/21/1kg_NA12878_21.snp to 21/1kg_NA12878_21.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/22/1kg_NA12878_22.haplotype to 22/1kg_NA12878_22.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/16/1kg_NA12878_16.haplotype to 16/1kg_NA12878_16.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/22/1kg_NA12878_22.snp to 22/1kg_NA12878_22.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/20/1kg_NA12878_20.snp to 20/1kg_NA12878_20.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/2/1kg_NA12878_2.haplotype to 2/1kg_NA12878_2.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/2/1kg_NA12878_2.snp to 2/1kg_NA12878_2.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/3/1kg_NA12878_3.haplotype to 3/1kg_NA12878_3.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/4/1kg_NA12878_4.haplotype to 4/1kg_NA12878_4.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/21/1kg_NA12878_21.haplotype to 21/1kg_NA12878_21.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/20/1kg_NA12878_20.haplotype to 20/1kg_NA12878_20.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/4/1kg_NA12878_4.snp to 4/1kg_NA12878_4.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/5/1kg_NA12878_5.haplotype to 5/1kg_NA12878_5.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/Y/1kg_NA12878_Y.snp to Y/1kg_NA12878_Y.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/6/1kg_NA12878_6.snp to 6/1kg_NA12878_6.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/7/1kg_NA12878_7.haplotype to 7/1kg_NA12878_7.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/Y/1kg_NA12878_Y.haplotype to Y/1kg_NA12878_Y.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/3/1kg_NA12878_3.snp to 3/1kg_NA12878_3.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/5/1kg_NA12878_5.snp to 5/1kg_NA12878_5.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/8/1kg_NA12878_8.haplotype to 8/1kg_NA12878_8.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/7/1kg_NA12878_7.snp to 7/1kg_NA12878_7.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/8/1kg_NA12878_8.snp to 8/1kg_NA12878_8.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/6/1kg_NA12878_6.haplotype to 6/1kg_NA12878_6.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/X/1kg_NA12878_X.snp to X/1kg_NA12878_X.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/9/1kg_NA12878_9.snp to 9/1kg_NA12878_9.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/X/1kg_NA12878_X.haplotype to X/1kg_NA12878_X.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/9/1kg_NA12878_9.haplotype to 9/1kg_NA12878_9.haplotype
+4227011 variants.snp
+3856373 variants.haplotype
+	Command being timed: "bash -c cat */*.snp > variants.snp; cat */*.haplotype > variants.haplotype; wc -l variants.snp; wc -l variants.haplotype"
+	User time (seconds): 0.06
+	System time (seconds): 0.21
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3232
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 740
+	Voluntary context switches: 9
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 568392
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Settings:
+  Output files: "1kg_NA12878_gencode100_index.*.ht2l"
+  Line rate: 8 (line is 256 bytes)
+  Lines per side: 1 (side is 256 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Local offset rate: 3 (one in 8)
+  Local fTable chars: 6
+  Local sequence length: 57344
+  Local sequence overlap between two consecutive indexes: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  Homo_sapiens.GRCh38.dna.primary_assembly.fa
+Reading reference sizes
+  Time reading reference sizes: 00:00:25
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:15
+  Time to read SNPs and splice sites: 00:00:27
+Generation 0 (2959922521 -> 2959922521 nodes, 0 ranks)
+COUNTED NEW NODES: 3
+COUNTED TEMP NODES: 0
+RESIZED NODES: 46
+RESIZED NODES: 0
+MADE NEW NODES: 4
+Generation 1 (2964092511 -> 2964092511 nodes, 0 ranks)
+COUNTED NEW NODES: 2
+COUNTED TEMP NODES: 0
+RESIZED NODES: 30
+RESIZED NODES: 0
+MADE NEW NODES: 5
+Generation 2 (2972433912 -> 2972433912 nodes, 0 ranks)
+COUNTED NEW NODES: 2
+COUNTED TEMP NODES: 0
+RESIZED NODES: 44
+RESIZED NODES: 0
+MADE NEW NODES: 5
+Generation 3 (2989122942 -> 2989122942 nodes, 0 ranks)
+BUILT FROM_INDEX: 16
+COUNTED NEW NODES: 3
+COUNTED TEMP NODES: 0
+RESIZED NODES: 30
+RESIZED NODES: 0
+MADE NEW NODES: 5
+RESIZE NODES: 82
+COUNT NUMBER IN EACH BIN: 2
+FINISHED FIRST ROUND: 3
+1 3022527722
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+FINISHED RECURSIVE SORTS: 568
+SORT NODES: 573
+MERGE, UPDATE RANK: 71
+Generation 4 (3022527722 -> 3020192716 nodes, 1151421057 ranks)
+Command terminated by signal 9
+	Command being timed: "bash -c hisat2-build -p 16 --large-index --snp variants.snp --haplotype variants.haplotype --exon exons.txt --ss splice_sites.txt Homo_sapiens.GRCh38.dna.primary_assembly.fa 1kg_NA12878_gencode100_index"
+	User time (seconds): 4343.61
+	System time (seconds): 1321.77
+	Percent of CPU this job got: 196%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 47:57.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 326480676
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 7
+	Minor (reclaiming a frame) page faults: 184189104
+	Voluntary context switches: 38164
+	Involuntary context switches: 154760
+	Swaps: 0
+	File system inputs: 31880
+	File system outputs: 302498624
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+---

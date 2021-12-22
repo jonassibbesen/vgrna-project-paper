@@ -1,0 +1,109 @@
+---
+jas-int-align-hisat2-vg-r1-aed1-uni-nceu-gc100-1110-2029
+TIME=20211110-2029 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2 MEMORY=16 CPU=8 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r1/inject_alignments.sh
+CPU=8 REF=1kg_nonCEU_af001_gencode100 GRAPH=1kg_nonCEU_af001_gencode100 SIM=ENCSR000AED_rep1_uni MAPPER=hisat2
+---
+Completed 1.1 KiB/1.1 KiB (15.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r1/inject_alignments.sh to ./inject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam.bai to ./hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam.bai to ./hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam to ./hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam to ./hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100.xg to ./1kg_nonCEU_af001_gencode100.xg
+	Command being timed: "bash -c samtools view -F 256 -b hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.bam > hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1_primary.bam"
+	User time (seconds): 566.01
+	System time (seconds): 15.30
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:41.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10320
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6883320
+	Voluntary context switches: 636
+	Involuntary context switches: 3173
+	Swaps: 0
+	File system inputs: 3612760
+	File system outputs: 7407888
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg inject -t 8 -x 1kg_nonCEU_af001_gencode100.xg hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1_primary.bam | vg view -a - | sed 's/\/1",/",/g' | sed 's/\/2",/",/g' | vg view -a -G -J - > hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.gam"
+	User time (seconds): 59933.88
+	System time (seconds): 2150.36
+	Percent of CPU this job got: 234%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:20:40
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10341784
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 157563227
+	Voluntary context switches: 158907342
+	Involuntary context switches: 203062
+	Swaps: 0
+	File system inputs: 21971504
+	File system outputs: 25603360
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -F 256 -b hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.bam > hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2_primary.bam"
+	User time (seconds): 570.41
+	System time (seconds): 14.34
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:44.79
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10088
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6885062
+	Voluntary context switches: 1737
+	Involuntary context switches: 876
+	Swaps: 0
+	File system inputs: 7675024
+	File system outputs: 7408104
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg inject -t 8 -x 1kg_nonCEU_af001_gencode100.xg hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2_primary.bam | vg view -a - | sed 's/\/1",/",/g' | sed 's/\/2",/",/g' | vg view -a -G -J - > hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.gam"
+	User time (seconds): 61089.57
+	System time (seconds): 2088.47
+	Percent of CPU this job got: 232%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:31:55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10395220
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 152694158
+	Voluntary context switches: 158238750
+	Involuntary context switches: 186995
+	Swaps: 0
+	File system inputs: 23431536
+	File system outputs: 25615824
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h1.gam
+upload: ./hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1_uni/hisat2/1kg_nonCEU_af001_gencode100/hisat2_1kg_nonCEU_af001_gencode100_sim_vg_r1_ENCSR000AED_rep1_uni_h2.gam
+---

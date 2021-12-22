@@ -1,0 +1,110 @@
+---
+jas-map-reads-hisat2-real-r1-470-gc100-1110-1758
+TIME=20211110-1758 IMAGE=quay.io/jsibbesen/hisat2-s3script:hisat2-2.2.1-s2 MEMORY=24 CPU=16 DISK=512
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real_r1/map_reads.sh
+CPU=16 REF=gencode100 REAL=SRR1153470 READS_1=s3://vg-k8s/users/jsibbesen/vgrna/data/reads/SRP036136/SRR1153470_1.fastq.gz READS_2=s3://vg-k8s/users/jsibbesen/vgrna/data/reads/SRP036136/SRR1153470_2.fastq.gz MAPPER=hisat2
+---
+Completed 1.6 KiB/1.6 KiB (16.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real_r1/map_reads.sh to ./map_reads.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/reads/SRP036136/SRR1153470_1.fastq.gz to ./reads_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/reads/SRP036136/SRR1153470_2.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.3.ht2 to ./gencode100_index.3.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.2.ht2 to ./gencode100_index.2.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.4.ht2 to ./gencode100_index.4.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.8.ht2 to ./gencode100_index.8.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.6.ht2 to ./gencode100_index.6.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.7.ht2 to ./gencode100_index.7.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.5.ht2 to ./gencode100_index.5.ht2
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/gencode100/gencode100_index.1.ht2 to ./gencode100_index.1.ht2
+Time loading forward index: 00:00:05
+Time loading reference: 00:00:01
+Multiseed full-index search: 00:26:21
+115359773 reads; of these:
+  115359773 (100.00%) were paired; of these:
+    11419710 (9.90%) aligned concordantly 0 times
+    99281302 (86.06%) aligned concordantly exactly 1 time
+    4658761 (4.04%) aligned concordantly >1 times
+    ----
+    11419710 pairs aligned concordantly 0 times; of these:
+      837765 (7.34%) aligned discordantly 1 time
+    ----
+    10581945 pairs aligned 0 times concordantly or discordantly; of these:
+      21163890 mates make up the pairs; of these:
+        11423497 (53.98%) aligned 0 times
+        8890867 (42.01%) aligned exactly 1 time
+        849526 (4.01%) aligned >1 times
+95.05% overall alignment rate
+Time searching: 00:26:22
+Overall time: 00:26:28
+	Command being timed: "bash -c hisat2 -p 16 -t -x gencode100_index -1 reads_1.fq.gz -2 reads_2.fq.gz -S hisat2_gencode100_real_r1_SRR1153470.sam"
+	User time (seconds): 20785.67
+	System time (seconds): 3612.41
+	Percent of CPU this job got: 1535%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 26:28.45
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6754760
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 8
+	Minor (reclaiming a frame) page faults: 39354296
+	Voluntary context switches: 6044047
+	Involuntary context switches: 799134
+	Swaps: 0
+	File system inputs: 13824
+	File system outputs: 171344120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c samtools view -O BAM --threads 16 hisat2_gencode100_real_r1_SRR1153470.sam > hisat2_gencode100_real_r1_SRR1153470.bam"
+	User time (seconds): 3473.61
+	System time (seconds): 186.87
+	Percent of CPU this job got: 1028%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:55.90
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 18184
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35241235
+	Voluntary context switches: 1383251
+	Involuntary context switches: 214206
+	Swaps: 0
+	File system inputs: 171344120
+	File system outputs: 50269328
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 80 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 hisat2_gencode100_real_r1_SRR1153470.bam > hisat2_gencode100_real_r1_SRR1153470_sort.bam; mv hisat2_gencode100_real_r1_SRR1153470_sort.bam hisat2_gencode100_real_r1_SRR1153470.bam; samtools index hisat2_gencode100_real_r1_SRR1153470.bam"
+	User time (seconds): 3971.63
+	System time (seconds): 327.16
+	Percent of CPU this job got: 534%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:24.38
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13890144
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 115946381
+	Voluntary context switches: 3275014
+	Involuntary context switches: 90211
+	Swaps: 0
+	File system inputs: 109927064
+	File system outputs: 68463416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./hisat2_gencode100_real_r1_SRR1153470.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real_r1/SRR1153470/hisat2/gencode100/hisat2_gencode100_real_r1_SRR1153470.bam.bai
+upload: ./hisat2_gencode100_real_r1_SRR1153470.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/real_r1/SRR1153470/hisat2/gencode100/hisat2_gencode100_real_r1_SRR1153470.bam
+---

@@ -1,0 +1,92 @@
+---
+jas-map-reads-mpmap-ns-vg-r1-470-uni-nceu-gc100-gs-1111-1103
+TIME=20211111-1103 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2 MEMORY=16 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/map_reads.sh
+CPU=16 REF=1kg_nonCEU_af001_gencode100_genes SIM=SRR1153470_uni MAPPER=mpmap_nosplice
+---
+Completed 2.0 KiB/2.0 KiB (20.4 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/map_reads.sh to ./map_reads.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_1.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_1.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_2.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_2.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_genes/1kg_nonCEU_af001_gencode100_genes.xg to ./1kg_nonCEU_af001_gencode100_genes.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100_genes/1kg_nonCEU_af001_gencode100_genes_index.gcsa.lcp to ./1kg_nonCEU_af001_gencode100_genes_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100_genes/1kg_nonCEU_af001_gencode100_genes_index.gcsa to ./1kg_nonCEU_af001_gencode100_genes_index.gcsa
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode100_genes/1kg_nonCEU_af001_gencode100_genes_index.dist to ./1kg_nonCEU_af001_gencode100_genes_index.dist
+[vg mpmap] elapsed time 0 s: Executing command: vg mpmap -t 16 -n rna --report-allelic-mapq --not-spliced -x 1kg_nonCEU_af001_gencode100_genes.xg -g 1kg_nonCEU_af001_gencode100_genes_index.gcsa -d 1kg_nonCEU_af001_gencode100_genes_index.dist -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_1.fq.gz -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_2.fq.gz
+[vg mpmap] elapsed time 0 s: Loading graph from 1kg_nonCEU_af001_gencode100_genes.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+[vg mpmap] elapsed time 4 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 4 s: Loading GCSA2 from 1kg_nonCEU_af001_gencode100_genes_index.gcsa
+[vg mpmap] elapsed time 6 s: Loading LCP from 1kg_nonCEU_af001_gencode100_genes_index.gcsa.lcp
+[vg mpmap] elapsed time 7 s: Loading distance index from 1kg_nonCEU_af001_gencode100_genes_index.dist
+[vg mpmap] elapsed time 13 s: Building null model to calibrate mismapping detection.
+[vg mpmap] elapsed time 17 s: Mapping reads from sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_1.fq.gz and sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_2.fq.gz using 16 threads
+[vg mpmap] elapsed time 7.2 m: Mapped 5000000 read pairs
+[vg mpmap] elapsed time 14.2 m: Mapped 10000000 read pairs
+[vg mpmap] elapsed time 21.0 m: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 26.7 m: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 32.3 m: Mapping finished. Mapped 25000000 read pairs.
+	Command being timed: "bash -c vg mpmap -t 16 -n rna --report-allelic-mapq --not-spliced -x 1kg_nonCEU_af001_gencode100_genes.xg -g 1kg_nonCEU_af001_gencode100_genes_index.gcsa -d 1kg_nonCEU_af001_gencode100_genes_index.dist -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_1.fq.gz -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_2.fq.gz > mpmap_nosplice_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h1.gamp"
+	User time (seconds): 29873.35
+	System time (seconds): 853.12
+	Percent of CPU this job got: 1587%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 32:15.90
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5298272
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 10874736
+	Voluntary context switches: 1019065
+	Involuntary context switches: 391211
+	Swaps: 0
+	File system inputs: 7791256
+	File system outputs: 20346616
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg mpmap] elapsed time 0 s: Executing command: vg mpmap -t 16 -n rna --report-allelic-mapq --not-spliced -x 1kg_nonCEU_af001_gencode100_genes.xg -g 1kg_nonCEU_af001_gencode100_genes_index.gcsa -d 1kg_nonCEU_af001_gencode100_genes_index.dist -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_1.fq.gz -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_2.fq.gz
+[vg mpmap] elapsed time 0 s: Loading graph from 1kg_nonCEU_af001_gencode100_genes.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+[vg mpmap] elapsed time 4 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 4 s: Loading GCSA2 from 1kg_nonCEU_af001_gencode100_genes_index.gcsa
+[vg mpmap] elapsed time 6 s: Loading LCP from 1kg_nonCEU_af001_gencode100_genes_index.gcsa.lcp
+[vg mpmap] elapsed time 7 s: Loading distance index from 1kg_nonCEU_af001_gencode100_genes_index.dist
+[vg mpmap] elapsed time 13 s: Building null model to calibrate mismapping detection.
+[vg mpmap] elapsed time 17 s: Mapping reads from sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_1.fq.gz and sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_2.fq.gz using 16 threads
+[vg mpmap] elapsed time 6.3 m: Mapped 5000000 read pairs
+[vg mpmap] elapsed time 12.6 m: Mapped 10000000 read pairs
+[vg mpmap] elapsed time 19.0 m: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 25.4 m: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 31.6 m: Mapping finished. Mapped 25000000 read pairs.
+	Command being timed: "bash -c vg mpmap -t 16 -n rna --report-allelic-mapq --not-spliced -x 1kg_nonCEU_af001_gencode100_genes.xg -g 1kg_nonCEU_af001_gencode100_genes_index.gcsa -d 1kg_nonCEU_af001_gencode100_genes_index.dist -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_1.fq.gz -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_2.fq.gz > mpmap_nosplice_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h2.gamp"
+	User time (seconds): 29192.12
+	System time (seconds): 840.07
+	Percent of CPU this job got: 1586%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 31:33.25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5292692
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18668716
+	Voluntary context switches: 1025515
+	Involuntary context switches: 377326
+	Swaps: 0
+	File system inputs: 13935488
+	File system outputs: 20346584
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_nosplice_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h1.gamp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/SRR1153470_uni/mpmap_nosplice/1kg_nonCEU_af001_gencode100_genes/mpmap_nosplice_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h1.gamp
+upload: ./mpmap_nosplice_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h2.gamp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/SRR1153470_uni/mpmap_nosplice/1kg_nonCEU_af001_gencode100_genes/mpmap_nosplice_1kg_nonCEU_af001_gencode100_genes_sim_vg_r1_SRR1153470_uni_h2.gamp
+---

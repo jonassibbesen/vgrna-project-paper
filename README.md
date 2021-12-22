@@ -12,6 +12,8 @@ This repository is organized in three subdirectories.
 
 3. The [originals](https://github.com/jonassibbesen/vgrna-project-paper/tree/main/originals) directory contains the raw, unedited bash scripts, as well as the log files. These files are not particularly user-friendly as they include a lot of hard-coded paths. However, we have included them here for transparency and reproducibility. By looking at the scripts and log files you can see exactly how each method was run in the paper. Most of the log files will include a short header which specifies the Docker image that was used. The Docker containers are available at this repository: [s3script-dockerfiles](https://github.com/jonassibbesen/s3script-dockerfiles). For the log files without this header it should be clear from the script itself what version was used. 
 
+4. The [dockerfiles](https://github.com/jonassibbesen/vgrna-project-paper/tree/main/dockerfiles) directory contains recommended Docker files for running scripts in this repository.
+
 ## Data
 
 Here you can find links to the data used in the paper. This includes both raw data and data constructed as part of the analyses in the paper. The constructed data included here is data that are either not guaranteed to be reproducible (subsampled transcript annotation and simulated reads) or that are deemed potentially useful in other projects (graphs, pantranscriptomes and indexes).

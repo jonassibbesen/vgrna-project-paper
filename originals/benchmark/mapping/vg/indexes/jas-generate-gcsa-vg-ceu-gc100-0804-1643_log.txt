@@ -1,0 +1,833 @@
+---
+jas-generate-gcsa-vg-ceu-gc100-0804-1643
+TIME=20210804-1643 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-8ff022c3-s1 MEMORY=92 CPU=8 DISK=2400
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/generate_gcsa.sh
+CPU=8 GRAPHS=1kg_CEU_gencode100
+---
+Completed 820 Bytes/820 Bytes (2.3 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/generate_gcsa.sh to ./generate_gcsa.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/13/1kg_CEU_gencode100_13.pg to 13/1kg_CEU_gencode100_13.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/11/1kg_CEU_gencode100_11.pg to 11/1kg_CEU_gencode100_11.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/12/1kg_CEU_gencode100_12.pg to 12/1kg_CEU_gencode100_12.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/10/1kg_CEU_gencode100_10.pg to 10/1kg_CEU_gencode100_10.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/14/1kg_CEU_gencode100_14.pg to 14/1kg_CEU_gencode100_14.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/17/1kg_CEU_gencode100_17.pg to 17/1kg_CEU_gencode100_17.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/1/1kg_CEU_gencode100_1.pg to 1/1kg_CEU_gencode100_1.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/15/1kg_CEU_gencode100_15.pg to 15/1kg_CEU_gencode100_15.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/16/1kg_CEU_gencode100_16.pg to 16/1kg_CEU_gencode100_16.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/21/1kg_CEU_gencode100_21.pg to 21/1kg_CEU_gencode100_21.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/18/1kg_CEU_gencode100_18.pg to 18/1kg_CEU_gencode100_18.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/19/1kg_CEU_gencode100_19.pg to 19/1kg_CEU_gencode100_19.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/20/1kg_CEU_gencode100_20.pg to 20/1kg_CEU_gencode100_20.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/22/1kg_CEU_gencode100_22.pg to 22/1kg_CEU_gencode100_22.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/2/1kg_CEU_gencode100_2.pg to 2/1kg_CEU_gencode100_2.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/5/1kg_CEU_gencode100_5.pg to 5/1kg_CEU_gencode100_5.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/3/1kg_CEU_gencode100_3.pg to 3/1kg_CEU_gencode100_3.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/MT/1kg_CEU_gencode100_MT.pg to MT/1kg_CEU_gencode100_MT.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/4/1kg_CEU_gencode100_4.pg to 4/1kg_CEU_gencode100_4.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/6/1kg_CEU_gencode100_6.pg to 6/1kg_CEU_gencode100_6.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/SCA/1kg_CEU_gencode100_SCA.pg to SCA/1kg_CEU_gencode100_SCA.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/Y/1kg_CEU_gencode100_Y.pg to Y/1kg_CEU_gencode100_Y.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/9/1kg_CEU_gencode100_9.pg to 9/1kg_CEU_gencode100_9.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/8/1kg_CEU_gencode100_8.pg to 8/1kg_CEU_gencode100_8.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/X/1kg_CEU_gencode100_X.pg to X/1kg_CEU_gencode100_X.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_CEU_gencode100/7/1kg_CEU_gencode100_7.pg to 7/1kg_CEU_gencode100_7.pg
+1
+Original graph 1/1kg_CEU_gencode100_1.pg: 10552142 nodes, 11746664 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 10552142 nodes, 11714447 edges
+Removed small subgraphs: 10521669 nodes, 11689826 edges
+Restored graph: 10542052 nodes
+Serialized the graph: 10542052 nodes, 11714415 edges
+2
+Original graph 2/1kg_CEU_gencode100_2.pg: 10450240 nodes, 11690107 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 10450240 nodes, 11665331 edges
+Removed small subgraphs: 10427104 nodes, 11646619 edges
+Restored graph: 10442700 nodes
+Serialized the graph: 10442700 nodes, 11665538 edges
+3
+Original graph 3/1kg_CEU_gencode100_3.pg: 8611148 nodes, 9649956 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 8611148 nodes, 9628900 edges
+Removed small subgraphs: 8591114 nodes, 9612413 edges
+Restored graph: 8604608 nodes
+Serialized the graph: 8604608 nodes, 9628761 edges
+4
+Original graph 4/1kg_CEU_gencode100_4.pg: 8400557 nodes, 9458754 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 8400557 nodes, 9434021 edges
+Removed small subgraphs: 8376953 nodes, 9414759 edges
+Restored graph: 8392834 nodes
+Serialized the graph: 8392834 nodes, 9433906 edges
+5
+Original graph 5/1kg_CEU_gencode100_5.pg: 7817767 nodes, 8741642 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 7817767 nodes, 8723534 edges
+Removed small subgraphs: 7801018 nodes, 8709909 edges
+Restored graph: 7812296 nodes
+Serialized the graph: 7812296 nodes, 8723658 edges
+6
+Original graph 6/1kg_CEU_gencode100_6.pg: 7564446 nodes, 8526089 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 7564446 nodes, 8477174 edges
+Removed small subgraphs: 7517403 nodes, 8444333 edges
+Restored graph: 7548718 nodes
+Serialized the graph: 7548718 nodes, 8480428 edges
+7
+Original graph 7/1kg_CEU_gencode100_7.pg: 6971725 nodes, 7828712 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 6971725 nodes, 7806867 edges
+Removed small subgraphs: 6951251 nodes, 7790636 edges
+Restored graph: 6965014 nodes
+Serialized the graph: 6965014 nodes, 7807193 edges
+8
+Original graph 8/1kg_CEU_gencode100_8.pg: 6397703 nodes, 7195728 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 6397703 nodes, 7178053 edges
+Removed small subgraphs: 6380729 nodes, 7163653 edges
+Restored graph: 6392214 nodes
+Serialized the graph: 6392214 nodes, 7177645 edges
+9
+Original graph 9/1kg_CEU_gencode100_9.pg: 5792114 nodes, 6422313 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 5792114 nodes, 6409233 edges
+Removed small subgraphs: 5779635 nodes, 6398695 edges
+Restored graph: 5788076 nodes
+Serialized the graph: 5788076 nodes, 6408956 edges
+10
+Original graph 10/1kg_CEU_gencode100_10.pg: 5946422 nodes, 6707556 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 5946422 nodes, 6684762 edges
+Removed small subgraphs: 5924373 nodes, 6666648 edges
+Restored graph: 5939130 nodes
+Serialized the graph: 5939130 nodes, 6684372 edges
+11
+Original graph 11/1kg_CEU_gencode100_11.pg: 5922863 nodes, 6653384 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 5922863 nodes, 6637580 edges
+Removed small subgraphs: 5907776 nodes, 6625155 edges
+Restored graph: 5917953 nodes
+Serialized the graph: 5917953 nodes, 6637460 edges
+12
+Original graph 12/1kg_CEU_gencode100_12.pg: 5778337 nodes, 6473760 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 5778337 nodes, 6458542 edges
+Removed small subgraphs: 5764060 nodes, 6446845 edges
+Restored graph: 5773668 nodes
+Serialized the graph: 5773668 nodes, 6458524 edges
+13
+Original graph 13/1kg_CEU_gencode100_13.pg: 4814797 nodes, 5350244 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 4814797 nodes, 5338703 edges
+Removed small subgraphs: 4803924 nodes, 5329627 edges
+Restored graph: 4811279 nodes
+Serialized the graph: 4811279 nodes, 5338607 edges
+14
+Original graph 14/1kg_CEU_gencode100_14.pg: 4464177 nodes, 4945766 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 4464177 nodes, 4934776 edges
+Removed small subgraphs: 4453904 nodes, 4926558 edges
+Restored graph: 4460818 nodes
+Serialized the graph: 4460818 nodes, 4934920 edges
+15
+Original graph 15/1kg_CEU_gencode100_15.pg: 4188164 nodes, 4619324 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 4188164 nodes, 4609105 edges
+Removed small subgraphs: 4178623 nodes, 4601338 edges
+Restored graph: 4185032 nodes
+Serialized the graph: 4185032 nodes, 4609129 edges
+16
+Original graph 16/1kg_CEU_gencode100_16.pg: 3918092 nodes, 4386810 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 3918092 nodes, 4375953 edges
+Removed small subgraphs: 3907628 nodes, 4367050 edges
+Restored graph: 3914720 nodes
+Serialized the graph: 3914720 nodes, 4375722 edges
+17
+Original graph 17/1kg_CEU_gencode100_17.pg: 3568514 nodes, 3984891 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 3568514 nodes, 3973006 edges
+Removed small subgraphs: 3557579 nodes, 3964532 edges
+Restored graph: 3564913 nodes
+Serialized the graph: 3564913 nodes, 3973380 edges
+18
+Original graph 18/1kg_CEU_gencode100_18.pg: 3475736 nodes, 3890140 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 3475736 nodes, 3881044 edges
+Removed small subgraphs: 3467080 nodes, 3873928 edges
+Restored graph: 3472909 nodes
+Serialized the graph: 3472909 nodes, 3880994 edges
+19
+Original graph 19/1kg_CEU_gencode100_19.pg: 2661283 nodes, 3018884 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 2661283 nodes, 3005161 edges
+Removed small subgraphs: 2648308 nodes, 2994955 edges
+Restored graph: 2657041 nodes
+Serialized the graph: 2657041 nodes, 3005481 edges
+20
+Original graph 20/1kg_CEU_gencode100_20.pg: 2761733 nodes, 3083398 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 2761733 nodes, 3076956 edges
+Removed small subgraphs: 2755727 nodes, 3071905 edges
+Restored graph: 2759750 nodes
+Serialized the graph: 2759750 nodes, 3076830 edges
+21
+Original graph 21/1kg_CEU_gencode100_21.pg: 1933506 nodes, 2138547 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 1933506 nodes, 2132801 edges
+Removed small subgraphs: 1928266 nodes, 2128578 edges
+Restored graph: 1931780 nodes
+Serialized the graph: 1931780 nodes, 2132838 edges
+22
+Original graph 22/1kg_CEU_gencode100_22.pg: 2074777 nodes, 2284239 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 2074777 nodes, 2276979 edges
+Removed small subgraphs: 2067802 nodes, 2271541 edges
+Restored graph: 2072492 nodes
+Serialized the graph: 2072492 nodes, 2277139 edges
+X
+Original graph X/1kg_CEU_gencode100_X.pg: 5798871 nodes, 6191513 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 5798871 nodes, 6186974 edges
+Removed small subgraphs: 5794128 nodes, 6182916 edges
+Restored graph: 5797357 nodes
+Serialized the graph: 5797357 nodes, 6186807 edges
+Y
+Original graph Y/1kg_CEU_gencode100_Y.pg: 1797311 nodes, 1800907 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 1797311 nodes, 1800907 edges
+Removed small subgraphs: 1797311 nodes, 1800907 edges
+Restored graph: 1797311 nodes
+Serialized the graph: 1797311 nodes, 1800907 edges
+MT
+Original graph MT/1kg_CEU_gencode100_MT.pg: 570 nodes, 569 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 570 nodes, 569 edges
+Removed small subgraphs: 570 nodes, 569 edges
+Restored graph: 570 nodes
+Serialized the graph: 570 nodes, 569 edges
+SCA
+Original graph SCA/1kg_CEU_gencode100_SCA.pg: 358681 nodes, 358629 edges
+Built a temporary XG index
+Removed all paths
+Pruned complex regions: 358681 nodes, 358629 edges
+Removed small subgraphs: 358681 nodes, 358629 edges
+Restored graph: 358681 nodes
+Serialized the graph: 358681 nodes, 358629 edges
+	Command being timed: "bash -c for i in $(seq 1 22; echo X; echo Y; echo MT; echo SCA); do echo ${i}; vg prune -p -t 8 -r ${i}/1kg_CEU_gencode100_${i}.pg > 1kg_CEU_gencode100_${i}_pruned.vg; done"
+	User time (seconds): 4332.30
+	System time (seconds): 177.35
+	Percent of CPU this job got: 122%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:01:25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 17658040
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 43712778
+	Voluntary context switches: 3051208
+	Involuntary context switches: 10215
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 89015416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Generating kmer files...
+Building the GCSA2 index...
+InputGraph::InputGraph(): 6733339446 kmers in 26 file(s)
+InputGraph::read(): Read 540038586 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-4pWZMI
+InputGraph::read(): Read 528119610 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-fa67JT
+InputGraph::read(): Read 433252550 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-WhbzqB
+InputGraph::read(): Read 417843514 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-TbROAe
+InputGraph::read(): Read 395688062 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-8ARBVR
+InputGraph::read(): Read 375307886 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-jRqdIg
+InputGraph::read(): Read 348945258 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-evcGJ9
+InputGraph::read(): Read 318535828 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-3HvCHk
+InputGraph::read(): Read 299070156 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-0cUazD
+InputGraph::read(): Read 294522824 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-f4YKH7
+InputGraph::read(): Read 295982392 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-enyroI
+InputGraph::read(): Read 291091944 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-PFzZVo
+InputGraph::read(): Read 247657968 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-yeW1H7
+InputGraph::read(): Read 231087840 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-PZ3cDw
+InputGraph::read(): Read 219193782 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-GmgyPv
+InputGraph::read(): Read 197314344 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-frAop0
+InputGraph::read(): Read 181174282 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-MYEGvN
+InputGraph::read(): Read 175397312 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-pOeYYJ
+InputGraph::read(): Read 129860554 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-CK620O
+InputGraph::read(): Read 140239656 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-jLHJAO
+InputGraph::read(): Read 100671608 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-WoYqhF
+InputGraph::read(): Read 109043574 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-FrRfEc
+InputGraph::read(): Read 325755482 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-Qdl6GY
+InputGraph::read(): Read 114573474 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-NWCxnq
+InputGraph::read(): Read 33172 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-EXpxon
+InputGraph::read(): Read 22937788 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-DCmIjm
+InputGraph::readKeys(): 1679570583 unique keys
+InputGraph::read(): Read 540038586 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-4pWZMI
+InputGraph::read(): Read 528119610 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-fa67JT
+InputGraph::read(): Read 433252550 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-WhbzqB
+InputGraph::read(): Read 417843514 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-TbROAe
+InputGraph::read(): Read 395688062 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-8ARBVR
+InputGraph::read(): Read 375307886 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-jRqdIg
+InputGraph::read(): Read 348945258 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-evcGJ9
+InputGraph::read(): Read 318535828 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-3HvCHk
+InputGraph::read(): Read 299070156 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-0cUazD
+InputGraph::read(): Read 294522824 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-f4YKH7
+InputGraph::read(): Read 295982392 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-enyroI
+InputGraph::read(): Read 291091944 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-PFzZVo
+InputGraph::read(): Read 247657968 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-yeW1H7
+InputGraph::read(): Read 231087840 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-PZ3cDw
+InputGraph::read(): Read 219193782 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-GmgyPv
+InputGraph::read(): Read 197314344 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-frAop0
+InputGraph::read(): Read 181174282 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-MYEGvN
+InputGraph::read(): Read 175397312 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-pOeYYJ
+InputGraph::read(): Read 129860554 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-CK620O
+InputGraph::read(): Read 140239656 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-jLHJAO
+InputGraph::read(): Read 100671608 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-WoYqhF
+InputGraph::read(): Read 109043574 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-FrRfEc
+InputGraph::read(): Read 325755482 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-Qdl6GY
+InputGraph::read(): Read 114573474 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-NWCxnq
+InputGraph::read(): Read 33172 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-EXpxon
+InputGraph::read(): Read 22937788 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-DCmIjm
+InputGraph::readFrom(): 6228730755 unique start nodes
+InputGraph::read(): Read 540038586 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-4pWZMI
+InputGraph::read(): Read 528119610 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-fa67JT
+InputGraph::read(): Read 433252550 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-WhbzqB
+InputGraph::read(): Read 417843514 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-TbROAe
+InputGraph::read(): Read 395688062 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-8ARBVR
+InputGraph::read(): Read 375307886 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-jRqdIg
+InputGraph::read(): Read 348945258 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-evcGJ9
+InputGraph::read(): Read 318535828 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-3HvCHk
+InputGraph::read(): Read 299070156 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-0cUazD
+InputGraph::read(): Read 294522824 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-f4YKH7
+InputGraph::read(): Read 295982392 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-enyroI
+InputGraph::read(): Read 291091944 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-PFzZVo
+InputGraph::read(): Read 247657968 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-yeW1H7
+InputGraph::read(): Read 231087840 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-PZ3cDw
+InputGraph::read(): Read 219193782 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-GmgyPv
+InputGraph::read(): Read 197314344 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-frAop0
+InputGraph::read(): Read 181174282 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-MYEGvN
+InputGraph::read(): Read 175397312 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-pOeYYJ
+InputGraph::read(): Read 129860554 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-CK620O
+InputGraph::read(): Read 140239656 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-jLHJAO
+InputGraph::read(): Read 100671608 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-WoYqhF
+InputGraph::read(): Read 109043574 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-FrRfEc
+InputGraph::read(): Read 325755482 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-Qdl6GY
+InputGraph::read(): Read 114573474 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-NWCxnq
+InputGraph::read(): Read 33172 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-EXpxon
+InputGraph::read(): Read 22937788 16-mers from /tmp/vg-NtbaW5/vg-kmers-tmp-DCmIjm
+PathGraph::PathGraph(): 6733339446 paths with 13466678892 ranks
+PathGraph::PathGraph(): 200.669 GB in 26 file(s)
+GCSA::GCSA(): Preprocessing: 2164.12 seconds, 70.9339 GB
+GCSA::GCSA(): Prefix-doubling from path length 16
+GCSA::GCSA(): Step 1 (path length 16 -> 32)
+PathGraph::prune(): 6733339446 -> 6727877329 paths (1678479404 ranges)
+PathGraph::prune(): 712429219 unique, 971268 redundant, 6013589749 unsorted, 887093 nondeterministic paths
+PathGraph::prune(): 200.506 GB in 26 file(s)
+PathGraph::read(): File 0: Read 539603801 order-16 paths
+PathGraph::extend(): File 0: Created 578405897 order-32 paths
+PathGraph::read(): File 0: Read 578405897 order-32 paths
+PathGraphBuilder::sort(): File 0: Sorted 578405897 paths
+PathGraph::read(): File 1: Read 527679640 order-16 paths
+PathGraph::extend(): File 1: Created 567658940 order-32 paths
+PathGraph::read(): File 1: Read 567658940 order-32 paths
+PathGraphBuilder::sort(): File 1: Sorted 567658940 paths
+PathGraph::read(): File 2: Read 432904198 order-16 paths
+PathGraph::extend(): File 2: Created 466700027 order-32 paths
+PathGraph::read(): File 2: Read 466700027 order-32 paths
+PathGraphBuilder::sort(): File 2: Sorted 466700027 paths
+PathGraph::read(): File 3: Read 417506966 order-16 paths
+PathGraph::extend(): File 3: Created 452441738 order-32 paths
+PathGraph::read(): File 3: Read 452441738 order-32 paths
+PathGraphBuilder::sort(): File 3: Sorted 452441738 paths
+PathGraph::read(): File 4: Read 395377826 order-16 paths
+PathGraph::extend(): File 4: Created 425376752 order-32 paths
+PathGraph::read(): File 4: Read 425376752 order-32 paths
+PathGraphBuilder::sort(): File 4: Sorted 425376752 paths
+PathGraph::read(): File 5: Read 374975884 order-16 paths
+PathGraph::extend(): File 5: Created 406402155 order-32 paths
+PathGraph::read(): File 5: Read 406402155 order-32 paths
+PathGraphBuilder::sort(): File 5: Sorted 406402155 paths
+PathGraph::read(): File 6: Read 348645713 order-16 paths
+PathGraph::extend(): File 6: Created 376604587 order-32 paths
+PathGraph::read(): File 6: Read 376604587 order-32 paths
+PathGraphBuilder::sort(): File 6: Sorted 376604587 paths
+PathGraph::read(): File 7: Read 318247813 order-16 paths
+PathGraph::extend(): File 7: Created 344302173 order-32 paths
+PathGraph::read(): File 7: Read 344302173 order-32 paths
+PathGraphBuilder::sort(): File 7: Sorted 344302173 paths
+PathGraph::read(): File 8: Read 298840946 order-16 paths
+PathGraph::extend(): File 8: Created 319290347 order-32 paths
+PathGraph::read(): File 8: Read 319290347 order-32 paths
+PathGraphBuilder::sort(): File 8: Sorted 319290347 paths
+PathGraph::read(): File 9: Read 294233373 order-16 paths
+PathGraph::extend(): File 9: Created 319113000 order-32 paths
+PathGraph::read(): File 9: Read 319113000 order-32 paths
+PathGraphBuilder::sort(): File 9: Sorted 319113000 paths
+PathGraph::read(): File 10: Read 295714887 order-16 paths
+PathGraph::extend(): File 10: Created 319407967 order-32 paths
+PathGraph::read(): File 10: Read 319407967 order-32 paths
+PathGraphBuilder::sort(): File 10: Sorted 319407967 paths
+PathGraph::read(): File 11: Read 290844259 order-16 paths
+PathGraph::extend(): File 11: Created 313389537 order-32 paths
+PathGraph::read(): File 11: Read 313389537 order-32 paths
+PathGraphBuilder::sort(): File 11: Sorted 313389537 paths
+PathGraph::read(): File 12: Read 247477465 order-16 paths
+PathGraph::extend(): File 12: Created 264975007 order-32 paths
+PathGraph::read(): File 12: Read 264975007 order-32 paths
+PathGraphBuilder::sort(): File 12: Sorted 264975007 paths
+PathGraph::read(): File 13: Read 230915179 order-16 paths
+PathGraph::extend(): File 13: Created 246524663 order-32 paths
+PathGraph::read(): File 13: Read 246524663 order-32 paths
+PathGraphBuilder::sort(): File 13: Sorted 246524663 paths
+PathGraph::read(): File 14: Read 219031498 order-16 paths
+PathGraph::extend(): File 14: Created 232945038 order-32 paths
+PathGraph::read(): File 14: Read 232945038 order-32 paths
+PathGraphBuilder::sort(): File 14: Sorted 232945038 paths
+PathGraph::read(): File 15: Read 197107970 order-16 paths
+PathGraph::extend(): File 15: Created 212259909 order-32 paths
+PathGraph::read(): File 15: Read 212259909 order-32 paths
+PathGraphBuilder::sort(): File 15: Sorted 212259909 paths
+PathGraph::read(): File 16: Read 180990514 order-16 paths
+PathGraph::extend(): File 16: Created 194186998 order-32 paths
+PathGraph::read(): File 16: Read 194186998 order-32 paths
+PathGraphBuilder::sort(): File 16: Sorted 194186998 paths
+PathGraph::read(): File 17: Read 175246789 order-16 paths
+PathGraph::extend(): File 17: Created 188664669 order-32 paths
+PathGraph::read(): File 17: Read 188664669 order-32 paths
+PathGraphBuilder::sort(): File 17: Sorted 188664669 paths
+PathGraph::read(): File 18: Read 129700471 order-16 paths
+PathGraph::extend(): File 18: Created 141328162 order-32 paths
+PathGraph::read(): File 18: Read 141328162 order-32 paths
+PathGraphBuilder::sort(): File 18: Sorted 141328162 paths
+PathGraph::read(): File 19: Read 140102726 order-16 paths
+PathGraph::extend(): File 19: Created 150253584 order-32 paths
+PathGraph::read(): File 19: Read 150253584 order-32 paths
+PathGraphBuilder::sort(): File 19: Sorted 150253584 paths
+PathGraph::read(): File 20: Read 100595011 order-16 paths
+PathGraph::extend(): File 20: Created 107286063 order-32 paths
+PathGraph::read(): File 20: Read 107286063 order-32 paths
+PathGraphBuilder::sort(): File 20: Sorted 107286063 paths
+PathGraph::read(): File 21: Read 108945692 order-16 paths
+PathGraph::extend(): File 21: Created 115628638 order-32 paths
+PathGraph::read(): File 21: Read 115628638 order-32 paths
+PathGraphBuilder::sort(): File 21: Sorted 115628638 paths
+PathGraph::read(): File 22: Read 325645318 order-16 paths
+PathGraph::extend(): File 22: Created 338017350 order-32 paths
+PathGraph::read(): File 22: Read 338017350 order-32 paths
+PathGraphBuilder::sort(): File 22: Sorted 338017350 paths
+PathGraph::read(): File 23: Read 114572661 order-16 paths
+PathGraph::extend(): File 23: Created 114680616 order-32 paths
+PathGraph::read(): File 23: Read 114680616 order-32 paths
+PathGraphBuilder::sort(): File 23: Sorted 114680616 paths
+PathGraph::read(): File 24: Read 33172 order-16 paths
+PathGraph::extend(): File 24: Created 33173 order-32 paths
+PathGraph::read(): File 24: Read 33173 order-32 paths
+PathGraphBuilder::sort(): File 24: Sorted 33173 paths
+PathGraph::read(): File 25: Read 22937557 order-16 paths
+PathGraph::extend(): File 25: Created 22941644 order-32 paths
+PathGraph::read(): File 25: Read 22941644 order-32 paths
+PathGraphBuilder::sort(): File 25: Sorted 22941644 paths
+PathGraph::extend(): 6727877329 -> 7218818634 paths (20942168322 ranks)
+PathGraph::extend(): 239.369 GB in 26 file(s)
+GCSA::GCSA(): Step 2 (path length 32 -> 64)
+PathGraph::prune(): 7218818634 -> 6881443194 paths (5569401993 ranges)
+PathGraph::prune(): 5383678833 unique, 971268 redundant, 1493246769 unsorted, 3546324 nondeterministic paths
+PathGraph::prune(): 228.057 GB in 26 file(s)
+PathGraph::read(): File 0: Read 552157864 order-32 paths
+PathGraph::extend(): File 0: Created 569460409 order-64 paths
+PathGraph::read(): File 0: Read 569460409 order-64 paths
+PathGraphBuilder::sort(): File 0: Sorted 569460409 paths
+PathGraph::read(): File 1: Read 539460254 order-32 paths
+PathGraph::extend(): File 1: Created 554634308 order-64 paths
+PathGraph::read(): File 1: Read 554634308 order-64 paths
+PathGraphBuilder::sort(): File 1: Sorted 554634308 paths
+PathGraph::read(): File 2: Read 442889847 order-32 paths
+PathGraph::extend(): File 2: Created 455720200 order-64 paths
+PathGraph::read(): File 2: Read 455720200 order-64 paths
+PathGraphBuilder::sort(): File 2: Sorted 455720200 paths
+PathGraph::read(): File 3: Read 428048617 order-32 paths
+PathGraph::extend(): File 3: Created 441768613 order-64 paths
+PathGraph::read(): File 3: Read 441768613 order-64 paths
+PathGraphBuilder::sort(): File 3: Sorted 441768613 paths
+PathGraph::read(): File 4: Read 404367171 order-32 paths
+PathGraph::extend(): File 4: Created 415934141 order-64 paths
+PathGraph::read(): File 4: Read 415934141 order-64 paths
+PathGraphBuilder::sort(): File 4: Sorted 415934141 paths
+PathGraph::read(): File 5: Read 384546812 order-32 paths
+PathGraph::extend(): File 5: Created 397293160 order-64 paths
+PathGraph::read(): File 5: Read 397293160 order-64 paths
+PathGraphBuilder::sort(): File 5: Sorted 397293160 paths
+PathGraph::read(): File 6: Read 357862917 order-32 paths
+PathGraph::extend(): File 6: Created 370335665 order-64 paths
+PathGraph::read(): File 6: Read 370335665 order-64 paths
+PathGraphBuilder::sort(): File 6: Sorted 370335665 paths
+PathGraph::read(): File 7: Read 325752783 order-32 paths
+PathGraph::extend(): File 7: Created 335217412 order-64 paths
+PathGraph::read(): File 7: Read 335217412 order-64 paths
+PathGraphBuilder::sort(): File 7: Sorted 335217412 paths
+PathGraph::read(): File 8: Read 305235810 order-32 paths
+PathGraph::extend(): File 8: Created 313843892 order-64 paths
+PathGraph::read(): File 8: Read 313843892 order-64 paths
+PathGraphBuilder::sort(): File 8: Sorted 313843892 paths
+PathGraph::read(): File 9: Read 301903173 order-32 paths
+PathGraph::extend(): File 9: Created 312102305 order-64 paths
+PathGraph::read(): File 9: Read 312102305 order-64 paths
+PathGraphBuilder::sort(): File 9: Sorted 312102305 paths
+PathGraph::read(): File 10: Read 303078397 order-32 paths
+PathGraph::extend(): File 10: Created 312796222 order-64 paths
+PathGraph::read(): File 10: Read 312796222 order-64 paths
+PathGraphBuilder::sort(): File 10: Sorted 312796222 paths
+PathGraph::read(): File 11: Read 297976991 order-32 paths
+PathGraph::extend(): File 11: Created 307338475 order-64 paths
+PathGraph::read(): File 11: Read 307338475 order-64 paths
+PathGraphBuilder::sort(): File 11: Sorted 307338475 paths
+PathGraph::read(): File 12: Read 252399797 order-32 paths
+PathGraph::extend(): File 12: Created 258492218 order-64 paths
+PathGraph::read(): File 12: Read 258492218 order-64 paths
+PathGraphBuilder::sort(): File 12: Sorted 258492218 paths
+PathGraph::read(): File 13: Read 235719569 order-32 paths
+PathGraph::extend(): File 13: Created 241952314 order-64 paths
+PathGraph::read(): File 13: Read 241952314 order-64 paths
+PathGraphBuilder::sort(): File 13: Sorted 241952314 paths
+PathGraph::read(): File 14: Read 223532529 order-32 paths
+PathGraph::extend(): File 14: Created 229733027 order-64 paths
+PathGraph::read(): File 14: Read 229733027 order-64 paths
+PathGraphBuilder::sort(): File 14: Sorted 229733027 paths
+PathGraph::read(): File 15: Read 202122456 order-32 paths
+PathGraph::extend(): File 15: Created 209020364 order-64 paths
+PathGraph::read(): File 15: Read 209020364 order-64 paths
+PathGraphBuilder::sort(): File 15: Sorted 209020364 paths
+PathGraph::read(): File 16: Read 185733042 order-32 paths
+PathGraph::extend(): File 16: Created 192516164 order-64 paths
+PathGraph::read(): File 16: Read 192516164 order-64 paths
+PathGraphBuilder::sort(): File 16: Sorted 192516164 paths
+PathGraph::read(): File 17: Read 179007540 order-32 paths
+PathGraph::extend(): File 17: Created 183860416 order-64 paths
+PathGraph::read(): File 17: Read 183860416 order-64 paths
+PathGraphBuilder::sort(): File 17: Sorted 183860416 paths
+PathGraph::read(): File 18: Read 134730345 order-32 paths
+PathGraph::extend(): File 18: Created 142256069 order-64 paths
+PathGraph::read(): File 18: Read 142256069 order-64 paths
+PathGraphBuilder::sort(): File 18: Sorted 142256069 paths
+PathGraph::read(): File 19: Read 143054087 order-32 paths
+PathGraph::extend(): File 19: Created 146802492 order-64 paths
+PathGraph::read(): File 19: Read 146802492 order-64 paths
+PathGraphBuilder::sort(): File 19: Sorted 146802492 paths
+PathGraph::read(): File 20: Read 102723467 order-32 paths
+PathGraph::extend(): File 20: Created 105612534 order-64 paths
+PathGraph::read(): File 20: Read 105612534 order-64 paths
+PathGraphBuilder::sort(): File 20: Sorted 105612534 paths
+PathGraph::read(): File 21: Read 111339154 order-32 paths
+PathGraph::extend(): File 21: Created 114878752 order-64 paths
+PathGraph::read(): File 21: Read 114878752 order-64 paths
+PathGraphBuilder::sort(): File 21: Sorted 114878752 paths
+PathGraph::read(): File 22: Read 330188701 order-32 paths
+PathGraph::extend(): File 22: Created 336032124 order-64 paths
+PathGraph::read(): File 22: Read 336032124 order-64 paths
+PathGraphBuilder::sort(): File 22: Sorted 336032124 paths
+PathGraph::read(): File 23: Read 114637483 order-32 paths
+PathGraph::extend(): File 23: Created 114744732 order-64 paths
+PathGraph::read(): File 23: Read 114744732 order-64 paths
+PathGraphBuilder::sort(): File 23: Sorted 114744732 paths
+PathGraph::read(): File 24: Read 33172 order-32 paths
+PathGraph::extend(): File 24: Created 33173 order-64 paths
+PathGraph::read(): File 24: Read 33173 order-64 paths
+PathGraphBuilder::sort(): File 24: Sorted 33173 paths
+PathGraph::read(): File 25: Read 22941216 order-32 paths
+PathGraph::extend(): File 25: Created 22949027 order-64 paths
+PathGraph::read(): File 25: Read 22949027 order-64 paths
+PathGraphBuilder::sort(): File 25: Sorted 22949027 paths
+PathGraph::extend(): 6881443194 -> 7085328208 paths (23903779440 ranks)
+PathGraph::extend(): 247.418 GB in 26 file(s)
+GCSA::GCSA(): Step 3 (path length 64 -> 128)
+PathGraph::prune(): 7085328208 -> 7006533163 paths (6254994159 ranges)
+PathGraph::prune(): 6122584598 unique, 971268 redundant, 856577292 unsorted, 26400005 nondeterministic paths
+PathGraph::prune(): 244.107 GB in 26 file(s)
+PathGraph::read(): File 0: Read 562990669 order-64 paths
+PathGraph::extend(): File 0: Created 576493521 order-128 paths
+PathGraph::read(): File 0: Read 576493521 order-128 paths
+PathGraphBuilder::sort(): File 0: Sorted 576493521 paths
+PathGraph::read(): File 1: Read 548847908 order-64 paths
+PathGraph::extend(): File 1: Created 559975594 order-128 paths
+PathGraph::read(): File 1: Read 559975594 order-128 paths
+PathGraphBuilder::sort(): File 1: Sorted 559975594 paths
+PathGraph::read(): File 2: Read 450706046 order-64 paths
+PathGraph::extend(): File 2: Created 460114887 order-128 paths
+PathGraph::read(): File 2: Read 460114887 order-128 paths
+PathGraphBuilder::sort(): File 2: Sorted 460114887 paths
+PathGraph::read(): File 3: Read 436590542 order-64 paths
+PathGraph::extend(): File 3: Created 447629380 order-128 paths
+PathGraph::read(): File 3: Read 447629380 order-128 paths
+PathGraphBuilder::sort(): File 3: Sorted 447629380 paths
+PathGraph::read(): File 4: Read 411523195 order-64 paths
+PathGraph::extend(): File 4: Created 420225198 order-128 paths
+PathGraph::read(): File 4: Read 420225198 order-128 paths
+PathGraphBuilder::sort(): File 4: Sorted 420225198 paths
+PathGraph::read(): File 5: Read 392289305 order-64 paths
+PathGraph::extend(): File 5: Created 402439033 order-128 paths
+PathGraph::read(): File 5: Read 402439033 order-128 paths
+PathGraphBuilder::sort(): File 5: Sorted 402439033 paths
+PathGraph::read(): File 6: Read 365616022 order-64 paths
+PathGraph::extend(): File 6: Created 374831472 order-128 paths
+PathGraph::read(): File 6: Read 374831472 order-128 paths
+PathGraphBuilder::sort(): File 6: Sorted 374831472 paths
+PathGraph::read(): File 7: Read 331479402 order-64 paths
+PathGraph::extend(): File 7: Created 338167160 order-128 paths
+PathGraph::read(): File 7: Read 338167160 order-128 paths
+PathGraphBuilder::sort(): File 7: Sorted 338167160 paths
+PathGraph::read(): File 8: Read 310601459 order-64 paths
+PathGraph::extend(): File 8: Created 317124444 order-128 paths
+PathGraph::read(): File 8: Read 317124444 order-128 paths
+PathGraphBuilder::sort(): File 8: Sorted 317124444 paths
+PathGraph::read(): File 9: Read 308073434 order-64 paths
+PathGraph::extend(): File 9: Created 315260771 order-128 paths
+PathGraph::read(): File 9: Read 315260771 order-128 paths
+PathGraphBuilder::sort(): File 9: Sorted 315260771 paths
+PathGraph::read(): File 10: Read 309067210 order-64 paths
+PathGraph::extend(): File 10: Created 316131481 order-128 paths
+PathGraph::read(): File 10: Read 316131481 order-128 paths
+PathGraphBuilder::sort(): File 10: Sorted 316131481 paths
+PathGraph::read(): File 11: Read 303554989 order-64 paths
+PathGraph::extend(): File 11: Created 309935402 order-128 paths
+PathGraph::read(): File 11: Read 309935402 order-128 paths
+PathGraphBuilder::sort(): File 11: Sorted 309935402 paths
+PathGraph::read(): File 12: Read 256046653 order-64 paths
+PathGraph::extend(): File 12: Created 260202489 order-128 paths
+PathGraph::read(): File 12: Read 260202489 order-128 paths
+PathGraphBuilder::sort(): File 12: Sorted 260202489 paths
+PathGraph::read(): File 13: Read 239471621 order-64 paths
+PathGraph::extend(): File 13: Created 243535405 order-128 paths
+PathGraph::read(): File 13: Read 243535405 order-128 paths
+PathGraphBuilder::sort(): File 13: Sorted 243535405 paths
+PathGraph::read(): File 14: Read 227446106 order-64 paths
+PathGraph::extend(): File 14: Created 232393569 order-128 paths
+PathGraph::read(): File 14: Read 232393569 order-128 paths
+PathGraphBuilder::sort(): File 14: Sorted 232393569 paths
+PathGraph::read(): File 15: Read 206282488 order-64 paths
+PathGraph::extend(): File 15: Created 211086117 order-128 paths
+PathGraph::read(): File 15: Read 211086117 order-128 paths
+PathGraphBuilder::sort(): File 15: Sorted 211086117 paths
+PathGraph::read(): File 16: Read 189773088 order-64 paths
+PathGraph::extend(): File 16: Created 193983038 order-128 paths
+PathGraph::read(): File 16: Read 193983038 order-128 paths
+PathGraphBuilder::sort(): File 16: Sorted 193983038 paths
+PathGraph::read(): File 17: Read 181984659 order-64 paths
+PathGraph::extend(): File 17: Created 186052574 order-128 paths
+PathGraph::read(): File 17: Read 186052574 order-128 paths
+PathGraphBuilder::sort(): File 17: Sorted 186052574 paths
+PathGraph::read(): File 18: Read 139109415 order-64 paths
+PathGraph::extend(): File 18: Created 143896276 order-128 paths
+PathGraph::read(): File 18: Read 143896276 order-128 paths
+PathGraphBuilder::sort(): File 18: Sorted 143896276 paths
+PathGraph::read(): File 19: Read 145222634 order-64 paths
+PathGraph::extend(): File 19: Created 147333307 order-128 paths
+PathGraph::read(): File 19: Read 147333307 order-128 paths
+PathGraphBuilder::sort(): File 19: Sorted 147333307 paths
+PathGraph::read(): File 20: Read 104590434 order-64 paths
+PathGraph::extend(): File 20: Created 106996420 order-128 paths
+PathGraph::read(): File 20: Read 106996420 order-128 paths
+PathGraphBuilder::sort(): File 20: Sorted 106996420 paths
+PathGraph::read(): File 21: Read 113534914 order-64 paths
+PathGraph::extend(): File 21: Created 116085176 order-128 paths
+PathGraph::read(): File 21: Read 116085176 order-128 paths
+PathGraphBuilder::sort(): File 21: Sorted 116085176 paths
+PathGraph::read(): File 22: Read 334011955 order-64 paths
+PathGraph::extend(): File 22: Created 338584537 order-128 paths
+PathGraph::read(): File 22: Read 338584537 order-128 paths
+PathGraphBuilder::sort(): File 22: Sorted 338584537 paths
+PathGraph::read(): File 23: Read 114737070 order-64 paths
+PathGraph::extend(): File 23: Created 114965674 order-128 paths
+PathGraph::read(): File 23: Read 114965674 order-128 paths
+PathGraphBuilder::sort(): File 23: Sorted 114965674 paths
+PathGraph::read(): File 24: Read 33172 order-64 paths
+PathGraph::extend(): File 24: Created 33172 order-128 paths
+PathGraph::read(): File 24: Read 33172 order-128 paths
+PathGraphBuilder::sort(): File 24: Sorted 33172 paths
+PathGraph::read(): File 25: Read 22948773 order-64 paths
+PathGraph::extend(): File 25: Created 22966038 order-128 paths
+PathGraph::read(): File 25: Read 22966038 order-128 paths
+PathGraphBuilder::sort(): File 25: Sorted 22966038 paths
+PathGraph::extend(): 7006533163 -> 7156442135 paths (28029033581 ranks)
+PathGraph::extend(): 264.375 GB in 26 file(s)
+GCSA::GCSA(): Step 4 (path length 128 -> 256)
+PathGraph::prune(): 7156442135 -> 7092207615 paths (6531473729 ranges)
+PathGraph::prune(): 6430618807 unique, 971268 redundant, 625498440 unsorted, 35119100 nondeterministic paths
+PathGraph::prune(): 260.714 GB in 26 file(s)
+PathGraph::read(): File 0: Read 571233347 order-128 paths
+PathGraph::extend(): File 0: Created 581725870 order-256 paths
+PathGraph::read(): File 0: Read 581725870 order-256 paths
+PathGraphBuilder::sort(): File 0: Sorted 581725870 paths
+PathGraph::read(): File 1: Read 555310600 order-128 paths
+PathGraph::extend(): File 1: Created 562916417 order-256 paths
+PathGraph::read(): File 1: Read 562916417 order-256 paths
+PathGraphBuilder::sort(): File 1: Sorted 562916417 paths
+PathGraph::read(): File 2: Read 455688959 order-128 paths
+PathGraph::extend(): File 2: Created 460850164 order-256 paths
+PathGraph::read(): File 2: Read 460850164 order-256 paths
+PathGraphBuilder::sort(): File 2: Sorted 460850164 paths
+PathGraph::read(): File 3: Read 442607745 order-128 paths
+PathGraph::extend(): File 3: Created 448927809 order-256 paths
+PathGraph::read(): File 3: Read 448927809 order-256 paths
+PathGraphBuilder::sort(): File 3: Sorted 448927809 paths
+PathGraph::read(): File 4: Read 416364313 order-128 paths
+PathGraph::extend(): File 4: Created 421266529 order-256 paths
+PathGraph::read(): File 4: Read 421266529 order-256 paths
+PathGraphBuilder::sort(): File 4: Sorted 421266529 paths
+PathGraph::read(): File 5: Read 397994105 order-128 paths
+PathGraph::extend(): File 5: Created 405480488 order-256 paths
+PathGraph::read(): File 5: Read 405480488 order-256 paths
+PathGraphBuilder::sort(): File 5: Sorted 405480488 paths
+PathGraph::read(): File 6: Read 371103371 order-128 paths
+PathGraph::extend(): File 6: Created 377229488 order-256 paths
+PathGraph::read(): File 6: Read 377229488 order-256 paths
+PathGraphBuilder::sort(): File 6: Sorted 377229488 paths
+PathGraph::read(): File 7: Read 335240964 order-128 paths
+PathGraph::extend(): File 7: Created 341353116 order-256 paths
+PathGraph::read(): File 7: Read 341353116 order-256 paths
+PathGraphBuilder::sort(): File 7: Sorted 341353116 paths
+PathGraph::read(): File 8: Read 314450933 order-128 paths
+PathGraph::extend(): File 8: Created 320606142 order-256 paths
+PathGraph::read(): File 8: Read 320606142 order-256 paths
+PathGraphBuilder::sort(): File 8: Sorted 320606142 paths
+PathGraph::read(): File 9: Read 312305016 order-128 paths
+PathGraph::extend(): File 9: Created 317194916 order-256 paths
+PathGraph::read(): File 9: Read 317194916 order-256 paths
+PathGraphBuilder::sort(): File 9: Sorted 317194916 paths
+PathGraph::read(): File 10: Read 313040366 order-128 paths
+PathGraph::extend(): File 10: Created 317236770 order-256 paths
+PathGraph::read(): File 10: Read 317236770 order-256 paths
+PathGraphBuilder::sort(): File 10: Sorted 317236770 paths
+PathGraph::read(): File 11: Read 306912359 order-128 paths
+PathGraph::extend(): File 11: Created 310338175 order-256 paths
+PathGraph::read(): File 11: Read 310338175 order-256 paths
+PathGraphBuilder::sort(): File 11: Sorted 310338175 paths
+PathGraph::read(): File 12: Read 258245602 order-128 paths
+PathGraph::extend(): File 12: Created 260248762 order-256 paths
+PathGraph::read(): File 12: Read 260248762 order-256 paths
+PathGraphBuilder::sort(): File 12: Sorted 260248762 paths
+PathGraph::read(): File 13: Read 241712653 order-128 paths
+PathGraph::extend(): File 13: Created 243783199 order-256 paths
+PathGraph::read(): File 13: Read 243783199 order-256 paths
+PathGraphBuilder::sort(): File 13: Sorted 243783199 paths
+PathGraph::read(): File 14: Read 230439915 order-128 paths
+PathGraph::extend(): File 14: Created 234206369 order-256 paths
+PathGraph::read(): File 14: Read 234206369 order-256 paths
+PathGraphBuilder::sort(): File 14: Sorted 234206369 paths
+PathGraph::read(): File 15: Read 209370790 order-128 paths
+PathGraph::extend(): File 15: Created 215674556 order-256 paths
+PathGraph::read(): File 15: Read 215674556 order-256 paths
+PathGraphBuilder::sort(): File 15: Sorted 215674556 paths
+PathGraph::read(): File 16: Read 192084854 order-128 paths
+PathGraph::extend(): File 16: Created 194615477 order-256 paths
+PathGraph::read(): File 16: Read 194615477 order-256 paths
+PathGraphBuilder::sort(): File 16: Sorted 194615477 paths
+PathGraph::read(): File 17: Read 184102489 order-128 paths
+PathGraph::extend(): File 17: Created 186790635 order-256 paths
+PathGraph::read(): File 17: Read 186790635 order-256 paths
+PathGraphBuilder::sort(): File 17: Sorted 186790635 paths
+PathGraph::read(): File 18: Read 141580827 order-128 paths
+PathGraph::extend(): File 18: Created 144306819 order-256 paths
+PathGraph::read(): File 18: Read 144306819 order-256 paths
+PathGraphBuilder::sort(): File 18: Sorted 144306819 paths
+PathGraph::read(): File 19: Read 146276676 order-128 paths
+PathGraph::extend(): File 19: Created 147221403 order-256 paths
+PathGraph::read(): File 19: Read 147221403 order-256 paths
+PathGraphBuilder::sort(): File 19: Sorted 147221403 paths
+PathGraph::read(): File 20: Read 106188366 order-128 paths
+PathGraph::extend(): File 20: Created 108398665 order-256 paths
+PathGraph::read(): File 20: Read 108398665 order-256 paths
+PathGraphBuilder::sort(): File 20: Sorted 108398665 paths
+PathGraph::read(): File 21: Read 115096018 order-128 paths
+PathGraph::extend(): File 21: Created 117087196 order-256 paths
+PathGraph::read(): File 21: Read 117087196 order-256 paths
+PathGraphBuilder::sort(): File 21: Sorted 117087196 paths
+PathGraph::read(): File 22: Read 336896047 order-128 paths
+PathGraph::extend(): File 22: Created 341785699 order-256 paths
+PathGraph::read(): File 22: Read 341785699 order-256 paths
+PathGraphBuilder::sort(): File 22: Sorted 341785699 paths
+PathGraph::read(): File 23: Read 114962570 order-128 paths
+PathGraph::extend(): File 23: Created 115643403 order-256 paths
+PathGraph::read(): File 23: Read 115643403 order-256 paths
+PathGraphBuilder::sort(): File 23: Sorted 115643403 paths
+PathGraph::read(): File 24: Read 33172 order-128 paths
+PathGraph::extend(): File 24: Created 33172 order-256 paths
+PathGraph::read(): File 24: Read 33172 order-256 paths
+PathGraphBuilder::sort(): File 24: Sorted 33172 paths
+PathGraph::read(): File 25: Read 22965558 order-128 paths
+PathGraph::extend(): File 25: Created 23007036 order-256 paths
+PathGraph::read(): File 25: Read 23007036 order-256 paths
+PathGraphBuilder::sort(): File 25: Sorted 23007036 paths
+PathGraph::extend(): 7092207615 -> 7197928275 paths (33774563215 ranks)
+PathGraph::extend(): 286.706 GB in 26 file(s)
+GCSA::GCSA(): Prefix-doubling: 27091.7 seconds, 70.9339 GB
+GCSA::GCSA(): Merging the paths
+MergedGraph::MergedGraph(): 6673522901 paths with 25168544179 ranks and 465495658 additional start nodes
+MergedGraph::MergedGraph(): 256.077 GB
+GCSA::GCSA(): Merging: 4111.61 seconds, 70.9339 GB
+GCSA::GCSA(): Building the index
+GCSA::GCSA(): Construction: 12119.3 seconds, 73.8032 GB
+GCSA::GCSA(): 6673522901 paths, 6711433166 edges
+GCSA::GCSA(): 7139018559 pointers (910287804 redundant)
+GCSA::GCSA(): 651912342 samples at 293511279 positions
+LCPArray::LCPArray(): Construction: 108.252 seconds, 73.8032 GB
+LCPArray::LCPArray(): 6779451840 values at 7 levels (branching factor 64)
+GCSA2 index built in 46909.8 seconds, 73.8032 GB
+I/O volume: 4179.86 GB read, 3616.37 GB write
+Saving the index to disk...
+Memory usage: 73.8032 GB
+	Command being timed: "bash -c vg index -p -t 8 -g 1kg_CEU_gencode100_index.gcsa $(for i in $(seq 1 22; echo X; echo Y; echo MT; echo SCA); do echo 1kg_CEU_gencode100_${i}_pruned.vg; done)"
+	User time (seconds): 82840.71
+	System time (seconds): 10560.99
+	Percent of CPU this job got: 198%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:02:37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 77388216
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3027082067
+	Voluntary context switches: 4827145
+	Involuntary context switches: 952344
+	Swaps: 0
+	File system inputs: 7036835800
+	File system outputs: 7617062864
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_CEU_gencode100_index.gcsa.lcp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_CEU_gencode100/1kg_CEU_gencode100_index.gcsa.lcp
+upload: ./1kg_CEU_gencode100_index.gcsa to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_CEU_gencode100/1kg_CEU_gencode100_index.gcsa
+---

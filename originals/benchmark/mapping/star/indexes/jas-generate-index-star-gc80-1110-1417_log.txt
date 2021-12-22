@@ -1,0 +1,66 @@
+---
+jas-generate-index-star-gc80-1110-1417
+TIME=20211110-1417 IMAGE=quay.io/jsibbesen/star-s3script:star-2.7.9a-s1 MEMORY=40 CPU=16 DISK=64
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/generate_index.sh
+CPU=16 REF=gencode80 TRANSCRIPTS=gencode.v29.primary_assembly.annotation_renamed_full_subset80.gtf
+---
+Completed 758 Bytes/758 Bytes (7.0 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/generate_index.sh to ./generate_index.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full_subset80.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full_subset80.gtf
+	STAR --runThreadN 16 --runMode genomeGenerate --genomeDir ./index/ --genomeFastaFiles Homo_sapiens.GRCh38.dna.primary_assembly.fa --sjdbGTFfile gencode.v29.primary_assembly.annotation_renamed_full_subset80.gtf --sjdbOverhang 150
+	STAR version: 2.7.9a   compiled: 2021-05-04T09:43:56-0400 vega:/home/dobin/data/STAR/STARcode/STAR.master/source
+Nov 10 13:18:03 ..... started STAR run
+Nov 10 13:18:03 ... starting to generate Genome files
+Nov 10 13:18:53 ..... processing annotations GTF
+Nov 10 13:19:15 ... starting to sort Suffix Array. This may take a long time...
+Nov 10 13:19:32 ... sorting Suffix Array chunks and saving them to disk...
+Nov 10 13:40:00 ... loading chunks from disk, packing SA...
+Nov 10 13:41:16 ... finished generating suffix array
+Nov 10 13:41:16 ... generating Suffix Array index
+Nov 10 13:44:19 ... completed Suffix Array index
+Nov 10 13:44:20 ..... inserting junctions into the genome indices
+Nov 10 13:47:31 ... writing Genome to disk ...
+Nov 10 13:47:33 ... writing Suffix Array to disk ...
+Nov 10 13:47:55 ... writing SAindex to disk
+Nov 10 13:47:57 ..... finished successfully
+	Command being timed: "bash -c mkdir index; STAR --runThreadN 16 --runMode genomeGenerate --genomeDir ./index/ --genomeFastaFiles Homo_sapiens.GRCh38.dna.primary_assembly.fa --sjdbGTFfile gencode.v29.primary_assembly.annotation_renamed_full_subset80.gtf --sjdbOverhang 150"
+	User time (seconds): 17274.08
+	System time (seconds): 229.10
+	Percent of CPU this job got: 975%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 29:54.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 37535684
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 55848380
+	Voluntary context switches: 497
+	Involuntary context switches: 94600
+	Swaps: 0
+	File system inputs: 49434976
+	File system outputs: 150471088
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: index/chrNameLength.txt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/chrNameLength.txt
+upload: index/chrName.txt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/chrName.txt
+upload: index/chrLength.txt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/chrLength.txt
+upload: index/chrStart.txt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/chrStart.txt
+upload: index/Log.out to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/Log.out
+upload: index/exonInfo.tab to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/exonInfo.tab
+upload: index/genomeParameters.txt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/genomeParameters.txt
+upload: index/geneInfo.tab to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/geneInfo.tab
+upload: index/exonGeTrInfo.tab to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/exonGeTrInfo.tab
+upload: index/sjdbInfo.txt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/sjdbInfo.txt
+upload: index/sjdbList.fromGTF.out.tab to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/sjdbList.fromGTF.out.tab
+upload: index/sjdbList.out.tab to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/sjdbList.out.tab
+upload: index/transcriptInfo.tab to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/transcriptInfo.tab
+upload: index/SAindex to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/SAindex
+upload: index/Genome to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/Genome
+upload: index/SA to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/indexes/gencode80/SA
+---

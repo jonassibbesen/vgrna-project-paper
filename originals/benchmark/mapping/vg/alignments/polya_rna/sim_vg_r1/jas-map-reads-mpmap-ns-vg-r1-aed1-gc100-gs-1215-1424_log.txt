@@ -1,0 +1,92 @@
+---
+jas-map-reads-mpmap-ns-vg-r1-aed1-gc100-gs-1215-1424
+TIME=20211215-1424 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2 MEMORY=16 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/map_reads.sh
+CPU=16 REF=gencode100_genes SIM=ENCSR000AED_rep1 MAPPER=mpmap_nosplice
+---
+Completed 2.0 KiB/2.0 KiB (21.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/map_reads.sh to ./map_reads.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_1.fq.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_1.fq.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_2.fq.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_2.fq.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100_genes/gencode100_genes.xg to ./gencode100_genes.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/gencode100_genes/gencode100_genes_index.gcsa.lcp to ./gencode100_genes_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/gencode100_genes/gencode100_genes_index.gcsa to ./gencode100_genes_index.gcsa
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/gencode100_genes/gencode100_genes_index.dist to ./gencode100_genes_index.dist
+[vg mpmap] elapsed time 0 s: Executing command: vg mpmap -t 16 -n rna --report-allelic-mapq --not-spliced -x gencode100_genes.xg -g gencode100_genes_index.gcsa -d gencode100_genes_index.dist -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_1.fq.gz -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_2.fq.gz
+[vg mpmap] elapsed time 0 s: Loading graph from gencode100_genes.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+[vg mpmap] elapsed time 2 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 2 s: Loading GCSA2 from gencode100_genes_index.gcsa
+[vg mpmap] elapsed time 3 s: Loading LCP from gencode100_genes_index.gcsa.lcp
+[vg mpmap] elapsed time 4 s: Loading distance index from gencode100_genes_index.dist
+[vg mpmap] elapsed time 12 s: Building null model to calibrate mismapping detection.
+[vg mpmap] elapsed time 14 s: Mapping reads from sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_1.fq.gz and sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_2.fq.gz using 16 threads
+[vg mpmap] elapsed time 2.4 m: Mapped 5000000 read pairs
+[vg mpmap] elapsed time 4.5 m: Mapped 10000000 read pairs
+[vg mpmap] elapsed time 6.6 m: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 8.7 m: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 10.7 m: Mapping finished. Mapped 25000000 read pairs.
+	Command being timed: "bash -c vg mpmap -t 16 -n rna --report-allelic-mapq --not-spliced -x gencode100_genes.xg -g gencode100_genes_index.gcsa -d gencode100_genes_index.dist -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_1.fq.gz -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h1_2.fq.gz > mpmap_nosplice_gencode100_genes_sim_vg_r1_ENCSR000AED_rep1_h1.gamp"
+	User time (seconds): 9827.85
+	System time (seconds): 259.61
+	Percent of CPU this job got: 1564%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:44.57
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3170828
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7014788
+	Voluntary context switches: 551314
+	Involuntary context switches: 122817
+	Swaps: 0
+	File system inputs: 105664
+	File system outputs: 13334248
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg mpmap] elapsed time 0 s: Executing command: vg mpmap -t 16 -n rna --report-allelic-mapq --not-spliced -x gencode100_genes.xg -g gencode100_genes_index.gcsa -d gencode100_genes_index.dist -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_1.fq.gz -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_2.fq.gz
+[vg mpmap] elapsed time 0 s: Loading graph from gencode100_genes.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+[vg mpmap] elapsed time 2 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 2 s: Loading GCSA2 from gencode100_genes_index.gcsa
+[vg mpmap] elapsed time 3 s: Loading LCP from gencode100_genes_index.gcsa.lcp
+[vg mpmap] elapsed time 3 s: Loading distance index from gencode100_genes_index.dist
+[vg mpmap] elapsed time 8 s: Building null model to calibrate mismapping detection.
+[vg mpmap] elapsed time 10 s: Mapping reads from sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_1.fq.gz and sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_2.fq.gz using 16 threads
+[vg mpmap] elapsed time 2.2 m: Mapped 5000000 read pairs
+[vg mpmap] elapsed time 4.2 m: Mapped 10000000 read pairs
+[vg mpmap] elapsed time 6.2 m: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 8.1 m: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 10.1 m: Mapping finished. Mapped 25000000 read pairs.
+	Command being timed: "bash -c vg mpmap -t 16 -n rna --report-allelic-mapq --not-spliced -x gencode100_genes.xg -g gencode100_genes_index.gcsa -d gencode100_genes_index.dist -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_1.fq.gz -f sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_vg_r1_h2_2.fq.gz > mpmap_nosplice_gencode100_genes_sim_vg_r1_ENCSR000AED_rep1_h2.gamp"
+	User time (seconds): 9312.36
+	System time (seconds): 248.17
+	Percent of CPU this job got: 1573%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:07.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3190272
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6805486
+	Voluntary context switches: 550784
+	Involuntary context switches: 123926
+	Swaps: 0
+	File system inputs: 7845168
+	File system outputs: 13346448
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_nosplice_gencode100_genes_sim_vg_r1_ENCSR000AED_rep1_h1.gamp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1/mpmap_nosplice/gencode100_genes/mpmap_nosplice_gencode100_genes_sim_vg_r1_ENCSR000AED_rep1_h1.gamp
+upload: ./mpmap_nosplice_gencode100_genes_sim_vg_r1_ENCSR000AED_rep1_h2.gamp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r1/ENCSR000AED_rep1/mpmap_nosplice/gencode100_genes/mpmap_nosplice_gencode100_genes_sim_vg_r1_ENCSR000AED_rep1_h2.gamp
+---

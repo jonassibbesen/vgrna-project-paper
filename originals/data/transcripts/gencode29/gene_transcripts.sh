@@ -1,0 +1,1 @@
+grep -P "\ttranscript\t" gencode.v29.primary_assembly.annotation_renamed_full.gtf | cut -f9 | cut -d '"' -f2,4,6,8,10,12 | sed -e 's/"/\t/g' > gencode.v29.primary_assembly.annotation_renamed_full_gene_transcripts.txt

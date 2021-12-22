@@ -1,0 +1,1 @@
+comm -12 <(comm -12 <(grep "CEU" 20181129_HLA_types_full_1000_Genomes_Project_panel.txt | cut -f3 | sort) <(grep "CEPH" 20140702_hla_diversity.txt | cut -d '"' -f2 | sort)) <(grep "CEU" ../../../meta/geuvadis/geuvadis.sequence.index | grep "mRNA" | cut -f10 | cut -d ':' -f2 | sort | uniq) | grep -v -E "NA07051|NA11832|NA11840|NA11930|NA12287|NA12775" | shuf | head -n 10

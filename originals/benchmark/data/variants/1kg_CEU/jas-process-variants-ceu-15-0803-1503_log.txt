@@ -1,0 +1,64 @@
+---
+jas-process-variants-ceu-15-0803-1503
+TIME=20210803-1503 IMAGE=jsibbesen/base-s3script:18.04-s1 MEMORY=2 CPU=1 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_CEU/process_variants.sh
+CPU=1 CHR=15
+---
+Completed 2.0 KiB/2.0 KiB (44.0 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_CEU/process_variants.sh to ./process_variants.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/genomes/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa.fai
+download: s3://vg-data/1kg_GRCh38/variants/ALL.chr15_GRCh38.genotypes.20170504.vcf.gz to ./ALL.chr15_GRCh38.genotypes.20170504.vcf.gz
+download: s3://vg-data/1kg_GRCh38/variants/ALL.chr15_GRCh38.genotypes.20170504.vcf.gz.tbi to ./ALL.chr15_GRCh38.genotypes.20170504.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/meta/1000g/integrated_call_samples_v3.20130502.ALL.panel to ./integrated_call_samples_v3.20130502.ALL.panel
+99 samples.txt
+	Command being timed: "bash -c grep CEU integrated_call_samples_v3.20130502.ALL.panel | grep -v sample | cut -f1 > samples.txt; wc -l samples.txt"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 150%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3220
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 647
+	Voluntary context switches: 13
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Lines   total/split/realigned/skipped:	2422112/11991/2979/0
+Lines   total/split/realigned/skipped:	411036/0/0/0
+	Command being timed: "bash -c bcftools annotate -x ^INFO/AC,^INFO/AF,^INFO/AN ALL.chr15_GRCh38.genotypes.20170504.vcf.gz | bcftools norm -m -any -f Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa | bcftools view -S samples.txt -c 1 | bcftools norm -m +any -O z -f Homo_sapiens.GRCh38.dna.primary_assembly_chromosomes.fa > 1kg_CEU_15.vcf.gz; tabix 1kg_CEU_15.vcf.gz"
+	User time (seconds): 1171.61
+	System time (seconds): 48.06
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 20:55.56
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12652
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 235890
+	Voluntary context switches: 1324481
+	Involuntary context switches: 16929
+	Swaps: 0
+	File system inputs: 32
+	File system outputs: 25552
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_CEU_15.vcf.gz.tbi to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_CEU/15/1kg_CEU_15.vcf.gz.tbi
+upload: ./1kg_CEU_15.vcf.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_CEU/15/1kg_CEU_15.vcf.gz
+---

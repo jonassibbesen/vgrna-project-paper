@@ -9,7 +9,7 @@ aws s3 cp s3://vg-data/1kg_GRCh38/genome/${GENOME_PREFIX}.fa . --no-progress
 aws s3 cp s3://vg-data/1kg_GRCh38/genome/${GENOME_PREFIX}.fa.fai . --no-progress
 
 # Download transcripts
-aws s3 cp s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/${REF}/ . --recursive --exclude "*" --include "*.fa.gz" --no-progress
+aws s3 cp s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/${REF}/ . --recursive --exclude "*" --include "*.fa.gz" --exclude "*MT*" --exclude "*SCA*" --no-progress
 
 # Combine transcripts
 /usr/bin/time -v bash -c "zcat */*fa.gz > ${REF}.fa; cat ${REF}.fa | grep '"'>'"' | wc -l"

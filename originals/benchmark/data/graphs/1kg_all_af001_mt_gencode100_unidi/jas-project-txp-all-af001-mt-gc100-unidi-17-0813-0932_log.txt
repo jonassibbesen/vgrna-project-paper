@@ -1,0 +1,149 @@
+---
+jas-project-txp-all-af001-mt-gc100-unidi-17-0813-0932
+TIME=20210813-0932 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c861e23e-s1 MEMORY=12 CPU=4 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_mt_gencode100_unidi/project_transcripts.sh
+CPU=4 CHR=17
+---
+Completed 1.6 KiB/1.6 KiB (4.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_mt_gencode100_unidi/project_transcripts.sh to ./project_transcripts.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_mt_gencode100/17/1kg_all_af001_mt_gencode100_17.pg to ./1kg_all_af001_mt_gencode100_17.pg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_mt_gencode100/17/1kg_all_exons_17.gbwt to ./1kg_all_exons_17.gbwt
+	Command being timed: "bash -c grep -P '^17\t' gencode.v29.primary_assembly.annotation_renamed_full.gtf > 17.gtf"
+	User time (seconds): 0.13
+	System time (seconds): 0.21
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3236
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 314
+	Voluntary context switches: 5
+	Involuntary context switches: 3
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 116744
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	4957560
+edges	5980080
+length	84234232
+node-id-range	143817963:148775522
+	Command being timed: "bash -c vg stats -z -l -r 1kg_all_af001_mt_gencode100_17.pg"
+	User time (seconds): 13.79
+	System time (seconds): 1.08
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:14.39
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1121904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 11384
+	Voluntary context switches: 132857
+	Involuntary context switches: 17
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Parsing haplotype GBWT index file ...
+[vg rna] Graph and GBWT index parsed in 14.315 seconds, 1.3065 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 10488 transcripts parsed, and graph augmented (no novel exon boundaries) in 8.2248 seconds, 3.0261 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 687897 haplotype-specfic transcripts projected in 4416.11 seconds, 6.65757 GB
+[vg rna] Writing transcripts as threads to GBWT index file ...
+[vg rna] Writing transcripts as sequences to fasta file ...
+[vg rna] Writing origin info on transcripts to tsv file ...
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph and 687897 transcripts written in 158.958 seconds, 9.33139 GB
+	Command being timed: "bash -c vg rna -p -t 4 -o -n 17.gtf -l 1kg_all_exons_17.gbwt -b 1kg_all_af001_mt_gencode100_unidi_17.gbwt -f 1kg_all_af001_mt_gencode100_unidi_17.fa -i 1kg_all_af001_mt_gencode100_unidi_17.txt 1kg_all_af001_mt_gencode100_17.pg > 1kg_all_af001_mt_gencode100_17_2.pg"
+	User time (seconds): 17456.93
+	System time (seconds): 79.17
+	Percent of CPU this job got: 381%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:16:38
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9784676
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7442351
+	Voluntary context switches: 4050084
+	Involuntary context switches: 93530
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8527464
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+nodes	4957560
+edges	5980080
+length	84234232
+node-id-range	143817963:148775522
+	Command being timed: "bash -c vg stats -z -l -r 1kg_all_af001_mt_gencode100_17_2.pg"
+	User time (seconds): 15.00
+	System time (seconds): 1.03
+	Percent of CPU this job got: 102%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:15.59
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1121904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 13546
+	Voluntary context switches: 132979
+	Involuntary context switches: 44
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip 1kg_all_af001_mt_gencode100_unidi_17.fa; gzip 1kg_all_af001_mt_gencode100_unidi_17.txt"
+	User time (seconds): 57.46
+	System time (seconds): 1.42
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:58.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3228
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 502
+	Voluntary context switches: 6
+	Involuntary context switches: 78
+	Swaps: 0
+	File system inputs: 2912736
+	File system outputs: 460736
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_all_af001_mt_gencode100_unidi_17.fa.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_mt_gencode100_unidi/17/1kg_all_af001_mt_gencode100_unidi_17.fa.gz
+upload: ./1kg_all_af001_mt_gencode100_unidi_17.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_mt_gencode100_unidi/17/1kg_all_af001_mt_gencode100_unidi_17.txt.gz
+upload: ./1kg_all_af001_mt_gencode100_unidi_17.gbwt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_mt_gencode100_unidi/17/1kg_all_af001_mt_gencode100_unidi_17.gbwt
+---

@@ -1,0 +1,933 @@
+---
+jas-generate-index-hisat2-na12878-gc100-1006-1629
+TIME=20211006-1629 IMAGE=jsibbesen/hisat2-s3script:2.2.1-s2 MEMORY=224 CPU=16 DISK=128
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/generate_index.sh
+CPU=16 REF=1kg_NA12878_gencode100 TRANSCRIPTS=gencode.v29.primary_assembly.annotation_renamed_full.gtf VARIANTS=1kg_NA12878
+---
+Completed 1.6 KiB/1.6 KiB (17.0 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/indexes/generate_index.sh to ./generate_index.sh
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa
+download: s3://vg-data/1kg_GRCh38/genome/Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai to ./Homo_sapiens.GRCh38.dna.primary_assembly.fa.fai
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+303499 exons.txt
+	Command being timed: "bash -c hisat2_extract_exons.py gencode.v29.primary_assembly.annotation_renamed_full.gtf > exons.txt; wc -l exons.txt"
+	User time (seconds): 12.70
+	System time (seconds): 0.47
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:13.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 299740
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 88544
+	Voluntary context switches: 5
+	Involuntary context switches: 18
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 13560
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+328248 splice_sites.txt
+	Command being timed: "bash -c hisat2_extract_splice_sites.py gencode.v29.primary_assembly.annotation_renamed_full.gtf > splice_sites.txt; wc -l splice_sites.txt"
+	User time (seconds): 12.47
+	System time (seconds): 0.40
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.87
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 274632
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 80964
+	Voluntary context switches: 5
+	Involuntary context switches: 20
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 14664
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/12/1kg_NA12878_12.snp to 12/1kg_NA12878_12.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/10/1kg_NA12878_10.haplotype to 10/1kg_NA12878_10.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/10/1kg_NA12878_10.snp to 10/1kg_NA12878_10.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/1/1kg_NA12878_1.snp to 1/1kg_NA12878_1.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/11/1kg_NA12878_11.haplotype to 11/1kg_NA12878_11.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/1/1kg_NA12878_1.haplotype to 1/1kg_NA12878_1.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/11/1kg_NA12878_11.snp to 11/1kg_NA12878_11.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/12/1kg_NA12878_12.haplotype to 12/1kg_NA12878_12.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/13/1kg_NA12878_13.snp to 13/1kg_NA12878_13.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/15/1kg_NA12878_15.snp to 15/1kg_NA12878_15.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/15/1kg_NA12878_15.haplotype to 15/1kg_NA12878_15.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/17/1kg_NA12878_17.snp to 17/1kg_NA12878_17.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/16/1kg_NA12878_16.haplotype to 16/1kg_NA12878_16.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/14/1kg_NA12878_14.haplotype to 14/1kg_NA12878_14.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/14/1kg_NA12878_14.snp to 14/1kg_NA12878_14.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/17/1kg_NA12878_17.haplotype to 17/1kg_NA12878_17.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/16/1kg_NA12878_16.snp to 16/1kg_NA12878_16.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/13/1kg_NA12878_13.haplotype to 13/1kg_NA12878_13.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/21/1kg_NA12878_21.snp to 21/1kg_NA12878_21.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/18/1kg_NA12878_18.haplotype to 18/1kg_NA12878_18.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/19/1kg_NA12878_19.snp to 19/1kg_NA12878_19.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/22/1kg_NA12878_22.snp to 22/1kg_NA12878_22.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/18/1kg_NA12878_18.snp to 18/1kg_NA12878_18.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/19/1kg_NA12878_19.haplotype to 19/1kg_NA12878_19.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/22/1kg_NA12878_22.haplotype to 22/1kg_NA12878_22.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/21/1kg_NA12878_21.haplotype to 21/1kg_NA12878_21.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/2/1kg_NA12878_2.snp to 2/1kg_NA12878_2.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/2/1kg_NA12878_2.haplotype to 2/1kg_NA12878_2.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/3/1kg_NA12878_3.haplotype to 3/1kg_NA12878_3.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/20/1kg_NA12878_20.haplotype to 20/1kg_NA12878_20.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/20/1kg_NA12878_20.snp to 20/1kg_NA12878_20.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/4/1kg_NA12878_4.snp to 4/1kg_NA12878_4.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/5/1kg_NA12878_5.snp to 5/1kg_NA12878_5.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/3/1kg_NA12878_3.snp to 3/1kg_NA12878_3.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/5/1kg_NA12878_5.haplotype to 5/1kg_NA12878_5.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/4/1kg_NA12878_4.haplotype to 4/1kg_NA12878_4.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/Y/1kg_NA12878_Y.haplotype to Y/1kg_NA12878_Y.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/Y/1kg_NA12878_Y.snp to Y/1kg_NA12878_Y.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/9/1kg_NA12878_9.haplotype to 9/1kg_NA12878_9.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/6/1kg_NA12878_6.haplotype to 6/1kg_NA12878_6.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/8/1kg_NA12878_8.haplotype to 8/1kg_NA12878_8.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/6/1kg_NA12878_6.snp to 6/1kg_NA12878_6.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/7/1kg_NA12878_7.haplotype to 7/1kg_NA12878_7.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/9/1kg_NA12878_9.snp to 9/1kg_NA12878_9.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/X/1kg_NA12878_X.haplotype to X/1kg_NA12878_X.haplotype
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/8/1kg_NA12878_8.snp to 8/1kg_NA12878_8.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/X/1kg_NA12878_X.snp to X/1kg_NA12878_X.snp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/variants/1kg_NA12878/7/1kg_NA12878_7.snp to 7/1kg_NA12878_7.snp
+4227011 variants.snp
+3856373 variants.haplotype
+	Command being timed: "bash -c cat */*.snp > variants.snp; cat */*.haplotype > variants.haplotype; wc -l variants.snp; wc -l variants.haplotype"
+	User time (seconds): 0.06
+	System time (seconds): 0.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3256
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 730
+	Voluntary context switches: 9
+	Involuntary context switches: 4
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 568392
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Settings:
+  Output files: "1kg_NA12878_gencode100_index.*.ht2"
+  Line rate: 7 (line is 128 bytes)
+  Lines per side: 1 (side is 128 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Local offset rate: 3 (one in 8)
+  Local fTable chars: 6
+  Local sequence length: 57344
+  Local sequence overlap between two consecutive indexes: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  Homo_sapiens.GRCh38.dna.primary_assembly.fa
+Reading reference sizes
+  Time reading reference sizes: 00:00:22
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:13
+  Time to read SNPs and splice sites: 00:00:27
+Generation 0 (2959922521 -> 2959922521 nodes, 0 ranks)
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 25
+RESIZED NODES: 0
+MADE NEW NODES: 2
+Generation 1 (2964092511 -> 2964092511 nodes, 0 ranks)
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 20
+RESIZED NODES: 0
+MADE NEW NODES: 2
+Generation 2 (2972433912 -> 2972433912 nodes, 0 ranks)
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 23
+RESIZED NODES: 0
+MADE NEW NODES: 2
+Generation 3 (2989122942 -> 2989122942 nodes, 0 ranks)
+BUILT FROM_INDEX: 9
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 20
+RESIZED NODES: 0
+MADE NEW NODES: 2
+RESIZE NODES: 46
+COUNT NUMBER IN EACH BIN: 0
+FINISHED FIRST ROUND: 4
+3 220524736
+9 227239166
+8 211520739
+8 232640985
+40 219144847
+15 178618984
+9 219341108
+40 180925091
+13 175892298
+9 172041623
+40 186125477
+7 160282395
+8 179997375
+3 160699301
+7 180554208
+147 116979389
+FINISHED RECURSIVE SORTS: 23
+SORT NODES: 27
+MERGE, UPDATE RANK: 49
+Generation 4 (3022527722 -> 3020192716 nodes, 1151421057 ranks)
+ALLOCATE FROM_TABLE: 30
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 5
+23 197241851
+22 189107211
+22 188786354
+22 188792628
+22 188744019
+22 188511154
+22 189032322
+22 188393109
+22 188668660
+22 188563591
+22 188902863
+22 188655996
+22 188648123
+22 188657256
+22 188496984
+22 180990595
+FINISHED RECURSIVE SORTS: 15
+BUILD TABLE: 21
+BUILD INDEX: 11
+COUNTED NEW NODES: 7
+COUNTED TEMP NODES: 0
+RESIZED NODES: 23
+RESIZED NODES: 0
+MADE NEW NODES: 24
+MERGEUPDATERANK: 66
+TOTAL TIME: 182
+Generation 5 (3070838166 -> 3030076092 nodes, 2634930348 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+23 197987381
+22 189799145
+22 189429451
+22 189371594
+22 189376718
+22 189131178
+22 189754263
+22 188929946
+22 189281306
+22 189156827
+22 189550996
+22 189254152
+22 189290333
+22 189289624
+22 189076325
+22 181396853
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 8
+COUNTED NEW NODES: 5
+COUNTED TEMP NODES: 0
+RESIZED NODES: 23
+RESIZED NODES: 0
+MADE NEW NODES: 6
+MERGEUPDATERANK: 25
+TOTAL TIME: 88
+Generation 6 (3046965309 -> 3038425733 nodes, 2881914433 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190031223
+22 190301379
+22 190094206
+23 198457169
+22 189901506
+22 189634607
+22 190318167
+22 189385741
+22 189813310
+22 189646035
+22 190105972
+22 189755308
+22 189834341
+22 189818111
+22 189571083
+22 181757575
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 11
+COUNTED NEW NODES: 2
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 3
+MERGEUPDATERANK: 16
+TOTAL TIME: 53
+Generation 7 (3046948742 -> 3042410674 nodes, 2957206108 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 3
+22 190476605
+22 190556284
+22 190349762
+23 198663281
+22 190141328
+22 189835135
+22 190529912
+22 189597635
+22 190081253
+22 189860843
+22 190375652
+22 189976094
+22 190102201
+22 190079424
+22 189815591
+22 181969674
+FINISHED RECURSIVE SORTS: 17
+BUILD TABLE: 21
+BUILD INDEX: 8
+COUNTED NEW NODES: 2
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 3
+MERGEUPDATERANK: 14
+TOTAL TIME: 48
+Generation 8 (3046352802 -> 3044181565 nodes, 2991285786 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 5
+22 190755100
+22 190665594
+22 190438277
+23 198744830
+22 190277699
+22 189940372
+22 190605953
+22 189685219
+22 190251415
+22 189930835
+22 190456924
+22 190056593
+22 190210862
+22 190193742
+22 189918597
+22 182049553
+FINISHED RECURSIVE SORTS: 15
+BUILD TABLE: 21
+BUILD INDEX: 10
+COUNTED NEW NODES: 0
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 13
+TOTAL TIME: 46
+Generation 9 (3045955986 -> 3044851237 nodes, 3013753790 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190866762
+22 190709541
+22 190452835
+23 198764335
+22 190363319
+22 189992852
+22 190625960
+22 189712876
+22 190386593
+22 189940547
+22 190474944
+22 190074776
+22 190240506
+22 190234716
+22 189947529
+22 182063146
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 9
+COUNTED NEW NODES: 2
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 12
+TOTAL TIME: 46
+Generation 10 (3046087247 -> 3045242719 nodes, 3027010330 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 0
+FINISHED FIRST ROUND: 5
+22 190882107
+22 190750824
+22 190452388
+23 198774941
+22 190402665
+22 190025065
+22 190633853
+22 189729376
+22 190532949
+22 189940789
+22 190479617
+22 190079982
+22 190256149
+22 190256531
+22 189961300
+22 182084183
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 9
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 11
+TOTAL TIME: 44
+Generation 11 (3046296180 -> 3045501718 nodes, 3031263283 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190874872
+22 190779351
+22 190449640
+23 198777183
+22 190412505
+22 190037055
+22 190642722
+22 189737370
+22 190689679
+22 189941848
+22 190480092
+22 190083068
+22 190256286
+22 190278482
+22 189960618
+22 182100947
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 9
+COUNTED NEW NODES: 2
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 11
+TOTAL TIME: 45
+Generation 12 (3046401048 -> 3045637921 nodes, 3032770393 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190855731
+22 190787359
+22 190449577
+23 198780558
+22 190400595
+22 190036738
+22 190642802
+22 189736621
+22 190834565
+22 189943896
+22 190480092
+22 190087736
+22 190251036
+22 190292003
+22 189956307
+22 182102305
+FINISHED RECURSIVE SORTS: 15
+BUILD TABLE: 20
+BUILD INDEX: 11
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 1
+MERGEUPDATERANK: 11
+TOTAL TIME: 44
+Generation 13 (3046399420 -> 3045796761 nodes, 3033626833 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190855018
+22 190782179
+22 190449577
+23 198778904
+22 190384552
+22 190037215
+22 190641810
+22 189733850
+22 191015968
+22 189944054
+22 190480092
+22 190087690
+22 190247863
+22 190294647
+22 189957678
+22 182105664
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 8
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 11
+TOTAL TIME: 43
+Generation 14 (3046461183 -> 3046042197 nodes, 3034350870 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190874932
+22 190765709
+22 190449577
+23 198773724
+22 190381889
+22 190044108
+22 190641810
+22 189733850
+22 191250090
+22 189944054
+22 190480092
+22 190092842
+22 190247863
+22 190284471
+22 189963869
+22 182113317
+FINISHED RECURSIVE SORTS: 15
+BUILD TABLE: 20
+BUILD INDEX: 10
+COUNTED NEW NODES: 0
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 11
+TOTAL TIME: 43
+Generation 15 (3046528925 -> 3046285906 nodes, 3035128467 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 3
+22 190875553
+22 190751931
+22 190449577
+23 198773724
+22 190381889
+22 190044108
+22 190641810
+22 189733850
+22 191506863
+22 189944054
+22 190480092
+22 190092842
+22 190247863
+22 190284089
+22 189965159
+22 182112502
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 20
+BUILD INDEX: 9
+COUNTED NEW NODES: 0
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 11
+TOTAL TIME: 42
+Generation 16 (3046497728 -> 3046430498 nodes, 3035776392 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 0
+FINISHED FIRST ROUND: 4
+22 190875553
+22 190751931
+22 190449577
+23 198773724
+22 190381889
+22 190044108
+22 190641810
+22 189733850
+22 191651455
+22 189944054
+22 190480092
+22 190092842
+22 190247863
+22 190284089
+22 189965159
+22 182112502
+FINISHED RECURSIVE SORTS: 18
+BUILD TABLE: 22
+BUILD INDEX: 10
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 10
+TOTAL TIME: 45
+Generation 17 (3046430499 -> 3046429822 nodes, 3036247933 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190875553
+22 190751931
+22 190449577
+23 198773724
+22 190381889
+22 190044108
+22 190641810
+22 189733850
+22 191650779
+22 189944054
+22 190480092
+22 190092842
+22 190247863
+22 190284089
+22 189965159
+22 182112502
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 9
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 10
+TOTAL TIME: 43
+Generation 18 (3046429823 -> 3046429822 nodes, 3037162132 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190875553
+22 190751931
+22 190449577
+23 198773724
+22 190381889
+22 190044108
+22 190641810
+22 189733850
+22 191650779
+22 189944054
+22 190480092
+22 190092842
+22 190247863
+22 190284089
+22 189965159
+22 182112502
+FINISHED RECURSIVE SORTS: 17
+BUILD TABLE: 22
+BUILD INDEX: 8
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 3
+MERGEUPDATERANK: 10
+TOTAL TIME: 44
+Generation 19 (3046429823 -> 3046429822 nodes, 3038602885 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190875553
+22 190751931
+22 190449577
+23 198773724
+22 190381889
+22 190044108
+22 190641810
+22 189733850
+22 191650779
+22 189944054
+22 190480092
+22 190092842
+22 190247863
+22 190284089
+22 189965159
+22 182112502
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 9
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 1
+MERGEUPDATERANK: 11
+TOTAL TIME: 43
+Generation 20 (3046429822 -> 3046429822 nodes, 3041224325 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+22 190875553
+22 190751931
+22 190449577
+23 198773724
+22 190381889
+22 190044108
+22 190641810
+22 189733850
+22 191650779
+22 189944054
+22 190480092
+22 190092842
+22 190247863
+22 190284089
+22 189965159
+22 182112502
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 9
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 2
+MERGEUPDATERANK: 11
+TOTAL TIME: 44
+Generation 21 (3046429822 -> 3046429822 nodes, 3046059750 ranks)
+ALLOCATE FROM_TABLE: 0
+COUNT NUMBER IN EACH BIN: 0
+FINISHED FIRST ROUND: 5
+22 190875553
+22 190751931
+22 190449577
+23 198773724
+22 190381889
+22 190044108
+22 190641810
+22 189733850
+22 191650779
+22 189944054
+22 190480092
+22 190092842
+22 190247863
+22 190284089
+22 189965159
+22 182112502
+FINISHED RECURSIVE SORTS: 16
+BUILD TABLE: 21
+BUILD INDEX: 21
+COUNTED NEW NODES: 1
+COUNTED TEMP NODES: 0
+RESIZED NODES: 0
+RESIZED NODES: 0
+MADE NEW NODES: 1
+MERGEUPDATERANK: 11
+TOTAL TIME: 55
+Generation 22 (3046429822 -> 3046429822 nodes, 3046429822 ranks)
+COUNT NUMBER IN EACH BIN: 3
+FINISHED FIRST ROUND: 5
+22 190875553
+22 190751931
+22 190449577
+23 198773724
+22 190381889
+22 190044108
+22 190641810
+22 189733850
+22 191650779
+22 189944054
+22 190480092
+22 190092842
+22 190247863
+22 190284089
+22 189965159
+22 182112502
+FINISHED RECURSIVE SORTS: 16
+Generating edges... 
+NODE.TO -> GENOME POS: 28
+BUILD FROM_INDEX 18
+COUNTED NEW EDGES: 3
+MADE NEW EDGES: 20
+COUNT NUMBER IN EACH BIN: 0
+FINISHED FIRST ROUND: 1
+17 57237694
+18 58385079
+23 57430834
+24 58685647
+21 56107775
+25 58506595
+28 56244488
+28 58393023
+18 55342720
+20 56539985
+20 55712089
+21 56000188
+23 55732498
+28 55002889
+24 52552190
+26 51461481
+FINISHED RECURSIVE SORTS: 4
+COUNT NUMBER IN EACH BIN: 0
+FINISHED FIRST ROUND: 1
+24 39919179
+21 40943658
+17 40527562
+15 39047731
+20 40368371
+20 40788453
+18 38806055
+19 40369800
+18 39659685
+58 37843732
+41 38577001
+19 38893099
+17 38197545
+15 36680453
+20 37008745
+22 35982470
+FINISHED RECURSIVE SORTS: 3
+COUNT NUMBER IN EACH BIN: 0
+FINISHED FIRST ROUND: 0
+23 39867241
+24 39534364
+22 41017360
+23 39394578
+25 38955245
+23 40115175
+21 40137662
+23 39326614
+18 40139247
+17 38976491
+19 39786857
+21 38308031
+26 37803236
+26 38617847
+24 37830678
+29 35893775
+FINISHED RECURSIVE SORTS: 3
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 0
+33 56796486
+32 57100789
+31 57142606
+24 57089870
+25 58392091
+23 57878115
+21 56039430
+20 56504029
+20 56035038
+17 55868866
+19 57842648
+21 55478956
+21 56624432
+24 56790681
+17 54984752
+16 51448985
+FINISHED RECURSIVE SORTS: 4
+SORTED NEW EDGES: 28
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 4
+23 192937984
+23 192937984
+23 192937984
+23 192937984
+23 192937984
+23 192937984
+23 192937984
+23 192937984
+23 192937984
+23 192937984
+23 192937984
+23 192937984
+22 184549376
+22 184549376
+22 184549376
+22 177525886
+FINISHED RECURSIVE SORTS: 17
+RE-SORTED NODES: 46
+PROCESS EDGES: 9
+REMOVE Y: 4
+COUNT NUMBER IN EACH BIN: 1
+FINISHED FIRST ROUND: 1
+23 193250294
+23 193138282
+23 193184166
+23 193175532
+23 193136267
+23 193177318
+23 193220769
+23 193207634
+23 193216718
+23 193261581
+23 193296485
+23 193194674
+22 184770853
+22 184802463
+22 184779406
+22 177858448
+FINISHED RECURSIVE SORTS: 9
+SORT, Make index: 35
+TOTAL: 191
+Allocating ftab, absorbFtab
+Entering GFM loop
+Exited GFM loop
+fchr[A]: 0
+fchr[C]: 899335175
+fchr[G]: 1522948714
+fchr[T]: 2148653115
+fchr[$]: 3050670889
+Exiting GFM::buildToDisk()
+Returning from initFromVector
+Wrote 1881558263 bytes to primary GFM file: 1kg_NA12878_gencode100_index.1.ht2
+Wrote 761607460 bytes to secondary GFM file: 1kg_NA12878_gencode100_index.2.ht2
+Re-opening _in1 and _in2 as input streams
+Returning from GFM constructor
+Warning: a local graph exploded (offset: 2487040, length: 55741)
+Warning: a local graph exploded (offset: 21661291, length: 57344)
+exceeded integer bounds, remove adjacent SNPs, use haplotypes, or switch to a large index (--large-index)
+terminate called after throwing an instance of 'int'
+Command terminated by signal 6
+	Command being timed: "bash -c hisat2-build -p 16 --snp variants.snp --haplotype variants.haplotype --exon exons.txt --ss splice_sites.txt Homo_sapiens.GRCh38.dna.primary_assembly.fa 1kg_NA12878_gencode100_index"
+	User time (seconds): 11819.43
+	System time (seconds): 585.39
+	Percent of CPU this job got: 461%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 44:45.88
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 167189836
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5
+	Minor (reclaiming a frame) page faults: 208893237
+	Voluntary context switches: 349541
+	Involuntary context switches: 34975
+	Swaps: 0
+	File system inputs: 26423320
+	File system outputs: 178757424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+---

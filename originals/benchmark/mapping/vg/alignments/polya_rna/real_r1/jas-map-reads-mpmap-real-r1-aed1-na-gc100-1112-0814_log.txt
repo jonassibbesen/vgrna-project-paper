@@ -1,0 +1,68 @@
+---
+jas-map-reads-mpmap-real-r1-aed1-na-gc100-1112-0814
+TIME=20211112-0814 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2 MEMORY=56 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r1/map_reads.sh
+CPU=16 REF=1kg_NA12878_gencode100 REAL=ENCSR000AED_rep1 READS_1=s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz READS_2=s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz MAPPER=mpmap
+---
+Completed 1.7 KiB/1.7 KiB (21.5 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r1/map_reads.sh to ./map_reads.sh
+download: s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz to ./reads_1.fq.gz
+download: s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_gencode100/1kg_NA12878_gencode100.xg to ./1kg_NA12878_gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_NA12878_gencode100/1kg_NA12878_gencode100_index.gcsa.lcp to ./1kg_NA12878_gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_NA12878_gencode100/1kg_NA12878_gencode100_index.gcsa to ./1kg_NA12878_gencode100_index.gcsa
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_NA12878_gencode100/1kg_NA12878_gencode100_index.dist to ./1kg_NA12878_gencode100_index.dist
+[vg mpmap] elapsed time 0 s: Executing command: vg mpmap -t 16 -n rna --report-allelic-mapq -x 1kg_NA12878_gencode100.xg -g 1kg_NA12878_gencode100_index.gcsa -d 1kg_NA12878_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz
+[vg mpmap] elapsed time 0 s: Loading graph from 1kg_NA12878_gencode100.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+[vg mpmap] elapsed time 12 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 12 s: Identifying reference paths.
+[vg mpmap] elapsed time 14 s: Loading GCSA2 from 1kg_NA12878_gencode100_index.gcsa
+[vg mpmap] elapsed time 30 s: Loading LCP from 1kg_NA12878_gencode100_index.gcsa.lcp
+[vg mpmap] elapsed time 42 s: Loading distance index from 1kg_NA12878_gencode100_index.dist
+[vg mpmap] elapsed time 1.4 m: Building null model to calibrate mismapping detection.
+[vg mpmap] elapsed time 1.5 m: Mapping reads from reads_1.fq.gz and reads_2.fq.gz using 16 threads
+[vg mpmap] elapsed time 7.0 m: Mapped 5000000 read pairs
+[vg mpmap] elapsed time 12.3 m: Mapped 10000000 read pairs
+[vg mpmap] elapsed time 17.7 m: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 23.1 m: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 28.4 m: Mapped 25000000 read pairs
+[vg mpmap] elapsed time 33.8 m: Mapped 30000000 read pairs
+[vg mpmap] elapsed time 39.2 m: Mapped 35000000 read pairs
+[vg mpmap] elapsed time 44.6 m: Mapped 40000000 read pairs
+[vg mpmap] elapsed time 50.1 m: Mapped 45000000 read pairs
+[vg mpmap] elapsed time 55.5 m: Mapped 50000000 read pairs
+[vg mpmap] elapsed time 1.0 h: Mapped 55000000 read pairs
+[vg mpmap] elapsed time 1.1 h: Mapped 60000000 read pairs
+[vg mpmap] elapsed time 1.2 h: Mapped 65000000 read pairs
+[vg mpmap] elapsed time 1.3 h: Mapped 70000000 read pairs
+[vg mpmap] elapsed time 1.4 h: Mapped 75000000 read pairs
+[vg mpmap] elapsed time 1.5 h: Mapped 80000000 read pairs
+[vg mpmap] elapsed time 1.6 h: Mapped 85000000 read pairs
+[vg mpmap] elapsed time 1.6 h: Mapped 90000000 read pairs
+[vg mpmap] elapsed time 1.7 h: Mapped 95000000 read pairs
+[vg mpmap] elapsed time 1.8 h: Mapping finished. Mapped 97548052 read pairs.
+	Command being timed: "bash -c vg mpmap -t 16 -n rna --report-allelic-mapq -x 1kg_NA12878_gencode100.xg -g 1kg_NA12878_gencode100_index.gcsa -d 1kg_NA12878_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz > mpmap_1kg_NA12878_gencode100_real_r1_ENCSR000AED_rep1.gamp"
+	User time (seconds): 98657.39
+	System time (seconds): 2733.21
+	Percent of CPU this job got: 1578%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:47:04
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 35809808
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 217294011
+	Voluntary context switches: 7562123
+	Involuntary context switches: 1229132
+	Swaps: 0
+	File system inputs: 33078928
+	File system outputs: 53070496
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_1kg_NA12878_gencode100_real_r1_ENCSR000AED_rep1.gamp to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r1/ENCSR000AED_rep1/mpmap/1kg_NA12878_gencode100/mpmap_1kg_NA12878_gencode100_real_r1_ENCSR000AED_rep1.gamp
+---

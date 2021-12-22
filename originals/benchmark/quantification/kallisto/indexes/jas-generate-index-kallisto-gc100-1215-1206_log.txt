@@ -1,0 +1,92 @@
+---
+jas-generate-index-kallisto-gc100-1215-1206
+TIME=20211215-1206 IMAGE=jsibbesen/kallisto-s3script:0.46.1-s1 MEMORY=16 CPU=1 DISK=128
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/indexes/generate_index.sh
+CPU=1 REF=gencode100
+---
+Completed 683 Bytes/683 Bytes (9.7 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/indexes/generate_index.sh to ./generate_index.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/10/gencode100_10.fa.gz to 10/gencode100_10.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/13/gencode100_13.fa.gz to 13/gencode100_13.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/18/gencode100_18.fa.gz to 18/gencode100_18.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/14/gencode100_14.fa.gz to 14/gencode100_14.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/15/gencode100_15.fa.gz to 15/gencode100_15.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/20/gencode100_20.fa.gz to 20/gencode100_20.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/11/gencode100_11.fa.gz to 11/gencode100_11.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/12/gencode100_12.fa.gz to 12/gencode100_12.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/19/gencode100_19.fa.gz to 19/gencode100_19.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/17/gencode100_17.fa.gz to 17/gencode100_17.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/21/gencode100_21.fa.gz to 21/gencode100_21.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/16/gencode100_16.fa.gz to 16/gencode100_16.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/22/gencode100_22.fa.gz to 22/gencode100_22.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/1/gencode100_1.fa.gz to 1/gencode100_1.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/4/gencode100_4.fa.gz to 4/gencode100_4.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/2/gencode100_2.fa.gz to 2/gencode100_2.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/6/gencode100_6.fa.gz to 6/gencode100_6.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/9/gencode100_9.fa.gz to 9/gencode100_9.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/Y/gencode100_Y.fa.gz to Y/gencode100_Y.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/8/gencode100_8.fa.gz to 8/gencode100_8.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/3/gencode100_3.fa.gz to 3/gencode100_3.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/7/gencode100_7.fa.gz to 7/gencode100_7.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/5/gencode100_5.fa.gz to 5/gencode100_5.fa.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/X/gencode100_X.fa.gz to X/gencode100_X.fa.gz
+172345
+	Command being timed: "bash -c cat */*fa.gz > gencode100.fa.gz; zcat gencode100.fa.gz | grep '>' | wc -l"
+	User time (seconds): 1.83
+	System time (seconds): 0.23
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3136
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 792
+	Voluntary context switches: 9767
+	Involuntary context switches: 32
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 152304
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+[build] loading fasta file gencode100.fa.gz
+[build] k-mer length: 31
+[build] warning: clipped off poly-A tail (longer than 10)
+        from 1527 target sequences
+[build] warning: replaced 194709 non-ACGUT characters in the input sequence
+        with pseudorandom nucleotides
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done 
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 1181608 contigs and contains 125293905 k-mers 
+
+	Command being timed: "bash -c kallisto index -i kallisto_index_gencode100.idx gencode100.fa.gz"
+	User time (seconds): 532.08
+	System time (seconds): 4.54
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:56.90
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5099880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 995708
+	Voluntary context switches: 1
+	Involuntary context switches: 901
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 5433488
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./kallisto_index_gencode100.idx to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/indexes/gencode100/kallisto_index_gencode100.idx
+---

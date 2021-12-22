@@ -1,0 +1,229 @@
+---
+jas-infer-exp-mpmap-rpvg-r1-hvb-at-all-gc100-uni-1209-2305
+TIME=20211209-2305 IMAGE=quay.io/jsibbesen/rpvg-s3script:rpvg-ad52c1e2-s15 MEMORY=144 CPU=24 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/analyses/variant/ENCDO424HVB/inference_r1/infer_expression.sh
+CPU=24 NAME=ENCSR686JJB READS_1=s3://encode-public/2017/11/11/8b4324f8-5040-48e9-86c7-c4e613048dd2/ENCFF823MIJ.fastq.gz,s3://encode-public/2017/11/11/73d9a457-22ee-4aa2-9678-17c3fda0528f/ENCFF319KIO.fastq.gz,s3://encode-public/2017/11/11/16188690-4ee6-4770-9003-e3237babc67d/ENCFF960ZQS.fastq.gz,s3://encode-public/2017/11/10/d3883f56-aaa2-45cd-9b7e-cf742d5003f6/ENCFF974YOZ.fastq.gz,s3://encode-public/2017/11/11/088f7d2d-215e-4c6f-a807-32030a60dc10/ENCFF533ZIN.fastq.gz,s3://encode-public/2017/11/10/7c18a8ed-2909-4604-a933-229367d181bd/ENCFF216JXJ.fastq.gz,s3://encode-public/2017/11/11/9b9420d0-ea8f-464f-8a48-63fa81a813fa/ENCFF082QMH.fastq.gz,s3://encode-public/2017/11/11/24a7e2a8-bb1c-4763-a987-9dd99f936720/ENCFF633SGD.fastq.gz,s3://encode-public/2017/11/10/aa194d8e-d4eb-41ff-b7ce-dddad80e7409/ENCFF310NTN.fastq.gz,s3://encode-public/2017/11/10/53f37e26-b58f-439f-a36a-6d2a65946096/ENCFF070YNF.fastq.gz,s3://encode-public/2017/11/11/85643233-3d1d-42bf-a03c-6a2f186a2710/ENCFF725GSF.fastq.gz,s3://encode-public/2017/11/11/cdaf070d-df6e-464f-9da7-92c8d85743fc/ENCFF202CON.fastq.gz READS_2=s3://encode-public/2017/11/12/8f5f5113-f417-430b-ae2f-19c7765f8db2/ENCFF477DJQ.fastq.gz,s3://encode-public/2017/11/12/e47fdbbe-4a46-4692-8948-9c8ec934e5bb/ENCFF358FBZ.fastq.gz,s3://encode-public/2017/11/12/3d473e3d-f08e-4758-90cc-f1b1577be196/ENCFF679PNZ.fastq.gz,s3://encode-public/2017/11/11/f917d68f-5f37-451c-8efa-c96148809c11/ENCFF182PGO.fastq.gz,s3://encode-public/2017/11/12/999c1233-e971-4b29-b4ed-b080b8da36fb/ENCFF752JVU.fastq.gz,s3://encode-public/2017/11/11/74bef6ee-4ac4-4a71-a7ca-a6800d82eb23/ENCFF422RPW.fastq.gz,s3://encode-public/2017/11/12/94dcf5e8-7a18-4d70-bca8-19b716d91945/ENCFF351JWU.fastq.gz,s3://encode-public/2017/11/12/e8ea6504-5e83-4f94-8a6d-54c146bb60f5/ENCFF478RBH.fastq.gz,s3://encode-public/2017/11/11/54aa7720-1f94-4e5a-a3bb-c3185da59fda/ENCFF250UAC.fastq.gz,s3://encode-public/2017/11/11/49073899-31dd-4879-816b-3ed8d94684bc/ENCFF768TUP.fastq.gz,s3://encode-public/2017/11/12/283d04b0-aa45-4d3b-bfec-c90f8be1576f/ENCFF762KJJ.fastq.gz,s3://encode-public/2017/11/12/ef28425d-5f1a-436d-9108-31c8f8f5308b/ENCFF914VLT.fastq.gz GRAPH=1kg_all_af001_gencode100 TRANSCRIPTS=1kg_all_af001_gencode100_unidi SEED=141760513
+---
+Completed 2.3 KiB/2.3 KiB (22.5 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/analyses/variant/ENCDO424HVB/inference_r1/infer_expression.sh to ./infer_expression.sh
+download: s3://encode-public/2017/11/11/8b4324f8-5040-48e9-86c7-c4e613048dd2/ENCFF823MIJ.fastq.gz to ./reads_1_1.fq.gz
+download: s3://encode-public/2017/11/11/73d9a457-22ee-4aa2-9678-17c3fda0528f/ENCFF319KIO.fastq.gz to ./reads_2_1.fq.gz
+download: s3://encode-public/2017/11/11/16188690-4ee6-4770-9003-e3237babc67d/ENCFF960ZQS.fastq.gz to ./reads_3_1.fq.gz
+download: s3://encode-public/2017/11/10/d3883f56-aaa2-45cd-9b7e-cf742d5003f6/ENCFF974YOZ.fastq.gz to ./reads_4_1.fq.gz
+download: s3://encode-public/2017/11/11/088f7d2d-215e-4c6f-a807-32030a60dc10/ENCFF533ZIN.fastq.gz to ./reads_5_1.fq.gz
+download: s3://encode-public/2017/11/10/7c18a8ed-2909-4604-a933-229367d181bd/ENCFF216JXJ.fastq.gz to ./reads_6_1.fq.gz
+download: s3://encode-public/2017/11/11/9b9420d0-ea8f-464f-8a48-63fa81a813fa/ENCFF082QMH.fastq.gz to ./reads_7_1.fq.gz
+download: s3://encode-public/2017/11/11/24a7e2a8-bb1c-4763-a987-9dd99f936720/ENCFF633SGD.fastq.gz to ./reads_8_1.fq.gz
+download: s3://encode-public/2017/11/10/aa194d8e-d4eb-41ff-b7ce-dddad80e7409/ENCFF310NTN.fastq.gz to ./reads_9_1.fq.gz
+download: s3://encode-public/2017/11/10/53f37e26-b58f-439f-a36a-6d2a65946096/ENCFF070YNF.fastq.gz to ./reads_10_1.fq.gz
+download: s3://encode-public/2017/11/11/85643233-3d1d-42bf-a03c-6a2f186a2710/ENCFF725GSF.fastq.gz to ./reads_11_1.fq.gz
+download: s3://encode-public/2017/11/11/cdaf070d-df6e-464f-9da7-92c8d85743fc/ENCFF202CON.fastq.gz to ./reads_12_1.fq.gz
+download: s3://encode-public/2017/11/12/8f5f5113-f417-430b-ae2f-19c7765f8db2/ENCFF477DJQ.fastq.gz to ./reads_1_2.fq.gz
+download: s3://encode-public/2017/11/12/e47fdbbe-4a46-4692-8948-9c8ec934e5bb/ENCFF358FBZ.fastq.gz to ./reads_2_2.fq.gz
+download: s3://encode-public/2017/11/12/3d473e3d-f08e-4758-90cc-f1b1577be196/ENCFF679PNZ.fastq.gz to ./reads_3_2.fq.gz
+download: s3://encode-public/2017/11/11/f917d68f-5f37-451c-8efa-c96148809c11/ENCFF182PGO.fastq.gz to ./reads_4_2.fq.gz
+download: s3://encode-public/2017/11/12/999c1233-e971-4b29-b4ed-b080b8da36fb/ENCFF752JVU.fastq.gz to ./reads_5_2.fq.gz
+download: s3://encode-public/2017/11/11/74bef6ee-4ac4-4a71-a7ca-a6800d82eb23/ENCFF422RPW.fastq.gz to ./reads_6_2.fq.gz
+download: s3://encode-public/2017/11/12/94dcf5e8-7a18-4d70-bca8-19b716d91945/ENCFF351JWU.fastq.gz to ./reads_7_2.fq.gz
+download: s3://encode-public/2017/11/12/e8ea6504-5e83-4f94-8a6d-54c146bb60f5/ENCFF478RBH.fastq.gz to ./reads_8_2.fq.gz
+download: s3://encode-public/2017/11/11/54aa7720-1f94-4e5a-a3bb-c3185da59fda/ENCFF250UAC.fastq.gz to ./reads_9_2.fq.gz
+download: s3://encode-public/2017/11/11/49073899-31dd-4879-816b-3ed8d94684bc/ENCFF768TUP.fastq.gz to ./reads_10_2.fq.gz
+download: s3://encode-public/2017/11/12/283d04b0-aa45-4d3b-bfec-c90f8be1576f/ENCFF762KJJ.fastq.gz to ./reads_11_2.fq.gz
+download: s3://encode-public/2017/11/12/ef28425d-5f1a-436d-9108-31c8f8f5308b/ENCFF914VLT.fastq.gz to ./reads_12_2.fq.gz
+523733272
+523733272
+	Command being timed: "bash -c cat $(for i in $(seq 1 12); do echo reads_${i}_1.fq.gz; done) > reads_1.fq.gz; zcat reads_1.fq.gz | wc -l; cat $(for i in $(seq 1 12); do echo reads_${i}_2.fq.gz; done) > reads_2.fq.gz; zcat reads_2.fq.gz | wc -l"
+	User time (seconds): 694.12
+	System time (seconds): 107.46
+	Percent of CPU this job got: 110%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 12:03.02
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3012
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1997
+	Voluntary context switches: 2734423
+	Involuntary context switches: 724
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 50088472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/1kg_all_af001_gencode100.xg to ./1kg_all_af001_gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_all_af001_gencode100/1kg_all_af001_gencode100_index.gcsa.lcp to ./1kg_all_af001_gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_all_af001_gencode100/1kg_all_af001_gencode100_index.dist to ./1kg_all_af001_gencode100_index.dist
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_all_af001_gencode100/1kg_all_af001_gencode100_index.gcsa to ./1kg_all_af001_gencode100_index.gcsa
+[vg mpmap] elapsed time 0 s: Executing command: vg mpmap -t 24 -n rna -x 1kg_all_af001_gencode100.xg -g 1kg_all_af001_gencode100_index.gcsa -d 1kg_all_af001_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz
+[vg mpmap] elapsed time 0 s: Loading graph from 1kg_all_af001_gencode100.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+[vg mpmap] elapsed time 19 s: Graph is in XG format. XG is a good graph format for most mapping use cases. PackedGraph may be selected if memory usage is too high. See `vg convert` if you want to change graph formats.
+[vg mpmap] elapsed time 19 s: Identifying reference paths.
+[vg mpmap] elapsed time 23 s: Loading GCSA2 from 1kg_all_af001_gencode100_index.gcsa
+[vg mpmap] elapsed time 46 s: Loading LCP from 1kg_all_af001_gencode100_index.gcsa.lcp
+[vg mpmap] elapsed time 1.0 m: Loading distance index from 1kg_all_af001_gencode100_index.dist
+[vg mpmap] elapsed time 2.5 m: Building null model to calibrate mismapping detection.
+[vg mpmap] elapsed time 2.5 m: Mapping reads from reads_1.fq.gz and reads_2.fq.gz using 24 threads
+[vg mpmap] elapsed time 13.4 m: Mapped 5000000 read pairs
+[vg mpmap] elapsed time 24.9 m: Mapped 10000000 read pairs
+[vg mpmap] elapsed time 36.2 m: Mapped 15000000 read pairs
+[vg mpmap] elapsed time 47.1 m: Mapped 20000000 read pairs
+[vg mpmap] elapsed time 58.6 m: Mapped 25000000 read pairs
+[vg mpmap] elapsed time 1.2 h: Mapped 30000000 read pairs
+[vg mpmap] elapsed time 1.3 h: Mapped 35000000 read pairs
+[vg mpmap] elapsed time 1.4 h: Mapped 40000000 read pairs
+[vg mpmap] elapsed time 1.6 h: Mapped 45000000 read pairs
+[vg mpmap] elapsed time 1.8 h: Mapped 50000000 read pairs
+[vg mpmap] elapsed time 1.9 h: Mapped 55000000 read pairs
+[vg mpmap] elapsed time 2.0 h: Mapped 60000000 read pairs
+[vg mpmap] elapsed time 2.2 h: Mapped 65000000 read pairs
+[vg mpmap] elapsed time 2.4 h: Mapped 70000000 read pairs
+[vg mpmap] elapsed time 2.5 h: Mapped 75000000 read pairs
+[vg mpmap] elapsed time 2.7 h: Mapped 80000000 read pairs
+[vg mpmap] elapsed time 2.9 h: Mapped 85000000 read pairs
+[vg mpmap] elapsed time 3.0 h: Mapped 90000000 read pairs
+[vg mpmap] elapsed time 3.1 h: Mapped 95000000 read pairs
+[vg mpmap] elapsed time 3.2 h: Mapped 100000000 read pairs
+[vg mpmap] elapsed time 3.3 h: Mapped 105000000 read pairs
+[vg mpmap] elapsed time 3.5 h: Mapped 110000000 read pairs
+[vg mpmap] elapsed time 3.7 h: Mapped 115000000 read pairs
+[vg mpmap] elapsed time 3.8 h: Mapped 120000000 read pairs
+[vg mpmap] elapsed time 4.0 h: Mapped 125000000 read pairs
+[vg mpmap] elapsed time 4.2 h: Mapped 130000000 read pairs
+[vg mpmap] elapsed time 4.3 h: Mapping finished. Mapped 130933318 read pairs.
+	Command being timed: "bash -c vg mpmap -t 24 -n rna -x 1kg_all_af001_gencode100.xg -g 1kg_all_af001_gencode100_index.gcsa -d 1kg_all_af001_gencode100_index.dist -f reads_1.fq.gz -f reads_2.fq.gz > alignments.gamp"
+	User time (seconds): 355298.20
+	System time (seconds): 8877.41
+	Percent of CPU this job got: 2376%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:15:21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 47918248
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1355
+	Minor (reclaiming a frame) page faults: 86860768
+	Voluntary context switches: 7106352
+	Involuntary context switches: 4423054
+	Swaps: 0
+	File system inputs: 6116792
+	File system outputs: 105293160
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/1kg_all_af001_gencode100_unidi.gbwt to ./1kg_all_af001_gencode100_unidi.gbwt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/1kg_all_af001_gencode100_unidi.gbwt.ri to ./1kg_all_af001_gencode100_unidi.gbwt.ri
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/13/1kg_all_af001_gencode100_unidi_13.txt.gz to 13/1kg_all_af001_gencode100_unidi_13.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/10/1kg_all_af001_gencode100_unidi_10.txt.gz to 10/1kg_all_af001_gencode100_unidi_10.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/12/1kg_all_af001_gencode100_unidi_12.txt.gz to 12/1kg_all_af001_gencode100_unidi_12.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/14/1kg_all_af001_gencode100_unidi_14.txt.gz to 14/1kg_all_af001_gencode100_unidi_14.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/11/1kg_all_af001_gencode100_unidi_11.txt.gz to 11/1kg_all_af001_gencode100_unidi_11.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/15/1kg_all_af001_gencode100_unidi_15.txt.gz to 15/1kg_all_af001_gencode100_unidi_15.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/18/1kg_all_af001_gencode100_unidi_18.txt.gz to 18/1kg_all_af001_gencode100_unidi_18.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/1/1kg_all_af001_gencode100_unidi_1.txt.gz to 1/1kg_all_af001_gencode100_unidi_1.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/16/1kg_all_af001_gencode100_unidi_16.txt.gz to 16/1kg_all_af001_gencode100_unidi_16.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/20/1kg_all_af001_gencode100_unidi_20.txt.gz to 20/1kg_all_af001_gencode100_unidi_20.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/21/1kg_all_af001_gencode100_unidi_21.txt.gz to 21/1kg_all_af001_gencode100_unidi_21.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/17/1kg_all_af001_gencode100_unidi_17.txt.gz to 17/1kg_all_af001_gencode100_unidi_17.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/22/1kg_all_af001_gencode100_unidi_22.txt.gz to 22/1kg_all_af001_gencode100_unidi_22.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/19/1kg_all_af001_gencode100_unidi_19.txt.gz to 19/1kg_all_af001_gencode100_unidi_19.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/2/1kg_all_af001_gencode100_unidi_2.txt.gz to 2/1kg_all_af001_gencode100_unidi_2.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/4/1kg_all_af001_gencode100_unidi_4.txt.gz to 4/1kg_all_af001_gencode100_unidi_4.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/6/1kg_all_af001_gencode100_unidi_6.txt.gz to 6/1kg_all_af001_gencode100_unidi_6.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/5/1kg_all_af001_gencode100_unidi_5.txt.gz to 5/1kg_all_af001_gencode100_unidi_5.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/3/1kg_all_af001_gencode100_unidi_3.txt.gz to 3/1kg_all_af001_gencode100_unidi_3.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/Y/1kg_all_af001_gencode100_unidi_Y.txt.gz to Y/1kg_all_af001_gencode100_unidi_Y.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/8/1kg_all_af001_gencode100_unidi_8.txt.gz to 8/1kg_all_af001_gencode100_unidi_8.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/7/1kg_all_af001_gencode100_unidi_7.txt.gz to 7/1kg_all_af001_gencode100_unidi_7.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/X/1kg_all_af001_gencode100_unidi_X.txt.gz to X/1kg_all_af001_gencode100_unidi_X.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100_unidi/9/1kg_all_af001_gencode100_unidi_9.txt.gz to 9/1kg_all_af001_gencode100_unidi_9.txt.gz
+11835581 transcript_info.txt
+	Command being timed: "bash -c zcat */*.txt.gz | head -n 1 > transcript_info.txt; zcat */*.txt.gz | grep -v ^Name >> transcript_info.txt; wc -l transcript_info.txt"
+	User time (seconds): 130.02
+	System time (seconds): 37.93
+	Percent of CPU this job got: 143%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:57.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3096
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1128
+	Voluntary context switches: 526550
+	Involuntary context switches: 1271
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 38419240
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Running rpvg (commit: ad52c1e22934c646c6614fc1fe2c4e239f28f3c8)
+Random number generator seed: 141760513
+Fragment length distribution parameters found in alignment (mean: 268.576, standard deviation: 40.1321)
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+Loaded graph, GBWT and r-index (42.5932 seconds, 13.5119 GB)
+Fragment length distribution parameters re-estimated from alignment paths (location: 261.465, scale: 36.2667, shape: 0.400393)
+Found alignment paths (6760.36 seconds, 63.3628 GB)
+Clustered alignment paths (1835.25 seconds, 65.7116 GB)
+Inferred path posterior probabilities and abundances (9589.62 seconds, 130.186 GB)
+	Command being timed: "bash -c rpvg -t 24 -r 141760513 -e rf -n 1000 -i haplotype-transcripts -g 1kg_all_af001_gencode100.xg -p 1kg_all_af001_gencode100_unidi.gbwt -a alignments.gamp -f transcript_info.txt -o rpvg_mpmap_r1_ENCSR686JJB_1kg_all_af001_gencode100_unidi"
+	User time (seconds): 303741.67
+	System time (seconds): 13298.04
+	Percent of CPU this job got: 1729%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:05:35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 136510160
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 192
+	Minor (reclaiming a frame) page faults: 313633431
+	Voluntary context switches: 307394721
+	Involuntary context switches: 975519
+	Swaps: 0
+	File system inputs: 26542848
+	File system outputs: 2952584
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip rpvg_mpmap_r1_ENCSR686JJB_1kg_all_af001_gencode100_unidi.txt; gzip rpvg_mpmap_r1_ENCSR686JJB_1kg_all_af001_gencode100_unidi_joint.txt"
+	User time (seconds): 16.81
+	System time (seconds): 0.26
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:17.08
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3056
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 626
+	Voluntary context switches: 10
+	Involuntary context switches: 29
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 138544
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./rpvg_mpmap_r1_ENCSR686JJB_1kg_all_af001_gencode100_unidi_joint.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/analyses/variant/ENCDO424HVB/inference_r1/ENCSR686JJB/1kg_all_af001_gencode100_unidi/rpvg_mpmap_r1_ENCSR686JJB_1kg_all_af001_gencode100_unidi_joint.txt.gz
+upload: ./rpvg_mpmap_r1_ENCSR686JJB_1kg_all_af001_gencode100_unidi.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/analyses/variant/ENCDO424HVB/inference_r1/ENCSR686JJB/1kg_all_af001_gencode100_unidi/rpvg_mpmap_r1_ENCSR686JJB_1kg_all_af001_gencode100_unidi.txt.gz
+upload: ./rpvg_mpmap_r1_ENCSR686JJB_1kg_all_af001_gencode100_unidi_gibbs.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/analyses/variant/ENCDO424HVB/inference_r1/ENCSR686JJB/1kg_all_af001_gencode100_unidi/rpvg_mpmap_r1_ENCSR686JJB_1kg_all_af001_gencode100_unidi_gibbs.txt.gz
+---

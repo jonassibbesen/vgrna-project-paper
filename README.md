@@ -66,6 +66,8 @@ The real RNA-seq reads:
 * https://www.encodeproject.org/experiments/ENCSR995BHD/ (Aorta)
 * https://www.internationalgenome.org/data-portal/data-collection/geuvadis (NA07051, NA11832, NA11840, NA11930, NA12287, NA12775, NA06994, NA07037, NA07357, NA11829, NA11893, NA12006, NA12043, NA12234, NA12272 & NA12275)
 * https://www.internationalgenome.org/data-portal/data-collection/structural-variation (NA19238, NA19239, NA19240, HG00512, HG00513, HG00514, HG00731, HG00732 & HG00733)
+* https://www.ncbi.nlm.nih.gov/sra/?term=SRR12765650 (intestine, African American individual)
+* https://www.ncbi.nlm.nih.gov/sra/?term=SRR12765534 (intestine, European American individual)
 
 The Iso-Seq alignments:
 

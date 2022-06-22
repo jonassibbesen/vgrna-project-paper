@@ -1,0 +1,107 @@
+Setting up
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1324 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1973 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [27.5 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [880 kB]
+Err:6 http://archive.ubuntu.com/ubuntu focal InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [54.2 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [27.1 kB]
+Fetched 4509 kB in 1min 1s (74.2 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+70 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+python3 is already the newest version (3.8.2-0ubuntu2).
+python3 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 70 not upgraded.
+successfully installed python
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+The following additional packages will be installed:
+  bzip2-doc liblzma5
+Suggested packages:
+  liblzma-doc
+The following NEW packages will be installed:
+  bzip2-doc libbz2-dev liblzma-dev
+The following packages will be upgraded:
+  liblzma5
+debconf: delaying package configuration, since apt-utils is not installed
+1 upgraded, 3 newly installed, 0 to remove and 69 not upgraded.
+Need to get 769 kB of archives.
+After this operation, 1322 kB of additional disk space will be used.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 29815 files and directories currently installed.)
+Preparing to unpack .../liblzma5_5.2.4-1ubuntu1.1_amd64.deb ...
+Unpacking liblzma5:amd64 (5.2.4-1ubuntu1.1) over (5.2.4-1ubuntu1) ...
+Setting up liblzma5:amd64 (5.2.4-1ubuntu1.1) ...
+Selecting previously unselected package bzip2-doc.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 29815 files and directories currently installed.)
+Preparing to unpack .../bzip2-doc_1.0.8-2_all.deb ...
+Unpacking bzip2-doc (1.0.8-2) ...
+Selecting previously unselected package libbz2-dev:amd64.
+Preparing to unpack .../libbz2-dev_1.0.8-2_amd64.deb ...
+Unpacking libbz2-dev:amd64 (1.0.8-2) ...
+Selecting previously unselected package liblzma-dev:amd64.
+Preparing to unpack .../liblzma-dev_5.2.4-1ubuntu1.1_amd64.deb ...
+Unpacking liblzma-dev:amd64 (5.2.4-1ubuntu1.1) ...
+Setting up bzip2-doc (1.0.8-2) ...
+Setting up liblzma-dev:amd64 (5.2.4-1ubuntu1.1) ...
+Setting up libbz2-dev:amd64 (1.0.8-2) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+wget is already the newest version (1.20.3-1ubuntu1).
+samtools is already the newest version (1.10-3).
+awscli is already the newest version (1.18.69-1ubuntu0.20.04.1).
+The following additional packages will be installed:
+  build-essential cpp cpp-9 dirmngr dpkg-dev fakeroot g++ g++-9 gcc gcc-9
+  gcc-9-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client
+  gpg-wks-server gpgconf gpgsm libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libassuan0
+  libatomic1 libcc1-0 libdpkg-perl libexpat1 libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-9-dev libisl22 libitm1 libksba8
+  liblocale-gettext-perl liblsan0 libmpc3 libmpfr6 libnpth0 libpython3-dev
+  libpython3.8 libpython3.8-dev libpython3.8-minimal libpython3.8-stdlib
+  libstdc++-9-dev libtsan0 libubsan1 make patch pinentry-curses python-pip-whl
+  python3-dev python3-distutils python3-lib2to3 python3-setuptools
+  python3-wheel python3.8 python3.8-dev python3.8-minimal zlib1g zlib1g-dev
+Suggested packages:
+  cpp-doc gcc-9-locales dbus-user-session libpam-systemd pinentry-gnome3 tor
+  debian-keyring g++-multilib g++-9-multilib gcc-9-doc gcc-multilib autoconf
+  automake libtool flex bison gdb gcc-doc gcc-9-multilib parcimonie xloadimage
+  scdaemon less git bzr libstdc++-9-doc make-doc ed diffutils-doc pinentry-doc
+  python-setuptools-doc python3.8-venv python3.8-doc binfmt-support
+The following NEW packages will be installed:
+  build-essential cpp cpp-9 dirmngr dpkg-dev fakeroot g++ g++-9 gcc gcc-9
+  gcc-9-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client
+  gpg-wks-server gpgconf gpgsm libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libassuan0
+  libatomic1 libcc1-0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-9-dev libisl22 libitm1 libksba8
+  liblocale-gettext-perl liblsan0 libmpc3 libmpfr6 libnpth0 libpython3-dev
+  libpython3.8 libpython3.8-dev libstdc++-9-dev libtsan0 libubsan1 make patch
+  pinentry-curses python-pip-whl python3-dev python3-distutils python3-lib2to3
+  python3-pip python3-setuptools python3-wheel python3.8-dev time zlib1g-dev
+The following packages will be upgraded:
+  gzip libexpat1 libpython3.8-minimal libpython3.8-stdlib python3.8
+  python3.8-minimal zlib1g
+7 upgraded, 59 newly installed, 0 to remove and 62 not upgraded.
+Need to get 53.5 MB of archives.
+After this operation, 201 MB of additional disk space will be used.
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libl/liblocale-gettext-perl/liblocale-gettext-perl_1.07-4_amd64.deb  Temporary failure resolving 'archive.ubuntu.com'
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?

@@ -1,0 +1,49 @@
+Setting up
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Err:1 http://archive.ubuntu.com/ubuntu focal InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1973 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [27.5 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [880 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1324 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1404 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2407 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [30.3 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1169 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [54.2 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [27.1 kB]
+Fetched 9633 kB in 31s (307 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+80 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+python3 is already the newest version (3.8.2-0ubuntu2).
+python3 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 80 not upgraded.
+successfully installed python
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+The following additional packages will be installed:
+  bzip2-doc liblzma5
+Suggested packages:
+  liblzma-doc
+The following NEW packages will be installed:
+  bzip2-doc libbz2-dev liblzma-dev
+The following packages will be upgraded:
+  liblzma5
+1 upgraded, 3 newly installed, 0 to remove and 79 not upgraded.
+Need to get 769 kB of archives.
+After this operation, 1322 kB of additional disk space will be used.
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2-doc_1.0.8-2_all.deb  Temporary failure resolving 'archive.ubuntu.com'
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?

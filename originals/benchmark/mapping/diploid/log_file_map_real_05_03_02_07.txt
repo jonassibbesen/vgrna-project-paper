@@ -1,0 +1,953 @@
+Setting up
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2191 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1777 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [25.8 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1139 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [870 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1216 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [30.3 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1155 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [26.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [51.2 kB]
+Fetched 8817 kB in 7s (1274 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+58 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+python3 is already the newest version (3.8.2-0ubuntu2).
+python3 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 58 not upgraded.
+successfully installed python
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+samtools is already the newest version (1.10-3).
+awscli is already the newest version (1.18.69-1ubuntu0.20.04.1).
+The following additional packages will be installed:
+  build-essential cpp cpp-9 dirmngr dpkg-dev fakeroot g++ g++-9 gcc gcc-9
+  gcc-9-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client
+  gpg-wks-server gpgconf gpgsm libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libassuan0
+  libatomic1 libcc1-0 libdpkg-perl libexpat1 libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-9-dev libisl22 libitm1 libksba8
+  liblocale-gettext-perl liblsan0 libmpc3 libmpfr6 libnpth0 libpython3-dev
+  libpython3.8 libpython3.8-dev libpython3.8-minimal libpython3.8-stdlib
+  libstdc++-9-dev libtsan0 libubsan1 make patch pinentry-curses python-pip-whl
+  python3-dev python3-distutils python3-lib2to3 python3-setuptools
+  python3-wheel python3.8 python3.8-dev python3.8-minimal zlib1g zlib1g-dev
+Suggested packages:
+  cpp-doc gcc-9-locales dbus-user-session libpam-systemd pinentry-gnome3 tor
+  debian-keyring g++-multilib g++-9-multilib gcc-9-doc gcc-multilib autoconf
+  automake libtool flex bison gdb gcc-doc gcc-9-multilib parcimonie xloadimage
+  scdaemon less git bzr libstdc++-9-doc make-doc ed diffutils-doc pinentry-doc
+  python-setuptools-doc python3.8-venv python3.8-doc binfmt-support
+The following NEW packages will be installed:
+  build-essential cpp cpp-9 dirmngr dpkg-dev fakeroot g++ g++-9 gcc gcc-9
+  gcc-9-base gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client
+  gpg-wks-server gpgconf gpgsm libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libassuan0
+  libatomic1 libcc1-0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-9-dev libisl22 libitm1 libksba8
+  liblocale-gettext-perl liblsan0 libmpc3 libmpfr6 libnpth0 libpython3-dev
+  libpython3.8 libpython3.8-dev libstdc++-9-dev libtsan0 libubsan1 make patch
+  pinentry-curses python-pip-whl python3-dev python3-distutils python3-lib2to3
+  python3-pip python3-setuptools python3-wheel python3.8-dev time zlib1g-dev
+The following packages will be upgraded:
+  gzip libexpat1 libpython3.8-minimal libpython3.8-stdlib python3.8
+  python3.8-minimal wget zlib1g
+debconf: delaying package configuration, since apt-utils is not installed
+8 upgraded, 59 newly installed, 0 to remove and 50 not upgraded.
+Need to get 53.8 MB of archives.
+After this operation, 201 MB of additional disk space will be used.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 29815 files and directories currently installed.)
+Preparing to unpack .../gzip_1.10-0ubuntu4.1_amd64.deb ...
+Unpacking gzip (1.10-0ubuntu4.1) over (1.10-0ubuntu4) ...
+Setting up gzip (1.10-0ubuntu4.1) ...
+Selecting previously unselected package liblocale-gettext-perl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 29815 files and directories currently installed.)
+Preparing to unpack .../0-liblocale-gettext-perl_1.07-4_amd64.deb ...
+Unpacking liblocale-gettext-perl (1.07-4) ...
+Preparing to unpack .../1-python3.8_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking python3.8 (3.8.10-0ubuntu1~20.04.4) over (3.8.10-0ubuntu1~20.04.1) ...
+Preparing to unpack .../2-libpython3.8-stdlib_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.4) over (3.8.10-0ubuntu1~20.04.1) ...
+Preparing to unpack .../3-python3.8-minimal_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking python3.8-minimal (3.8.10-0ubuntu1~20.04.4) over (3.8.10-0ubuntu1~20.04.1) ...
+Preparing to unpack .../4-libpython3.8-minimal_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.4) over (3.8.10-0ubuntu1~20.04.1) ...
+Preparing to unpack .../5-libexpat1_2.2.9-1ubuntu0.4_amd64.deb ...
+Unpacking libexpat1:amd64 (2.2.9-1ubuntu0.4) over (2.2.9-1build1) ...
+Preparing to unpack .../6-zlib1g_1%3a1.2.11.dfsg-2ubuntu1.3_amd64.deb ...
+Unpacking zlib1g:amd64 (1:1.2.11.dfsg-2ubuntu1.3) over (1:1.2.11.dfsg-2ubuntu1.2) ...
+Setting up zlib1g:amd64 (1:1.2.11.dfsg-2ubuntu1.3) ...
+Selecting previously unselected package time.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 29829 files and directories currently installed.)
+Preparing to unpack .../00-time_1.7-25.1build1_amd64.deb ...
+Unpacking time (1.7-25.1build1) ...
+Preparing to unpack .../01-wget_1.20.3-1ubuntu2_amd64.deb ...
+Unpacking wget (1.20.3-1ubuntu2) over (1.20.3-1ubuntu1) ...
+Selecting previously unselected package gcc-9-base:amd64.
+Preparing to unpack .../02-gcc-9-base_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking gcc-9-base:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package libisl22:amd64.
+Preparing to unpack .../03-libisl22_0.22.1-1_amd64.deb ...
+Unpacking libisl22:amd64 (0.22.1-1) ...
+Selecting previously unselected package libmpfr6:amd64.
+Preparing to unpack .../04-libmpfr6_4.0.2-1_amd64.deb ...
+Unpacking libmpfr6:amd64 (4.0.2-1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../05-libmpc3_1.1.0-1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.1.0-1) ...
+Selecting previously unselected package cpp-9.
+Preparing to unpack .../06-cpp-9_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking cpp-9 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../07-cpp_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking cpp (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../08-libcc1-0_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libcc1-0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../09-libitm1_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libitm1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../10-libatomic1_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libatomic1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libasan5:amd64.
+Preparing to unpack .../11-libasan5_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking libasan5:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../12-liblsan0_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking liblsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../13-libtsan0_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libtsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../14-libubsan1_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libubsan1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libgcc-9-dev:amd64.
+Preparing to unpack .../15-libgcc-9-dev_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking libgcc-9-dev:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package gcc-9.
+Preparing to unpack .../16-gcc-9_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking gcc-9 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../17-gcc_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking gcc (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package libstdc++-9-dev:amd64.
+Preparing to unpack .../18-libstdc++-9-dev_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking libstdc++-9-dev:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package g++-9.
+Preparing to unpack .../19-g++-9_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking g++-9 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../20-g++_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking g++ (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package make.
+Preparing to unpack .../21-make_4.2.1-1.2_amd64.deb ...
+Unpacking make (4.2.1-1.2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../22-libdpkg-perl_1.19.7ubuntu3_all.deb ...
+Unpacking libdpkg-perl (1.19.7ubuntu3) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../23-patch_2.7.6-6_amd64.deb ...
+Unpacking patch (2.7.6-6) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../24-dpkg-dev_1.19.7ubuntu3_all.deb ...
+Unpacking dpkg-dev (1.19.7ubuntu3) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../25-build-essential_12.8ubuntu1.1_amd64.deb ...
+Unpacking build-essential (12.8ubuntu1.1) ...
+Selecting previously unselected package libassuan0:amd64.
+Preparing to unpack .../26-libassuan0_2.5.3-7ubuntu2_amd64.deb ...
+Unpacking libassuan0:amd64 (2.5.3-7ubuntu2) ...
+Selecting previously unselected package gpgconf.
+Preparing to unpack .../27-gpgconf_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpgconf (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package libksba8:amd64.
+Preparing to unpack .../28-libksba8_1.3.5-2_amd64.deb ...
+Unpacking libksba8:amd64 (1.3.5-2) ...
+Selecting previously unselected package libnpth0:amd64.
+Preparing to unpack .../29-libnpth0_1.6-1_amd64.deb ...
+Unpacking libnpth0:amd64 (1.6-1) ...
+Selecting previously unselected package dirmngr.
+Preparing to unpack .../30-dirmngr_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking dirmngr (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../31-libfakeroot_1.24-1_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.24-1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../32-fakeroot_1.24-1_amd64.deb ...
+Unpacking fakeroot (1.24-1) ...
+Selecting previously unselected package gnupg-l10n.
+Preparing to unpack .../33-gnupg-l10n_2.2.19-3ubuntu2.1_all.deb ...
+Unpacking gnupg-l10n (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package gnupg-utils.
+Preparing to unpack .../34-gnupg-utils_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gnupg-utils (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package gpg.
+Preparing to unpack .../35-gpg_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpg (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package pinentry-curses.
+Preparing to unpack .../36-pinentry-curses_1.1.0-3build1_amd64.deb ...
+Unpacking pinentry-curses (1.1.0-3build1) ...
+Selecting previously unselected package gpg-agent.
+Preparing to unpack .../37-gpg-agent_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpg-agent (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package gpg-wks-client.
+Preparing to unpack .../38-gpg-wks-client_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpg-wks-client (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package gpg-wks-server.
+Preparing to unpack .../39-gpg-wks-server_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpg-wks-server (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package gpgsm.
+Preparing to unpack .../40-gpgsm_2.2.19-3ubuntu2.1_amd64.deb ...
+Unpacking gpgsm (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package gnupg.
+Preparing to unpack .../41-gnupg_2.2.19-3ubuntu2.1_all.deb ...
+Unpacking gnupg (2.2.19-3ubuntu2.1) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../42-libalgorithm-diff-perl_1.19.03-2_all.deb ...
+Unpacking libalgorithm-diff-perl (1.19.03-2) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../43-libalgorithm-diff-xs-perl_0.04-6_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-6) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../44-libalgorithm-merge-perl_0.08-3_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-3) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../45-libexpat1-dev_2.2.9-1ubuntu0.4_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.2.9-1ubuntu0.4) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../46-libfile-fcntllock-perl_0.22-3build4_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3build4) ...
+Selecting previously unselected package libpython3.8:amd64.
+Preparing to unpack .../47-libpython3.8_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Selecting previously unselected package libpython3.8-dev:amd64.
+Preparing to unpack .../48-libpython3.8-dev_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking libpython3.8-dev:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Selecting previously unselected package libpython3-dev:amd64.
+Preparing to unpack .../49-libpython3-dev_3.8.2-0ubuntu2_amd64.deb ...
+Unpacking libpython3-dev:amd64 (3.8.2-0ubuntu2) ...
+Selecting previously unselected package python-pip-whl.
+Preparing to unpack .../50-python-pip-whl_20.0.2-5ubuntu1.6_all.deb ...
+Unpacking python-pip-whl (20.0.2-5ubuntu1.6) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../51-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu1.3_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.3) ...
+Selecting previously unselected package python3.8-dev.
+Preparing to unpack .../52-python3.8-dev_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking python3.8-dev (3.8.10-0ubuntu1~20.04.4) ...
+Selecting previously unselected package python3-lib2to3.
+Preparing to unpack .../53-python3-lib2to3_3.8.10-0ubuntu1~20.04_all.deb ...
+Unpacking python3-lib2to3 (3.8.10-0ubuntu1~20.04) ...
+Selecting previously unselected package python3-distutils.
+Preparing to unpack .../54-python3-distutils_3.8.10-0ubuntu1~20.04_all.deb ...
+Unpacking python3-distutils (3.8.10-0ubuntu1~20.04) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../55-python3-dev_3.8.2-0ubuntu2_amd64.deb ...
+Unpacking python3-dev (3.8.2-0ubuntu2) ...
+Selecting previously unselected package python3-setuptools.
+Preparing to unpack .../56-python3-setuptools_45.2.0-1_all.deb ...
+Unpacking python3-setuptools (45.2.0-1) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../57-python3-wheel_0.34.2-1_all.deb ...
+Unpacking python3-wheel (0.34.2-1) ...
+Selecting previously unselected package python3-pip.
+Preparing to unpack .../58-python3-pip_20.0.2-5ubuntu1.6_all.deb ...
+Unpacking python3-pip (20.0.2-5ubuntu1.6) ...
+Setting up libksba8:amd64 (1.3.5-2) ...
+Setting up libexpat1:amd64 (2.2.9-1ubuntu0.4) ...
+Setting up time (1.7-25.1build1) ...
+Setting up libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up wget (1.20.3-1ubuntu2) ...
+Setting up libfile-fcntllock-perl (0.22-3build4) ...
+Setting up libalgorithm-diff-perl (1.19.03-2) ...
+Setting up libnpth0:amd64 (1.6-1) ...
+Setting up libassuan0:amd64 (2.5.3-7ubuntu2) ...
+Setting up python3-wheel (0.34.2-1) ...
+Setting up libfakeroot:amd64 (1.24-1) ...
+Setting up fakeroot (1.24-1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/fakeroot.1.gz because associated file /usr/share/man/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/faked.1.gz because associated file /usr/share/man/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/es/man1/fakeroot.1.gz because associated file /usr/share/man/es/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/es/man1/faked.1.gz because associated file /usr/share/man/es/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/fakeroot.1.gz because associated file /usr/share/man/fr/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/faked.1.gz because associated file /usr/share/man/fr/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/sv/man1/fakeroot.1.gz because associated file /usr/share/man/sv/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/sv/man1/faked.1.gz because associated file /usr/share/man/sv/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist
+Setting up libexpat1-dev:amd64 (2.2.9-1ubuntu0.4) ...
+Setting up make (4.2.1-1.2) ...
+Setting up libmpfr6:amd64 (4.0.2-1) ...
+Setting up gnupg-l10n (2.2.19-3ubuntu2.1) ...
+Setting up libmpc3:amd64 (1.1.0-1) ...
+Setting up libatomic1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up patch (2.7.6-6) ...
+Setting up libdpkg-perl (1.19.7ubuntu3) ...
+Setting up libubsan1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.3) ...
+Setting up python3.8-minimal (3.8.10-0ubuntu1~20.04.4) ...
+Setting up gpgconf (2.2.19-3ubuntu2.1) ...
+Setting up libisl22:amd64 (0.22.1-1) ...
+Setting up python-pip-whl (20.0.2-5ubuntu1.6) ...
+Setting up libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up python3.8 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up python3-lib2to3 (3.8.10-0ubuntu1~20.04) ...
+Setting up libalgorithm-diff-xs-perl (0.04-6) ...
+Setting up libcc1-0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up liblocale-gettext-perl (1.07-4) ...
+Setting up gpg (2.2.19-3ubuntu2.1) ...
+Setting up liblsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up libitm1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up gcc-9-base:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libalgorithm-merge-perl (0.08-3) ...
+Setting up gnupg-utils (2.2.19-3ubuntu2.1) ...
+Setting up libtsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up python3-distutils (3.8.10-0ubuntu1~20.04) ...
+Setting up pinentry-curses (1.1.0-3build1) ...
+Setting up gpg-agent (2.2.19-3ubuntu2.1) ...
+Setting up python3-setuptools (45.2.0-1) ...
+Setting up gpgsm (2.2.19-3ubuntu2.1) ...
+Setting up dpkg-dev (1.19.7ubuntu3) ...
+Setting up dirmngr (2.2.19-3ubuntu2.1) ...
+Setting up libasan5:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up python3-pip (20.0.2-5ubuntu1.6) ...
+Setting up gpg-wks-server (2.2.19-3ubuntu2.1) ...
+Setting up cpp-9 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up gpg-wks-client (2.2.19-3ubuntu2.1) ...
+Setting up libgcc-9-dev:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libpython3.8-dev:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up python3.8-dev (3.8.10-0ubuntu1~20.04.4) ...
+Setting up cpp (4:9.3.0-1ubuntu2) ...
+Setting up gnupg (2.2.19-3ubuntu2.1) ...
+Setting up gcc-9 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libpython3-dev:amd64 (3.8.2-0ubuntu2) ...
+Setting up libstdc++-9-dev:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up gcc (4:9.3.0-1ubuntu2) ...
+Setting up python3-dev (3.8.2-0ubuntu2) ...
+Setting up g++-9 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up g++ (4:9.3.0-1ubuntu2) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/c++.1.gz because associated file /usr/share/man/man1/g++.1.gz (of link group c++) doesn't exist
+Setting up build-essential (12.8ubuntu1.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Downloading CrossMap
+Collecting CrossMap
+  Downloading CrossMap-0.6.3-py3-none-any.whl (80 kB)
+Collecting pyBigWig
+  Downloading pyBigWig-0.3.18.tar.gz (64 kB)
+Collecting cython>=0.17
+  Downloading Cython-0.29.28-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.9 MB)
+Collecting pysam
+  Downloading pysam-0.19.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (16.3 MB)
+Collecting bx-python
+  Downloading bx_python-0.8.13-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.7 MB)
+Requirement already satisfied: numpy in /usr/lib/python3/dist-packages (from bx-python->CrossMap) (1.17.4)
+Building wheels for collected packages: pyBigWig
+  Building wheel for pyBigWig (setup.py): started
+  Building wheel for pyBigWig (setup.py): finished with status 'done'
+  Created wheel for pyBigWig: filename=pyBigWig-0.3.18-cp38-cp38-linux_x86_64.whl size=170447 sha256=1ac8d752cbc11f398c7e0c6fa1e99e4c67ef2eee4d035987d724a90bbe555517
+  Stored in directory: /root/.cache/pip/wheels/1f/d0/64/fa4977556a0cfae19b8b1cf546f1928e81c45a8f19f73aba9b
+Successfully built pyBigWig
+Installing collected packages: pyBigWig, cython, pysam, bx-python, CrossMap
+Successfully installed CrossMap-0.6.3 bx-python-0.8.13 cython-0.29.28 pyBigWig-0.3.18 pysam-0.19.0
+CrossMap 0.6.3
+Downloading STAR
+--2022-05-03 02:08:52--  https://github.com/alexdobin/STAR/archive/refs/tags/2.7.9a.tar.gz
+Resolving github.com (github.com)... 192.30.255.113
+Connecting to github.com (github.com)|192.30.255.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/alexdobin/STAR/tar.gz/refs/tags/2.7.9a [following]
+--2022-05-03 02:08:52--  https://codeload.github.com/alexdobin/STAR/tar.gz/refs/tags/2.7.9a
+Resolving codeload.github.com (codeload.github.com)... 192.30.255.120
+Connecting to codeload.github.com (codeload.github.com)|192.30.255.120|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: '2.7.9a.tar.gz'
+
+     0K .......... .......... .......... .......... .......... 2.65M
+    50K .......... .......... .......... .......... .......... 5.03M
+   100K .......... .......... .......... .......... .......... 5.18M
+   150K .......... .......... .......... .......... .......... 5.16M
+   200K .......... .......... .......... .......... .......... 2.71M
+   250K .......... .......... .......... .......... .......... 5.01M
+   300K .......... .......... .......... .......... .......... 5.13M
+   350K .......... .......... .......... .......... .......... 5.25M
+   400K .......... .......... .......... .......... .......... 2.61M
+   450K .......... .......... .......... .......... .......... 2.62M
+   500K .......... .......... .......... .......... .......... 5.07M
+   550K .......... .......... .......... .......... .......... 5.23M
+   600K .......... .......... .......... .......... .......... 5.11M
+   650K .......... .......... .......... .......... .......... 5.14M
+   700K .......... .......... .......... .......... .......... 2.68M
+   750K .......... .......... .......... .......... .......... 5.17M
+   800K .......... .......... .......... .......... .......... 5.03M
+   850K .......... .......... .......... .......... .......... 2.68M
+   900K .......... .......... .......... .......... .......... 89.8M
+   950K .......... .......... .......... .......... .......... 5.12M
+  1000K .......... .......... .......... .......... .......... 5.12M
+  1050K .......... .......... .......... .......... .......... 2.74M
+  1100K .......... .......... .......... .......... .......... 4.97M
+  1150K .......... .......... .......... .......... .......... 5.14M
+  1200K .......... .......... .......... .......... .......... 2.68M
+  1250K .......... .......... .......... .......... .......... 5.15M
+  1300K .......... .......... .......... .......... .......... 5.15M
+  1350K .......... .......... .......... .......... .......... 2.66M
+  1400K .......... .......... .......... .......... .......... 5.15M
+  1450K .......... .......... .......... .......... .......... 5.06M
+  1500K .......... .......... .......... .......... .......... 5.64M
+  1550K .......... .......... .......... .......... .......... 31.2M
+  1600K .......... .......... .......... .......... .......... 2.67M
+  1650K .......... .......... .......... .......... .......... 5.13M
+  1700K .......... .......... .......... .......... .......... 2.75M
+  1750K .......... .......... .......... .......... .......... 4.88M
+  1800K .......... .......... .......... .......... .......... 5.13M
+  1850K .......... .......... .......... .......... .......... 5.19M
+  1900K .......... .......... .......... .......... .......... 5.11M
+  1950K .......... .......... .......... .......... .......... 2.67M
+  2000K .......... .......... .......... .......... .......... 5.11M
+  2050K .......... .......... .......... .......... .......... 5.12M
+  2100K .......... .......... .......... .......... .......... 5.14M
+  2150K .......... .......... .......... .......... .......... 5.08M
+  2200K .......... .......... .......... .......... .......... 2.65M
+  2250K .......... .......... .......... .......... .......... 5.27M
+  2300K .......... .......... .......... .......... .......... 5.18M
+  2350K .......... .......... .......... .......... .......... 2.67M
+  2400K .......... .......... .......... .......... .......... 5.11M
+  2450K .......... .......... .......... .......... .......... 5.12M
+  2500K .......... .......... .......... .......... .......... 2.65M
+  2550K .......... .......... .......... .......... .......... 2.61M
+  2600K .......... .......... .......... .......... .......... 2.62M
+  2650K .......... .......... .......... .......... .......... 5.11M
+  2700K .......... .......... .......... .......... .......... 2.61M
+  2750K .......... .......... .......... .......... .......... 2.62M
+  2800K .......... .......... .......... .......... .......... 2.63M
+  2850K .......... .......... .......... .......... .......... 5.09M
+  2900K .......... .......... .......... .......... .......... 2.54M
+  2950K .......... .......... .......... .......... .......... 2.62M
+  3000K .......... .......... .......... .......... .......... 5.09M
+  3050K .......... .......... .......... .......... .......... 2.59M
+  3100K .......... .......... .......... .......... .......... 2.65M
+  3150K .......... .......... .......... .......... .......... 2.58M
+  3200K .......... .......... .......... .......... .......... 2.62M
+  3250K .......... .......... .......... .......... .......... 5.10M
+  3300K .......... .......... .......... .......... .......... 2.61M
+  3350K .......... .......... .......... .......... .......... 2.62M
+  3400K .......... .......... .......... .......... .......... 5.10M
+  3450K .......... .......... .......... .......... .......... 2.62M
+  3500K .......... .......... .......... .......... .......... 2.60M
+  3550K .......... .......... .......... .......... .......... 2.61M
+  3600K .......... .......... .......... .......... .......... 2.62M
+  3650K .......... .......... .......... .......... .......... 5.24M
+  3700K .......... .......... .......... .......... .......... 2.61M
+  3750K .......... .......... .......... .......... .......... 5.17M
+  3800K .......... .......... .......... .......... .......... 2.62M
+  3850K .......... .......... .......... .......... .......... 5.11M
+  3900K .......... .......... .......... .......... .......... 5.19M
+  3950K .......... .......... .......... .......... .......... 2.67M
+  4000K .......... .......... .......... .......... .......... 5.07M
+  4050K .......... .......... .......... .......... .......... 5.06M
+  4100K .......... .......... .......... .......... .......... 5.17M
+  4150K .......... .......... .......... .......... ..........  329M
+  4200K .......... .......... .......... .......... .......... 5.26M
+  4250K .......... .......... .......... .......... ..........  269M
+  4300K .......... .......... .......... .......... ..........  267M
+  4350K .......... .......... .......... .......... .......... 5.43M
+  4400K .......... .......... .......... .......... ..........  320M
+  4450K .......... .......... .......... .......... ..........  340M
+  4500K .......... .......... .......... .......... .......... 5.42M
+  4550K .......... .......... .......... .......... ..........  201M
+  4600K .......... .......... .......... .......... ..........  322M
+  4650K .......... .......... .......... .......... ..........  299M
+  4700K .......... .......... .......... .......... ..........  261M
+  4750K .......... .......... .......... .......... ..........  320M
+  4800K .......... .......... .......... .......... .......... 13.1M
+  4850K .......... .......... .......... .......... ..........  265M
+  4900K .......... .......... .......... .......... ..........  295M
+  4950K .......... .......... .......... .......... .......... 10.8M
+  5000K .......... .......... .......... .......... ..........  259M
+  5050K .......... .......... .......... .......... ..........  298M
+  5100K .......... .......... .......... .......... ..........  254M
+  5150K .......... .......... .......... .......... ..........  303M
+  5200K .......... .......... .......... .......... ..........  314M
+  5250K .......... .......... .......... .......... ..........  290M
+  5300K .......... .......... .......... .......... ..........  342M
+  5350K .......... .......... .......... .......... ..........  304M
+  5400K .......... .......... .......... .......... ..........  330M
+  5450K .......... .......... .......... .......... ..........  254M
+  5500K .......... .......... .......... .......... ..........  356M
+  5550K .......... .......... .......... .......... ..........  312M
+  5600K .......... .......... .......... .......... .......... 19.8M
+  5650K .......... .......... .......... .......... ..........  214M
+  5700K .......... .......... .......... .......... ..........  296M
+  5750K .......... .......... .......... .......... ..........  321M
+  5800K .......... .......... .......... .......... ..........  333M
+  5850K .......... .......... .......... .......... .......... 11.7M
+  5900K .......... .......... .......... .......... ..........  256M
+  5950K .......... .......... .......... .......... ..........  286M
+  6000K .......... .......... .......... .......... ..........  256M
+  6050K .......... .......... .......... .......... ..........  300M
+  6100K .......... .......... .......... .......... ..........  311M
+  6150K .......... .......... .......... .......... ..........  351M
+  6200K .......... .......... .......... .......... ..........  334M
+  6250K .......... .......... .......... .......... ..........  255M
+  6300K .......... .......... .......... .......... ..........  340M
+  6350K .......... .......... .......... .......... ..........  329M
+  6400K .......... .......... .......... .......... ..........  292M
+  6450K .......... .......... .......... .......... ..........  124M
+  6500K .......... .......... .......... .......... .......... 14.3M
+  6550K .......... .......... .......... .......... .......... 29.3M
+  6600K .......... .......... .......... .......... .......... 4.40M
+  6650K .......... .......... .......... .......... .......... 6.47M
+  6700K .......... .......... .......... .......... .......... 6.41M
+  6750K .......... .......... .......... .......... .......... 5.88M
+  6800K .......... .......... .......... .......... .......... 4.63M
+  6850K .......... .......... .......... .......... .......... 5.18M
+  6900K .......... .......... .......... .......... .......... 6.34M
+  6950K .......... .......... .......... .......... .......... 8.98M
+  7000K .......... .......... .......... .......... .......... 5.41M
+  7050K .......... .......... .......... .......... .......... 7.39M
+  7100K .......... .......... .......... .......... .......... 8.33M
+  7150K .......... .......... .......... .......... .......... 5.76M
+  7200K .......... .......... .......... .......... .......... 4.93M
+  7250K .......... .......... .......... .......... .......... 6.14M
+  7300K .......... .......... .......... .......... .......... 5.38M
+  7350K .......... .......... .......... .......... .......... 6.32M
+  7400K .......... .......... .......... .......... .......... 5.69M
+  7450K .......... .......... .......... .......... .......... 4.30M
+  7500K .......... .......... .......... .......... .......... 3.52M
+  7550K .......... .......... .......... .......... .......... 3.95M
+  7600K .......... .......... .......... .......... .......... 4.40M
+  7650K .......... .......... .......... .......... .......... 9.28M
+  7700K .......... .......... .......... .......... .......... 3.99M
+  7750K .......... .......... .......... .......... .......... 6.31M
+  7800K .......... .......... .......... .......... .......... 2.96M
+  7850K .......... .......... .......... .......... .......... 10.4M
+  7900K .......... .......... .......... .......... .......... 5.95M
+  7950K .......... .......... .......... .......... .......... 6.56M
+  8000K .......... .......... .......... .......... .......... 3.61M
+  8050K .......... .......... .......... .......... .......... 18.5M
+  8100K .......... .......... .......... .......... .......... 3.73M
+  8150K .......... .......... .......... .......... .......... 13.3M
+  8200K .......... .......... .......... .......... .......... 6.11M
+  8250K .......... .......... .......... .......... .......... 5.86M
+  8300K .......... .......... .......... .......... .......... 6.68M
+  8350K .......... .......... .......... .......... .......... 3.95M
+  8400K .......... .......... .......... .......... .......... 6.55M
+  8450K .......... .......... .......... .......... .......... 9.11M
+  8500K .......... .......... .......... .......... .......... 5.34M
+  8550K .......... .......... .......... .......... .......... 7.44M
+  8600K .......... .......... .......... .......... .......... 8.51M
+  8650K .......... .......... .......... .......... .......... 5.74M
+  8700K .......... .......... .......... .......... .......... 6.76M
+  8750K .......... .......... .......... .......... .......... 6.23M
+  8800K .......... .......... .......... .......... .......... 3.42M
+  8850K .......... .......... .......... .......... .......... 8.77M
+  8900K .......... .......... .......... .......... .......... 2.59M
+  8950K .......... .......... .......... .......... .......... 75.6M
+  9000K .......... .......... .......... .......... .......... 3.40M
+  9050K .......... .......... .......... .......... .......... 4.05M
+  9100K .......... .......... .......... .......... .......... 4.73M
+  9150K .......... .......... .......... .......... .......... 13.8M
+  9200K .......... .......... .......... .......... .......... 3.21M
+  9250K .......... .......... .......... .......... .......... 6.66M
+  9300K .......... .......... .......... .......... .......... 2.86M
+  9350K .......... .......... .......... .......... .......... 11.8M
+  9400K .......... .......... .......... .......... .......... 33.9M
+  9450K .......... .......... .......... .......... .......... 22.6M
+  9500K .......... .......... .......... .......... .......... 32.3M
+  9550K .......... .......... .......... .......... .......... 21.1M
+  9600K .......... .......... .......... .......... .......... 4.29M
+  9650K .......... .......... .......... .......... .......... 82.8M
+  9700K .......... .......... .......... .......... .......... 4.64M
+  9750K .......... .......... .......... .......... .......... 4.52M
+  9800K .......... .......... .......... .......... .......... 5.42M
+  9850K .......... .......... .......... .......... .......... 5.26M
+  9900K .......... .......... .......... .......... .......... 4.49M
+  9950K .......... .......... .......... .......... .......... 5.93M
+ 10000K .......... .......... .......... .......... .......... 5.15M
+ 10050K .......... .......... .......... .......... .......... 5.33M
+ 10100K .......... .......... .......... .......... .......... 4.15M
+ 10150K .......... .......... .......... .......... ..........  105M
+ 10200K .......... .......... .......... .......... .......... 4.95M
+ 10250K .......... .......... .......... .......... .......... 4.00M
+ 10300K .......... .......... .......... .......... .......... 2.47M
+ 10350K .......... .......... .......... .......... .......... 12.2M
+ 10400K .......... .........                                   7.39M=1.8s
+
+2022-05-03 02:08:54 (5.65 MB/s) - '2.7.9a.tar.gz' saved [10669338]
+
+Downloading chainSwap
+--2022-05-03 02:08:54--  http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/chainSwap
+Resolving hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
+Connecting to hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5463200 (5.2M)
+Saving to: 'chainSwap'
+
+     0K .......... .......... .......... .......... ..........  0%  865K 6s
+    50K .......... .......... .......... .......... ..........  1% 1.68M 5s
+   100K .......... .......... .......... .......... ..........  2% 1.68M 4s
+   150K .......... .......... .......... .......... ..........  3% 1.68M 4s
+   200K .......... .......... .......... .......... ..........  4% 1.68M 4s
+   250K .......... .......... .......... .......... ..........  5% 1.69M 3s
+   300K .......... .......... .......... .......... ..........  6% 1.68M 3s
+   350K .......... .......... .......... .......... ..........  7% 1.68M 3s
+   400K .......... .......... .......... .......... ..........  8% 1.68M 3s
+   450K .......... .......... .......... .......... ..........  9% 1.68M 3s
+   500K .......... .......... .......... .......... .......... 10% 1.68M 3s
+   550K .......... .......... .......... .......... .......... 11% 1.69M 3s
+   600K .......... .......... .......... .......... .......... 12%  866K 3s
+   650K .......... .......... .......... .......... .......... 13% 1.67M 3s
+   700K .......... .......... .......... .......... .......... 14% 1.68M 3s
+   750K .......... .......... .......... .......... .......... 14% 1.68M 3s
+   800K .......... .......... .......... .......... .......... 15% 1.69M 3s
+   850K .......... .......... .......... .......... .......... 16% 1.69M 3s
+   900K .......... .......... .......... .......... .......... 17% 1.68M 3s
+   950K .......... .......... .......... .......... .......... 18% 1.69M 3s
+  1000K .......... .......... .......... .......... .......... 19% 1.69M 3s
+  1050K .......... .......... .......... .......... .......... 20% 1.68M 3s
+  1100K .......... .......... .......... .......... .......... 21% 1.68M 3s
+  1150K .......... .......... .......... .......... .......... 22%  868K 3s
+  1200K .......... .......... .......... .......... .......... 23% 1.68M 3s
+  1250K .......... .......... .......... .......... .......... 24% 1.69M 3s
+  1300K .......... .......... .......... .......... .......... 25% 1.68M 3s
+  1350K .......... .......... .......... .......... .......... 26% 1.68M 3s
+  1400K .......... .......... .......... .......... .......... 27%  864K 3s
+  1450K .......... .......... .......... .......... .......... 28% 1.68M 3s
+  1500K .......... .......... .......... .......... .......... 29%  861K 3s
+  1550K .......... .......... .......... .......... .......... 29% 1.68M 3s
+  1600K .......... .......... .......... .......... .......... 30%  862K 3s
+  1650K .......... .......... .......... .......... .......... 31%  864K 3s
+  1700K .......... .......... .......... .......... .......... 32% 1.68M 2s
+  1750K .......... .......... .......... .......... .......... 33%  862K 3s
+  1800K .......... .......... .......... .......... .......... 34%  860K 3s
+  1850K .......... .......... .......... .......... .......... 35% 1.66M 2s
+  1900K .......... .......... .......... .......... .......... 36%  863K 2s
+  1950K .......... .......... .......... .......... .......... 37%  862K 2s
+  2000K .......... .......... .......... .......... .......... 38% 1.68M 2s
+  2050K .......... .......... .......... .......... .......... 39%  862K 2s
+  2100K .......... .......... .......... .......... .......... 40%  864K 2s
+  2150K .......... .......... .......... .......... .......... 41% 1.67M 2s
+  2200K .......... .......... .......... .......... .......... 42%  860K 2s
+  2250K .......... .......... .......... .......... .......... 43%  862K 2s
+  2300K .......... .......... .......... .......... .......... 44% 1.67M 2s
+  2350K .......... .......... .......... .......... .......... 44%  860K 2s
+  2400K .......... .......... .......... .......... .......... 45%  861K 2s
+  2450K .......... .......... .......... .......... .......... 46%  862K 2s
+  2500K .......... .......... .......... .......... .......... 47% 1.68M 2s
+  2550K .......... .......... .......... .......... .......... 48%  866K 2s
+  2600K .......... .......... .......... .......... .......... 49%  863K 2s
+  2650K .......... .......... .......... .......... .......... 50% 1.67M 2s
+  2700K .......... .......... .......... .......... .......... 51%  863K 2s
+  2750K .......... .......... .......... .......... .......... 52%  863K 2s
+  2800K .......... .......... .......... .......... .......... 53% 1.67M 2s
+  2850K .......... .......... .......... .......... .......... 54%  864K 2s
+  2900K .......... .......... .......... .......... .......... 55%  863K 2s
+  2950K .......... .......... .......... .......... .......... 56% 1.68M 2s
+  3000K .......... .......... .......... .......... .......... 57%  864K 2s
+  3050K .......... .......... .......... .......... .......... 58%  863K 2s
+  3100K .......... .......... .......... .......... .......... 59% 1.68M 2s
+  3150K .......... .......... .......... .......... .......... 59%  862K 2s
+  3200K .......... .......... .......... .......... .......... 60%  862K 2s
+  3250K .......... .......... .......... .......... .......... 61% 1.69M 2s
+  3300K .......... .......... .......... .......... .......... 62%  861K 2s
+  3350K .......... .......... .......... .......... .......... 63%  863K 2s
+  3400K .......... .......... .......... .......... .......... 64%  862K 2s
+  3450K .......... .......... .......... .......... .......... 65% 1.67M 2s
+  3500K .......... .......... .......... .......... .......... 66%  864K 2s
+  3550K .......... .......... .......... .......... .......... 67%  864K 1s
+  3600K .......... .......... .......... .......... .......... 68% 1.68M 1s
+  3650K .......... .......... .......... .......... .......... 69%  863K 1s
+  3700K .......... .......... .......... .......... .......... 70%  860K 1s
+  3750K .......... .......... .......... .......... .......... 71% 1.67M 1s
+  3800K .......... .......... .......... .......... .......... 72%  860K 1s
+  3850K .......... .......... .......... .......... .......... 73%  863K 1s
+  3900K .......... .......... .......... .......... .......... 74% 1.68M 1s
+  3950K .......... .......... .......... .......... .......... 74%  863K 1s
+  4000K .......... .......... .......... .......... .......... 75%  865K 1s
+  4050K .......... .......... .......... .......... .......... 76% 1.68M 1s
+  4100K .......... .......... .......... .......... .......... 77%  864K 1s
+  4150K .......... .......... .......... .......... .......... 78%  863K 1s
+  4200K .......... .......... .......... .......... .......... 79% 1.69M 1s
+  4250K .......... .......... .......... .......... .......... 80%  863K 1s
+  4300K .......... .......... .......... .......... .......... 81%  864K 1s
+  4350K .......... .......... .......... .......... .......... 82%  862K 1s
+  4400K .......... .......... .......... .......... .......... 83% 1.68M 1s
+  4450K .......... .......... .......... .......... .......... 84%  864K 1s
+  4500K .......... .......... .......... .......... .......... 85%  864K 1s
+  4550K .......... .......... .......... .......... .......... 86% 1.68M 1s
+  4600K .......... .......... .......... .......... .......... 87%  864K 1s
+  4650K .......... .......... .......... .......... .......... 88%  864K 1s
+  4700K .......... .......... .......... .......... .......... 89% 1.68M 1s
+  4750K .......... .......... .......... .......... .......... 89%  864K 0s
+  4800K .......... .......... .......... .......... .......... 90%  862K 0s
+  4850K .......... .......... .......... .......... .......... 91% 1.68M 0s
+  4900K .......... .......... .......... .......... .......... 92%  864K 0s
+  4950K .......... .......... .......... .......... .......... 93%  866K 0s
+  5000K .......... .......... .......... .......... .......... 94% 1.69M 0s
+  5050K .......... .......... .......... .......... .......... 95%  864K 0s
+  5100K .......... .......... .......... .......... .......... 96%  864K 0s
+  5150K .......... .......... .......... .......... .......... 97% 1.68M 0s
+  5200K .......... .......... .......... .......... .......... 98%  864K 0s
+  5250K .......... .......... .......... .......... .......... 99%  860K 0s
+  5300K .......... .......... .......... .....                100% 1.19M=4.7s
+
+2022-05-03 02:08:59 (1.10 MB/s) - 'chainSwap' saved [5463200/5463200]
+
+Downloading inputs
+download: s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz to ./reads_1.fq.gz
+download: s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz to ./reads_2.fq.gz
+Completed 2.7 KiB/2.7 KiB (27.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jeizenga/alleleseq/choose_mapping.py to ./choose_mapping.py
+download: s3://vg-k8s/users/jeizenga/alleleseq/diploid_outputs/maternal.chain to ./maternal.chain
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/chrLength.txt to maternal_indexes/chrLength.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/Log.out to maternal_indexes/Log.out
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/chrName.txt to maternal_indexes/chrName.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/chrStart.txt to maternal_indexes/chrStart.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/chrNameLength.txt to maternal_indexes/chrNameLength.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/exonInfo.tab to maternal_indexes/exonInfo.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/geneInfo.tab to maternal_indexes/geneInfo.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/genomeParameters.txt to maternal_indexes/genomeParameters.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/exonGeTrInfo.tab to maternal_indexes/exonGeTrInfo.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/sjdbInfo.txt to maternal_indexes/sjdbInfo.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/sjdbList.fromGTF.out.tab to maternal_indexes/sjdbList.fromGTF.out.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/sjdbList.out.tab to maternal_indexes/sjdbList.out.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/transcriptInfo.tab to maternal_indexes/transcriptInfo.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/SAindex to maternal_indexes/SAindex
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/Genome to maternal_indexes/Genome
+download: s3://vg-k8s/users/jeizenga/alleleseq/maternal_indexes/SA to maternal_indexes/SA
+download: s3://vg-k8s/users/jeizenga/alleleseq/diploid_outputs/paternal.chain to ./paternal.chain
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/chrName.txt to paternal_indexes/chrName.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/Log.out to paternal_indexes/Log.out
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/chrLength.txt to paternal_indexes/chrLength.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/chrNameLength.txt to paternal_indexes/chrNameLength.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/chrStart.txt to paternal_indexes/chrStart.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/exonInfo.tab to paternal_indexes/exonInfo.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/exonGeTrInfo.tab to paternal_indexes/exonGeTrInfo.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/geneInfo.tab to paternal_indexes/geneInfo.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/genomeParameters.txt to paternal_indexes/genomeParameters.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/sjdbInfo.txt to paternal_indexes/sjdbInfo.txt
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/sjdbList.fromGTF.out.tab to paternal_indexes/sjdbList.fromGTF.out.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/sjdbList.out.tab to paternal_indexes/sjdbList.out.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/transcriptInfo.tab to paternal_indexes/transcriptInfo.tab
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/SAindex to paternal_indexes/SAindex
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/Genome to paternal_indexes/Genome
+download: s3://vg-k8s/users/jeizenga/alleleseq/paternal_indexes/SA to paternal_indexes/SA
+Making joint reverse chain
+Mapping reads
+	./STAR-2.7.9a/bin/Linux_x86_64_static/STAR --runThreadN 8 --genomeDir maternal_indexes/ --readFilesCommand zcat --readFilesIn reads_1.fq.gz reads_2.fq.gz --outSAMunmapped Within --outSAMtype BAM Unsorted --outFileNamePrefix maternal_star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni_
+	STAR version: 2.7.9a   compiled: 2021-05-04T09:43:56-0400 vega:/home/dobin/data/STAR/STARcode/STAR.master/source
+May 03 02:12:34 ..... started STAR run
+May 03 02:12:34 ..... loading genome
+May 03 02:13:04 ..... started mapping
+May 03 02:35:43 ..... finished mapping
+May 03 02:35:46 ..... finished successfully
+	Command being timed: "./STAR-2.7.9a/bin/Linux_x86_64_static/STAR --runThreadN 8 --genomeDir maternal_indexes/ --readFilesCommand zcat --readFilesIn reads_1.fq.gz reads_2.fq.gz --outSAMunmapped Within --outSAMtype BAM Unsorted --outFileNamePrefix maternal_star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni_"
+	User time (seconds): 9981.70
+	System time (seconds): 348.01
+	Percent of CPU this job got: 742%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 23:12.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 30734432
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 126673575
+	Voluntary context switches: 771424
+	Involuntary context switches: 77857
+	Swaps: 0
+	File system inputs: 12494280
+	File system outputs: 49370640
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 72 files and 8 in-memory blocks...
+	Command being timed: "samtools sort -n -@ 8 -O BAM maternal_star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.namefix.bam"
+	User time (seconds): 2418.28
+	System time (seconds): 68.60
+	Percent of CPU this job got: 597%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:56.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7319640
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3766353
+	Voluntary context switches: 3326504
+	Involuntary context switches: 11900
+	Swaps: 0
+	File system inputs: 15455480
+	File system outputs: 82609736
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	./STAR-2.7.9a/bin/Linux_x86_64_static/STAR --runThreadN 8 --genomeDir paternal_indexes/ --readFilesCommand zcat --readFilesIn reads_1.fq.gz reads_2.fq.gz --outSAMunmapped Within --outSAMtype BAM Unsorted --outFileNamePrefix paternal_star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni_
+	STAR version: 2.7.9a   compiled: 2021-05-04T09:43:56-0400 vega:/home/dobin/data/STAR/STARcode/STAR.master/source
+May 03 02:47:31 ..... started STAR run
+May 03 02:47:31 ..... loading genome
+May 03 02:48:02 ..... started mapping
+May 03 03:09:50 ..... finished mapping
+May 03 03:09:53 ..... finished successfully
+	Command being timed: "./STAR-2.7.9a/bin/Linux_x86_64_static/STAR --runThreadN 8 --genomeDir paternal_indexes/ --readFilesCommand zcat --readFilesIn reads_1.fq.gz reads_2.fq.gz --outSAMunmapped Within --outSAMtype BAM Unsorted --outFileNamePrefix paternal_star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni_"
+	User time (seconds): 9640.06
+	System time (seconds): 303.82
+	Percent of CPU this job got: 740%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 22:22.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 30727528
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 107179777
+	Voluntary context switches: 781608
+	Involuntary context switches: 75384
+	Swaps: 0
+	File system inputs: 58631632
+	File system outputs: 49374864
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 72 files and 8 in-memory blocks...
+	Command being timed: "samtools sort -n -@ 8 -O BAM paternal_star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.namefix.bam"
+	User time (seconds): 2439.36
+	System time (seconds): 63.48
+	Percent of CPU this job got: 608%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:51.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7325516
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1475121
+	Voluntary context switches: 3209010
+	Involuntary context switches: 9482
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 82609688
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "./choose_mapping.py /dev/fd/63 /dev/fd/62"
+	User time (seconds): 1144.83
+	System time (seconds): 73.59
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 20:20.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9720
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 2862
+	Voluntary context switches: 4805
+	Involuntary context switches: 2730
+	Swaps: 0
+	File system inputs: 11928
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 72 files and 8 in-memory blocks...
+	Command being timed: "samtools sort -@ 8 joint_star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.bam"
+	User time (seconds): 1558.76
+	System time (seconds): 93.51
+	Percent of CPU this job got: 564%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:52.88
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7316188
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18467284
+	Voluntary context switches: 3030800
+	Involuntary context switches: 24450
+	Swaps: 0
+	File system inputs: 11694840
+	File system outputs: 57647744
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Insert size = 200.000000
+Insert size stdev = 30.000000
+Number of stdev from the mean = 3.000000
+Add tags to each alignment = False
+2022-05-03 03:48:30 [INFO]  Read the chain file "joint.reverse.chain" 
+2022-05-03 03:48:35 [INFO]  Liftover BAM file "joint_star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.sorted.bam" to "star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.bam"
+2022-05-03 05:31:49 [INFO]  Done!
+2022-05-03 05:31:49 [INFO]  Sort "star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.bam" and save as "star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.sorted.bam"
+2022-05-03 06:13:01 [INFO]  Index "star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.sorted.bam" ...
+False
+
+Total alignments:195096104
+	QC failed: 0
+	Paired-end reads:
+		R1 unique, R2 unique (UU): 169018526
+		R1 unique, R2 unmapp (UN): 13524
+		R1 unique, R2 multiple (UM): 0
+		R1 multiple, R2 multiple (MM): 0
+		R1 multiple, R2 unique (MU): 11093260
+		R1 multiple, R2 unmapped (MN): 2907
+		R1 unmap, R2 unmap (NN): 14967887
+		R1 unmap, R2 unique (NU): 0
+		R1 unmap, R2 multiple (NM): 0
+	Command being timed: "CrossMap.py bam joint.reverse.chain joint_star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.sorted.bam star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni"
+	User time (seconds): 8811.17
+	System time (seconds): 47.58
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:27:41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1218240
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 59
+	Minor (reclaiming a frame) page faults: 1594249
+	Voluntary context switches: 247583
+	Involuntary context switches: 11515
+	Swaps: 0
+	File system inputs: 161944
+	File system outputs: 75189816
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni.bam to s3://vg-k8s/users/jeizenga/alleleseq/star_alleleseq_diploid_gencode100_real_r1_ENCSR000AED_rep1_uni_919964403.bam

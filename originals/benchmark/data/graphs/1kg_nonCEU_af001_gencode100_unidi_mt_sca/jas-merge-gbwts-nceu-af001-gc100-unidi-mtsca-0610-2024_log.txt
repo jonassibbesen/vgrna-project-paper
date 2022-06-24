@@ -1,0 +1,77 @@
+---
+jas-merge-gbwts-nceu-af001-gc100-unidi-mtsca-0610-2024
+TIME=20220610-2024 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c861e23e-s1 MEMORY=24 CPU=1 DISK=64
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/merge_gbwts.sh
+CPU=1
+---
+Completed 621 Bytes/621 Bytes (1.5 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/merge_gbwts.sh to ./merge_gbwts.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/MT/1kg_nonCEU_af001_gencode100_unidi_mt_sca_MT.gbwt to MT/1kg_nonCEU_af001_gencode100_unidi_mt_sca_MT.gbwt
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/SCA/1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.gbwt to SCA/1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.gbwt
+Algorithm:        fast
+Input files:      2
+Output name:      1kg_nonCEU_af001_gencode100_unidi_mt_sca.gbwt
+
+Compressed GBWT:  MT/1kg_nonCEU_af001_gencode100_unidi_mt_sca_MT.gbwt
+Total length:     565
+Sequences:        37
+Alphabet size:    358238388
+Effective:        1069
+Runs:             564
+DA samples:       43
+BWT:              0.00543594 MB
+DA samples:       0.000706673 MB
+Total:            0.00749969 MB
+Metadata:         37 paths with names, 37 samples with names, 37 haplotypes, 0 contigs
+
+Compressed GBWT:  SCA/1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.gbwt
+Total length:     2493
+Sequences:        67
+Alphabet size:    358954248
+Effective:        437767
+Runs:             1919
+DA samples:       119
+BWT:              0.594454 MB
+DA samples:       0.0659304 MB
+Total:            0.662762 MB
+Metadata:         67 paths with names, 67 samples with names, 67 haplotypes, 0 contigs
+
+Compressed GBWT:  1kg_nonCEU_af001_gencode100_unidi_mt_sca.gbwt
+Total length:     3058
+Sequences:        104
+Alphabet size:    358954248
+Effective:        716929
+Runs:             2483
+DA samples:       162
+BWT:              0.977425 MB
+DA samples:       0.107617 MB
+Total:            1.08867 MB
+Metadata:         104 paths with names, 104 samples with names, 104 haplotypes, 0 contigs
+
+Inserted 3058 nodes in 0.110589 seconds (27651.9 nodes/second)
+Memory usage 0.0312157 GB
+
+	Command being timed: "bash -c vg gbwt -p -m -f -o 1kg_nonCEU_af001_gencode100_unidi_mt_sca.gbwt $(for i in $(echo MT; echo SCA); do echo ${i}/1kg_nonCEU_af001_gencode100_unidi_mt_sca_${i}.gbwt; done)"
+	User time (seconds): 0.10
+	System time (seconds): 0.01
+	Percent of CPU this job got: 95%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 32732
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4688
+	Voluntary context switches: 434
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2232
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_nonCEU_af001_gencode100_unidi_mt_sca.gbwt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/1kg_nonCEU_af001_gencode100_unidi_mt_sca.gbwt
+---

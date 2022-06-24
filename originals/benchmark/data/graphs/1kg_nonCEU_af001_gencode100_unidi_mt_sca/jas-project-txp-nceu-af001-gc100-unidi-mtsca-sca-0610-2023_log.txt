@@ -1,0 +1,116 @@
+---
+jas-project-txp-nceu-af001-gc100-unidi-mtsca-sca-0610-2023
+TIME=20220610-2023 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-c861e23e-s1 MEMORY=12 CPU=4 DISK=32
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/project_transcripts.sh
+CPU=4 CHR=SCA
+---
+Completed 1.4 KiB/1.4 KiB (4.6 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/project_transcripts.sh to ./project_transcripts.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gtf to ./gencode.v29.primary_assembly.annotation_renamed_full.gtf
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/SCA/1kg_nonCEU_af001_gencode100_SCA.pg to ./graph.pg
+	Command being timed: "bash -c grep '^KI\|^GL' gencode.v29.primary_assembly.annotation_renamed_full.gtf > SCA.gtf"
+	User time (seconds): 0.58
+	System time (seconds): 0.15
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 312
+	Voluntary context switches: 10
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 1656
+	File system outputs: 464
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg paths -d -Q ENST -v graph.pg > graph_nopaths.pg"
+	User time (seconds): 3.12
+	System time (seconds): 0.16
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 310872
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 74906
+	Voluntary context switches: 4188
+	Involuntary context switches: 9
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 13712
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[vg rna] Parsing graph file ...
+[vg rna] Graph parsed in 0.681636 seconds, 0.10865 GB
+[vg rna] Adding novel exon boundaries and splice-junctions to graph ...
+[vg rna] 0 introns and 67 transcripts parsed, and graph augmented (no novel exon boundaries) in 0.181564 seconds, 0.134853 GB
+[vg rna] Projecting haplotype-specfic transcripts ...
+[vg rna] 67 haplotype-specfic transcripts projected in 0.187013 seconds, 0.135582 GB
+[vg rna] Writing transcripts as threads to GBWT index file ...
+[vg rna] Writing transcripts as sequences to fasta file ...
+[vg rna] Writing origin info on transcripts to tsv file ...
+[vg rna] Writing splice graph to stdout ...
+[vg rna] Splice graph and 67 transcripts written in 3.38012 seconds, 0.856407 GB
+	Command being timed: "bash -c vg rna -p -t 4 -e -o -u -n SCA.gtf -b 1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.gbwt -f 1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.fa -i 1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.txt graph_nopaths.pg > graph_nopaths2.pg"
+	User time (seconds): 2.86
+	System time (seconds): 4.48
+	Percent of CPU this job got: 163%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 898008
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 233953
+	Voluntary context switches: 12374
+	Involuntary context switches: 7
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 63152
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip 1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.fa; gzip 1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.txt"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 90%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3152
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 440
+	Voluntary context switches: 5
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 48
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/SCA/1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.txt.gz
+upload: ./1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.fa.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/SCA/1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.fa.gz
+upload: ./1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.gbwt to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100_unidi_mt_sca/SCA/1kg_nonCEU_af001_gencode100_unidi_mt_sca_SCA.gbwt
+---

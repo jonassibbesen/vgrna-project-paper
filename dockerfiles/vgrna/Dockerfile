@@ -1,4 +1,4 @@
-FROM quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2
+FROM quay.io/jsibbesen/vgdev-s3script:vgdev-2cea1e25-s2
 
 MAINTAINER jsibbese@ucsc.edu
 
@@ -20,7 +20,7 @@ RUN	pip3 install --no-cache-dir pysam biopython
 
 RUN git clone https://github.com/jonassibbesen/vgrna-project-scripts.git && \
 	cd vgrna-project-scripts && \
-	git checkout 4b55c11079907761923e8dc41e06f01fb2b91fc6 && \
+	git checkout f9db749ec2089214f413d8f458008051a7fce2a5 && \
 	cd c++ && \
 	cmake . && \
 	make && \

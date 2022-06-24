@@ -26,7 +26,7 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 `map_reads.sh`: Map paired-end RNA-seq reads to spliced pangenome graph.
 
-* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
+* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-2cea1e25-s2
 
 Important variables:
 
@@ -38,5 +38,5 @@ Important variables:
 
 `surject_alignments.sh`: Optionally surject alignments to reference coordinates (needed for reference-based mapping evaluation).
 
-* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
+* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-2cea1e25-s2
 

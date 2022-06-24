@@ -10,11 +10,9 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 `infer_expression.sh`: Infer expression of haplotype-specific transcripts in pantranscriptome.
 
-* Docker image: quay.io/jsibbesen/rpvg-s3script:rpvg-a7a79697-s9
+* Docker image: quay.io/jsibbesen/rpvg-s3script:rpvg-1d91a9e3-s17
 
 Important variables:
 
 * `MODE`: Inference mode to use (see script for more details)
 * `SEED`: Seed for the random number generator
-* `MEAN`: Mean of fragment length distribution (only used in single-path mode)
-* `SD`: Standard deviation of fragment length distribution (only used in single-path mode)

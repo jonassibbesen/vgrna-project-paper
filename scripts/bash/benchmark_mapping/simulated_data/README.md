@@ -10,7 +10,7 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 `calculate_bam_stats.sh`: Calculate overlap between predicted alignments and simulated alignments on the reference-genome.
 
-* Docker image: quay.io/jsibbesen/vgrna-s3script:vgrna-71442ea4-s2
+* Docker image: quay.io/jsibbesen/vgrna-s3script:vgrna-f9db749e-s7
 
 Important variables:
 
@@ -22,7 +22,7 @@ Important variables:
 
 `calculate_gamp_stats.sh`: Calculate distance between predicted alignments and simulated alignments in the spliced pangenome graph.
 
-* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
+* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-096bfdce-s2
 
 Important variables:
 
@@ -34,7 +34,7 @@ Important variables:
 
 `calculate_bam_bias.sh`: Calculate read alignment coverage across variants for each haplotype. Run this script on each chromosome (`seq 1 22; echo "X"; echo "Y"`).
 
-* Docker image: quay.io/jsibbesen/vgrna-s3script:vgrna-71442ea4-s2
+* Docker image: quay.io/jsibbesen/vgrna-s3script:vgrna-f9db749e-s7
 
 Important variables:
 
@@ -44,7 +44,7 @@ Important variables:
 
 ### 2. Plot benchmark
 
-All simulated data mapping benchmark plots presented in the paper were created using the following R scripts from the [vgrna-project-scripts](https://github.com/jonassibbesen/vgrna-project-scripts) repository:
+All simulated data mapping benchmark plots presented in the paper were created using the following R scripts [here](https://github.com/jonassibbesen/vgrna-project-paper/tree/main/scripts/R):
 
 * plot_vg_sim_overlap.R
 * plot_vg_sim_distance.R

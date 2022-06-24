@@ -28,10 +28,10 @@ fi
 /usr/bin/time -v bash -c "vg stats -a ${ALIGN_PREFIX}.gam"
 
 # Calculate distance statistics
-/usr/bin/time -v bash -c "vg gampcompare -t ${CPU} -d -a ${MAPPER} -G ${GRAPH_PREFIX}.xg ${ALIGN_PREFIX}.gam ${SIM_PREFIX}.gam | grep -v ^distance | cut -f1-4 | sort -k1n -k2n -k3n | uniq -c > ${OUT_PREFIX}_dist_gam.txt; gzip ${OUT_PREFIX}_dist_gam.txt"
+/usr/bin/time -v bash -c "vg gampcompare -t ${CPU} -d -a ${MAPPER} -G ${GRAPH_PREFIX}.xg ${ALIGN_PREFIX}.gam ${SIM_PREFIX}.gam | grep -v ^distance | sort -nr -k4 | sort -ns -k1 | sort -su -k6 | cut -f1-5 | sort -k1n -k2n -k3n -k4n | uniq -c > ${OUT_PREFIX}_dist_gam.txt; gzip ${OUT_PREFIX}_dist_gam.txt"
 
 if [ -f "${ALIGN_PREFIX}.gamp" ]; then
 
 	# Calculate distance statistics
-	/usr/bin/time -v bash -c "vg gampcompare -t ${CPU} -d -a ${MAPPER} ${GRAPH_PREFIX}.xg ${ALIGN_PREFIX}.gamp ${SIM_PREFIX}.gam | grep -v ^distance | cut -f1-4 | sort -k1n -k2n -k3n | uniq -c > ${OUT_PREFIX}_dist_gamp.txt; gzip ${OUT_PREFIX}_dist_gamp.txt"
+	/usr/bin/time -v bash -c "vg gampcompare -t ${CPU} -d -a ${MAPPER} ${GRAPH_PREFIX}.xg ${ALIGN_PREFIX}.gamp ${SIM_PREFIX}.gam | grep -v ^distance | sort -nr -k4 | sort -ns -k1 | sort -su -k6 | cut -f1-5 | sort -k1n -k2n -k3n -k4n | uniq -c > ${OUT_PREFIX}_dist_gamp.txt; gzip ${OUT_PREFIX}_dist_gamp.txt"
 fi

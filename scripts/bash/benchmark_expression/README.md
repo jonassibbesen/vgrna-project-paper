@@ -16,7 +16,7 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 ### 2. Plot benchmark
 
-All expression benchmark plots presented in the paper were created using the following R scripts from the [vgrna-project-scripts](https://github.com/jonassibbesen/vgrna-project-scripts) repository:
+All expression benchmark plots presented in the paper were created using the following R scripts from [here](https://github.com/jonassibbesen/vgrna-project-paper/tree/main/scripts/R):
 
 * parse_expression_data.R
 * plot_expression_data.R

@@ -2,7 +2,9 @@ set -e
 
 # Set mapping mode. 
 # 	"map": Use vg map
+# 	"map_multi10": Use vg map with mutimapping
 #	"mpmap": Use vg mpmap
+# 	"mpmap_multi10": Use vg mpmap with mutimapping
 #	"mpmap_nosplice": Use vg mpmap without novel splice-junction detection (used when mapping to gene-only graphs)
 MODE="mpmap"
 
@@ -28,11 +30,23 @@ if [ "${MODE}" = "map" ]; then
 	# Map reads
 	/usr/bin/time -v bash -c "vg map -t ${CPU} --try-up-to 16 --mate-rescues 32 -x ${GRAPH_PREFIX}.xg -g ${INDEX_PREFIX}.gcsa -f ${READ_1} -f ${READ_2} > ${OUT_PREFIX}.gam"
 
+# Use faster vg map with multimapping
+elif [ "${MAPPER}" = "map_multi10" ]; then
+
+	# Map reads
+	/usr/bin/time -v bash -c "vg map -t ${CPU} --try-up-to 16 --mate-rescues 32 -M 10 -x ${GRAPH_PREFIX}.xg -g ${INDEX_PREFIX}.gcsa -f ${READ_1} -f ${READ_2} > ${OUT_PREFIX}.gam"
+
 # Use default vg mpmap
 elif [ "${MODE}" = "mpmap" ]; then
 
 	# Map reads
 	/usr/bin/time -v bash -c "vg mpmap -t ${CPU} -n rna -x ${GRAPH_PREFIX}.xg -g ${INDEX_PREFIX}.gcsa -d {INDEX_PREFIX}.dist -f ${READ_1} -f ${READ_2} > ${OUT_PREFIX}.gamp"
+
+# Use default vg mpmap with multimapping
+elif [ "${MAPPER}" = "mpmap_multi10" ]; then
+
+	# Map reads
+	/usr/bin/time -v bash -c "vg mpmap -t ${CPU} -n rna -M 10 -U -x ${GRAPH_PREFIX}.xg -g ${INDEX_PREFIX}.gcsa -d {INDEX_PREFIX}.dist -f ${READ_1} -f ${READ_2} > ${OUT_PREFIX}.gamp"
 
 # Use vg mpmap in non-splicing mode
 elif [ "${MODE}" = "mpmap_nosplice" ]; then

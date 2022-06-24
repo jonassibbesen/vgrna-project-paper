@@ -16,13 +16,13 @@ Optionally calculate exon coverage for Iso-Seq alignments from the same cell-lin
 
 `calculate_bam_stats.sh`: Calculate exon overlap and coverage using an annotation and optionally exon regions defined by Iso-Seq alignments.
 
-* Docker image: quay.io/jsibbesen/vgrna-s3script:vgrna-71442ea4-s2
+* Docker image: quay.io/jsibbesen/vgrna-s3script:vgrna-2220bb08-s7
 
 
 
 ### 2. Plot benchmark
 
-All real data mapping benchmark plots presented in the paper were created using the following R scripts from the [vgrna-project-scripts](https://github.com/jonassibbesen/vgrna-project-scripts) repository:
+All real data mapping benchmark plots presented in the paper were created using the following R scripts from [here](https://github.com/jonassibbesen/vgrna-project-paper/tree/main/scripts/R):
 
 * plot_mapping_stats.R
 * plot_coverage_correlation.R

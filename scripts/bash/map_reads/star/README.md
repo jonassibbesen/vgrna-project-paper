@@ -26,5 +26,5 @@ Note that the Docker image suggested is not necessarily the same version of the 
 
 `inject_alignments.sh`: Optionally inject alignments to graph coordinates (needed for graph-based mapping evaluation).
 
-* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
+* Docker image: quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2
 

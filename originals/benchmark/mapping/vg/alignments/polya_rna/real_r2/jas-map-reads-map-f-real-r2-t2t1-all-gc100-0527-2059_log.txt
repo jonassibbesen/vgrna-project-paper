@@ -1,0 +1,39 @@
+---
+jas-map-reads-map-f-real-r2-t2t1-all-gc100-0527-2059
+TIME=20220527-2059 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-2cea1e25-s2 MEMORY=40 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/map_reads.sh
+CPU=16 REF=1kg_all_af001_gencode100 REAL=CHM13_rep1 READS_1=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz READS_2=https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz MAPPER=map_fast
+---
+Completed 1.7 KiB/1.7 KiB (22.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/map_reads.sh to ./map_reads.sh
+2022-05-27 19:04:51 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R1_001.fastq.gz [6473127051/6473127051] -> "reads_1.fq.gz" [1]
+2022-05-27 19:09:27 URL:https://s3.amazonaws.com/nanopore-human-wgs/chm13/rnaseq/CHM13_1_S182_L002_R2_001.fastq.gz [6810978043/6810978043] -> "reads_2.fq.gz" [1]
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_all_af001_gencode100/1kg_all_af001_gencode100.xg to ./1kg_all_af001_gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_all_af001_gencode100/1kg_all_af001_gencode100_index.gcsa.lcp to ./1kg_all_af001_gencode100_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_all_af001_gencode100/1kg_all_af001_gencode100_index.dist to ./1kg_all_af001_gencode100_index.dist
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_all_af001_gencode100/1kg_all_af001_gencode100_index.gcsa to ./1kg_all_af001_gencode100_index.gcsa
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg map -t 16 --try-up-to 16 --mate-rescues 32 -x 1kg_all_af001_gencode100.xg -g 1kg_all_af001_gencode100_index.gcsa -f reads_1.fq.gz -f reads_2.fq.gz > map_fast_1kg_all_af001_gencode100_real_r2_CHM13_rep1.gam"
+	User time (seconds): 750602.02
+	System time (seconds): 22171.99
+	Percent of CPU this job got: 1594%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:27:58
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31091928
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1809198513
+	Voluntary context switches: 7366675
+	Involuntary context switches: 9772483
+	Swaps: 0
+	File system inputs: 53576392
+	File system outputs: 75030256
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./map_fast_1kg_all_af001_gencode100_real_r2_CHM13_rep1.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/CHM13_rep1/map_fast/1kg_all_af001_gencode100/map_fast_1kg_all_af001_gencode100_real_r2_CHM13_rep1.gam
+---

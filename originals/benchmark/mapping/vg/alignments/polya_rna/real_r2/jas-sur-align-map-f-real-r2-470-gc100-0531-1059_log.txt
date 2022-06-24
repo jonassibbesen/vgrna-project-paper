@@ -1,0 +1,85 @@
+---
+jas-sur-align-map-f-real-r2-470-gc100-0531-1059
+TIME=20220531-1059 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-2cea1e25-s2 MEMORY=48 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/surject_alignments.sh
+CPU=16 REF=gencode100 REAL=SRR1153470 MAPPER=map_fast
+---
+Completed 1.4 KiB/1.4 KiB (16.1 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/surject_alignments.sh to ./surject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/SRR1153470/map_fast/gencode100/map_fast_gencode100_real_r2_SRR1153470.gam to ./map_fast_gencode100_real_r2_SRR1153470.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg to ./gencode100.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+194 reference_paths.txt
+	Command being timed: "bash -c vg paths -L -x gencode100.xg | grep -v ENST > reference_paths.txt; wc -l reference_paths.txt"
+	User time (seconds): 5.89
+	System time (seconds): 17.03
+	Percent of CPU this job got: 133%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:17.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6057736
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1529808
+	Voluntary context switches: 1541549
+	Involuntary context switches: 186
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 28880
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg surject -t 16 -S -A -b -F reference_paths.txt -x gencode100.xg map_fast_gencode100_real_r2_SRR1153470.gam > map_fast_gencode100_real_r2_SRR1153470.bam"
+	User time (seconds): 83432.58
+	System time (seconds): 7962.62
+	Percent of CPU this job got: 1594%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:35:31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6703616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2444842235
+	Voluntary context switches: 1497684
+	Involuntary context switches: 1577039
+	Swaps: 0
+	File system inputs: 97160616
+	File system outputs: 41305512
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 64 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 map_fast_gencode100_real_r2_SRR1153470.bam > map_fast_gencode100_real_r2_SRR1153470_sort.bam; mv map_fast_gencode100_real_r2_SRR1153470_sort.bam map_fast_gencode100_real_r2_SRR1153470.bam; samtools index map_fast_gencode100_real_r2_SRR1153470.bam"
+	User time (seconds): 3115.39
+	System time (seconds): 101.61
+	Percent of CPU this job got: 568%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:26.29
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 14272104
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7774141
+	Voluntary context switches: 2630516
+	Involuntary context switches: 43437
+	Swaps: 0
+	File system inputs: 62451904
+	File system outputs: 56102592
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./map_fast_gencode100_real_r2_SRR1153470.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/SRR1153470/map_fast/gencode100/map_fast_gencode100_real_r2_SRR1153470.bam.bai
+upload: ./map_fast_gencode100_real_r2_SRR1153470.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/SRR1153470/map_fast/gencode100/map_fast_gencode100_real_r2_SRR1153470.bam
+---

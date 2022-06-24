@@ -1,0 +1,38 @@
+---
+jas-int-align-hisat2-m10-vg-r2-aed1-uni-nceu-gc100-0602-1243
+TIME=20220602-1243 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-2cea1e25-s2 MEMORY=32 CPU=1 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/inject_alignments.sh
+CPU=1 REF=1kg_nonCEU_af001_gencode100 GRAPH=1kg_nonCEU_af001_gencode100 SIM=ENCSR000AED_rep1_uni MAPPER=hisat2_multi10
+---
+Completed 1.0 KiB/1.0 KiB (10.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/inject_alignments.sh to ./inject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/1kg_nonCEU_af001_gencode100/hisat2_multi10_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam.bai to ./hisat2_multi10_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/1kg_nonCEU_af001_gencode100/hisat2_multi10_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam.bai to ./hisat2_multi10_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/1kg_nonCEU_af001_gencode100/hisat2_multi10_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam to ./hisat2_multi10_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/1kg_nonCEU_af001_gencode100/hisat2_multi10_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam to ./hisat2_multi10_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode100/1kg_nonCEU_af001_gencode100.xg to ./1kg_nonCEU_af001_gencode100.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+[vg::alignment.cpp] error: alignment references path not present in graph: Command exited with non-zero status 1
+	Command being timed: "bash -c vg inject -t 1 -x 1kg_nonCEU_af001_gencode100.xg hisat2_multi10_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam > align_tmp_h1.gam"
+	User time (seconds): 9632.21
+	System time (seconds): 45.78
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:41:21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10239688
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7249973
+	Voluntary context switches: 2431523
+	Involuntary context switches: 21478
+	Swaps: 0
+	File system inputs: 2579536
+	File system outputs: 29961224
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+---

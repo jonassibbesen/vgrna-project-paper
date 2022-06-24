@@ -1,0 +1,66 @@
+---
+jas-map-reads-map-f-m10-vg-r2-470-uni-nceu-gc80-0515-1106
+TIME=20220515-1106 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-2cea1e25-s2 MEMORY=40 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/map_reads.sh
+CPU=16 REF=1kg_nonCEU_af001_gencode80 SIM=SRR1153470_uni MAPPER=map_fast_multi10
+---
+Completed 2.6 KiB/2.6 KiB (12.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/map_reads.sh to ./map_reads.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_2.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_1.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_2.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/SRR1153470_uni/vg_r1/sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_1.fq.gz to ./sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_1.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_nonCEU_af001_gencode80/1kg_nonCEU_af001_gencode80.xg to ./1kg_nonCEU_af001_gencode80.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode80/1kg_nonCEU_af001_gencode80_index.gcsa.lcp to ./1kg_nonCEU_af001_gencode80_index.gcsa.lcp
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode80/1kg_nonCEU_af001_gencode80_index.dist to ./1kg_nonCEU_af001_gencode80_index.dist
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/indexes/1kg_nonCEU_af001_gencode80/1kg_nonCEU_af001_gencode80_index.gcsa to ./1kg_nonCEU_af001_gencode80_index.gcsa
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg map -t 16 --try-up-to 16 --mate-rescues 32 -M 10 -x 1kg_nonCEU_af001_gencode80.xg -g 1kg_nonCEU_af001_gencode80_index.gcsa -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_1.fq.gz -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h1_2.fq.gz > map_fast_multi10_1kg_nonCEU_af001_gencode80_sim_vg_r2_SRR1153470_uni_h1.gam"
+	User time (seconds): 185466.56
+	System time (seconds): 5473.01
+	Percent of CPU this job got: 1577%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:21:42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31800992
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 440200095
+	Voluntary context switches: 7449968
+	Involuntary context switches: 2365378
+	Swaps: 0
+	File system inputs: 54848240
+	File system outputs: 28586432
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg map -t 16 --try-up-to 16 --mate-rescues 32 -M 10 -x 1kg_nonCEU_af001_gencode80.xg -g 1kg_nonCEU_af001_gencode80_index.gcsa -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_1.fq.gz -f sim_1kg_NA12878_gencode100_SRR1153470_uni_vg_r1_h2_2.fq.gz > map_fast_multi10_1kg_nonCEU_af001_gencode80_sim_vg_r2_SRR1153470_uni_h2.gam"
+	User time (seconds): 200775.90
+	System time (seconds): 6010.26
+	Percent of CPU this job got: 1582%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:37:48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31771408
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 369180201
+	Voluntary context switches: 7438386
+	Involuntary context switches: 2600712
+	Swaps: 0
+	File system inputs: 62068304
+	File system outputs: 28840000
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./map_fast_multi10_1kg_nonCEU_af001_gencode80_sim_vg_r2_SRR1153470_uni_h1.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/SRR1153470_uni/map_fast_multi10/1kg_nonCEU_af001_gencode80/map_fast_multi10_1kg_nonCEU_af001_gencode80_sim_vg_r2_SRR1153470_uni_h1.gam
+upload: ./map_fast_multi10_1kg_nonCEU_af001_gencode80_sim_vg_r2_SRR1153470_uni_h2.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/SRR1153470_uni/map_fast_multi10/1kg_nonCEU_af001_gencode80/map_fast_multi10_1kg_nonCEU_af001_gencode80_sim_vg_r2_SRR1153470_uni_h2.gam
+---

@@ -1,0 +1,109 @@
+---
+jas-int-align-hisat2-m10-vg-r2-aed1-uni-gc100-0607-1845
+TIME=20220607-1845 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2 MEMORY=32 CPU=8 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/inject_alignments.sh
+CPU=8 REF=gencode100 GRAPH=gencode100 SIM=ENCSR000AED_rep1_uni MAPPER=hisat2_multi10
+---
+Completed 1.0 KiB/1.0 KiB (6.7 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/inject_alignments.sh to ./inject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/gencode100/hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam.bai to ./hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/gencode100/hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam.bai to ./hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/gencode100/hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam to ./hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/gencode100/hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam to ./hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg to ./gencode100.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg inject -t 8 -x gencode100.xg hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam > align_tmp_h1.gam"
+	User time (seconds): 11896.93
+	System time (seconds): 45.13
+	Percent of CPU this job got: 705%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 28:11.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6310136
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6979045
+	Voluntary context switches: 1506651
+	Involuntary context switches: 41857
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 18748296
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg view -a align_tmp_h1.gam | sed 's/\/1",/",/g' | sed 's/\/2",/",/g' | vg view -a -G -J - > hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam"
+	User time (seconds): 34110.69
+	System time (seconds): 1607.82
+	Percent of CPU this job got: 154%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:25:47
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1556740
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 87582503
+	Voluntary context switches: 130914552
+	Involuntary context switches: 59646
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 18771680
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg inject -t 8 -x gencode100.xg hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam > align_tmp_h2.gam"
+	User time (seconds): 11421.89
+	System time (seconds): 55.41
+	Percent of CPU this job got: 707%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 27:01.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6255976
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 9839765
+	Voluntary context switches: 1604125
+	Involuntary context switches: 48325
+	Swaps: 0
+	File system inputs: 8229232
+	File system outputs: 18736248
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c vg view -a align_tmp_h2.gam | sed 's/\/1",/",/g' | sed 's/\/2",/",/g' | vg view -a -G -J - > hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam"
+	User time (seconds): 32305.70
+	System time (seconds): 1504.22
+	Percent of CPU this job got: 154%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:03:35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1706812
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 96811478
+	Voluntary context switches: 127741798
+	Involuntary context switches: 56367
+	Swaps: 0
+	File system inputs: 9431680
+	File system outputs: 18742360
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/gencode100/hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam
+upload: ./hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/hisat2/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/hisat2_multi10/gencode100/hisat2_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam
+---

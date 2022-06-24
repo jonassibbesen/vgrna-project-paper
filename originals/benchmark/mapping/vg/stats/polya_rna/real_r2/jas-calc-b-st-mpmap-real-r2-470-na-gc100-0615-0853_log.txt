@@ -1,0 +1,266 @@
+---
+jas-calc-b-st-mpmap-real-r2-470-na-gc100-0615-0853
+TIME=20220615-0853 IMAGE=quay.io/jsibbesen/vgrna-s3script:vgrna-2220bb08-s7 MEMORY=4 CPU=1 DISK=128
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real_r2/calculate_bam_stats.sh
+CPU=1 REF=1kg_NA12878_gencode100 REAL=SRR1153470 TRANSCRIPTS=ENCSR706ANY MAPPER=mpmap
+---
+Completed 1.9 KiB/1.9 KiB (7.9 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real_r2/calculate_bam_stats.sh to ./calculate_bam_stats.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/SRR1153470/mpmap/1kg_NA12878_gencode100/mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam.bai to ./mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/real_r2/SRR1153470/mpmap/1kg_NA12878_gencode100/mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam to ./mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full_exons.bed to ./gencode_exons.bed
+230719546 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+227399180 + 0 mapped (98.56% : N/A)
+0 + 0 paired in sequencing
+0 + 0 read1
+0 + 0 read2
+0 + 0 properly paired (N/A : N/A)
+0 + 0 with itself and mate mapped
+0 + 0 singletons (N/A : N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5)
+	Command being timed: "bash -c samtools flagstat mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam"
+	User time (seconds): 206.20
+	System time (seconds): 9.82
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:37.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 22152
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5252
+	Voluntary context switches: 2
+	Involuntary context switches: 5722
+	Swaps: 0
+	File system inputs: 25316056
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2220bb08a33d30ba5dc0356de6059041636aa20f
+calc_read_regions_overlap_stats mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam gencode_exons.bed
+
+Total length of transcript regions: 131340583
+
+Number of analysed reads: 10000000
+Number of analysed reads: 20000000
+Number of analysed reads: 30000000
+Number of analysed reads: 40000000
+Number of analysed reads: 50000000
+Number of analysed reads: 60000000
+Number of analysed reads: 70000000
+Number of analysed reads: 80000000
+Number of analysed reads: 90000000
+Number of analysed reads: 100000000
+Number of analysed reads: 110000000
+Number of analysed reads: 120000000
+Number of analysed reads: 130000000
+Number of analysed reads: 140000000
+Number of analysed reads: 150000000
+Number of analysed reads: 160000000
+Number of analysed reads: 170000000
+Number of analysed reads: 180000000
+Number of analysed reads: 190000000
+Number of analysed reads: 200000000
+Number of analysed reads: 210000000
+Number of analysed reads: 220000000
+Number of analysed reads: 230000000
+
+Total number of analysed reads: 230719546
+Average overlap: 0.867039
+	Command being timed: "bash -c calc_read_regions_overlap_stats mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam gencode_exons.bed > mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_ovl_gc.txt; gzip mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_ovl_gc.txt"
+	User time (seconds): 874.14
+	System time (seconds): 10.83
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 14:46.53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 64540
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 26973
+	Voluntary context switches: 21
+	Involuntary context switches: 7950
+	Swaps: 0
+	File system inputs: 24669944
+	File system outputs: 4496
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2220bb08a33d30ba5dc0356de6059041636aa20f
+calc_exon_read_coverage mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam gencode_exons.bed
+
+Total length of complex regions: 0
+
+Number of analysed exons: 10000
+Number of analysed exons: 20000
+Number of analysed exons: 30000
+Number of analysed exons: 40000
+Number of analysed exons: 50000
+Number of analysed exons: 60000
+Number of analysed exons: 70000
+Number of analysed exons: 80000
+Number of analysed exons: 90000
+Number of analysed exons: 100000
+Number of analysed exons: 110000
+Number of analysed exons: 120000
+Number of analysed exons: 130000
+Number of analysed exons: 140000
+Number of analysed exons: 150000
+Number of analysed exons: 160000
+Number of analysed exons: 170000
+Number of analysed exons: 180000
+Number of analysed exons: 190000
+Number of analysed exons: 200000
+Number of analysed exons: 210000
+Number of analysed exons: 220000
+Number of analysed exons: 230000
+Number of analysed exons: 240000
+Number of analysed exons: 250000
+Number of analysed exons: 260000
+Number of analysed exons: 270000
+Number of analysed exons: 280000
+Number of analysed exons: 290000
+Number of analysed exons: 300000
+
+Total number of analysed exons: 303279
+	Command being timed: "bash -c calc_exon_read_coverage mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam gencode_exons.bed > mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_cov_gc.txt; gzip mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_cov_gc.txt"
+	User time (seconds): 1639.71
+	System time (seconds): 25.80
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 27:48.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 64140
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 30472
+	Voluntary context switches: 196
+	Involuntary context switches: 10601
+	Swaps: 0
+	File system inputs: 24911184
+	File system outputs: 79408
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq0.bed to ./ENCSR706ANY_mq0.bed
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/ENCSR706ANY/ENCSR706ANY_mq30.bed to ./ENCSR706ANY_mq30.bed
+2220bb08a33d30ba5dc0356de6059041636aa20f
+calc_read_regions_overlap_stats mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam ENCSR706ANY_mq30.bed
+
+Total length of transcript regions: 77921696
+
+Number of analysed reads: 10000000
+Number of analysed reads: 20000000
+Number of analysed reads: 30000000
+Number of analysed reads: 40000000
+Number of analysed reads: 50000000
+Number of analysed reads: 60000000
+Number of analysed reads: 70000000
+Number of analysed reads: 80000000
+Number of analysed reads: 90000000
+Number of analysed reads: 100000000
+Number of analysed reads: 110000000
+Number of analysed reads: 120000000
+Number of analysed reads: 130000000
+Number of analysed reads: 140000000
+Number of analysed reads: 150000000
+Number of analysed reads: 160000000
+Number of analysed reads: 170000000
+Number of analysed reads: 180000000
+Number of analysed reads: 190000000
+Number of analysed reads: 200000000
+Number of analysed reads: 210000000
+Number of analysed reads: 220000000
+Number of analysed reads: 230000000
+
+Total number of analysed reads: 230719546
+Average overlap: 0.848482
+	Command being timed: "bash -c calc_read_regions_overlap_stats mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam ENCSR706ANY_mq30.bed > mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_ovl_ENCSR706ANY_mq30.txt; gzip mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_ovl_ENCSR706ANY_mq30.txt"
+	User time (seconds): 787.56
+	System time (seconds): 9.93
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:19.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 56656
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 21199
+	Voluntary context switches: 1303
+	Involuntary context switches: 6781
+	Swaps: 0
+	File system inputs: 18572072
+	File system outputs: 3960
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2220bb08a33d30ba5dc0356de6059041636aa20f
+calc_exon_read_coverage mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam ENCSR706ANY_mq30.bed
+
+Total length of complex regions: 0
+
+Number of analysed exons: 10000
+Number of analysed exons: 20000
+Number of analysed exons: 30000
+Number of analysed exons: 40000
+Number of analysed exons: 50000
+Number of analysed exons: 60000
+Number of analysed exons: 70000
+Number of analysed exons: 80000
+Number of analysed exons: 90000
+Number of analysed exons: 100000
+Number of analysed exons: 110000
+Number of analysed exons: 120000
+Number of analysed exons: 130000
+Number of analysed exons: 140000
+Number of analysed exons: 150000
+
+Total number of analysed exons: 153051
+	Command being timed: "bash -c calc_exon_read_coverage mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470.bam ENCSR706ANY_mq30.bed > mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_cov_ENCSR706ANY_mq30.txt; gzip mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_cov_ENCSR706ANY_mq30.txt"
+	User time (seconds): 1275.14
+	System time (seconds): 21.76
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 21:38.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 63516
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 24494
+	Voluntary context switches: 97
+	Involuntary context switches: 8929
+	Swaps: 0
+	File system inputs: 24763984
+	File system outputs: 56856
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_ovl_ENCSR706ANY_mq30.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real_r2/SRR1153470/mpmap/1kg_NA12878_gencode100/mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_ovl_ENCSR706ANY_mq30.txt.gz
+upload: ./mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_cov_ENCSR706ANY_mq30.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real_r2/SRR1153470/mpmap/1kg_NA12878_gencode100/mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_cov_ENCSR706ANY_mq30.txt.gz
+upload: ./mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_ovl_gc.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real_r2/SRR1153470/mpmap/1kg_NA12878_gencode100/mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_ovl_gc.txt.gz
+upload: ./mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_cov_gc.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/real_r2/SRR1153470/mpmap/1kg_NA12878_gencode100/mpmap_1kg_NA12878_gencode100_real_r2_SRR1153470_exon_cov_gc.txt.gz
+---

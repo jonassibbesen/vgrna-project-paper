@@ -1,0 +1,135 @@
+---
+jas-calc-g-st-star-m10-vg-r2-aed1-uni-gc100-0621-1130
+TIME=20220621-1130 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-096bfdce-s2 MEMORY=144 CPU=24 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/stats/polya_rna/sim_vg_r2/calculate_gamp_stats.sh
+CPU=24 REF=gencode100 GRAPH=gencode100 SIM=ENCSR000AED_rep1_uni MAPPER=star_multi10
+---
+Completed 1.4 KiB/1.4 KiB (16.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/stats/polya_rna/sim_vg_r2/calculate_gamp_stats.sh to ./calculate_gamp_stats.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/star_multi10/gencode100/star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam to ./star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/star_multi10/gencode100/star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam to ./star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg to ./gencode100.xg
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h1.gam to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h1.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h2.gam to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h2.gam
+Total alignments: 51621778
+Total primary: 50000000
+Total secondary: 1621778
+Total aligned: 0
+Total perfect: 0
+Total gapless (softclips allowed): 0
+Total paired: 0
+Total properly paired: 0
+Insertions: 171477 bp in 84993 read events
+Deletions: 96769038019 bp in 3058294016 read events
+Substitutions: 13695527 bp in 13695527 read events
+Softclips: 74946896 bp in 5656244 read events
+	Command being timed: "bash -c vg stats -a star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam"
+	User time (seconds): 2257.36
+	System time (seconds): 6.05
+	Percent of CPU this job got: 1891%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:59.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7369064
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 11
+	Minor (reclaiming a frame) page faults: 1950916
+	Voluntary context switches: 3411
+	Involuntary context switches: 10025
+	Swaps: 0
+	File system inputs: 71664
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+49325264 reads correct
+	Command being timed: "bash -c vg gampcompare -t 24 -d -a star_multi10 -G gencode100.xg star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h1.gam | grep -v ^distance | sort -nr -k4 | sort -ns -k1 | sort -su -k6 | cut -f1-5 | sort -k1n -k2n -k3n -k4n | uniq -c > star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_gam_dist_h1.txt; gzip star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_gam_dist_h1.txt"
+	User time (seconds): 12628.65
+	System time (seconds): 384.41
+	Percent of CPU this job got: 1364%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:53.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 135034608
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 57
+	Minor (reclaiming a frame) page faults: 59075384
+	Voluntary context switches: 14102081
+	Involuntary context switches: 155532
+	Swaps: 0
+	File system inputs: 12596952
+	File system outputs: 57772616
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Total alignments: 51619368
+Total primary: 50000000
+Total secondary: 1619368
+Total aligned: 0
+Total perfect: 0
+Total gapless (softclips allowed): 0
+Total paired: 0
+Total properly paired: 0
+Insertions: 171251 bp in 86076 read events
+Deletions: 96890627325 bp in 3062158485 read events
+Substitutions: 13713007 bp in 13713007 read events
+Softclips: 74966777 bp in 5658453 read events
+	Command being timed: "bash -c vg stats -a star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam"
+	User time (seconds): 2289.81
+	System time (seconds): 8.08
+	Percent of CPU this job got: 1896%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:01.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7363728
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 2035307
+	Voluntary context switches: 3692
+	Involuntary context switches: 9440
+	Swaps: 0
+	File system inputs: 15386040
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+49322832 reads correct
+	Command being timed: "bash -c vg gampcompare -t 24 -d -a star_multi10 -G gencode100.xg star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h2.gam | grep -v ^distance | sort -nr -k4 | sort -ns -k1 | sort -su -k6 | cut -f1-5 | sort -k1n -k2n -k3n -k4n | uniq -c > star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_gam_dist_h2.txt; gzip star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_gam_dist_h2.txt"
+	User time (seconds): 12760.01
+	System time (seconds): 425.60
+	Percent of CPU this job got: 1385%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:51.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 135106884
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 48
+	Minor (reclaiming a frame) page faults: 60380706
+	Voluntary context switches: 15617721
+	Involuntary context switches: 126928
+	Swaps: 0
+	File system inputs: 49274080
+	File system outputs: 57771840
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_gam_dist_h1.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/stats/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/star_multi10/gencode100/star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_gam_dist_h1.txt.gz
+upload: ./star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_gam_dist_h2.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/star/stats/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/star_multi10/gencode100/star_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_gam_dist_h2.txt.gz
+---

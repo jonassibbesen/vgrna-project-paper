@@ -1,0 +1,161 @@
+---
+jas-sur-align-map-f-m10-vg-r2-aed1-uni-gc100-0515-2246
+TIME=20220515-2246 IMAGE=quay.io/jsibbesen/vgdev-s3script:vgdev-2cea1e25-s2 MEMORY=48 CPU=16 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/surject_alignments.sh
+CPU=16 REF=gencode100 SIM=ENCSR000AED_rep1_uni MAPPER=map_fast_multi10
+---
+Completed 1.5 KiB/1.5 KiB (15.8 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/surject_alignments.sh to ./surject_alignments.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/map_fast_multi10/gencode100/map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam to ./map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/map_fast_multi10/gencode100/map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam to ./map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/gencode100/gencode100.xg to ./gencode100.xg
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+194 reference_paths.txt
+	Command being timed: "bash -c vg paths -L -x gencode100.xg | grep -v ENST > reference_paths.txt; wc -l reference_paths.txt"
+	User time (seconds): 6.21
+	System time (seconds): 15.36
+	Percent of CPU this job got: 138%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:15.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6055520
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1513378
+	Voluntary context switches: 1530726
+	Involuntary context switches: 74
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 28880
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg surject -t 16 -S -A -b -F reference_paths.txt -x gencode100.xg map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.gam > map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam"
+	User time (seconds): 24445.75
+	System time (seconds): 2537.94
+	Percent of CPU this job got: 1582%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 28:24.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6679000
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 730192668
+	Voluntary context switches: 1473413
+	Involuntary context switches: 422932
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 11191416
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 16 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam > map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1_sort.bam; mv map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1_sort.bam map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam; samtools index map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam"
+	User time (seconds): 1287.32
+	System time (seconds): 45.21
+	Percent of CPU this job got: 621%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:34.50
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13960092
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 16028425
+	Voluntary context switches: 1171112
+	Involuntary context switches: 12999
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 17729688
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+194 reference_paths.txt
+	Command being timed: "bash -c vg paths -L -x gencode100.xg | grep -v ENST > reference_paths.txt; wc -l reference_paths.txt"
+	User time (seconds): 6.10
+	System time (seconds): 15.51
+	Percent of CPU this job got: 138%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:15.60
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6057816
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1230250
+	Voluntary context switches: 1564409
+	Involuntary context switches: 16
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 28880
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+warning:[XG] Loading an out-of-date XG format. For better performance over repeated loads, consider recreating this XG index.
+	Command being timed: "bash -c vg surject -t 16 -S -A -b -F reference_paths.txt -x gencode100.xg map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.gam > map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam"
+	User time (seconds): 22625.87
+	System time (seconds): 2245.51
+	Percent of CPU this job got: 1581%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 26:12.41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6694264
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 713574266
+	Voluntary context switches: 1473907
+	Involuntary context switches: 345850
+	Swaps: 0
+	File system inputs: 9783384
+	File system outputs: 11092984
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 16 files and 16 in-memory blocks...
+	Command being timed: "bash -c samtools sort -O BAM --threads 16 map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam > map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2_sort.bam; mv map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2_sort.bam map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam; samtools index map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam"
+	User time (seconds): 1146.04
+	System time (seconds): 26.10
+	Percent of CPU this job got: 635%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:04.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 14161732
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2913644
+	Voluntary context switches: 1228453
+	Involuntary context switches: 10424
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 17618584
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/map_fast_multi10/gencode100/map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam.bai
+upload: ./map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam.bai to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/map_fast_multi10/gencode100/map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam.bai
+upload: ./map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/map_fast_multi10/gencode100/map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam
+upload: ./map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/map_fast_multi10/gencode100/map_fast_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam
+---

@@ -1,0 +1,75 @@
+---
+jas-exp-kallisto-s-real-r2-aed1-all-gc100-uni-ms-0619-2012
+TIME=20220619-2012 IMAGE=quay.io/jsibbesen/kallisto-s3script:kallisto-0.46.2-s1 MEMORY=208 CPU=24 DISK=256
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real_r2/infer_expression.sh
+CPU=24 REF=1kg_all_af001_gencode100_unidi_mt_sca REAL=ENCSR000AED_rep1 READS_1=s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz READS_2=s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz SEED=622797 QUANTER=kallisto_strand
+---
+Completed 1.9 KiB/1.9 KiB (22.2 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real_r2/infer_expression.sh to ./infer_expression.sh
+download: s3://encode-public/2013/06/13/c653a32e-e618-42b1-b8b8-b3b838847b97/ENCFF001REK.fastq.gz to ./reads_1.fq.gz
+download: s3://encode-public/2013/06/13/efa1a02d-6b43-4635-9ef8-d2d78c527839/ENCFF001REJ.fastq.gz to ./reads_2.fq.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/indexes/1kg_all_af001_gencode100_unidi_mt_sca/kallisto_index_1kg_all_af001_gencode100_unidi_mt_sca.idx to ./kallisto_index_1kg_all_af001_gencode100_unidi_mt_sca.idx
+
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 11,835,684
+[index] number of k-mers: 241,605,672
+[index] number of equivalence classes: 21,554,671
+[quant] running in paired-end mode
+[quant] will process pair 1: reads_1.fq.gz
+                             reads_2.fq.gz
+[quant] finding pseudoalignments for the reads ... done
+[quant] processed 97,548,052 reads, 70,677,588 reads pseudoaligned
+[quant] estimated average fragment length: 209.534
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 4,420 rounds
+
+	Command being timed: "bash -c kallisto quant -t 24 --seed 622797 --rf-stranded -i kallisto_index_1kg_all_af001_gencode100_unidi_mt_sca.idx -o kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_ENCSR000AED_rep1 reads_1.fq.gz reads_2.fq.gz"
+	User time (seconds): 68216.68
+	System time (seconds): 988.95
+	Percent of CPU this job got: 159%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 12:03:37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 150583336
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 128400438
+	Voluntary context switches: 42320
+	Involuntary context switches: 79133
+	Swaps: 0
+	File system inputs: 29397624
+	File system outputs: 1013576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+	Command being timed: "bash -c gzip kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_ENCSR000AED_rep1/abundance.tsv"
+	User time (seconds): 6.47
+	System time (seconds): 0.14
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 279
+	Voluntary context switches: 1
+	Involuntary context switches: 21
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 78232
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_ENCSR000AED_rep1/run_info.json to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real_r2/ENCSR000AED_rep1/kallisto_strand/1kg_all_af001_gencode100_unidi_mt_sca/kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_ENCSR000AED_rep1/run_info.json
+upload: kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_ENCSR000AED_rep1/abundance.h5 to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real_r2/ENCSR000AED_rep1/kallisto_strand/1kg_all_af001_gencode100_unidi_mt_sca/kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_ENCSR000AED_rep1/abundance.h5
+upload: kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_ENCSR000AED_rep1/abundance.tsv.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/quantification/kallisto/expression/polya_rna/real_r2/ENCSR000AED_rep1/kallisto_strand/1kg_all_af001_gencode100_unidi_mt_sca/kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_ENCSR000AED_rep1/abundance.tsv.gz
+---

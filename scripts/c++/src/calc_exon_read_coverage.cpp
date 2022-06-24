@@ -20,9 +20,9 @@ using namespace SeqLib;
 
 int main(int argc, char* argv[]) {
 
-    if (argc != 3) {
+    if (!(argc == 3 || argc == 4)) {
 
-        cerr << "Usage: calc_allele_read_coverage <read_bam> <exon_bed> > coverage.txt" << endl;
+        cerr << "Usage: calc_allele_read_coverage <read_bam> <exon_bed> (<complex_bed>) > coverage.txt" << endl;
         return 1;
     }
 
@@ -35,7 +35,16 @@ int main(int argc, char* argv[]) {
     GRC exons;
     assert(exons.ReadBED(argv[2], bam_reader.Header()));
 
-    cout << "Count" << "\t" << "MapQ" << "\t" << "AllelicMapQ" << "\t" << "AllelePosition" << "\t" << "ExonSize" << "\t" << "ReadCoverage" << "\t" << "BaseCoverage" << endl;
+    cout << "Count" << "\t" << "MapQ" << "\t" << "AllelicMapQ" << "\t" << "AllelePosition" << "\t" << "ExonSize" << "\t" << "ExonComplexFrac" << "\t" << "ReadCoverage" << "\t" << "BaseCoverage" << endl;
+
+    GRC complex_regions;
+
+    if (argc == 4) {
+
+        complex_regions = parseRegionsBed(argv[3], bam_reader.Header());
+    }
+
+    cerr << "Total length of complex regions: " << complex_regions.TotalWidth() << "\n" << endl;
 
     BamRecord bam_record;
 
@@ -71,6 +80,8 @@ int main(int argc, char* argv[]) {
             }
         }
 
+        double exon_complex_frac = complex_regions.FindOverlapWidth(*exons_it, true) / static_cast<double>(exons_it->Width());
+
         if (mapq_read_coverage_counts.empty()) {
 
             cout << "0";
@@ -78,6 +89,7 @@ int main(int argc, char* argv[]) {
             cout << "\t" << "0";
             cout << "\t" << exons_it->ToString(bam_reader.Header());
             cout << "\t" << exons_it->Width();
+            cout << "\t" << exon_complex_frac;            
             cout << "\t" << "0";
             cout << "\t" << "0";
             cout << endl;
@@ -91,6 +103,7 @@ int main(int argc, char* argv[]) {
                 cout << "\t" << mapq_count.first.second;
                 cout << "\t" << exons_it->ToString(bam_reader.Header());
                 cout << "\t" << exons_it->Width();
+                cout << "\t" << exon_complex_frac;            
                 cout << "\t" << mapq_count.second.first;
                 cout << "\t" << mapq_count.second.second;
                 cout << endl;

@@ -21,9 +21,9 @@ transcripts in bam format.
 
 using namespace SeqLib;
 
-unordered_map<string, GRC> createTranscriptGenomicRegions(const string & transcript_bam_file) {
+GRC createTranscriptGenomicRegions(const string & transcript_bam_file) {
 
-    unordered_map<string, GRC> transcript_genomic_regions;
+    GRC transcript_genomic_regions;
 
     BamReader bam_reader;
     bam_reader.Open(transcript_bam_file);
@@ -34,18 +34,13 @@ unordered_map<string, GRC> createTranscriptGenomicRegions(const string & transcr
     while (bam_reader.GetNextRecord(bam_record)) {
 
         assert(bam_record.GetCigar().NumQueryConsumed() == bam_record.Length());
-
-        auto transcript_genomic_regions_it = transcript_genomic_regions.emplace(bam_record.ChrName(bam_reader.Header()), GRC());
-        cigarToGenomicRegions(&(transcript_genomic_regions_it.first->second), bam_record.GetCigar(), 0, bam_record.Position());
+        cigarToGenomicRegions(&transcript_genomic_regions, bam_record.GetCigar(), bam_record.ChrID(), bam_record.Position());
     }
 
     bam_reader.Close();
 
-    for (auto & chrom_regions: transcript_genomic_regions) {
-
-        chrom_regions.second.MergeOverlappingIntervals();
-        chrom_regions.second.CreateTreeMap();
-    }
+    transcript_genomic_regions.MergeOverlappingIntervals();
+    transcript_genomic_regions.CreateTreeMap();
 
     return transcript_genomic_regions;
 }
@@ -65,14 +60,8 @@ int main(int argc, char* argv[]) {
     assert(bam_reader.IsOpen());
 
     auto transcript_genomic_regions = createTranscriptGenomicRegions(argv[2]);
-    uint32_t total_width = 0;
 
-    for (auto & chrom_regions: transcript_genomic_regions) {
-
-        total_width += chrom_regions.second.TotalWidth();
-    }
-
-    cerr << "Number of transcript bases: " << total_width << "\n" << endl;
+    cerr << "Number of transcript bases: " << transcript_genomic_regions.TotalWidth() << "\n" << endl;
 
     bool debug_output = (argc == 4);
 
@@ -105,8 +94,6 @@ int main(int argc, char* argv[]) {
 
         double overlap = 0;
 
-        auto transcript_genomic_regions_it = transcript_genomic_regions.find(bam_record.ChrName(bam_reader.Header()));
-
         if (bam_record.MappedFlag()) { 
             
             assert(bam_record.GetCigar().NumQueryConsumed() == bam_record.Length());
@@ -114,15 +101,11 @@ int main(int argc, char* argv[]) {
             insertion_length = cigarTypeLength(bam_record.GetCigar(), 'I');
             soft_clip_length = cigarTypeLength(bam_record.GetCigar(), 'S');
 
-            if (transcript_genomic_regions_it != transcript_genomic_regions.end()) {
+            auto read_cigar_genomic_regions = cigarToGenomicRegions(bam_record.GetCigar(), bam_record.ChrID(), bam_record.Position());
+            read_cigar_genomic_regions.CreateTreeMap();
 
-                auto read_cigar_genomic_regions = cigarToGenomicRegions(bam_record.GetCigar(), 0, bam_record.Position());
-                read_cigar_genomic_regions.CreateTreeMap();
-
-                auto cigar_genomic_regions_intersection = transcript_genomic_regions_it->second.Intersection(read_cigar_genomic_regions, true);
-
-                overlap = cigar_genomic_regions_intersection.TotalWidth() / static_cast<double>(bam_record.Length()); 
-            }
+            auto cigar_genomic_regions_intersection = transcript_genomic_regions.Intersection(read_cigar_genomic_regions, true);
+            overlap = cigar_genomic_regions_intersection.TotalWidth() / static_cast<double>(bam_record.Length()); 
         }
 
         stringstream overlap_stats_ss;

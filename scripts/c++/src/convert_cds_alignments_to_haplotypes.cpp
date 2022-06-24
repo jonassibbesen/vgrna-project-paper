@@ -38,81 +38,11 @@ unordered_map<int32_t, string> parseGenome(const string & genome_file, const Bam
     return genome;
 }
 
-GRC parseSpliceJunctions(const string & transcripts_file, const BamHeader & bam_header) {
-
-    GRC splice_junctions;
-
-    ifstream transcripts_istream(transcripts_file);
-    assert(transcripts_istream.is_open());
-
-    string line;
-
-    smatch regex_id_match;
-    regex regex_id_exp("transcript_id\\s{1}\"?([^\"]*)\"?;?");
-
-    string prev_transcript_id = "";
-    pair<uint32_t, uint32_t> prev_exon(0, 0);
-
-    while (transcripts_istream.good()) {
-
-        getline(transcripts_istream, line, '\n');
-
-        if (line.empty() || line.front() == '#') {
-
-            continue;
-        }
-
-        auto line_split = splitString(line, '\t');
-
-        if (line_split.at(2) != "exon") {
-
-            continue;
-        }
-
-        string transcript_id = "";
-
-        if (std::regex_search(line_split.at(8), regex_id_match, regex_id_exp)) {
-
-            assert(regex_id_match.size() == 2);
-            transcript_id = regex_id_match[1];
-        }
-
-        pair<uint32_t, uint32_t> exon(stoi(line_split.at(3)), stoi(line_split.at(4)));
-
-        if (prev_transcript_id == transcript_id) {
-
-            auto splice_start = prev_exon.second;
-            auto splice_end = exon.first;
-
-            if (line_split.at(6) == "-") {
-
-                if (exon.first < prev_exon.second) {
-
-                    splice_start = exon.second;
-                    splice_end = prev_exon.first;
-                }
-            }
-
-            splice_junctions.add(GenomicRegion(bam_header.Name2ID(line_split.at(0)), splice_start, splice_end - 2));
-        }
-
-        prev_transcript_id = transcript_id;
-        prev_exon = exon;
-    }
-
-    transcripts_istream.close();
-
-    splice_junctions.CoordinateSort();
-    splice_junctions.CreateTreeMap();
-
-    return splice_junctions;
-}
-
 int main(int argc, char* argv[]) {
 
     if (argc != 5) {
 
-        cerr << "Usage: convert_cds_alignments_to_haplotypes <cds_bam> <genome_fasta> <transcripts_gtf> <max_sj_dist> > haplotypes.fa" << endl;
+        cerr << "Usage: convert_cds_alignments_to_haplotypes <cds_bam> <genome_fasta> <transcripts_gff> <max_sj_dist> > haplotypes.fa" << endl;
         return 1;
     }
 

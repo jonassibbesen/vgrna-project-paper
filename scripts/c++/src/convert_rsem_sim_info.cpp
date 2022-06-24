@@ -68,10 +68,9 @@ int main(int argc, char* argv[]) {
     auto transcripts = parseTranscriptInfo(argv[2]);
     cerr << "Number of transcripts: " << transcripts.size() << "\n" << endl;
 
-    cout << "read" << "\t" << "path" << "\t" << "offset" << "\t" << "reverse" << endl;
-
     BamRecord bam_record;
 
+    unordered_set<string> read_info;
     uint32_t num_reads = 0;
 
     while (bam_reader.GetNextRecord(bam_record)) { 
@@ -90,16 +89,11 @@ int main(int argc, char* argv[]) {
         uint32_t read_transcript_pos = stoi(read_name_split.at(3));
 
         auto read_name_end_split = splitString(read_name_split.at(4), '/');
-        assert(read_name_end_split.size() <= 2); 
+        assert(read_name_end_split.size() <= 2);
 
-        if (read_name_end_split.size() == 2) {
+        bool is_first = isFirstRead(bam_record); 
 
-            if (read_name_end_split.back() == "2") {
-
-                read_transcript_pos += stoi(read_name_end_split.front()) - bam_record.Length();
-            }
-
-        } else if (!bam_record.FirstFlag()) {
+        if (!is_first) {
 
             read_transcript_pos += stoi(read_name_end_split.front()) - bam_record.Length();
         }
@@ -111,7 +105,7 @@ int main(int argc, char* argv[]) {
 
         string read_name = bam_record.Qname();
 
-        if (bam_record.FirstFlag()) {
+        if (is_first) {
 
             read_name += "_1";
         
@@ -120,7 +114,17 @@ int main(int argc, char* argv[]) {
             read_name += "_2";            
         }
 
-        cout << read_name << "\t" << read_transcript_id << "\t" << read_transcript_pos << "\t" << !bam_record.ReverseFlag() << endl;     
+        string reverse = "0";
+
+        if ((read_name_split.at(1) == "0" && !is_first) || (read_name_split.at(1) == "1" && is_first)) {
+
+            reverse = "1";
+        }  
+
+        stringstream read_info_ss;
+        read_info_ss << read_name << "\t" << read_transcript_id << "\t" << read_transcript_pos << "\t" << reverse;  
+
+        read_info.emplace(read_info_ss.str());   
 
         if (num_reads % 10000000 == 0) {
 
@@ -130,7 +134,15 @@ int main(int argc, char* argv[]) {
 
     bam_reader.Close();
 
-    cerr << "\nTotal number of converted reads: " << num_reads << endl;
+    cout << "read" << "\t" << "path" << "\t" << "offset" << "\t" << "reverse" << endl;
+
+    for (auto & read: read_info) {
+
+        cout << read << endl;
+    }
+
+    cerr << "\nNumber of converted unique reads: " << read_info.size() << endl;
+    cerr << "Total number of converted reads: " << num_reads << endl;
 
 	return 0;
 }

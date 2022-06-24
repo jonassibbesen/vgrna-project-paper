@@ -46,7 +46,7 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 add_executable(calc_allele_read_coverage src/calc_allele_read_coverage.cpp)
 add_dependencies(calc_allele_read_coverage seqlib-proj)
-target_link_libraries(calc_allele_read_coverage seqlib hts)
+target_link_libraries(calc_allele_read_coverage seqlib hts z)
 
 add_executable(calc_exon_read_coverage src/calc_exon_read_coverage.cpp)
 add_dependencies(calc_exon_read_coverage seqlib-proj)
@@ -54,11 +54,11 @@ target_link_libraries(calc_exon_read_coverage seqlib hts z)
 
 add_executable(convert_rsem_sim_info src/convert_rsem_sim_info.cpp)
 add_dependencies(convert_rsem_sim_info seqlib-proj)
-target_link_libraries(convert_rsem_sim_info seqlib hts)
+target_link_libraries(convert_rsem_sim_info seqlib hts z)
 
 add_executable(calc_vg_benchmark_stats src/calc_vg_benchmark_stats.cpp)
 add_dependencies(calc_vg_benchmark_stats seqlib-proj)
-target_link_libraries(calc_vg_benchmark_stats seqlib hts)
+target_link_libraries(calc_vg_benchmark_stats seqlib hts z)
 
 add_executable(calc_read_regions_overlap_stats src/calc_read_regions_overlap_stats.cpp)
 add_dependencies(calc_read_regions_overlap_stats seqlib-proj)
@@ -66,15 +66,15 @@ target_link_libraries(calc_read_regions_overlap_stats seqlib hts z)
 
 add_executable(calc_read_transcript_overlap_stats src/calc_read_transcript_overlap_stats.cpp)
 add_dependencies(calc_read_transcript_overlap_stats seqlib-proj)
-target_link_libraries(calc_read_transcript_overlap_stats seqlib hts)
+target_link_libraries(calc_read_transcript_overlap_stats seqlib hts z)
 
 add_executable(convert_snaptron_to_bed src/convert_snaptron_to_bed.cpp)
 add_dependencies(convert_snaptron_to_bed seqlib-proj)
-target_link_libraries(convert_snaptron_to_bed seqlib hts)
+target_link_libraries(convert_snaptron_to_bed seqlib hts z)
 
 add_executable(filter_multi_gene_introns src/filter_multi_gene_introns.cpp)
 add_dependencies(filter_multi_gene_introns seqlib-proj)
-target_link_libraries(filter_multi_gene_introns seqlib hts)
+target_link_libraries(filter_multi_gene_introns seqlib hts z)
 
 add_executable(convert_cds_alignments_to_haplotypes src/convert_cds_alignments_to_haplotypes.cpp)
 add_dependencies(convert_cds_alignments_to_haplotypes seqlib-proj)

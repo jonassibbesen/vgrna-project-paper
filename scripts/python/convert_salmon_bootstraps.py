@@ -57,7 +57,7 @@ printScriptHeader()
 
 if len(sys.argv) != 5:
 
-    print("Usage: python convert_salmon_bootstraps.py <bootstraps_gz_name> <names_tsv_gz_name> <em_quant_gz_name> <output_fil_name>\n")
+    print("Usage: python convert_salmon_bootstraps.py <bootstraps_gz_name> <names_tsv_gz_name> <em_quant_gz_name> <output_file_name>\n")
     sys.exit(1)
 
 

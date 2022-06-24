@@ -3,113 +3,122 @@
 
 rm(list=ls())
 
-library("tidyverse")
-library("gridExtra")
-library("wesanderson")
-library("scales")
-
 # source("./utils.R")
-
-source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r1/")
 
 # printHeader()
 
 # data_dir <- read.csv(args[6], sep = " ", header = F)
 # setwd(data_dir)
 
-########
+source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
 
+########
 
 parse_file <- function(filename) {
   
   dir_split <- strsplit(dirname(filename), "/")[[1]]
   
-  data <- read_table2(filename)
+  data <- read_table(filename)
   data <- data %>%
     add_column(Type = dir_split[5]) %>%
     add_column(Reads = dir_split[7]) %>%
     add_column(Method = dir_split[8]) %>%
-    add_column(Graph = dir_split[9])
-  
-  if (!grepl("mpmap", filename)) {
-    
-     data <- data %>%
-       mutate(AllelicMapQ = MapQ)
-  }
+    add_column(Reference = dir_split[9])
   
   return(data)
 }
 
 mapping_data <- map_dfr(list.files(path = "./methods", pattern=".*_exon_ovl_gc.*.txt", full.names = T, recursive = T), parse_file)
 
-
-########
-
-
 mapping_data <- mapping_data %>%
   filter(Type == "polya_rna")
 
-mapping_data_amq <- mapping_data %>%
-  filter(Method == "mpmap") %>%
-  mutate(Method = "mpmap_amq") %>%
-  mutate(MapQ = AllelicMapQ)
-
-mapping_data <- rbind(mapping_data, mapping_data_amq)
-
 mapping_data$Method <- recode_factor(mapping_data$Method, 
-                                           "hisat2" = "HISAT2",
-                                           "star" = "STAR",
-                                           "map_fast" = "vg map", 
-                                           "mpmap" = "vg mpmap", 
-                                           "mpmap_amq" = "vg mpmap (amq)")
+                                     "hisat2" = "HISAT2",
+                                     "star" = "STAR",
+                                     "map_fast" = "vg map", 
+                                     "mpmap" = "vg mpmap",
+                                     "star_alleleseq" = "Diploid reference (STAR)")
 
-# mapping_data <- mapping_data %>%
-#   filter(Method != "vg mpmap (amq)")
 
-mapping_data$Graph = recode_factor(mapping_data$Graph, 
-                                         "gencode100" = "Spliced reference",
-                                         "1kg_NA12878_gencode100" = "Personal reference graph",
-                                         "1kg_NA12878_exons_gencode100" = "Personal reference graph",
-                                         "1kg_nonCEU_af001_gencode100" = "Spliced pangenome graph",
-                                         "1kg_all_af001_gencode100" = "Spliced pangenome graph")
-
+mapping_data$Reference = recode_factor(mapping_data$Reference, 
+                                            "gencode100" = "Spliced reference",
+                                            "1kg_NA12878_gencode100" = "Spliced personal graph/reference",
+                                            "1kg_NA12878_exons_gencode100" = "Spliced personal graph/reference",
+                                            "1kg_nonCEU_af001_gencode100" = "Spliced pangenome graph",
+                                            "1kg_all_af001_gencode100" = "Spliced pangenome graph")
 
 mapping_data_stats <- mapping_data %>%
   mutate(MapQ = ifelse(IsMapped, MapQ, -1)) %>% 
-  mutate(MapQ1 = Count * (MapQ >= 1)) %>% 
-  group_by(Reads, Method, Graph) %>%
-  summarise(count = sum(Count), MapQ1 = sum(MapQ1)) %>%
-  mutate(MapQ1_frac = MapQ1 / count) %>%
-  gather("MapQ1_frac", key = "Filter", value = "Frac")
+  mutate(MapQ0 = Count * (MapQ >= 0)) %>% 
+  mutate(MapQ30 = Count * (MapQ >= 30)) %>% 
+  group_by(Reads, Method, Reference) %>%
+  summarise(count = sum(Count), MapQ0 = sum(MapQ0), MapQ30 = sum(MapQ30)) %>%
+  mutate(MapQ0_frac = MapQ0 / count, MapQ30_frac = MapQ30 / count) %>%
+  gather("MapQ0_frac", "MapQ30_frac", key = "Filter", value = "Frac")
 
-for (reads in unique(mapping_data_stats$Reads)) {
-  
-  mapping_data_stats_reads <- mapping_data_stats %>%
+########
+
+mapping_data_stats_main <- mapping_data_stats %>%
+  filter(Reference != "Spliced personal graph/reference")
+
+for (reads in unique(mapping_data_stats_main$Reads)) {
+
+  mapping_data_stats_main_reads <- mapping_data_stats_main %>%
     filter(Reads == reads)
-  
-  mapping_data_stats_reads <- mapping_data_stats_reads %>%
+
+  mapping_data_stats_main_reads <- mapping_data_stats_main_reads %>%
     ungroup() %>%
-    add_row(Reads = reads, Method = "STAR", Graph = "Spliced pangenome graph", count = 0, MapQ1 = 0, Filter = "MapQ1_frac", Frac = 0)
+    add_row(Reads = reads, Method = "STAR", Reference = "Spliced pangenome graph", count = 0, MapQ0 = 0, MapQ30 = 0, Filter = "MapQ0_frac", Frac = 0) %>%
+    add_row(Reads = reads, Method = "STAR", Reference = "Spliced pangenome graph", count = 0, MapQ0 = 0, MapQ30 = 0, Filter = "MapQ30_frac", Frac = 0)
+
+  mapping_data_stats_main_reads$Method <- factor(mapping_data_stats_main_reads$Method, levels = c("HISAT2", "STAR", "vg map", "vg mpmap"))
+
+  mapping_data_stats_main_reads$Reference = recode_factor(mapping_data_stats_main_reads$Reference,
+                                                 "Spliced reference" = "Spliced\nreference",
+                                                 "Spliced pangenome graph" = "Spliced\npangenome\ngraph")
+
+  mapping_data_stats_main_reads$Filter <- recode_factor(mapping_data_stats_main_reads$Filter,
+                                                         "MapQ0_frac" = "Mapped",
+                                                         "MapQ30_frac" = "MapQ >= 30")
+
+  mapping_data_stats_main_reads$FacetCol <- "Real reads,\nprimary alignments"
+  mapping_data_stats_main_reads$FacetRow <- ""
+
+  plotMappingStatsBenchmark(mapping_data_stats_main_reads, wes_cols, paste("plots/real_stats/real_r2_stats_bar_main_", reads, sep = ""))
+}
+
+########
+
+mapping_data_stats_personal <- mapping_data_stats %>%
+  filter(Reads == "ENCSR000AED_rep1") %>%
+  filter(Method == "STAR" | ((Method == "vg mpmap" | Method == "Diploid reference (STAR)") & Reference == "Spliced personal graph/reference"))
+
+for (reads in unique(mapping_data_stats_personal$Reads)) {
   
-  if (!grepl("CHM13", reads)) {
-    
-    mapping_data_stats_reads <- mapping_data_stats_reads %>%
-      add_row(Reads = reads, Method = "STAR", Graph = "Personal reference graph", count = 0, MapQ1 = 0, Filter = "MapQ1_frac", Frac = 0)
-  }
+  mapping_data_stats_personal_reads <- mapping_data_stats_personal %>%
+    filter(Reads == reads)
+
+  mapping_data_stats_personal_reads <- mapping_data_stats_personal_reads %>%
+    ungroup() %>%
+    add_row(Reads = reads, Method = "vg mpmap", Reference = "Spliced reference", count = 0, MapQ0 = 0, MapQ30 = 0, Filter = "MapQ0_frac", Frac = 0) %>%
+    add_row(Reads = reads, Method = "vg mpmap", Reference = "Spliced reference", count = 0, MapQ0 = 0, MapQ30 = 0, Filter = "MapQ30_frac", Frac = 0)
   
-  mapping_data_stats_reads$Graph = recode_factor(mapping_data_stats_reads$Graph, 
-                                                       "Spliced reference" = "Spliced\nreference",
-                                                       "Personal reference graph" = "Personal\nreference\ngraph",
-                                                       "Spliced pangenome graph" = "Spliced\npangenome\ngraph")
+  mapping_data_stats_personal_reads$Method <- factor(mapping_data_stats_personal_reads$Method, levels = c("STAR", "vg mpmap", "Diploid reference (STAR)"))
   
-  mapping_data_stats_reads$Filter <- recode_factor(mapping_data_stats_reads$Filter, 
-                                                         "MapQ1_frac" = "MapQ > 0")
+  mapping_data_stats_personal_reads$Reference = recode_factor(mapping_data_stats_personal_reads$Reference,
+                                                          "Spliced reference" = "Spliced\nreference",
+                                                          "Spliced personal graph/reference" = "Spliced personal\ngraph/reference")
+
+  mapping_data_stats_personal_reads$Filter <- recode_factor(mapping_data_stats_personal_reads$Filter, 
+                                                        "MapQ0_frac" = "Mapped", 
+                                                        "MapQ30_frac" = "MapQ >= 30")
   
-  mapping_data_stats_reads$FacetCol <- "Real reads"
-  mapping_data_stats_reads$FacetRow <- ""
+  mapping_data_stats_personal_reads$FacetCol <- "Real reads,\nprimary alignments"
+  mapping_data_stats_personal_reads$FacetRow <- ""
   
-  plotMappingStatsBenchmark(mapping_data_stats_reads, wes_cols, paste("plots/real_stats/real_stats_bar_", reads, sep = ""))
+  plotMappingStatsBenchmarkWide(mapping_data_stats_personal_reads, wes_cols[c(2,4,5)], paste("plots/real_stats/real_r2_stats_bar_personal_", reads, sep = ""))
 }
 
 ########

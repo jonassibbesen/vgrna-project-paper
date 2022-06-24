@@ -3,28 +3,20 @@
 
 rm(list=ls())
 
-library("tidyverse")
-library("gridExtra")
-library("scales")
-library("wesanderson")
-library("truncnorm")
-
 # source("./utils.R")
-
-source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/hla_r1/")
 
 # printHeader()
 
 # data_dir <- read.csv(args[6], sep = " ", header = F)
 # setwd(data_dir)
 
+source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/hla_r2/")
+
 ########
 
-
-inference <- "_r1"
-#samples <- c("NA06994", "NA07037", "NA07357", "NA11829", "NA11893", "NA12006", "NA12043", "NA12234", "NA12272", "NA12275")
-samples <- c("NA06994", "NA07037", "NA07357", "NA11893", "NA12006", "NA12043", "NA12234", "NA12272", "NA12275")
+inference <- "_r2"
+samples <- c("NA06994", "NA07037", "NA07357", "NA11829", "NA11893", "NA12006", "NA12043", "NA12234", "NA12272", "NA12275")
 
 #samples <- c("NA07051", "NA11832", "NA11840", "NA11930", "NA12287")
 
@@ -33,7 +25,7 @@ parse_rpvg <- function(filename) {
   print(filename)
   dir_split <- strsplit(dirname(filename), "/")[[1]]
   
-  data <- read_table2(gzfile(filename), col_names = T)
+  data <- read_table(gzfile(filename), col_names = T)
   data <- data %>%
     add_column(Method = dir_split[3]) %>%
     add_column(Sample = dir_split[4])
@@ -41,7 +33,7 @@ parse_rpvg <- function(filename) {
   return(data)
 }
 
-info <- read_table2(gzfile("graphs/1kg_nonCEU_af001_imgt_hla_p10k_noB258_noN_main_gencode100/6/1kg_nonCEU_af001_imgt_hla_p10k_noB258_noN_main_gencode100_6.txt.gz"), col_names = T) %>%
+info <- read_table(gzfile("../hla_r1/graphs/1kg_nonCEU_af001_imgt_hla_p10k_noB258_noN_main_gencode100/6/1kg_nonCEU_af001_imgt_hla_p10k_noB258_noN_main_gencode100_6.txt.gz"), col_names = T) %>%
   mutate(Haplotypes = gsub("_thread_hla_", "", Haplotypes, fixed = T)) %>%
   mutate(Haplotypes = gsub("_0_0_0", ":", Haplotypes, fixed = T)) %>%
   mutate(Haplotypes = gsub("*", ":", Haplotypes, fixed = T)) %>%
@@ -50,7 +42,7 @@ info <- read_table2(gzfile("graphs/1kg_nonCEU_af001_imgt_hla_p10k_noB258_noN_mai
 
 info$Haplotypes <- gsub("^([A-Z,0-9]*:[0-9]*:[0-9]*:[0-9]*):.*", "\\1:", info$Haplotypes)
 
-group <- read_table2("groups/hla_nom_g.txt", comment = "#", col_names = F)
+group <- read_table("../hla_r1/groups/hla_nom_g.txt", comment = "#", col_names = F)
 group <- group %>%
   add_column(g_id = seq(1, nrow(group))) %>%
   separate(X1, c("Gene", "Allele"), sep = "\\*") %>%
@@ -88,7 +80,7 @@ info <- info %>%
   arrange(Name, Haplotypes, g_id) %>%
   distinct()
 
-main_hla_genes <- read_table2("genes/gencode.v29.primary_assembly.annotation_renamed_full_gene_transcripts.txt", col_names = F) %>%
+main_hla_genes <- read_table("../hla_r1/genes/gencode.v29.primary_assembly.annotation_renamed_full_gene_transcripts.txt", col_names = F) %>%
   filter(X4 == "HLA-A" | X4 == "HLA-B" | X4 == "HLA-C" | X4 == "HLA-DRB1" | X4 == "HLA-DQB1" | X4 == "HLA-DQB1-AS1")
 
 eval <- function(truth, samples) {
@@ -158,10 +150,10 @@ eval <- function(truth, samples) {
   return(results)
 }
 
-truth_old <- read.table("truth/20140702_hla_diversity.txt", header = T)
+truth_old <- read.table("../hla_r1/truth/20140702_hla_diversity.txt", header = T)
 truth_old$sbgroup <- NULL
 
-truth_new <- read.table("truth/20181129_HLA_types_full_1000_Genomes_Project_panel.txt", header = T, sep = "\t") %>%
+truth_new <- read.table("../hla_r1/truth/20181129_HLA_types_full_1000_Genomes_Project_panel.txt", header = T, sep = "\t") %>%
   rename(id = Sample.ID)
 truth_new$Region <- NULL
 truth_new$Population <- NULL
@@ -236,7 +228,7 @@ stats_new_d1 <- results_new %>%
   mutate(correct_2 = correct_d1_2) %>%
   calc_hap_stats()
 
-pdf(paste("plots/geu/hap_stats_samples_geu_inf", inference, ".pdf", sep = ""))
+pdf(paste("plots/geu/hla_r2_hap_stats_samples_geu_inf", inference, ".pdf", sep = ""))
 
 plot_hap_stats(stats_old_full, stats_new_full, "full")
 plot_hap_stats(stats_old_d2, stats_new_d2, "2 digit")
@@ -264,7 +256,7 @@ stats_d1 <- stats_old_d1 %>%
   mutate(correct = (correct.x | correct.y)) %>%
   add_column(Resolution = "1 field")
 
-pdf(paste("plots/geu/hap_stats_mean_geu_inf", inference, ".pdf", sep = ""), height = 4, width = 5, pointsize = 12)
+pdf(paste("plots/geu/hla_r2_hap_stats_mean_geu_inf", inference, ".pdf", sep = ""), height = 4, width = 5, pointsize = 12)
 stats_d2 %>%
   rbind(stats_g) %>%
   rbind(stats_d1) %>%
@@ -360,7 +352,7 @@ stats_new_d1 <- results_new %>%
   mutate(correct_2 = correct_d1_2) %>%
   calc_dip_stats()
 
-pdf(paste("plots/geu/dip_stats_samples_geu_inf", inference, ".pdf", sep = ""))
+pdf(paste("plots/geu/hla_r2_dip_stats_samples_geu_inf", inference, ".pdf", sep = ""))
 
 plot_dip_stats(stats_old_full, stats_new_full, "full")
 plot_dip_stats(stats_old_d2, stats_new_d2, "2 field")
@@ -371,7 +363,7 @@ dev.off()
 
 
 
-pdf(paste("plots/geu/dip_stats_num_geu_inf", inference, ".pdf", sep = ""), height = 4, width = 6, pointsize = 12)
+pdf(paste("plots/geu/hla_r2_dip_stats_num_geu_inf", inference, ".pdf", sep = ""), height = 4, width = 6, pointsize = 12)
 results_old %>%
   filter(TPM > 0) %>%
   group_by(transcript, Sample, Gene) %>%
@@ -409,7 +401,7 @@ stats_d1 <- stats_old_d1 %>%
   mutate(correct = (correct.x | correct.y)) %>%
   add_column(Resolution = "1 field")
 
-pdf(paste("plots/geu/dip_stats_mean_geu_inf", inference, ".pdf", sep = ""), height = 4, width = 5, pointsize = 12)
+pdf(paste("plots/geu/hla_r2_dip_stats_mean_geu_inf", inference, ".pdf", sep = ""), height = 4, width = 5, pointsize = 12)
 stats_d2 %>%
   rbind(stats_g) %>%
   rbind(stats_d1) %>%
@@ -428,13 +420,11 @@ stats_d2 %>%
   theme(text = element_text(size = 12))
 dev.off()
 
-
-
-
+########
 
 exp_data <- map_dfr(list.files(path = paste("rpvg/hgsvc/inference", inference, sep = ""), pattern = ".*1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi.txt.gz", full.names = T, recursive = T), parse_rpvg)
 
-genes <- read_table2("genes/gencode.v29.primary_assembly.annotation_renamed_full_gene_transcripts.txt", col_names = F)
+genes <- read_table("../hla_r1/genes/gencode.v29.primary_assembly.annotation_renamed_full_gene_transcripts.txt", col_names = F)
 
 exp_data_filt <- exp_data %>%
   filter(HaplotypeProbability >= 0.8) %>%
@@ -443,10 +433,7 @@ exp_data_filt <- exp_data %>%
   left_join(genes, by = c("transcript" = "X2")) %>%
   mutate(X4 = gsub("-AS1$", "", X4))
   
-
-
 exp_data_filt %>% group_by(ClusterID, Sample, X4) %>% filter(grepl("HLA", X4)) %>% summarise(n = n()) %>% arrange(Sample) %>% print(n=200)
-
 
 cons_trio_hg0051 <- exp_data_filt %>% 
   filter(Sample == "HG00512" | Sample == "HG00513" | Sample == "HG00514") %>%
@@ -519,8 +506,7 @@ cons_trio_na1923 <- exp_data_filt %>%
 
 
 cons_trio <- cons_trio_hg0051 %>%
-  #rbind(cons_trio_hg0073, cons_trio_na1923) %>%
-  rbind(cons_trio_hg0073) %>%
+  rbind(cons_trio_hg0073, cons_trio_na1923) %>%
   filter(grepl("HLA", X4)) %>%
   add_column(dummy = "") %>%
   filter(sum_var_exp > 0) %>%
@@ -530,7 +516,7 @@ cons_trio$X4 = factor(cons_trio$X4, levels = rev(sort(unique(cons_trio$X4))))
 cons_trio$cons = factor(cons_trio$cons, levels = c("True", "False", "Unknown"))
 
 
-pdf("plots/hgsvc/hgsvc_trio_num.pdf", height = 5, width = 5, pointsize = 12)
+pdf("plots/hgsvc/hla_r2_hgsvc_trio_num.pdf", height = 5, width = 5, pointsize = 12)
 cons_trio %>%
   group_by(X4, cons, child, dummy) %>%
   summarise(n = n()) %>%
@@ -551,7 +537,7 @@ cons_trio %>%
 dev.off()  
   
   
-pdf("plots/hgsvc/hgsvc_trio_frac.pdf", height = 5, width = 3.5, pointsize = 12)
+pdf("plots/hgsvc/hla_r2_hgsvc_trio_frac.pdf", height = 5, width = 3.5, pointsize = 12)
 cons_trio %>%
   group_by(X4, child, dummy) %>%
   mutate(sum_sum_var_exp = sum(sum_var_exp)) %>%
@@ -572,4 +558,4 @@ cons_trio %>%
   theme(text = element_text(size = 12))
 dev.off()
 
-
+########

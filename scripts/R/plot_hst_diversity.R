@@ -11,8 +11,6 @@ library("wesanderson")
 
 source("./utils.R")
 
-source("./utils.R")
-
 # printHeader()
 
 # data_dir <- read.csv(args[6], sep = " ", header = F)

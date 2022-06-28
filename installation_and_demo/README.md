@@ -13,7 +13,7 @@ First, obtain the repo and its submodules:
     git clone https://github.com/vgteam/vg.git
     cd vg
     # the commit used in the paper
-    git checkout ccf6e5d4420ab0e6c8a18aea18b03e9185d016f6
+    git checkout 096bfdce3f8ccae9f5744b115587d0ed7295d924
     git submodule update --init --recursive
     
 Then, install VG's dependencies. You'll need the protobuf and jansson development libraries installed, and to run the tests you will need:
@@ -28,13 +28,14 @@ On other distros, you will need to perform the equivalent of:
 
     sudo apt-get install build-essential git cmake pkg-config libncurses-dev libbz2-dev  \
                          protobuf-compiler libprotoc-dev libprotobuf-dev libjansson-dev \
-                         automake libtool jq bsdmainutils bc rs parallel npm curl unzip \
-                         redland-utils librdf-dev bison flex gawk lzma-dev liblzma-dev \
-                         liblz4-dev libffi-dev libcairo-dev libboost-all-dev
+                         automake gettext autopoint libtool jq bsdmainutils bc rs parallel \
+                         npm curl unzip redland-utils librdf-dev bison flex gawk lzma-dev \
+                         liblzma-dev liblz4-dev libffi-dev libcairo-dev libboost-all-dev \
+                         libzstd-devel
                          
 Note that **Ubuntu 16.04** does not ship a sufficiently new Protobuf; vg requires **Protobuf 3** which will have to be manually installed.
 
-At present, you will need GCC version 4.9 or greater, with support for C++14, to compile vg. (Check your version with `gcc --version`.)
+At present, you will need GCC version 4.9 or greater, with support for C++14, to compile vg. (Check your version with `gcc --version`.) GCC up to 11.2.0 is supported.
 
 Other libraries may be required. Please report any build difficulties.
 
@@ -53,7 +54,7 @@ The first step is to clone the vg repository:
     git clone https://github.com/vgteam/vg.git
     cd vg
     # the commit used in the paper
-    git checkout ccf6e5d4420ab0e6c8a18aea18b03e9185d016f6
+    git checkout 096bfdce3f8ccae9f5744b115587d0ed7295d924
     git submodule update --init --recursive
 
 #### Install Dependencies
@@ -64,9 +65,8 @@ VG depends on a number of packages being installed on the system where it is bei
 
 You can use MacPorts to install VG's dependencies:
 
-    sudo port install libtool protobuf3-cpp jansson jq cmake pkgconfig autoconf automake libtool coreutils samtools redland bison gperftools md5sha1sum rasqal gmake autogen cairo libomp boost
+    sudo port install libtool protobuf3-cpp jansson jq cmake pkgconfig autoconf automake libtool coreutils samtools redland bison gperftools md5sha1sum rasqal gmake autogen cairo libomp boost zstd
     
-
 ##### Using Homebrew
 
 Homebrew provides another package management solution for OSX, and may be preferable to some users over MacPorts. VG ships a `Brewfile` describing its Homebrew dependencies, so from the root vg directory, you can install dependencies, and expose them to vg, like this:
@@ -100,6 +100,25 @@ With dependencies installed, VG can now be built:
 
 Our team has successfully built vg on Mac with GCC versions 4.9, 5.3, 6, 7, and 7.3, as well as Clang 9.0.
 
+#### Migrating to ARM Macs
+
+The Mac platform is moving to ARM, with Apple's M1, M1 Pro, M1 Max, and subsequent chip designs. The vg codebase supports ARM on Mac as well as on Linux. **The normal installation instructions work on a factory-fresh ARM Mac**.
+
+However, it is easy to run into problems when **migrating a working vg build environment** or **migrating Macports or Homebrew** from x86_64 to ARM. The ARM machine can successfully run x86_64 tools installed via Macports or Homebrew on the old machine, but vg can only build properly on ARM if you are using ARM versions of the build tools, like `make` and CMake.
+
+So, after migrating to an ARM Mac using e.g. Apple's migration tools:
+
+1. Uninstall Macports and its packages, if they were migrated from the old machine. Only an ARM Macports install can be used to provide dependencies for vg on ARM.
+2. Uninstall Homebrew and its packages, if they were migrated. Similarly, only an ARM Homebrew install will work.
+3. Reinstall one of Macports or Homebrew. Make sure to use the M1 or ARM version.
+4. Use the package manager you installed to install system dependencies of vg, such as CMake, [as documented above](#install-dependencies).
+5. Clean vg with `make clean`. This *should* remove all build artefacts.
+6. Build vg again with `make`.
+
+If you still experience build problems after this, delete the whole checkout and check out the code again; `make clean` is not under CI test and is not always up to date with the rest of the build system.
+
+Whether or not that helps, please then [open an issue](https://github.com/vgteam/vg/issues/new) so we can help fix the build or fix `make clean`.
+
 ## rpvg
 
 ### Compilation
@@ -108,7 +127,7 @@ Our team has successfully built vg on Mac with GCC versions 4.9, 5.3, 6, 7, and 
 
 1. `git clone https://github.com/jonassibbesen/rpvg.git`
 2. `cd rpvg`
-3. `git checkout ad52c1e22934c646c6614fc1fe2c4e239f28f3c8`
+3. `git checkout 1d91a9e379cb7b3f5260642ae1500d99b8afccf6`
 4. `git submodule update --init --recursive`
 5. `mkdir build && cd build`
 6. `cmake ..`
@@ -118,7 +137,7 @@ Compiling *rpvg* should take 5-10 minutes using 4 threads (`-j`). *rpvg* has bee
 
 ### Docker container
 
-A docker container of the latest commit to master is available on [Docker Hub](https://hub.docker.com/repository/docker/jsibbesen/rpvg) and [Quay](https://quay.io/repository/jsibbesen/rpvg).
+A docker container of the latest commit to master is available [here](https://quay.io/repository/jsibbesen/rpvg).
 
 # Demo
 
@@ -160,16 +179,13 @@ rpvg -g graph.xg -p paths.gbwt -a alignments.gamp -o rpvg_results -i <inference-
 
 The prefix used for all output files are given using `-o`. The number of threads can be given using `-t`. 
 
-A small example dataset containing 36,120 haplotype-specific transcripts and 100,000 read pairs is available as example data.
+A small example dataset containing 36,120 haplotype-specific transcripts and 100,000 read pairs is available as example data. To infer the expression of the haplotype-specific transcripts in the small pantranscriptome using 4 threads use the following command:
 
 ```
-rpvg -t 4 -g example_data/graph.xg -p example_data/pantranscriptome.gbwt -f <(zcat example_data/pantranscriptome.txt.gz) -a example_data/mpmap_align.gamp -o rpvg --inference-model haplotype-transcripts
+rpvg -t 4 -g example_data/graph.xg -p example_data/pantranscriptome.gbwt -f example_data/pantranscriptome.txt.gz -a example_data/mpmap_align.gamp -o rpvg --inference-model haplotype-transcripts
 ```
 
 This should take less than a minute to run and will create two files: 
 
-* *rpvg.txt*: Contains the estimated haplotype probability and transcript expression for each haplotype-specific transcript in the pantranscriptome.
-* *rpvg_haps.txt*: Contains the estimated probability of each haplotype combination (e.g. diplotype) for all transcripts (only combinations with a probability above zero are shown).
-
-
-
+* *rpvg.txt*: Contains the estimated marginal haplotype probability and expression value for each haplotype-specific transcript in the pantranscriptome.
+* *rpvg_joint.txt*: Contains the estimated joint probability of each haplotype combination (e.g. diplotype) for each transcript in the pantranscriptome and the corresponding estimated haplotype-specific transcript expression values (only combinations with a probability at or above the precision threshold are written (see option --prob-precision)).

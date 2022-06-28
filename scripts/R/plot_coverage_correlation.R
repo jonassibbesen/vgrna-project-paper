@@ -49,7 +49,8 @@ coverage_data$Method <- recode_factor(coverage_data$Method,
                                                        "star" = "STAR",
                                                        "map_fast" = "vg map",
                                                        "mpmap" = "vg mpmap", 
-                                                       "star_alleleseq" = "Diploid reference (STAR)")
+                                                       "star_alleleseq" = "Diploid reference (STAR)",
+                                                       "star_alleleseq_levio" = "Diploid reference (STAR, LevioSAM)")
 
 coverage_data$Reference = recode_factor(coverage_data$Reference, 
                                         "1kg_nonCEU_af001_gencode100" = "Spliced pangenome graph",
@@ -107,7 +108,7 @@ for (reads in unique(coverage_data_pb_mq_corr_main$Reads)) {
 
 coverage_data_pb_mq_corr_personal <- coverage_data_pb_mq_corr %>%
   filter(Reads == "ENCSR000AED_rep1") %>%
-  filter(Method == "STAR" | ((Method == "vg mpmap" | Method == "Diploid reference (STAR)") & Reference == "Spliced personal graph/reference"))
+  filter(Method == "STAR" | ((Method == "vg mpmap" | Method == "Diploid reference (STAR)" | Method == "Diploid reference (STAR, LevioSAM)") & Reference == "Spliced personal graph/reference"))
 
 for (reads in unique(coverage_data_pb_mq_corr_personal$Reads)) {
   
@@ -115,7 +116,7 @@ for (reads in unique(coverage_data_pb_mq_corr_personal$Reads)) {
     filter(Reads == reads) %>%
     rename(MapQ = Threshold)
   
-  plotIsoSeqCorrelationBenchmark(coverage_data_pb_mq_corr_personal_reads, wes_cols[c(2,4,5)], paste("plots/real_corr/real_r2_cov_corr_personal_", reads, sep = ""))
+  plotIsoSeqCorrelationBenchmark(coverage_data_pb_mq_corr_personal_reads, wes_cols[c(2,4,5,6)], paste("plots/real_corr/real_r2_cov_corr_personal_", reads, sep = ""))
 }
 
 ########

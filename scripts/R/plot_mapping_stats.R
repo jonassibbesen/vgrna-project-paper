@@ -39,7 +39,8 @@ mapping_data$Method <- recode_factor(mapping_data$Method,
                                      "star" = "STAR",
                                      "map_fast" = "vg map", 
                                      "mpmap" = "vg mpmap",
-                                     "star_alleleseq" = "Diploid reference (STAR)")
+                                     "star_alleleseq" = "Diploid reference (STAR)",
+                                     "star_alleleseq_levio" = "Diploid reference (STAR, LevioSAM)")
 
 
 mapping_data$Reference = recode_factor(mapping_data$Reference, 
@@ -93,8 +94,8 @@ for (reads in unique(mapping_data_stats_main$Reads)) {
 
 mapping_data_stats_personal <- mapping_data_stats %>%
   filter(Reads == "ENCSR000AED_rep1") %>%
-  filter(Method == "STAR" | ((Method == "vg mpmap" | Method == "Diploid reference (STAR)") & Reference == "Spliced personal graph/reference"))
-
+  filter(Method == "STAR" | ((Method == "vg mpmap" | Method == "Diploid reference (STAR)" | Method == "Diploid reference (STAR, LevioSAM)") & Reference == "Spliced personal graph/reference"))
+  
 for (reads in unique(mapping_data_stats_personal$Reads)) {
   
   mapping_data_stats_personal_reads <- mapping_data_stats_personal %>%
@@ -105,7 +106,7 @@ for (reads in unique(mapping_data_stats_personal$Reads)) {
     add_row(Reads = reads, Method = "vg mpmap", Reference = "Spliced reference", count = 0, MapQ0 = 0, MapQ30 = 0, Filter = "MapQ0_frac", Frac = 0) %>%
     add_row(Reads = reads, Method = "vg mpmap", Reference = "Spliced reference", count = 0, MapQ0 = 0, MapQ30 = 0, Filter = "MapQ30_frac", Frac = 0)
   
-  mapping_data_stats_personal_reads$Method <- factor(mapping_data_stats_personal_reads$Method, levels = c("STAR", "vg mpmap", "Diploid reference (STAR)"))
+  mapping_data_stats_personal_reads$Method <- factor(mapping_data_stats_personal_reads$Method, levels = c("STAR", "vg mpmap", "Diploid reference (STAR)", "Diploid reference (STAR, LevioSAM)"))
   
   mapping_data_stats_personal_reads$Reference = recode_factor(mapping_data_stats_personal_reads$Reference,
                                                           "Spliced reference" = "Spliced\nreference",
@@ -118,7 +119,7 @@ for (reads in unique(mapping_data_stats_personal$Reads)) {
   mapping_data_stats_personal_reads$FacetCol <- "Real reads,\nprimary alignments"
   mapping_data_stats_personal_reads$FacetRow <- ""
   
-  plotMappingStatsBenchmarkWide(mapping_data_stats_personal_reads, wes_cols[c(2,4,5)], paste("plots/real_stats/real_r2_stats_bar_personal_", reads, sep = ""))
+  plotMappingStatsBenchmarkWide(mapping_data_stats_personal_reads, wes_cols[c(2,4,5,6)], paste("plots/real_stats/real_r2_stats_bar_personal_", reads, sep = ""))
 }
 
 ########

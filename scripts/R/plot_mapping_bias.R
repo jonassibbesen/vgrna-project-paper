@@ -92,6 +92,7 @@ coverage_data_mq_bias$Method = recode_factor(coverage_data_mq_bias$Method,
                                              "mpmap" = "vg mpmap",
                                              "mpmap_multi10" = "vg mpmap",
                                              "star_alleleseq" = "Diploid reference (STAR)",
+                                             "star_alleleseq_levio" = "Diploid reference (STAR, LevioSAM)",
                                              "star_wasp" = "WASP (STAR)")
 
 coverage_data_mq_bias[coverage_data_mq_bias$Method == "WASP (STAR)",]$Reference <- "1kg_NA12878_gencode100"
@@ -109,6 +110,11 @@ for (reads in unique(coverage_data_mq_bias_debug$Reads)) {
     filter(Reads == reads)
 
   plotMappingBiasBenchmark(coverage_data_mq_bias_debug_reads, wes_cols, paste("plots/sim_bias/debug/vg_sim_r2_mapping_bias_debug_", reads, sep = ""), 20)
+  
+  coverage_data_mq_bias_debug_reads$FacetCol <- coverage_data_mq_bias_debug_reads$var
+  coverage_data_mq_bias_debug_reads$FacetRow <- paste(coverage_data_mq_bias_debug_reads$Simulation, ",\n primary alignments", sep = "")
+  
+  plotMappingBiasBinomBenchmark(coverage_data_mq_bias_debug_reads, wes_cols, paste("plots/sim_bias/debug/vg_sim_r2_mapping_bias_binom_a001_debug_", reads, sep = ""), 0.01, 20)
 }
 
 ########
@@ -117,6 +123,7 @@ coverage_data_mq_bias_main <- coverage_data_mq_bias %>%
   filter(Reads == "sim_vg_r2_ENCSR000AED_rep1_uni") %>%
   filter(Method != "WASP (STAR)") %>%
   filter(Method != "Diploid reference (STAR)") %>%
+  filter(Method != "Diploid reference (STAR, LevioSAM)") %>%
   filter(Method != "vg map (def)") %>%
   filter(Reference != "1kg_NA12878_gencode100") %>%
   filter(Reference != "1kg_NA12878_exons_gencode100")
@@ -139,7 +146,9 @@ for (reads in unique(coverage_data_mq_bias_main$Reads)) {
 
 coverage_data_mq_bias_binom <- coverage_data_mq_bias %>%
   filter(Reads == "sim_vg_r2_ENCSR000AED_rep1_uni") %>%
-  filter(Method != "vg map (def)") 
+  filter(Method != "vg map (def)") %>%
+  filter(Method != "Diploid reference (STAR)") %>%
+  filter(Method != "Diploid reference (STAR, LevioSAM)")
 
 coverage_data_mq_bias_binom$Reference = recode_factor(coverage_data_mq_bias_binom$Reference,
                                                  "1kg_nonCEU_af001_gencode100" = "Spliced pangenome graph",

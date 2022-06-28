@@ -83,7 +83,7 @@ overlap_data %>% group_by(Reads, Reference, Method) %>%
   print(n = 100)
   
 overlap_data_prim1 <- overlap_data %>%
-  filter(Method == "hisat2_multi10" | Method == "star_multi10" | Method == "star_wasp" | Method == "star_alleleseq" | Method == "mpmap_multi10") %>%
+  filter(Method == "hisat2_multi10" | Method == "star_multi10" | Method == "star_wasp" | Method == "star_alleleseq" | Method == "star_alleleseq_levio" | Method == "mpmap_multi10") %>%
   mutate(MapQ = PrimaryMapq) %>%
   mutate(Overlap = PrimaryOverlap) %>%
   mutate(Eval = "Primary")
@@ -111,6 +111,7 @@ overlap_data$Method <- recode_factor(overlap_data$Method,
                                      "mpmap" = "vg mpmap",
                                      "mpmap_multi10" = "vg mpmap",
                                      "star_alleleseq" = "Diploid reference (STAR)",
+                                     "star_alleleseq_levio" = "Diploid reference (STAR, LevioSAM)",
                                      "star_wasp" = "WASP (STAR)")
 
 overlap_data[overlap_data$Method == "WASP (STAR)",]$Reference <- "1kg_NA12878_gencode100"
@@ -352,7 +353,7 @@ for (reads in unique(overlap_data_main_multi_indel$Reads)) {
 
 overlap_data_personal_prim <- overlap_data %>%
   filter(Reads == "sim_vg_r2_ENCSR000AED_rep1_uni") %>%
-  filter((Method == "STAR" & Reference == "Spliced reference") | ((Method == "vg mpmap" | Method == "Diploid reference (STAR)") & Reference == "Spliced personal graph/reference")) %>%
+  filter((Method == "STAR" & Reference == "Spliced reference") | ((Method == "vg mpmap" | Method == "Diploid reference (STAR)" | Method == "Diploid reference (STAR, LevioSAM)") & Reference == "Spliced personal graph/reference")) %>%
   filter(Eval == "Primary") %>%
   mutate(FacetCol = paste(FacetCol, ", primary alignments", sep = ""))
 
@@ -361,7 +362,7 @@ for (reads in unique(overlap_data_personal_prim$Reads)) {
   overlap_data_personal_prim_reads <- overlap_data_personal_prim %>%
     filter(Reads == reads)
   
-  plotRocBenchmarkMapQ(overlap_data_personal_prim_reads, wes_cols[c(2,4,5)], "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_personal_ovl", overlap_threshold, "_", reads, "_primary", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_personal_prim_reads, wes_cols[c(2,4,5,6)], "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_personal_ovl", overlap_threshold, "_", reads, "_primary", sep = ""))
 }
 
 ########

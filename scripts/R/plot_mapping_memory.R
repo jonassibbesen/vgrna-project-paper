@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 ########
 
@@ -22,7 +22,6 @@ convertMemoryLine <- function(memory_line) {
 
 parse_file <- function(filename) {
   
-  dir_split <- strsplit(dirname(filename), "/")[[1]]
   base_split <- strsplit(basename(filename), "-")[[1]]
   
   mem <- convertMemoryLine(grep('Maximum', readLines(filename), value = T)[1])
@@ -57,8 +56,8 @@ parse_file <- function(filename) {
 
 memory_data_hisat2 <- map_dfr(list.files(path = "../mapping_r1/methods", pattern="*-hisat2-real-.*log.txt", full.names = T, recursive = T), parse_file) 
 memory_data_star <- map_dfr(list.files(path = "../mapping_r1/methods", pattern=".*star-real-.*log.txt", full.names = T, recursive = T), parse_file)
-memory_data_map_fast <- map_dfr(list.files(path = "./methods", pattern=".*-map-f-real-.*log.txt", full.names = T, recursive = T), parse_file)
-memory_data_mpmap <- map_dfr(list.files(path = "./methods", pattern=".*-mpmap-real-.*log.txt", full.names = T, recursive = T), parse_file)
+memory_data_map_fast <- map_dfr(list.files(path = "../mapping_r2/methods", pattern=".*-map-f-real-.*log.txt", full.names = T, recursive = T), parse_file)
+memory_data_mpmap <- map_dfr(list.files(path = "../mapping_r2/methods", pattern=".*-mpmap-real-.*log.txt", full.names = T, recursive = T), parse_file)
 
 memory_data <- bind_rows(memory_data_hisat2, memory_data_star, memory_data_map_fast, memory_data_mpmap)
 
@@ -105,7 +104,7 @@ for (reads in unique(memory_data$Reads)) {
   memory_data_reads$FacetCol <- "Real reads"
   memory_data_reads$FacetRow <- ""
   
-  plotMappingMemoryBenchmark(memory_data_reads, wes_cols, paste("plots/real_memory/real_r2_mapping_memory_", reads, sep = ""))
+  plotMappingMemoryBenchmark(memory_data_reads, wes_cols, paste("plots/real_memory/real_r2_mapping_memory_", reads, "_final", sep = ""))
 }
 
 ########

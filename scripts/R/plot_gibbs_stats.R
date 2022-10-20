@@ -11,14 +11,14 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/quant_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/quant_final/")
 
 ########
 
-gibbs_samples <- read_table("gibbs/rpvg_gibbs_mpmap_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_gibbs_stats.txt") %>%
+gibbs_samples <- read_table("../quant_r2/gibbs/rpvg_gibbs_mpmap_1kg_nonCEU_af001_gencode100_sim_vg_r2_ENCSR000AED_rep1_gibbs_stats.txt") %>%
   select(-ClusterID)
 
-exp_sim <- read_table("truth/truth_exp_sim_vg_ENCSR000AED_rep1_1kg_nonCEU_af001_gencode100.tsv") %>%
+exp_sim <- read_table("../quant_r2/truth/truth_exp_sim_vg_ENCSR000AED_rep1_1kg_nonCEU_af001_gencode100.tsv") %>%
   select(-tpm_truth) %>%
   rename(Name = name)
 
@@ -41,7 +41,7 @@ wes_cols <- c(wes_palette("FantasticFox1"))
 
 max_val <- max(c(log10(gibbs_samples_sim_exp$count_truth + 1), log10(gibbs_samples_sim_exp$CIUpper90 + 1)))
 
-png("plots/gibbs/sim_r2_gibbs_ci_scatter_ENCSR000AED_rep1_lower.png", width = 4, height = 4, units = 'in', res = 600, pointsize = 12)
+png("plots/gibbs/sim_r2_gibbs_ci_scatter_ENCSR000AED_rep1_lower_final.png", width = 4, height = 4, units = 'in', res = 600, pointsize = 12)
 gibbs_samples_sim_exp %>%
   ggplot(aes(x = log10(CILower90 + 1), y = log10(count_truth + 1))) +
   geom_point(size = 0.25, alpha = 0.15, col = wes_cols[3]) +
@@ -57,7 +57,7 @@ gibbs_samples_sim_exp %>%
   theme(text = element_text(size = 12))
 dev.off()
 
-png("plots/gibbs/sim_r2_gibbs_ci_scatter_ENCSR000AED_rep1_upper.png", width = 4, height = 4, units = 'in', res = 600, pointsize = 12)
+png("plots/gibbs/sim_r2_gibbs_ci_scatter_ENCSR000AED_rep1_upper_final.png", width = 4, height = 4, units = 'in', res = 600, pointsize = 12)
 gibbs_samples_sim_exp %>%
   ggplot(aes(x = log10(CIUpper90 + 1), y = log10(count_truth + 1))) +
   geom_point(size = 0.25, alpha = 0.15, col = wes_cols[4]) +

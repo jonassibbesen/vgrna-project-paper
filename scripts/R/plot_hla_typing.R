@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/hla_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/hla_final/")
 
 ########
 
@@ -27,8 +27,8 @@ parse_rpvg <- function(filename) {
   
   data <- read_table(gzfile(filename), col_names = T)
   data <- data %>%
-    add_column(Method = dir_split[3]) %>%
-    add_column(Sample = dir_split[4])
+    add_column(Method = dir_split[5]) %>%
+    add_column(Sample = dir_split[6])
 
   return(data)
 }
@@ -129,7 +129,7 @@ eval <- function(truth, samples) {
       group_by(Name, Gene) %>%
       summarise(correct_full_1 = any(correct_full_1), correct_full_2 = any(correct_full_2), correct_d2_1 = any(correct_d2_1), correct_d2_2 = any(correct_d2_2), correct_d1_1 = any(correct_d1_1), correct_d1_2 = any(correct_d1_2), correct_g_1 = any(correct_g_1), correct_g_2 = any(correct_g_2))
     
-    exp_data <- map_dfr(list.files(path = paste("rpvg/geuvadis/inference", inference, sep = ""), pattern = paste(".*", sam, ".*1kg_nonCEU_af001_imgt_hla_p10k_noB258_noN_main_gencode100.txt.gz", sep = ""), full.names = T, recursive = T), parse_rpvg)
+    exp_data <- map_dfr(list.files(path = paste("../hla_r2/rpvg/geuvadis/inference", inference, sep = ""), pattern = paste(".*", sam, ".*1kg_nonCEU_af001_imgt_hla_p10k_noB258_noN_main_gencode100.txt.gz", sep = ""), full.names = T, recursive = T), parse_rpvg)
     
     exp_data_filt <- exp_data %>%
       filter(HaplotypeProbability >= 0.8)
@@ -228,7 +228,7 @@ stats_new_d1 <- results_new %>%
   mutate(correct_2 = correct_d1_2) %>%
   calc_hap_stats()
 
-pdf(paste("plots/geu/hla_r2_hap_stats_samples_geu_inf", inference, ".pdf", sep = ""))
+pdf(paste("plots/geu/hla_r2_hap_stats_samples_geu_inf", inference, "_final.pdf", sep = ""), useDingbats = F)
 
 plot_hap_stats(stats_old_full, stats_new_full, "full")
 plot_hap_stats(stats_old_d2, stats_new_d2, "2 digit")
@@ -256,7 +256,7 @@ stats_d1 <- stats_old_d1 %>%
   mutate(correct = (correct.x | correct.y)) %>%
   add_column(Resolution = "1 field")
 
-pdf(paste("plots/geu/hla_r2_hap_stats_mean_geu_inf", inference, ".pdf", sep = ""), height = 4, width = 5, pointsize = 12)
+pdf(paste("plots/geu/hla_r2_hap_stats_mean_geu_inf", inference, "_final.pdf", sep = ""), height = 4, width = 5, pointsize = 12, useDingbats = F)
 stats_d2 %>%
   rbind(stats_g) %>%
   rbind(stats_d1) %>%
@@ -352,7 +352,7 @@ stats_new_d1 <- results_new %>%
   mutate(correct_2 = correct_d1_2) %>%
   calc_dip_stats()
 
-pdf(paste("plots/geu/hla_r2_dip_stats_samples_geu_inf", inference, ".pdf", sep = ""))
+pdf(paste("plots/geu/hla_r2_dip_stats_samples_geu_inf", inference, "_final.pdf", sep = ""), useDingbats = F)
 
 plot_dip_stats(stats_old_full, stats_new_full, "full")
 plot_dip_stats(stats_old_d2, stats_new_d2, "2 field")
@@ -363,7 +363,7 @@ dev.off()
 
 
 
-pdf(paste("plots/geu/hla_r2_dip_stats_num_geu_inf", inference, ".pdf", sep = ""), height = 4, width = 6, pointsize = 12)
+pdf(paste("plots/geu/hla_r2_dip_stats_num_geu_inf", inference, "_final.pdf", sep = ""), height = 4, width = 6, pointsize = 12, useDingbats = F)
 results_old %>%
   filter(TPM > 0) %>%
   group_by(transcript, Sample, Gene) %>%
@@ -401,7 +401,7 @@ stats_d1 <- stats_old_d1 %>%
   mutate(correct = (correct.x | correct.y)) %>%
   add_column(Resolution = "1 field")
 
-pdf(paste("plots/geu/hla_r2_dip_stats_mean_geu_inf", inference, ".pdf", sep = ""), height = 4, width = 5, pointsize = 12)
+pdf(paste("plots/geu/hla_r2_dip_stats_mean_geu_inf", inference, "_final.pdf", sep = ""), height = 4, width = 5, pointsize = 12, useDingbats = F)
 stats_d2 %>%
   rbind(stats_g) %>%
   rbind(stats_d1) %>%
@@ -422,7 +422,7 @@ dev.off()
 
 ########
 
-exp_data <- map_dfr(list.files(path = paste("rpvg/hgsvc/inference", inference, sep = ""), pattern = ".*1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi.txt.gz", full.names = T, recursive = T), parse_rpvg)
+exp_data <- map_dfr(list.files(path = paste("../hla_r2/rpvg/hgsvc/inference", inference, sep = ""), pattern = ".*1kg_all_af001_imgt_hla_p10k_noB258_noN_a100_gencode100_unidi.txt.gz", full.names = T, recursive = T), parse_rpvg)
 
 genes <- read_table("../hla_r1/genes/gencode.v29.primary_assembly.annotation_renamed_full_gene_transcripts.txt", col_names = F)
 
@@ -516,7 +516,7 @@ cons_trio$X4 = factor(cons_trio$X4, levels = rev(sort(unique(cons_trio$X4))))
 cons_trio$cons = factor(cons_trio$cons, levels = c("True", "False", "Unknown"))
 
 
-pdf("plots/hgsvc/hla_r2_hgsvc_trio_num.pdf", height = 5, width = 5, pointsize = 12)
+pdf("plots/hgsvc/hla_r2_hgsvc_trio_num_final.pdf", height = 5, width = 3.5, pointsize = 12, useDingbats = F)
 cons_trio %>%
   group_by(X4, cons, child, dummy) %>%
   summarise(n = n()) %>%
@@ -528,16 +528,17 @@ cons_trio %>%
   scale_y_continuous(breaks = seq(0, 10, 2)) + 
   xlab("") +
   ylab("Number of expressed transcripts") +
-  labs(fill = "Trio\nconcordant") + 
+  labs(fill = "Trio concordant") + 
   theme_bw() +
   theme(strip.background = element_blank()) +
+  theme(axis.text.y = element_text(size = 8.5)) +
   theme(panel.spacing = unit(0.2, "cm")) +
-  theme(axis.text.y = element_text(size = 8)) +
-  theme(text = element_text(size = 12))
+  theme(legend.position = 'bottom') +
+  theme(text = element_text(size = 11))
 dev.off()  
   
   
-pdf("plots/hgsvc/hla_r2_hgsvc_trio_frac.pdf", height = 5, width = 3.5, pointsize = 12)
+pdf("plots/hgsvc/hla_r2_hgsvc_trio_frac_final.pdf", height = 5.25, width = 2, pointsize = 12, useDingbats = F)
 cons_trio %>%
   group_by(X4, child, dummy) %>%
   mutate(sum_sum_var_exp = sum(sum_var_exp)) %>%
@@ -550,12 +551,13 @@ cons_trio %>%
   facet_grid(child~dummy) +
   xlab("") +
   ylab("TPM fraction") +
-  labs(fill = "Trio\nconcordant") + 
+  labs(fill = "Trio concordant") + 
   theme_bw() +
   theme(strip.background = element_blank()) +
   theme(panel.spacing = unit(0.2, "cm")) +
   theme(axis.text.y = element_blank()) +
-  theme(text = element_text(size = 12))
+  theme(legend.position = 'bottom') +
+  theme(text = element_text(size = 11))
 dev.off()
 
 ########

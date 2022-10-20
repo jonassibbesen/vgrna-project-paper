@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 ########
 
@@ -63,6 +63,8 @@ overlap_threshold <- 90
 
 ########
 
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+
 overlap_data_raw_h1 <- map_dfr(list.files(path = "./methods", pattern=".*_bam_ovl3_h1.txt.gz", full.names = T, recursive = T), parse_file) %>%
   select(-SubstitutionBP2, -IndelBP2) %>%
   rename(SubstitutionBP = SubstitutionBP1) %>%
@@ -72,6 +74,8 @@ overlap_data_raw_h2 <- map_dfr(list.files(path = "./methods", pattern=".*_bam_ov
   select(-SubstitutionBP1, -IndelBP1) %>%
   rename(SubstitutionBP = SubstitutionBP2) %>%
   rename(IndelBP = IndelBP2)
+
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 overlap_data <- rbind(overlap_data_raw_h1, overlap_data_raw_h2) %>%
   filter(Type == "polya_rna") %>%
@@ -173,7 +177,7 @@ for (reads in unique(overlap_data_main_prim$Reads)) {
   overlap_data_main_prim_reads <- overlap_data_main_prim %>%
     filter(Reads == reads)
 
-  plotRocBenchmarkMapQ(overlap_data_main_prim_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl", overlap_threshold, "_", reads, "_primary", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_main_prim_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl", overlap_threshold, "_", reads, "_primary", "_final", sep = ""))
 }
 
 overlap_data_main_multi <- overlap_data_main %>%
@@ -186,7 +190,7 @@ for (reads in unique(overlap_data_main_multi$Reads)) {
   overlap_data_main_multi_reads <- overlap_data_main_multi %>%
     filter(Reads == reads)
 
-  plotRocBenchmarkMapQ(overlap_data_main_multi_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl", overlap_threshold, "_", reads, "_multi", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_main_multi_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl", overlap_threshold, "_", reads, "_multi", "_final", sep = ""))
 }
 
 ########
@@ -206,7 +210,7 @@ for (reads in unique(overlap_data_main_multi_novel_sj$Reads)) {
   overlap_data_main_multi_novel_sj_reads <- overlap_data_main_multi_novel_sj %>%
     filter(Reads == reads)
 
-  plotRocBenchmarkMapQ(overlap_data_main_multi_novel_sj_reads, wes_cols, "Reads", paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl", overlap_threshold, "_", reads, "_multi_novel_sj", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_main_multi_novel_sj_reads, wes_cols, "Reads", paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl", overlap_threshold, "_", reads, "_multi_novel_sj", "_final", sep = ""))
 }
 
 ########
@@ -229,7 +233,7 @@ for (reads in unique(overlap_data_main_error90$Reads)) {
   overlap_data_main_error90_reads <- overlap_data_main_error90 %>%
     filter(Reads == reads)
 
-  plotErrorBenchmark(overlap_data_main_error90_reads, wes_cols, paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl", overlap_threshold, "_", reads, "_primary", sep = ""))
+  plotErrorBenchmark(overlap_data_main_error90_reads, wes_cols, paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl", overlap_threshold, "_", reads, "_primary", "_final", sep = ""))
 }
 
 overlap_data_main_error1 <- overlap_data_main_error %>%
@@ -241,7 +245,7 @@ for (reads in unique(overlap_data_main_error1$Reads)) {
   overlap_data_main_error1_reads <- overlap_data_main_error1 %>%
     filter(Reads == reads)
 
-  plotErrorBenchmark(overlap_data_main_error1_reads, wes_cols, paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl1_", reads, "_primary", sep = ""))
+  plotErrorBenchmark(overlap_data_main_error1_reads, wes_cols, paste("plots/sim_overlap/vg_sim_r2_overlap_main_ovl1_", reads, "_primary", "_final", sep = ""))
 }
 
 ########
@@ -281,7 +285,7 @@ for (reads in unique(overlap_data_main_multi_nov$Reads)) {
   overlap_data_main_multi_nov_reads <- overlap_data_main_multi_nov %>%
     filter(Reads == reads)
 
-  plotRocBenchmarkMapQ(overlap_data_main_multi_nov_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_nov_ovl", overlap_threshold, "_", reads, "_multi", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_main_multi_nov_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_nov_ovl", overlap_threshold, "_", reads, "_multi", "_final", sep = ""))
 }
 
 overlap_data_main_multi_snv1 <- overlap_data_main_multi %>%
@@ -294,7 +298,7 @@ for (reads in unique(overlap_data_main_multi_snv1$Reads)) {
   overlap_data_main_multi_snv1_reads <- overlap_data_main_multi_snv1 %>%
     filter(Reads == reads)
 
-  plotRocBenchmarkMapQ(overlap_data_main_multi_snv1_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_snv1_ovl", overlap_threshold, "_", reads, "_multi", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_main_multi_snv1_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_snv1_ovl", overlap_threshold, "_", reads, "_multi", "_final", sep = ""))
 }
 
 overlap_data_main_multi_snv2 <- overlap_data_main_multi %>%
@@ -307,7 +311,7 @@ for (reads in unique(overlap_data_main_multi_snv2$Reads)) {
   overlap_data_main_multi_snv2_reads <- overlap_data_main_multi_snv2 %>%
     filter(Reads == reads)
 
-  plotRocBenchmarkMapQ(overlap_data_main_multi_snv2_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_snv2_ovl", overlap_threshold, "_", reads, "_multi", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_main_multi_snv2_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_snv2_ovl", overlap_threshold, "_", reads, "_multi", "_final", sep = ""))
 }
 
 overlap_data_main_multi_snv3 <- overlap_data_main_multi %>%
@@ -320,7 +324,7 @@ for (reads in unique(overlap_data_main_multi_snv3$Reads)) {
   overlap_data_main_multi_snv3_reads <- overlap_data_main_multi_snv3 %>%
     filter(Reads == reads)
 
-  plotRocBenchmarkMapQ(overlap_data_main_multi_snv3_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_snv3_ovl", overlap_threshold, "_", reads, "_multi", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_main_multi_snv3_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_snv3_ovl", overlap_threshold, "_", reads, "_multi", "_final", sep = ""))
 }
 
 overlap_data_main_multi_snv4 <- overlap_data_main_multi %>%
@@ -333,7 +337,7 @@ for (reads in unique(overlap_data_main_multi_snv4$Reads)) {
   overlap_data_main_multi_snv4_reads <- overlap_data_main_multi_snv4 %>%
     filter(Reads == reads)
 
-  plotRocBenchmarkMapQ(overlap_data_main_multi_snv4_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_snv4_ovl", overlap_threshold, "_", reads, "_multi", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_main_multi_snv4_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_snv4_ovl", overlap_threshold, "_", reads, "_multi", "_final", sep = ""))
 }
 
 overlap_data_main_multi_indel <- overlap_data_main_multi %>%
@@ -346,7 +350,7 @@ for (reads in unique(overlap_data_main_multi_indel$Reads)) {
   overlap_data_main_multi_indel_reads <- overlap_data_main_multi_indel %>%
     filter(Reads == reads)
 
-  plotRocBenchmarkMapQ(overlap_data_main_multi_indel_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_indel_ovl", overlap_threshold, "_", reads, "_multi", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_main_multi_indel_reads, wes_cols, "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_main_indel_ovl", overlap_threshold, "_", reads, "_multi", "_final", sep = ""))
 }
 
 ########
@@ -362,7 +366,7 @@ for (reads in unique(overlap_data_personal_prim$Reads)) {
   overlap_data_personal_prim_reads <- overlap_data_personal_prim %>%
     filter(Reads == reads)
   
-  plotRocBenchmarkMapQ(overlap_data_personal_prim_reads, wes_cols[c(2,4,5,6)], "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_personal_ovl", overlap_threshold, "_", reads, "_primary", sep = ""))
+  plotRocBenchmarkMapQ(overlap_data_personal_prim_reads, wes_cols[c(2,4,5,6)], "Reference", paste("plots/sim_overlap/vg_sim_r2_overlap_personal_ovl", overlap_threshold, "_", reads, "_primary", "_final", sep = ""))
 }
 
 ########

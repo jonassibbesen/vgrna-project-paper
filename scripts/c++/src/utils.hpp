@@ -176,6 +176,30 @@ SeqLib::GRC cigarToGenomicRegions(const SeqLib::Cigar & cigar, const uint32_t ch
     return cigar_genomic_regions;
 }
 
+tuple<uint32_t, uint32_t, uint32_t> cigarToBasePairEdits(const SeqLib::Cigar & cigar) {
+
+    uint32_t sub_bp_edits = 0;
+    uint32_t indel_bp_edits = 0;
+    uint32_t indel_count_edits = 0;
+
+    for (auto & field: cigar) {
+
+        assert(field.Type() == 'M' || field.Type() == 'X' || field.Type() == 'I' || field.Type() == 'D');
+
+        if (field.Type() == 'X') {
+
+            sub_bp_edits += field.Length();
+
+        } else if (field.Type() == 'I' || field.Type() == 'D') {
+
+            indel_bp_edits += field.Length();
+            indel_count_edits++;
+        }
+    }
+
+    return make_tuple(sub_bp_edits, indel_bp_edits, indel_count_edits);
+}
+
 uint32_t cigarTypeLength(const SeqLib::Cigar & cigar, const char type) {
 
     uint32_t type_length = 0;

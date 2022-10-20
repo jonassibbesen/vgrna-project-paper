@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 ########
 
@@ -57,8 +57,12 @@ distance_threshold <- 100
 
 ########
 
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+
 distance_data_raw_h1 <- map_dfr(list.files(path = "./methods", pattern=".*_dist_h1.txt.gz", full.names = T, recursive = T), parse_file) 
 distance_data_raw_h2 <- map_dfr(list.files(path = "./methods", pattern=".*_dist_h2.txt.gz", full.names = T, recursive = T), parse_file) 
+
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 distance_data <- rbind(distance_data_raw_h1, distance_data_raw_h2)  %>%
   mutate(Correct = Distance <= distance_threshold) %>%
@@ -101,7 +105,7 @@ for (reads in unique(distance_data_main$Reads)) {
   distance_data_main_reads <- distance_data_main %>%
     filter(Reads == reads)
   
-  plotRocBenchmarkMapQ(distance_data_main_reads, wes_cols, "Reference", paste("plots/sim_distance/vg_sim_r2_distance_main_dist", distance_threshold, "_", reads, sep = ""))
+  plotRocBenchmarkMapQ(distance_data_main_reads, wes_cols, "Reference", paste("plots/sim_distance/vg_sim_r2_distance_main_dist", distance_threshold, "_", reads, "_final", sep = ""))
 }
 
 ########

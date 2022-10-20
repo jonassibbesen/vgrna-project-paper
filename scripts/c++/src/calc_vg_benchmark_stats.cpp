@@ -86,6 +86,47 @@ unordered_map<string, ReadTranscriptInfo> parseReadsTranscriptInfo(const string 
     return read_transcript_info;
 }
 
+struct ReadEditInfo {
+
+    const string cigar;
+
+    ReadEditInfo(const string & cigar_in) : cigar(cigar_in) {}
+};
+
+unordered_map<string, ReadEditInfo> parseReadEditInfo(const string & read_edit_file) {
+
+    unordered_map<string, ReadEditInfo> read_edit_info;
+
+    ifstream read_istream(read_edit_file);
+    assert(read_istream.is_open());
+
+    string line;
+
+    while (read_istream.good()) {
+
+        getline(read_istream, line);
+
+        if (line.empty()) {
+
+            continue;
+        }
+
+        auto line_split = splitString(line, '\t');
+        assert(line_split.size() == 4);
+
+        if (line_split.at(1) == "cigar") {
+
+            continue;
+        }
+
+        assert(read_edit_info.emplace(line_split.front(), ReadEditInfo(line_split.at(1))).second);
+    }
+
+    read_istream.close();
+
+    return read_edit_info;
+}
+
 stringstream createEmptyStats(const BamRecord & bam_record, const BamReader & bam_reader, const bool debug_output) {
     
     stringstream benchmark_stats_ss;
@@ -108,7 +149,8 @@ stringstream createEmptyStats(const BamRecord & bam_record, const BamReader & ba
     benchmark_stats_ss << '\t' << '0';                          // Overlap
     benchmark_stats_ss << '\t' << '0';                          // NonAnnoSJ
     benchmark_stats_ss << '\t' << '0';                          // ComplexFrac
-    benchmark_stats_ss << "\t0\t0\t0\t0";                       // SubstitutionBP / IndelBP
+    benchmark_stats_ss << "\t0\t0\t0\t0";                       // Var
+    benchmark_stats_ss << "\t0\t0\t0";                          // Edit
 
     return benchmark_stats_ss;
 }
@@ -171,9 +213,9 @@ void addStats(unordered_map<string, pair<uint32_t, double> > * benchmark_stats, 
 
 int main(int argc, char* argv[]) {
 
-    if (!(argc == 9 || argc == 10)) {
+    if (!(argc == 10 || argc == 11)) {
 
-        cerr << "Usage: calc_vg_benchmark_stats <read_bam> <transcript_bam> <read_transcript_file> <min_base_quality> <transcript_gff> <complex_bed> <vcf1,vcf2,...> <sample> (<enable_debug_output>) > statistics.txt" << endl;
+        cerr << "Usage: calc_vg_benchmark_stats <read_bam> <transcript_bam> <read_transcript_file> <min_base_quality> <transcript_gff> <complex_bed> <vcf1,vcf2,...> <sample> <read_edit_file> (<enable_debug_output>) > statistics.txt" << endl;
         return 1;
     }
     
@@ -205,9 +247,6 @@ int main(int argc, char* argv[]) {
         complex_regions = parseRegionsBed(argv[6], bam_reader.Header());
     }
 
-    cerr << "Total number of splice junction: " << splice_junctions.size() << endl;
-    cerr << "Total length of complex regions: " << complex_regions.TotalWidth() << "\n" << endl;
-
     vector<string> vcf_filenames;
     unordered_map<string, int> contig_to_vcf;
     vector<tuple<htsFile*, bcf_hdr_t*, tbx_t*, int> > vcfs;
@@ -221,7 +260,19 @@ int main(int argc, char* argv[]) {
         vcfs = initializeVCFs(vcf_filenames, sample_name, contig_to_vcf);
     }
 
-    const bool debug_output = (argc == 10);
+    unordered_map<string, ReadEditInfo> read_edit_info;
+
+    if (string(argv[9]) != "null") {
+
+        read_edit_info = parseReadEditInfo(argv[9]);
+    }
+
+    cerr << "Number of splice junctions: " << splice_junctions.size() << endl;
+    cerr << "Number of complex regions: " << complex_regions.size() << endl;
+    cerr << "Number of variant files: " << vcf_filenames.size() << endl;
+    cerr << "Number of edit distances: " << read_edit_info.size() << "\n" << endl;
+
+    const bool debug_output = (argc == 11);
 
     stringstream base_header; 
     base_header << "TruthAlignmentLength";
@@ -234,10 +285,13 @@ int main(int argc, char* argv[]) {
     base_header << "\t" << "Overlap";
     base_header << "\t" << "NonAnnoSJ";
     base_header << "\t" << "ComplexFrac";
-    base_header << "\t" << "SubstitutionBP1";
-    base_header << "\t" << "IndelBP1";
-    base_header << "\t" << "SubstitutionBP2";
-    base_header << "\t" << "IndelBP2";
+    base_header << "\t" << "VarSubBP1";
+    base_header << "\t" << "VarIndelBP1";
+    base_header << "\t" << "VarSubBP2";
+    base_header << "\t" << "VarIndelBP2";
+    base_header << "\t" << "EditSubBP";
+    base_header << "\t" << "EditIndelBP";
+    base_header << "\t" << "EditIndelCount";
     base_header << "\t" << "PrimaryMapq";
     base_header << "\t" << "PrimaryOverlap";
 
@@ -477,6 +531,42 @@ int main(int argc, char* argv[]) {
         benchmark_stats_ss << '\t' << indel_bp_1;
         benchmark_stats_ss << '\t' << subs_bp_2;
         benchmark_stats_ss << '\t' << indel_bp_2;
+
+        uint32_t edit_sub_bp = 0;
+        uint32_t edit_indel_bp = 0;
+        uint32_t edit_indel_count = 0;
+
+        if (!read_edit_info.empty()) {
+
+            auto read_edit_info_it = read_edit_info.find(read_name);
+            assert(read_edit_info_it != read_edit_info.end());
+
+            string edit_cigar_str = read_edit_info_it->second.cigar;
+            replace(edit_cigar_str.begin(), edit_cigar_str.end(), '=', 'M');
+
+            auto edit_cigar = Cigar(edit_cigar_str); 
+
+            assert(edit_cigar.NumQueryConsumed() == bam_record.Length());
+            assert(trimmed_start + trimmed_length <= edit_cigar.NumQueryConsumed());
+
+            pair<SeqLib::Cigar, uint32_t> trimmed_edit_cigar;
+
+            if (bam_record.ReverseFlag()) {
+
+                assert(trimmed_start + trimmed_length <= bam_record.Length());
+                trimmed_edit_cigar = trimCigar(edit_cigar, bam_record.Length() - trimmed_length - trimmed_start, trimmed_length);
+
+            } else {
+
+                trimmed_edit_cigar = trimCigar(edit_cigar, trimmed_start, trimmed_length);
+            }
+
+            tie(edit_sub_bp, edit_indel_bp, edit_indel_count) = cigarToBasePairEdits(trimmed_edit_cigar.first);
+        }
+
+        benchmark_stats_ss << '\t' << edit_sub_bp;
+        benchmark_stats_ss << '\t' << edit_indel_bp;
+        benchmark_stats_ss << '\t' << edit_indel_count;
 
         if (debug_output) {
 

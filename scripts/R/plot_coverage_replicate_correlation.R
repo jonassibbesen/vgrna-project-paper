@@ -118,7 +118,7 @@ coverage_data_mq_cor_data <- coverage_data_mq_cor_data %>%
   filter(cor_type != "Expressed") %>%
   filter(cor_type != "LogPearson")
 
-pdf("plots/micro_rna/real_cov_cor_rep_mir.pdf", height = 5, width = 7, pointsize = 12)
+pdf("plots/micro_rna/real_cov_cor_rep_mir.pdf", height = 5, width = 7, pointsize = 12, useDingbats = F)
 coverage_data_mq_cor_data %>%
   ggplot(aes(y = cor, x = sens, color = Method, linetype = Graph, shape = Graph, label = Threshold)) +
   geom_line(size = 1.5) + 

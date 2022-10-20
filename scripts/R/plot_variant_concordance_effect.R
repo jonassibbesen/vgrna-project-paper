@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/variant_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/variant_final/")
 
 ########
 
@@ -117,11 +117,11 @@ parse_and_analyse_exp_data <- function(chrom) {
   save(exp_cons, file = paste("rdata/exp_cons_", chrom, ".RData", sep = "", collapse = ""))
 }
 
-map_dfr(c(seq(1, 22), "X", "Y"), parse_and_analyse_exp_data)
+# map_dfr(c(seq(1, 22), "X", "Y"), parse_and_analyse_exp_data)
 
 exp_count_all <- list()
 
-for (f in list.files(pattern = "exp_count_.*RData", full.names = T, recursive = T)) { 
+for (f in list.files(path = "../variant_r2/rdata", pattern = "exp_count_.*RData", full.names = T, recursive = T)) { 
   
   print(f)
   load(f)
@@ -131,7 +131,7 @@ for (f in list.files(pattern = "exp_count_.*RData", full.names = T, recursive = 
 
 exp_cons_all <- list()
 
-for (f in list.files(pattern = "exp_cons_.*RData", full.names = T, recursive = T)) { 
+for (f in list.files(path = "../variant_r2/rdata", pattern = "exp_cons_.*RData", full.names = T, recursive = T)) { 
   
   print(f)
   load(f)
@@ -179,7 +179,7 @@ p1 <- exp_count_min1 %>%
   guides(linetype = guide_legend(ncol = 1)) +
   guides(shape = guide_legend(ncol = 1)) +
   theme(legend.position = 'bottom') +
-  theme(text = element_text(size = 11))
+  theme(text = element_text(size = 12))
 
 
 
@@ -201,7 +201,7 @@ p2 <- exp_cons_hpa %>%
   mutate(AlleleType = recode_factor(AlleleType, "SNV" = "SNV", "Ins" = "Insertion", "Del" = "Deletion")) %>%
   mutate(hp_filt = factor(hp_filt, levels=c("All", "<6"))) %>%
   ggplot(aes(y = cor / total, x = min_exp, color = AlleleType, linetype = hp_filt, shape = hp_filt)) +
-  geom_line(size = 1.5) +
+  geom_line(size = 0.75) +
   geom_point(size = 3) +
   ylim(c(0.5, 1)) +
   scale_color_manual(values = var_cols) +
@@ -214,9 +214,9 @@ p2 <- exp_cons_hpa %>%
   theme(strip.background = element_blank()) +
   theme(panel.spacing = unit(0.5, "cm")) +
   theme(legend.key.width = unit(1.5, "cm")) +
-  theme(panel.border = element_rect(size = 1)) +
+  #theme(panel.border = element_rect(size = 1)) +
   theme(legend.key.height = unit(1.0, 'cm')) +
-  theme(text = element_text(size = 20))
+  theme(text = element_text(size = 21))
 
 p3 <- exp_cons_hpa %>%
   rbind(exp_count_hp5) %>%
@@ -228,7 +228,7 @@ p3 <- exp_cons_hpa %>%
   mutate(AlleleType = recode_factor(AlleleType, "SNV" = "SNV", "Ins" = "Insertion", "Del" = "Deletion")) %>%
   mutate(hp_filt = factor(hp_filt, levels=c("All", "<6"))) %>%
   ggplot(aes(y = cor / total, x = min_exp, color = AlleleType, linetype = hp_filt, shape = hp_filt)) +
-  geom_line(size = 1.5) +
+  geom_line(size = 0.75) +
   geom_point(size = 3) +
   ylim(c(0.5, 1)) +
   scale_color_manual(values = var_cols) +
@@ -241,19 +241,18 @@ p3 <- exp_cons_hpa %>%
   theme(strip.background = element_blank()) +
   theme(panel.spacing = unit(0.5, "cm")) +
   theme(legend.key.width = unit(1.5, "cm")) +
-  theme(panel.border = element_rect(size = 1)) +
-  theme(text = element_text(size = 20))
+  theme(text = element_text(size = 21))
 
 
-pdf("plots/cons/variant_r2_consistency_5_tissues_count.pdf", height = 5, width = 3.5, pointsize = 12)
+pdf("plots/cons/variant_r2_consistency_5_tissues_count_final.pdf", height = 5, width = 4, pointsize = 12, useDingbats = F)
 print(p1)
 dev.off()
 
-pdf("plots/cons/variant_r2_consistency_5_tissues_cons_exon.pdf", height = 5, width = 7, pointsize = 12)
+pdf("plots/cons/variant_r2_consistency_5_tissues_cons_exon_final.pdf", height = 5, width = 7, pointsize = 12, useDingbats = F)
 print(p2)
 dev.off()
 
-pdf("plots/cons/variant_r2_consistency_5_tissues_cons_var.pdf", height = 5, width = 7, pointsize = 12)
+pdf("plots/cons/variant_r2_consistency_5_tissues_cons_var_final.pdf", height = 5, width = 7, pointsize = 12, useDingbats = F)
 print(p3)
 dev.off()
 
@@ -307,11 +306,11 @@ parse_and_analyse_exp_vep_data <- function(chrom) {
 }
 
 
-map_dfr(c(seq(1, 22), "X"), parse_and_analyse_exp_vep_data)
+# map_dfr(c(seq(1, 22), "X"), parse_and_analyse_exp_vep_data)
 
 exp_vep_all <- list()
 
-for (f in list.files(pattern = "exp_vep_.*RData", full.names = T, recursive = T)) { 
+for (f in list.files(path = "../variant_r2/rdata", pattern = "exp_vep_.*RData", full.names = T, recursive = T)) { 
   
   print(f)
   load(f)
@@ -372,7 +371,7 @@ vep_exp_var$Consequence = factor(vep_exp_var$Consequence, levels = rev(str_sort(
 vep_exp_txp$Consequence = factor(vep_exp_txp$Consequence, levels = rev(str_sort(unique(vep_exp_txp$Consequence))))
 
 
-pdf("plots/vep/variant_r2_vep_var_nonmis_geno.pdf", height = 4, pointsize = 12)
+pdf("plots/vep/variant_r2_vep_var_nonmis_geno_final.pdf", height = 4, pointsize = 12, useDingbats = F)
 vep_exp_var %>% 
   filter(Consequence != "missense_variant") %>%
   add_column(Genotype = "Inconsistent") %>% 
@@ -391,7 +390,7 @@ vep_exp_var %>%
   theme(text = element_text(size = 12))
 dev.off()
 
-pdf("plots/vep/variant_r2_vep_var_mis_geno.pdf", height = 4, pointsize = 12)
+pdf("plots/vep/variant_r2_vep_var_mis_geno_final.pdf", height = 4, pointsize = 12, useDingbats = F)
 vep_exp_var %>% 
   filter(Consequence == "missense_variant") %>%
   add_column(Genotype = "Inconsistent") %>% 
@@ -418,7 +417,7 @@ vep_exp_var_hom_counts <- vep_exp_var %>%
 
 vep_exp_var_hom_counts$num_exp_hom = factor(vep_exp_var_hom_counts$num_exp_hom, levels = rev(sort(unique(vep_exp_var_hom_counts$num_exp_hom))))
 
-pdf("plots/vep/variant_r2_vep_var_nonmis_tissues.pdf", height = 3, width = 6, pointsize = 12)
+pdf("plots/vep/variant_r2_vep_var_nonmis_tissues_final.pdf", height = 3, width = 6, pointsize = 12, useDingbats = F)
 vep_exp_var_hom_counts %>%
   filter(Consequence != "missense_variant") %>%
   ggplot(aes(x = Consequence, y = num, fill = num_exp_hom)) + 
@@ -433,7 +432,7 @@ vep_exp_var_hom_counts %>%
   theme(text = element_text(size = 12))
 dev.off()
 
-pdf("plots/vep/variant_r2_vep_var_mis_tissues.pdf", height = 3, width = 6, pointsize = 12)
+pdf("plots/vep/variant_r2_vep_var_mis_tissues_final.pdf", height = 3, width = 6, pointsize = 12, useDingbats = F)
 vep_exp_var_hom_counts %>% 
   filter(Consequence == "missense_variant") %>%
   ggplot(aes(x = Consequence, y = num, fill = num_exp_hom)) + 

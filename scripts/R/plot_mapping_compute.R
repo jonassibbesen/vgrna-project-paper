@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 ########
 
@@ -37,8 +37,6 @@ compute_data <- compute_data %>%
 
 parse_ovl_file <- function(filename) {
   
-  dir_split <- strsplit(dirname(filename), "/")[[1]]
-  
   data <- read_table(filename)
   data <- data %>%
     summarise(num_reads = sum(Count))
@@ -53,7 +51,7 @@ for (reads in unique(compute_data$Reads)) {
   compute_data_reads <- compute_data %>%
     filter(Reads == reads)
 
-  overlap_data <- map_dfr(list.files(path = "./methods", pattern = paste(".*real_r2_", reads, "_exon_ovl_gc.txt.gz", sep = ""), full.names = T, recursive = T), parse_ovl_file) 
+  overlap_data <- map_dfr(list.files(path = "../mapping_r2/methods", pattern = paste(".*real_r2_", reads, "_exon_ovl_gc.txt.gz", sep = ""), full.names = T, recursive = T), parse_ovl_file) 
   
   compute_data_reads <- compute_data_reads %>%
     mutate(Time = Time * 16) %>%
@@ -62,7 +60,7 @@ for (reads in unique(compute_data$Reads)) {
   compute_data_reads$FacetCol <- "Real reads"
   compute_data_reads$FacetRow <- ""
   
-  plotMappingComputeBenchmark(compute_data_reads, wes_cols, paste("plots/real_compute/real_r2_mapping_compute_polya_", reads, sep = ""))
+  plotMappingComputeBenchmark(compute_data_reads, wes_cols, paste("plots/real_compute/real_r2_mapping_compute_polya_", reads, "_final", sep = ""))
 }
 
 ########

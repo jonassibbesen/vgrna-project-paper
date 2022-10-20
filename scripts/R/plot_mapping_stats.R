@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 ########
 
@@ -29,7 +29,11 @@ parse_file <- function(filename) {
   return(data)
 }
 
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+
 mapping_data <- map_dfr(list.files(path = "./methods", pattern=".*_exon_ovl_gc.*.txt", full.names = T, recursive = T), parse_file)
+
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 mapping_data <- mapping_data %>%
   filter(Type == "polya_rna")
@@ -87,7 +91,7 @@ for (reads in unique(mapping_data_stats_main$Reads)) {
   mapping_data_stats_main_reads$FacetCol <- "Real reads,\nprimary alignments"
   mapping_data_stats_main_reads$FacetRow <- ""
 
-  plotMappingStatsBenchmark(mapping_data_stats_main_reads, wes_cols, paste("plots/real_stats/real_r2_stats_bar_main_", reads, sep = ""))
+  plotMappingStatsBenchmark(mapping_data_stats_main_reads, wes_cols, paste("plots/real_stats/real_r2_stats_bar_main_", reads, "_final", sep = ""))
 }
 
 ########
@@ -119,7 +123,7 @@ for (reads in unique(mapping_data_stats_personal$Reads)) {
   mapping_data_stats_personal_reads$FacetCol <- "Real reads,\nprimary alignments"
   mapping_data_stats_personal_reads$FacetRow <- ""
   
-  plotMappingStatsBenchmarkWide(mapping_data_stats_personal_reads, wes_cols[c(2,4,5,6)], paste("plots/real_stats/real_r2_stats_bar_personal_", reads, sep = ""))
+  plotMappingStatsBenchmarkWide(mapping_data_stats_personal_reads, wes_cols[c(2,4,5,6)], paste("plots/real_stats/real_r2_stats_bar_personal_", reads, "_final", sep = ""))
 }
 
 ########

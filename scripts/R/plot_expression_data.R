@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/quant_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/quant_final/")
 
 ########
 
@@ -101,7 +101,7 @@ print(args)
 
 dataset <- args[1]
 
-for (f in list.files(path = "./rdata", pattern = paste(".*", dataset, ".*RData", sep = ""), full.names = T, recursive = T)) { 
+for (f in list.files(path = "../quant_r2/rdata", pattern = paste(".*", dataset, ".*RData", sep = ""), full.names = T, recursive = T)) { 
   
   print(f)
   load(f)
@@ -230,7 +230,7 @@ exp_data_hap_prob_all_roc_points_sim <- exp_data_hap_prob_all_roc_points %>%
   filter(Method == "rpvg") %>%
   filter(Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole")
 
-pdf(paste("plots/prob/sim_r2_hap_prob_roc_pre_", dataset, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+pdf(paste("plots/prob/sim_r2_hap_prob_roc_pre_", dataset, "_final.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
 exp_data_hap_prob_all_roc %>%
   filter(Reads == "Simulated reads (vg)") %>%
   filter(Method == "rpvg") %>%
@@ -256,7 +256,7 @@ exp_data_hap_prob_all_roc_points_real <- exp_data_hap_prob_all_roc_points %>%
   filter(Method == "rpvg") %>%
   filter(Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole")
 
-pdf(paste("plots/prob/real_r2_hap_prob_roc_pre_", dataset, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+pdf(paste("plots/prob/real_r2_hap_prob_roc_pre_", dataset, "_final.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
 exp_data_hap_prob_all_roc %>%
   filter(Reads == "Real reads") %>%
   filter(Method == "rpvg") %>%
@@ -289,7 +289,7 @@ exp_data_hap_exp_all_roc_points_sim <- exp_data_hap_exp_all_roc_points %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "RSEM" | Method == "rpvg") %>%
   filter(Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole")
 
-pdf(paste("plots/hap/sim_r2_expression_roc_pre_", dataset, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+pdf(paste("plots/hap/sim_r2_expression_roc_pre_", dataset, "_final.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
 exp_data_hap_exp_all_roc %>%
   filter(Reads == "Simulated reads (vg)") %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "RSEM" | Method == "rpvg") %>%
@@ -315,7 +315,7 @@ exp_data_hap_exp_all_roc_points_sim_sample <- exp_data_hap_exp_all_roc_points %>
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "RSEM" | Method == "rpvg") %>%
   filter(Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole")
 
-pdf(paste("plots/hap/sim_r2_expression_roc_pre_sample_", dataset, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+pdf(paste("plots/hap/sim_r2_expression_roc_pre_sample_", dataset, "_final.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
 exp_data_hap_exp_all_roc %>%
   filter(Reads == "Simulated reads (vg)") %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "RSEM" | Method == "rpvg") %>%
@@ -341,7 +341,7 @@ exp_data_hap_exp_all_roc_points_real <- exp_data_hap_exp_all_roc_points %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "RSEM" | Method == "rpvg") %>%
   filter(Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole")
 
-pdf(paste("plots/hap/real_r2_expression_roc_pre_", dataset, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+pdf(paste("plots/hap/real_r2_expression_roc_pre_", dataset, "_final.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
 exp_data_hap_exp_all_roc %>%
   filter(Reads == "Real reads") %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "RSEM" | Method == "rpvg") %>%
@@ -382,7 +382,7 @@ exp_data_hap_exp_all_roc_points_rpvg_sim <- exp_data_hap_exp_all_roc_points_rpvg
   filter(Reads == "Simulated reads (vg)") %>%
   filter(Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole")
 
-pdf(paste("plots/hap/sim_r2_expression_roc_pre_rpvg_", dataset, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+pdf(paste("plots/hap/sim_r2_expression_roc_pre_rpvg_", dataset, "_final.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
 exp_data_hap_exp_all_roc_rpvg %>%
   filter(Reads == "Simulated reads (vg)") %>%
   filter(Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole") %>%
@@ -406,7 +406,7 @@ exp_data_hap_exp_all_roc_points_rpvg_real <- exp_data_hap_exp_all_roc_points_rpv
   filter(Reads == "Real reads") %>%
   filter(Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole")
 
-pdf(paste("plots/hap/real_r2_expression_roc_pre_rpvg_", dataset, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+pdf(paste("plots/hap/real_r2_expression_roc_pre_rpvg_", dataset, "_final.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
 exp_data_hap_exp_all_roc_rpvg %>%
   filter(Reads == "Real reads") %>%
   filter(Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole") %>%
@@ -432,7 +432,7 @@ dev.off()
   
 exp_data_stats_all_scatter$Method <- factor(exp_data_stats_all_scatter$Method, levels = c("rpvg", "Kallisto", "Salmon", "RSEM", "rpvg (vg mpmap, single-path)", "rpvg (vg map, single-path)"))
 
-pdf(paste("plots/exp/sim_r2_exp_scatter_hap_tpm_", dataset, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+pdf(paste("plots/exp/sim_r2_exp_scatter_hap_tpm_", dataset, "_final.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
 exp_data_stats_all_scatter %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "RSEM" | Method == "rpvg") %>%
   filter(Pantranscriptome == "Personal (NA12878)" | Pantranscriptome == "Europe (excl. CEU)" | Pantranscriptome == "Whole (excl. CEU)" | Pantranscriptome == "Whole") %>%
@@ -449,7 +449,6 @@ exp_data_stats_all_scatter %>%
   theme(aspect.ratio = 1) +
   theme(strip.background = element_blank()) +
   theme(panel.spacing = unit(0.2, "cm")) +
-  theme(legend.key.width = unit(1.2, "cm")) +
   theme(text = element_text(size = 8)) +
   theme(legend.text = element_text(size = 8))
 dev.off()
@@ -478,7 +477,7 @@ exp_data_stats_all_bars_main$Pantranscriptome <- factor(exp_data_stats_all_bars_
 
 exp_data_stats_all_bars_main$FacetRow <- ""
 
-pdf(paste("plots/hap/sim_r2_real_hap_tpm_error_", dataset, ".pdf", sep = ""), height = 4, width = 7, pointsize = 12)
+pdf(paste("plots/hap/sim_r2_real_hap_tpm_error_", dataset, "_final.pdf", sep = ""), height = 4, width = 7, pointsize = 12, useDingbats = F)
 exp_data_stats_all_bars_main %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "RSEM" | Method == "rpvg") %>%
   filter(Pantranscriptome == "Europe\n(excl. CEU)" | Pantranscriptome == "Whole\n(excl. CEU)" | Pantranscriptome == "Whole") %>%
@@ -503,7 +502,7 @@ exp_data_stats_all_bars_main_rpvg <- exp_data_stats_all_bars_main %>%
 exp_data_stats_all_bars_main_rpvg$Method = recode_factor(exp_data_stats_all_bars_main_rpvg$Method, "rpvg" = "rpvg (vg mpmap)")
 exp_data_stats_all_bars_main_rpvg$Method <- factor(exp_data_stats_all_bars_main_rpvg$Method, levels = c("rpvg (vg mpmap)", "rpvg (vg mpmap, single-path)", "rpvg (vg map, single-path)"))
 
-pdf(paste("plots/hap/sim_r2_real_hap_tpm_error_rpvg_", dataset, ".pdf", sep = ""), height = 4, width = 7.5, pointsize = 12)
+pdf(paste("plots/hap/sim_r2_real_hap_tpm_error_rpvg_", dataset, "_final.pdf", sep = ""), height = 4, width = 7.5, pointsize = 12, useDingbats = F)
 exp_data_stats_all_bars_main_rpvg %>%
   filter(Pantranscriptome == "Europe\n(excl. CEU)" | Pantranscriptome == "Whole\n(excl. CEU)" | Pantranscriptome == "Whole") %>%
   filter(Type == "All") %>%
@@ -557,7 +556,7 @@ exp_data_stats_all_bars_main_sim_all_hap <- exp_data_stats_all_bars_main_sim %>%
 
 exp_data_stats_all_bars_main_sim_all_hap$Type <- factor(exp_data_stats_all_bars_main_sim_all_hap$Type, levels = c("All", "Haplotype"))
 
-pdf(paste("plots/exp/sim_r2_mard_all_hap_tpm_", dataset, ".pdf", sep = ""), height = 4, width = 6, pointsize = 12)
+pdf(paste("plots/exp/sim_r2_mard_all_hap_tpm_", dataset, "_final.pdf", sep = ""), height = 4, width = 6, pointsize = 12, useDingbats = F)
 ggplot() +
   geom_bar(data = subset(exp_data_stats_all_bars_main_sim_all_hap, Type == "All"), aes(x = Pantranscriptome, y = ARD_mean_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge()) +
   geom_bar(data = subset(exp_data_stats_all_bars_main_sim_all_hap, Type == "Haplotype"), aes(x = Pantranscriptome, y = ARD_mean_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge(), alpha = 0.6) +
@@ -572,7 +571,7 @@ ggplot() +
   theme(text = element_text(size = 12))
 dev.off()
 
-pdf(paste("plots/exp/sim_r2_spearman_all_hap_tpm_", dataset, ".pdf", sep = ""), height = 4, width = 6, pointsize = 12)
+pdf(paste("plots/exp/sim_r2_spearman_all_hap_tpm_", dataset, "_final.pdf", sep = ""), height = 4, width = 6, pointsize = 12, useDingbats = F)
 ggplot() +
   geom_bar(data = subset(exp_data_stats_all_bars_main_sim_all_hap, Type == "All"), aes(x = Pantranscriptome, y = Spearman_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge()) +
   geom_bar(data = subset(exp_data_stats_all_bars_main_sim_all_hap, Type == "Haplotype"), aes(x = Pantranscriptome, y = Spearman_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge(), alpha = 0.6) +
@@ -599,7 +598,7 @@ exp_data_stats_all_bars_main_sim_rpvg$Type <- factor(exp_data_stats_all_bars_mai
 exp_data_stats_all_bars_main_sim_rpvg$Method = recode_factor(exp_data_stats_all_bars_main_sim_rpvg$Method, "rpvg" = "rpvg (vg mpmap)")
 exp_data_stats_all_bars_main_sim_rpvg$Method <- factor(exp_data_stats_all_bars_main_sim_rpvg$Method, levels = c("rpvg (vg mpmap)", "rpvg (vg mpmap, single-path)", "rpvg (vg map, single-path)"))
 
-pdf(paste("plots/exp/sim_r2_mard_all_hap_tpm_rpvg_", dataset, ".pdf", sep = ""), height = 4.5, width = 7.5, pointsize = 12)
+pdf(paste("plots/exp/sim_r2_mard_all_hap_tpm_rpvg_", dataset, "_final.pdf", sep = ""), height = 4.5, width = 7.5, pointsize = 12, useDingbats = F)
 ggplot() +
   geom_bar(data = subset(exp_data_stats_all_bars_main_sim_rpvg, Type == "All"), aes(x = Pantranscriptome, y = ARD_mean_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge()) +
   geom_bar(data = subset(exp_data_stats_all_bars_main_sim_rpvg, Type == "Haplotype"), aes(x = Pantranscriptome, y = ARD_mean_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge(), alpha = 0.6) +
@@ -622,7 +621,7 @@ exp_data_stats_all_bars_main_sim_expressed <- exp_data_stats_all_bars_main_sim %
 
 exp_data_stats_all_bars_main_sim_expressed$Type <- factor(exp_data_stats_all_bars_main_sim_expressed$Type, levels = c("Expressed"))
 
-pdf(paste("plots/exp/sim_r2_mard_exp_tpm_", dataset, ".pdf", sep = ""), height = 4, width = 6, pointsize = 12)
+pdf(paste("plots/exp/sim_r2_mard_exp_tpm_", dataset, "_final.pdf", sep = ""), height = 4, width = 6, pointsize = 12, useDingbats = F)
 ggplot() +
   geom_bar(data = exp_data_stats_all_bars_main_sim_expressed, aes(x = Pantranscriptome, y = ARD_mean_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge()) +
   scale_alpha_manual(name = "Transcripts", values = c(1), labels = c("Expressed"), drop = F) +
@@ -636,7 +635,7 @@ ggplot() +
   theme(text = element_text(size = 12))
 dev.off()
 
-pdf(paste("plots/exp/sim_r2_spearman_exp_tpm_", dataset, ".pdf", sep = ""), height = 4, width = 6, pointsize = 12)
+pdf(paste("plots/exp/sim_r2_spearman_exp_tpm_", dataset, "_final.pdf", sep = ""), height = 4, width = 6, pointsize = 12, useDingbats = F)
 ggplot() +
   geom_bar(data = exp_data_stats_all_bars_main_sim_expressed, aes(x = Pantranscriptome, y = Spearman_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge()) +
   scale_alpha_manual(name = "Transcripts", values = c(1), labels = c("Expressed"), drop = F) +
@@ -661,7 +660,7 @@ exp_data_stats_all_bars_main_sim_transcript$Method <- factor(exp_data_stats_all_
 
 exp_data_stats_all_bars_main_sim_transcript$Type <- factor(exp_data_stats_all_bars_main_sim_transcript$Type, levels = c("Transcript"))
 
-pdf(paste("plots/exp/sim_r2_mard_ref_tpm_", dataset, ".pdf", sep = ""), height = 4, width = 7, pointsize = 12)
+pdf(paste("plots/exp/sim_r2_mard_ref_tpm_", dataset, "_final.pdf", sep = ""), height = 4, width = 7, pointsize = 12, useDingbats = F)
 ggplot() +
   geom_bar(data = exp_data_stats_all_bars_main_sim_transcript, aes(x = Pantranscriptome, y = ARD_mean_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge()) +
   scale_alpha_manual(name = "Transcripts", values = c(1), labels = c("Reference"), drop = F) +
@@ -675,7 +674,7 @@ ggplot() +
   theme(text = element_text(size = 12))
 dev.off()
 
-pdf(paste("plots/exp/sim_r2_spearman_ref_tpm_", dataset, ".pdf", sep = ""), height = 4, width = 7, pointsize = 12)
+pdf(paste("plots/exp/sim_r2_spearman_ref_tpm_", dataset, "_final.pdf", sep = ""), height = 4, width = 7, pointsize = 12, useDingbats = F)
 ggplot() +
   geom_bar(data = exp_data_stats_all_bars_main_sim_transcript, aes(x = Pantranscriptome, y = Spearman_tpm, fill = Method, alpha = Type), stat = "identity", width = 0.5, position = position_dodge()) +
   scale_alpha_manual(name = "Transcripts", values = c(1), labels = c("Reference"), drop = F) +
@@ -707,7 +706,7 @@ exp_data_hap_exp_all_roc %>%
   print(n = 100)
 
 
-pdf(paste("plots/debug/hap_prob_rocs_pt_debug_", dataset, ".pdf", sep = ""), width = 9, height = 9)
+pdf(paste("plots/debug/hap_prob_rocs_pt_debug_", dataset, ".pdf", sep = ""), width = 9, height = 9, useDingbats = F)
 
 for (pt in unique(exp_data_hap_prob_all_roc$Pantranscriptome)) {
 
@@ -785,7 +784,7 @@ for (pt in unique(exp_data_hap_prob_all_roc$Pantranscriptome)) {
 dev.off()
 
 
-pdf(paste("plots/debug/hap_prob_rocs_me_debug_", dataset, ".pdf", sep = ""), width = 9, height = 9)
+pdf(paste("plots/debug/hap_prob_rocs_me_debug_", dataset, ".pdf", sep = ""), width = 9, height = 9, useDingbats = F)
 
 for (me in unique(exp_data_hap_prob_all_roc$Method)) {
 
@@ -863,7 +862,7 @@ for (me in unique(exp_data_hap_prob_all_roc$Method)) {
 dev.off()
 
 
-pdf(paste("plots/debug/expression_rocs_pt_debug_", dataset, ".pdf", sep = ""))
+pdf(paste("plots/debug/expression_rocs_pt_debug_", dataset, ".pdf", sep = ""), useDingbats = F)
 
 for (pt in unique(exp_data_hap_exp_all_roc$Pantranscriptome)) {
 
@@ -931,7 +930,7 @@ for (pt in unique(exp_data_hap_exp_all_roc$Pantranscriptome)) {
 dev.off()
 
 
-pdf(paste("plots/debug/expression_rocs_me_debug_", dataset, ".pdf", sep = ""))
+pdf(paste("plots/debug/expression_rocs_me_debug_", dataset, ".pdf", sep = ""), useDingbats = F)
 
 for (me in unique(exp_data_hap_exp_all_roc$Method)) {
 
@@ -999,7 +998,7 @@ for (me in unique(exp_data_hap_exp_all_roc$Method)) {
 dev.off()
 
 
-pdf(paste("plots/debug/general_stats_debug_", dataset, ".pdf", sep = ""))
+pdf(paste("plots/debug/general_stats_debug_", dataset, ".pdf", sep = ""), useDingbats = F)
 
 exp_data_stats_all_bars %>%
   filter(Type == "All") %>%

@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/quant_r2_chm13/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/quant_chm13_final/")
 
 ########
 
@@ -53,13 +53,13 @@ parse_kallisto <- function(filename) {
   return(data)
 }
 
-kallisto_strand <- parse_kallisto("methods/kallisto/expression/polya_rna/real_r2/CHM13_rep1/kallisto_strand/1kg_all_af001_gencode100_unidi_mt_sca/kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_CHM13_rep1/abundance.tsv.gz") %>%
+kallisto_strand <- parse_kallisto("../quant_r2_chm13/methods/kallisto/expression/polya_rna/real_r2/CHM13_rep1/kallisto_strand/1kg_all_af001_gencode100_unidi_mt_sca/kallisto_strand_1kg_all_af001_gencode100_unidi_mt_sca_real_r2_CHM13_rep1/abundance.tsv.gz") %>%
   add_column(Method = "kallisto_strand")
 
-salmon <- parse_salmon("methods/salmon/expression/polya_rna/real_r2/CHM13_rep1/salmon/1kg_all_af001_gencode100_unidi_decoy_mt_sca/salmon_1kg_all_af001_gencode100_unidi_decoy_mt_sca_real_r2_CHM13_rep1/quant.sf.gz") %>%
+salmon <- parse_salmon("../quant_r2_chm13/methods/salmon/expression/polya_rna/real_r2/CHM13_rep1/salmon/1kg_all_af001_gencode100_unidi_decoy_mt_sca/salmon_1kg_all_af001_gencode100_unidi_decoy_mt_sca_real_r2_CHM13_rep1/quant.sf.gz") %>%
   add_column(Method = "salmon")
 
-rpvg_strand <- parse_rpvg("methods/rpvg/expression/polya_rna/real_r2/CHM13_rep1/rpvg_strand/1kg_all_af001_gencode100_unidi/rpvg_strand_mpmap_1kg_all_af001_gencode100_unidi_real_r2_CHM13_rep1.txt.gz")  %>%
+rpvg_strand <- parse_rpvg("../quant_r2_chm13/methods/rpvg/expression/polya_rna/real_r2/CHM13_rep1/rpvg_strand/1kg_all_af001_gencode100_unidi/rpvg_strand_mpmap_1kg_all_af001_gencode100_unidi_real_r2_CHM13_rep1.txt.gz")  %>%
   add_column(Method = "rpvg_strand")
 
 rpvg_paper <- parse_rpvg("../quant_r1_chm13/methods/rpvg/expression/polya_rna/real_r1/CHM13_rep1/rpvg_strand/1kg_all_af001_gencode100_unidi/rpvg_strand_mpmap_1kg_all_af001_gencode100_unidi_real_r1_CHM13_rep1.txt.gz") %>%
@@ -67,7 +67,7 @@ rpvg_paper <- parse_rpvg("../quant_r1_chm13/methods/rpvg/expression/polya_rna/re
 
 gc()
 
-decoy_transcripts <- rbind(read_table("decoys/MT/gencode100_MT.txt.gz"), read_table("decoys/SCA/gencode100_SCA.txt.gz")) %>% 
+decoy_transcripts <- rbind(read_table("../quant_r2_chm13/decoys/MT/gencode100_MT.txt.gz"), read_table("../quant_r2_chm13/decoys/SCA/gencode100_SCA.txt.gz")) %>% 
   select(Transcript) 
 
 rbind(kallisto_strand, salmon, rpvg_strand, rpvg_paper) %>% 
@@ -123,7 +123,7 @@ hap_exp_data_stats <- hap_exp_data %>%
 
 hap_exp_data_stats %>% print(n = 100)
 
-pdf("plots/real_r2_t2t_major_count_frac_tpm.pdf", height = 4, width = 4, pointsize = 12)
+pdf("plots/real_r2_t2t_major_count_frac_tpm_final.pdf", height = 4, width = 4, pointsize = 12, useDingbats = F)
 hap_exp_data_stats %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "rpvg") %>%
   filter(major = TRUE) %>%
@@ -140,7 +140,7 @@ hap_exp_data_stats %>%
   theme(text = element_text(size = 13))
 dev.off()
 
-pdf("plots/real_r2_t2t_major_count_frac_count.pdf", height = 4, width = 4, pointsize = 12)
+pdf("plots/real_r2_t2t_major_count_frac_count_final.pdf", height = 4, width = 4, pointsize = 12, useDingbats = F)
 hap_exp_data_stats %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "rpvg") %>%
   filter(major = TRUE) %>%
@@ -184,7 +184,7 @@ set.seed(1234)
 hap_exp_data_roc_tpm_points_main <- hap_exp_data_roc_tpm_points %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "rpvg")
 
-pdf("plots/real_r2_t2t_major_minor_exp_roc_tpm.pdf", height = 5, width = 7, pointsize = 12)
+pdf("plots/real_r2_t2t_major_minor_exp_roc_tpm_final.pdf", height = 5, width = 7, pointsize = 12, useDingbats = F)
 hap_exp_data_roc_tpm %>%
   filter(Method == "Kallisto" | Method == "Salmon" | Method == "rpvg") %>%
   ggplot(aes(y = TP_cs, x = FP_cs, color = Method, linetype = Pantranscriptome, shape = Pantranscriptome, label = tpm_est_sig)) +
@@ -208,7 +208,7 @@ dev.off()
 
 ########
 
-pdf("plots/debug/real_r2_t2t_major_minor_exp_roc_tpm_debug.pdf", height = 5, width = 7, pointsize = 12)
+pdf("plots/debug/real_r2_t2t_major_minor_exp_roc_tpm_debug.pdf", height = 5, width = 7, pointsize = 12, useDingbats = F)
 hap_exp_data_roc_tpm %>%
   ggplot(aes(y = TP_cs, x = FP_cs, color = Method, linetype = Pantranscriptome, shape = Pantranscriptome, label = tpm_est_sig)) +
   geom_line(size = 1) +

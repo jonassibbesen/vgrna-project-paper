@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/ase_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/ase_final/")
 
 ########
 
@@ -97,7 +97,7 @@ ase_base_count_sim_est <- ase_base_count_sim_wasp
 
 ########
 
-ase_data_rpvg_na <- map_dfr(list.files(path = paste("allele_expression/", dataset, "/inference_r2/", sep = ""), pattern = paste("allele_exp_rpvg_mpmap_1kg_NA12878", ".*.txt", sep = ""), full.names = T, recursive = T), parse_ase_data) %>%
+ase_data_rpvg_na <- map_dfr(list.files(path = paste("../ase_r2/allele_expression/", dataset, "/inference_r2/", sep = ""), pattern = paste("allele_exp_rpvg_mpmap_1kg_NA12878", ".*.txt", sep = ""), full.names = T, recursive = T), parse_ase_data) %>%
   select(-AlleleNum, -AlleleType, -AlleleLength, -HomopolymerLength, -NumTandemRepeats, -Probability, -TranscriptReadCount, -TPM) %>%
   rename(base_count_est = BaseReadCount) 
 
@@ -181,7 +181,7 @@ ase_base_count_sim_est_pval_roc$FacetRow <- "Simulated reads (vg)"
 
 wes_cols <- c(wes_palette("GrandBudapest1")[1], wes_palette("Chevalier1")[1])
 
-pdf(paste("plots/sim_r2_ase_roc_", dataset, ".pdf", sep = ""), height = 5, width = 9, pointsize = 12)
+pdf(paste("plots/sim_r2_ase_roc_", dataset, "final.pdf", sep = ""), height = 5, width = 9, pointsize = 12, useDingbats = F)
 ase_base_count_sim_est_pval_roc %>%
   ggplot(aes(y = TPR, x = FPR, color = Method, linetype = Variants, shape = Variants)) +
   geom_line(size = 0.75) +

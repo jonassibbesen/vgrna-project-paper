@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 ########
 
@@ -36,7 +36,11 @@ pb_coverage <- pb_coverage %>%
   group_by(AllelePosition, ExonSize) %>%
   summarise(ReadCoverage = sum(ReadCoverage), BaseCoverage = sum(BaseCoverage))
 
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+
 coverage_data <- map_dfr(list.files(path = "./methods", pattern=".*_real_.*cov_ENCSR706ANY_mq30.txt.gz", full.names = T, recursive = T), parse_file)
+
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 coverage_data <- coverage_data %>%
   mutate(MapQ = ifelse(MapQ > 60, 60, MapQ))
@@ -101,7 +105,7 @@ for (reads in unique(coverage_data_pb_mq_corr_main$Reads)) {
     filter(Reads == reads) %>%
     rename(MapQ = Threshold)
 
-  plotIsoSeqCorrelationBenchmark(coverage_data_pb_mq_corr_main_reads, wes_cols, paste("plots/real_corr/real_r2_cov_corr_main_", reads, sep = ""))
+  plotIsoSeqCorrelationBenchmark(coverage_data_pb_mq_corr_main_reads, wes_cols, paste("plots/real_corr/real_r2_cov_corr_main_", reads, "_final", sep = ""))
 }
 
 ########
@@ -116,7 +120,7 @@ for (reads in unique(coverage_data_pb_mq_corr_personal$Reads)) {
     filter(Reads == reads) %>%
     rename(MapQ = Threshold)
   
-  plotIsoSeqCorrelationBenchmark(coverage_data_pb_mq_corr_personal_reads, wes_cols[c(2,4,5,6)], paste("plots/real_corr/real_r2_cov_corr_personal_", reads, sep = ""))
+  plotIsoSeqCorrelationBenchmark(coverage_data_pb_mq_corr_personal_reads, wes_cols[c(2,4,5,6)], paste("plots/real_corr/real_r2_cov_corr_personal_", reads, "_final", sep = ""))
 }
 
 ########
@@ -146,7 +150,7 @@ for (reads in unique(coverage_data_pb_mq30$Reads)) {
   coverage_data_pb_mq30_reads <- coverage_data_pb_mq30 %>%
     filter(Reads == reads)
 
-  plotIsoSeqCoverageBenchmark(coverage_data_pb_mq30_reads, wes_cols, paste("plots/real_corr/real_r2_cov_scatter_main_", reads, sep = ""))
+  plotIsoSeqCoverageBenchmark(coverage_data_pb_mq30_reads, wes_cols, paste("plots/real_corr/real_r2_cov_scatter_main_", reads, "_final", sep = ""))
 }
 
 ########

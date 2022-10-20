@@ -12,6 +12,8 @@ library("scales")
 library("truncnorm")
 library("ggplot2")
 library("wesanderson")
+library("grid")
+library("gridExtra")
 
 ########
 
@@ -47,7 +49,6 @@ plotRocCurveMapq <- function(data, cols, plot_numbers, lt_title) {
     group_by(Method, LineType, FacetRow, FacetCol) %>%
     mutate(N = sum(TP) + sum(FP)) %>%
     mutate(TPcs = cumsum(TP), FPcs = cumsum(FP)) %>%
-    group_by(LineType, FacetRow, FacetCol) %>%
     mutate(FNcs = N - TPcs - FPcs) %>%
     mutate(TPR = TPcs / (TPcs + FNcs), FDR = FPcs / (TPcs + FPcs)) %>%
     filter(MapQ >= 0)
@@ -88,6 +89,152 @@ plotRocCurveMapq <- function(data, cols, plot_numbers, lt_title) {
     theme(text = element_text(size = 13)) +
     theme(legend.text = element_text(size = 12)) 
   print(p)   
+}
+
+plotRocCurveEdit <- function(data, cols, plot_numbers, lt_title) {
+  
+  data <- data %>%
+    mutate(TP = Count * Correct) %>% 
+    mutate(FP = Count * !Correct)
+  
+  data <- data %>% 
+    mutate(MapQ = ifelse(IsMapped, MapQ, -1)) %>% 
+    group_by(Method, LineType, FacetRow, FacetCol, Eval, Edit, MapQ) %>%
+    summarise(TP = sum(TP), FP = sum(FP)) %>% 
+    group_by(Method, LineType, FacetRow, FacetCol, Eval) %>%
+    mutate(N = sum(TP) + sum(FP)) %>%
+    filter(MapQ >= 0)
+
+  data_prim <- data %>% 
+    filter(Eval == "unique alignments") %>%
+    filter(MapQ >= 30)
+
+  data_multi <- data %>% 
+    filter(Eval == "multi alignments") %>%
+    filter(MapQ >= 0) 
+  
+  data_roc <- rbind(data_prim, data_multi) %>%
+    group_by(Method, LineType, FacetRow, FacetCol, Eval, Edit) %>%
+    summarise(TP = sum(TP), FP = sum(FP), N = max(N)) %>% 
+    group_by(Method, LineType, FacetRow, FacetCol, Eval) %>%
+    arrange(Edit, .by_group = T) %>%
+    mutate(TPcs = cumsum(TP), FPcs = cumsum(FP)) %>%
+    mutate(FNcs = N - TPcs - FPcs) %>%
+    mutate(TPR = TPcs / (TPcs + FNcs), FDR = FPcs / (TPcs + FPcs)) 
+  
+  min_lim_x <- min(data_roc$TPR)
+  max_edit <- max(data_roc$Edit)
+  
+  data_roc %>% filter(Edit == 0) %>% print(n = 100)
+
+  a <- annotation_logticks(sides = "l")
+  a$data <- data.frame(x = NA, FacetCol = c(as.character(data_roc$FacetCol[1])))
+  
+  p <- data_roc %>%
+    ggplot(aes(y = FDR, x = TPR, color = Method, linetype = LineType, shape = LineType, label = Edit)) +
+    a +
+    geom_line(size = 0.75) +
+    geom_point(size = 1.25, alpha = 1)
+  
+  if (plot_numbers) {
+    
+    p <- p +
+      geom_text_repel(data = subset(data_roc, Edit == 0 | Edit == max_edit), size = 2, fontface = 2, show.legend = FALSE)
+  }
+  
+  p <- p +
+    scale_y_continuous(trans = 'log10') +
+    facet_grid(FacetRow ~ FacetCol) +
+    scale_color_manual(values = cols) +
+    scale_linetype_discrete(name = lt_title) +
+    scale_shape_discrete(name = lt_title) +
+    xlim(c(min_lim_x, 1)) +
+    xlab("Mapping recall") +
+    ylab("Mapping error (1 - precision)") +
+    theme_bw() +
+    theme(aspect.ratio = 1) +
+    theme(strip.background = element_blank()) +
+    theme(panel.spacing = unit(0.5, "cm")) +
+    theme(legend.key.width = unit(0.8, "cm")) +
+    theme(text = element_text(size = 9)) +
+    theme(legend.text = element_text(size = 8)) 
+  print(p)   
+}
+
+plotEditCurve <- function(data, cols, lt_title, xlab) {
+  
+  data <- data %>%
+    mutate(TP = Count * Correct) %>% 
+    mutate(FP = Count * !Correct)
+  
+  data <- data %>% 
+    mutate(MapQ = ifelse(IsMapped, MapQ, -1)) %>% 
+    group_by(Method, LineType, FacetRow, FacetCol, Eval, Edit, MapQ) %>%
+    summarise(TP = sum(TP), FP = sum(FP)) %>% 
+    group_by(Method, LineType, FacetRow, FacetCol, Eval, Edit) %>%
+    mutate(N = sum(TP) + sum(FP)) %>%
+    filter(MapQ >= 0)
+  
+  data_prim <- data %>% 
+    filter(Eval == "unique alignments") %>%
+    filter(MapQ >= 30)
+  
+  data_multi <- data %>% 
+    filter(Eval == "multi alignments") %>%
+    filter(MapQ >= 0) 
+  
+  data_roc <- rbind(data_prim, data_multi) %>%
+    group_by(Method, LineType, FacetRow, FacetCol, Eval, Edit) %>%
+    summarise(TP = sum(TP), FP = sum(FP), N = max(N)) %>% 
+    mutate(FN = N - TP - FP) %>%
+    mutate(TPR = TP / (TP + FN), FDR = FP / (TP + FP)) 
+  
+  data_roc %>% filter(Edit == 0) %>% print(n = 100)
+
+  p1 <- data_roc %>%
+    ggplot(aes(y = TPR, x = Edit, color = Method, linetype = LineType, shape = LineType)) +
+    geom_line(size = 0.5) +
+    geom_point(size = 1.5) +
+    facet_grid(FacetRow ~ FacetCol) +
+    scale_color_manual(values = cols) +
+    scale_x_continuous(breaks = seq(0, 4, 1), labels = c(seq(0, 3, 1), ">3")) +
+    scale_linetype_discrete(name = lt_title) +
+    scale_shape_discrete(name = lt_title) +
+    xlab(xlab) +
+    ylab("Mapping recall") +
+    theme_bw() +
+    theme(aspect.ratio = 1) +
+    theme(strip.background = element_blank()) +
+    theme(panel.spacing = unit(0.5, "cm")) +
+    theme(legend.key.width = unit(1, "cm")) +
+    theme(text = element_text(size = 10)) +
+    theme(legend.text = element_text(size = 9)) 
+
+  a <- annotation_logticks(sides = "l")
+  a$data <- data.frame(x = NA, FacetCol = c(as.character(data_roc$FacetCol[1])))
+  
+  p2 <- data_roc %>%
+    ggplot(aes(y = FDR, x = Edit, color = Method, linetype = LineType, shape = LineType)) +
+    a +
+    geom_line(size = 0.5) +
+    geom_point(size = 1.5) +
+    scale_y_continuous(trans = 'log10') +
+    facet_grid(FacetRow ~ FacetCol) +
+    scale_color_manual(values = cols) +
+    scale_x_continuous(breaks = seq(0, 4, 1), labels = c(seq(0, 3, 1), ">3")) +
+    scale_linetype_discrete(name = lt_title) +
+    scale_shape_discrete(name = lt_title) +
+    xlab(xlab) +
+    ylab("Mapping error (1 - precision)") +
+    theme_bw() +
+    theme(aspect.ratio = 1) +
+    theme(strip.background = element_blank()) +
+    theme(panel.spacing = unit(0.5, "cm")) +
+    theme(legend.key.width = unit(1, "cm")) +
+    theme(text = element_text(size = 10)) +
+    theme(legend.text = element_text(size = 9)) 
+  
+  grid.arrange(p1, p2, nrow = 2)
 }
 
 plotMapQCurve <- function(data, cols, ylab) {
@@ -137,8 +284,8 @@ plotErrorCurve <- function(data, cols) {
     theme(strip.background = element_blank()) +
     theme(panel.spacing = unit(0.5, "cm")) +
     theme(legend.key.width = unit(1.2, "cm")) +
-    theme(text = element_text(size = 13)) +
-    theme(legend.text = element_text(size = 12))
+    theme(text = element_text(size = 14)) +
+    theme(legend.text = element_text(size = 13))
   print(p) 
 }
 
@@ -164,7 +311,6 @@ plotLogBins <- function(data, cols, xlab, ylab) {
     theme(aspect.ratio = 1) +
     theme(strip.background = element_blank()) +
     theme(panel.spacing = unit(0.5, "cm")) +
-    theme(legend.key.width = unit(1.2, "cm")) +
     theme(text = element_text(size = 10)) +
     theme(legend.text = element_text(size = 9))
   print(p) 
@@ -301,49 +447,63 @@ plotBar <- function(data, cols, ylab) {
 
 plotRocBenchmarkMapQ <- function(data, cols, lt_title, filename) {
 
-  pdf(paste(filename, "_roc.pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+  pdf(paste(filename, "_roc.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
   plotRocCurveMapq(data, cols, T, lt_title)
   dev.off() 
 }
 
 plotRocBenchmarkMapQDebug <- function(data, cols, lt_title, filename) {
   
-  pdf(paste(filename, "_roc.pdf", sep = ""), height = 7, width = 9, pointsize = 12)
+  pdf(paste(filename, "_roc.pdf", sep = ""), height = 7, width = 9, pointsize = 12, useDingbats = F)
   plotRocCurveMapq(data, cols, F, lt_title)
+  dev.off() 
+}
+
+plotRocBenchmarkEdit <- function(data, cols, lt_title, filename) {
+  
+  pdf(paste(filename, "_roc.pdf", sep = ""), height = 6, width = 8, pointsize = 12, useDingbats = F)
+  plotRocCurveEdit(data, cols, T, lt_title)
+  dev.off() 
+}
+
+plotCurveBenchmarkEdit <- function(data, cols, lt_title, xlab, filename) {
+  
+  pdf(paste(filename, "_curve.pdf", sep = ""), height = 6.5, width = 8, pointsize = 12, useDingbats = F)
+  plotEditCurve(data, cols, lt_title, xlab)
   dev.off() 
 }
 
 plotErrorBenchmark <- function(data, cols, filename) {
   
-  pdf(paste(filename, "_error.pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+  pdf(paste(filename, "_error.pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
   plotErrorCurve(data, cols)
   dev.off() 
 }
 
 plotMappingBiasBenchmark <- function(data, cols, filename, min_count) {
 
-  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 9, pointsize = 12)
+  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 9, pointsize = 12, useDingbats = F)
   plotBiasCurve(data, cols, min_count)
   dev.off() 
 }
 
 plotMappingBiasBinomBenchmark <- function(data, cols, filename, alpha_thres, min_count) {
   
-  pdf(paste(filename, ".pdf", sep = ""), height = 5, width = 9, pointsize = 12)
+  pdf(paste(filename, ".pdf", sep = ""), height = 5, width = 9, pointsize = 12, useDingbats = F)
   plotBiasBinom(data, cols, alpha_thres, min_count)
   dev.off() 
 }
 
 plotMappingStatsBenchmark <- function(data, cols, filename) {
 
-  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 4, pointsize = 12)
+  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 4, pointsize = 12, useDingbats = F)
   plotStatsBarTwoLayer(data, cols)
   dev.off() 
 }
 
 plotMappingStatsBenchmarkWide <- function(data, cols, filename) {
   
-  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 5, pointsize = 12)
+  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 5, pointsize = 12, useDingbats = F)
   plotStatsBarTwoLayer(data, cols)
   dev.off() 
 }
@@ -353,7 +513,7 @@ plotIsoSeqCorrelationBenchmark <- function(data, cols, filename) {
   data <- data %>%
     rename(Value = Corr) 
   
-  pdf(paste(filename, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+  pdf(paste(filename, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
   plotMapQCurve(data, cols, "Iso-Seq exon coverage correlation")
   dev.off() 
 }
@@ -364,7 +524,7 @@ plotIsoSeqCoverageBenchmark <- function(data, cols, filename) {
     rename(value_x = Coverage.est) %>%
     rename(value_y = Coverage.pb)
   
-  pdf(paste(filename, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12)
+  pdf(paste(filename, ".pdf", sep = ""), height = 5, width = 7, pointsize = 12, useDingbats = F)
   plotLogBins(data, cols, "Estimated exon coverage (log10 + 1)", "Iso-Seq exon coverage (log10 + 1)")
   dev.off() 
 }
@@ -374,7 +534,7 @@ plotMappingComputeBenchmark <- function(data, cols, filename) {
   data <- data %>%
     rename(Value = Time)
   
-  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 4, pointsize = 12)
+  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 4, pointsize = 12, useDingbats = F)
   plotBar(data, cols, "Read pairs mapped per second")
   dev.off() 
 }
@@ -384,7 +544,7 @@ plotMappingMemoryBenchmark <- function(data, cols, filename) {
   data <- data %>%
     rename(Value = Mem)
   
-  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 4, pointsize = 12)
+  pdf(paste(filename, ".pdf", sep = ""), height = 4, width = 4, pointsize = 12, useDingbats = F)
   plotBar(data, cols, "Maximum memory usage (GiB)")
   dev.off() 
 }

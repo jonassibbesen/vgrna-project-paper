@@ -11,7 +11,7 @@ rm(list=ls())
 # setwd(data_dir)
 
 source("/Users/jonas/Documents/postdoc/sc/code/vgrna-project-scripts/R/utils.R")
-setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 ########
 
@@ -46,7 +46,11 @@ parse_file <- function(filename) {
 
 min_mapq = 30
 
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_r2/")
+
 coverage_data <- map_dfr(list.files(path = "./methods", pattern=".*_allele_cov.txt.gz", full.names = T, recursive = T), parse_file)
+
+setwd("/Users/jonas/Documents/postdoc/sc/projects/vgrna/figures/mapping_final/")
 
 coverage_data <- coverage_data %>%
   filter(Method != "map_fast_multi10") %>%
@@ -139,7 +143,7 @@ for (reads in unique(coverage_data_mq_bias_main$Reads)) {
   coverage_data_mq_bias_main_reads <- coverage_data_mq_bias_main %>%
     filter(Reads == reads)
 
-  plotMappingBiasBenchmark(coverage_data_mq_bias_main_reads, wes_cols, paste("plots/sim_bias/vg_sim_r2_mapping_bias_main_", reads, sep = ""), 20)
+  plotMappingBiasBenchmark(coverage_data_mq_bias_main_reads, wes_cols, paste("plots/sim_bias/vg_sim_r2_mapping_bias_main_", reads, "_final", sep = ""), 20)
 }
 
 ########
@@ -164,7 +168,7 @@ for (reads in unique(coverage_data_mq_bias_binom$Reads)) {
   coverage_data_mq_bias_binom_reads <- coverage_data_mq_bias_binom %>%
     filter(Reads == reads)
   
-  plotMappingBiasBinomBenchmark(coverage_data_mq_bias_binom_reads, wes_cols, paste("plots/sim_bias/vg_sim_r2_mapping_bias_binom_a001_", reads, sep = ""), 0.01, 20)
+  plotMappingBiasBinomBenchmark(coverage_data_mq_bias_binom_reads, wes_cols, paste("plots/sim_bias/vg_sim_r2_mapping_bias_binom_a001_", reads, "_final", sep = ""), 0.01, 20)
 }
 
 coverage_data_mq_bias_binom_nowasp <- coverage_data_mq_bias_binom %>%
@@ -175,7 +179,7 @@ for (reads in unique(coverage_data_mq_bias_binom_nowasp$Reads)) {
   coverage_data_mq_bias_binom_nowasp_reads <- coverage_data_mq_bias_binom_nowasp %>%
     filter(Reads == reads)
   
-  plotMappingBiasBinomBenchmark(coverage_data_mq_bias_binom_nowasp_reads, wes_cols, paste("plots/sim_bias/vg_sim_r2_mapping_bias_binom_a001_nowasp_", reads, sep = ""), 0.01, 20)
+  plotMappingBiasBinomBenchmark(coverage_data_mq_bias_binom_nowasp_reads, wes_cols, paste("plots/sim_bias/vg_sim_r2_mapping_bias_binom_a001_nowasp_", reads, "_final", sep = ""), 0.01, 20)
 }
 
 ########

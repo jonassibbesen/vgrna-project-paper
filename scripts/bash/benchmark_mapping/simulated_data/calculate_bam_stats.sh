@@ -43,4 +43,4 @@ else
 fi	
 
 # Calculate overlap statistics
-/usr/bin/time -v bash -c "calc_vg_benchmark_stats ${ALIGN_PREFIX}.bam ${TRANSCRIPTS_PREFIX}.bam <(zcat ${SIM_PREFIX}.txt.gz) 3 ${ANNOTATION_PREFIX}.gff null ${VARIANT_PREFIX}.vcf.gz NA12878 > ${OUT_PREFIX}_ovl3_vg.txt; gzip ${OUT_PREFIX}_ovl3_vg.txt"
+/usr/bin/time -v bash -c "calc_vg_benchmark_stats ${ALIGN_PREFIX}.bam ${TRANSCRIPTS_PREFIX}.bam <(zcat ${SIM_PREFIX}.txt.gz) 3 ${ANNOTATION_PREFIX}.gff null ${VARIANT_PREFIX}.vcf.gz NA12878 null > ${OUT_PREFIX}_ovl3_vg.txt; gzip ${OUT_PREFIX}_ovl3_vg.txt"

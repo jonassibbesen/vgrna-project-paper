@@ -12,17 +12,17 @@ aws s3 cp s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v
 
 ALIGN_FILE=$(ls ${ALIGN_PREFIX}*)
 
-# Create alignment index
-/usr/bin/time -v bash -c "samtools index ${ALIGN_FILE}"
+# Sort and index alignments 
+/usr/bin/time -v bash -c "samtools sort -o align_sort.bam ${ALIGN_FILE}; samtools index align_sort.bam"
 
 # Calculate alignment statistics
-/usr/bin/time -v bash -c "samtools flagstat ${ALIGN_FILE}"
+/usr/bin/time -v bash -c "samtools flagstat align_sort.bam"
 
 # Calculate exon read overlap
-/usr/bin/time -v bash -c "calc_read_regions_overlap_stats ${ALIGN_FILE} gencode_exons.bed > ${OUT_PREFIX}_exon_ovl_gc.txt; gzip ${OUT_PREFIX}_exon_ovl_gc.txt"
+/usr/bin/time -v bash -c "calc_read_regions_overlap_stats align_sort.bam gencode_exons.bed > ${OUT_PREFIX}_exon_ovl_gc.txt; gzip ${OUT_PREFIX}_exon_ovl_gc.txt"
 
 # Calculate exon read coverage
-/usr/bin/time -v bash -c "calc_exon_read_coverage ${ALIGN_FILE} gencode_exons.bed > ${OUT_PREFIX}_exon_cov_gc.txt; gzip ${OUT_PREFIX}_exon_cov_gc.txt"
+/usr/bin/time -v bash -c "calc_exon_read_coverage align_sort.bam gencode_exons.bed > ${OUT_PREFIX}_exon_cov_gc.txt; gzip ${OUT_PREFIX}_exon_cov_gc.txt"
 
 if [ "${TRANSCRIPTS}" != "" ]; then
 
@@ -30,10 +30,10 @@ if [ "${TRANSCRIPTS}" != "" ]; then
 	aws s3 cp s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/alignments/${TRANSCRIPTS}/ . --recursive --exclude "*" --include "*.bed" --no-progress
 
 	# Calculate exon read overlap
-	/usr/bin/time -v bash -c "calc_read_regions_overlap_stats ${ALIGN_FILE} ${TRANSCRIPTS}_mq30.bed > ${OUT_PREFIX}_exon_ovl_${TRANSCRIPTS}_mq30.txt; gzip ${OUT_PREFIX}_exon_ovl_${TRANSCRIPTS}_mq30.txt"
+	/usr/bin/time -v bash -c "calc_read_regions_overlap_stats align_sort.bam ${TRANSCRIPTS}_mq30.bed > ${OUT_PREFIX}_exon_ovl_${TRANSCRIPTS}_mq30.txt; gzip ${OUT_PREFIX}_exon_ovl_${TRANSCRIPTS}_mq30.txt"
 
 	# Calculate exon read coverage
-	/usr/bin/time -v bash -c "calc_exon_read_coverage ${ALIGN_FILE} ${TRANSCRIPTS}_mq30.bed > ${OUT_PREFIX}_exon_cov_${TRANSCRIPTS}_mq30.txt; gzip ${OUT_PREFIX}_exon_cov_${TRANSCRIPTS}_mq30.txt"
+	/usr/bin/time -v bash -c "calc_exon_read_coverage align_sort.bam ${TRANSCRIPTS}_mq30.bed > ${OUT_PREFIX}_exon_cov_${TRANSCRIPTS}_mq30.txt; gzip ${OUT_PREFIX}_exon_cov_${TRANSCRIPTS}_mq30.txt"
 fi
 
 # Upload statistics 

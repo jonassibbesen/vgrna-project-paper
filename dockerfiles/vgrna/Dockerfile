@@ -20,7 +20,7 @@ RUN	pip3 install --no-cache-dir pysam biopython
 
 RUN git clone https://github.com/jonassibbesen/vgrna-project-scripts.git && \
 	cd vgrna-project-scripts && \
-	git checkout f9db749ec2089214f413d8f458008051a7fce2a5 && \
+	git checkout 9a079ecfebe59fe12315084e8fc4f2d1fc1d8b95 && \
 	cd c++ && \
 	cmake . && \
 	make && \

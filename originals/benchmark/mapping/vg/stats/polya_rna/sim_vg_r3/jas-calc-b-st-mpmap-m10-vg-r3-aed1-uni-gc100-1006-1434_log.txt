@@ -1,0 +1,300 @@
+---
+jas-calc-b-st-mpmap-m10-vg-r3-aed1-uni-gc100-1006-1434
+TIME=20221006-1434 IMAGE=quay.io/jsibbesen/vgrna-s3script:vgrna-9a079ecf-s7 MEMORY=20 CPU=1 DISK=64
+s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg_r3/calculate_bam_stats.sh
+CPU=1 REF=gencode100 SIM=ENCSR000AED_rep1_uni TRANSCRIPTS=1kg_NA12878_exons_gencode100_allpaths MAPPER=mpmap_multi10
+---
+Completed 2.6 KiB/2.6 KiB (27.1 KiB/s) with 1 file(s) remainingdownload: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg_r3/calculate_bam_stats.sh to ./calculate_bam_stats.sh
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/mpmap_multi10/gencode100/mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam.bai to ./mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/mpmap_multi10/gencode100/mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam.bai to ./mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam.bai
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/mpmap_multi10/gencode100/mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam to ./mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/alignments/polya_rna/sim_vg_r2/ENCSR000AED_rep1_uni/mpmap_multi10/gencode100/mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam to ./mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/graphs/1kg_NA12878_exons_gencode100_allpaths/1kg_NA12878_exons_gencode100_allpaths.bam to ./1kg_NA12878_exons_gencode100_allpaths.bam
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h1_edit_dist.txt.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h1_edit_dist.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h2_edit_dist.txt.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h2_edit_dist.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h2.txt.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h2.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/reads/sim/1kg_NA12878_gencode100/ENCSR000AED_rep1_uni/vg_r1/sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h1.txt.gz to ./sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h1.txt.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/1/1kg_NA12878_exons_1.vcf.gz to 1/1kg_NA12878_exons_1.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/12/1kg_NA12878_exons_12.vcf.gz to 12/1kg_NA12878_exons_12.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/10/1kg_NA12878_exons_10.vcf.gz to 10/1kg_NA12878_exons_10.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/12/1kg_NA12878_exons_12.vcf.gz.tbi to 12/1kg_NA12878_exons_12.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/14/1kg_NA12878_exons_14.vcf.gz to 14/1kg_NA12878_exons_14.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/14/1kg_NA12878_exons_14.vcf.gz.tbi to 14/1kg_NA12878_exons_14.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/11/1kg_NA12878_exons_11.vcf.gz.tbi to 11/1kg_NA12878_exons_11.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/13/1kg_NA12878_exons_13.vcf.gz.tbi to 13/1kg_NA12878_exons_13.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/10/1kg_NA12878_exons_10.vcf.gz.tbi to 10/1kg_NA12878_exons_10.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/15/1kg_NA12878_exons_15.vcf.gz.tbi to 15/1kg_NA12878_exons_15.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/13/1kg_NA12878_exons_13.vcf.gz to 13/1kg_NA12878_exons_13.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/1/1kg_NA12878_exons_1.vcf.gz.tbi to 1/1kg_NA12878_exons_1.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/15/1kg_NA12878_exons_15.vcf.gz to 15/1kg_NA12878_exons_15.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/11/1kg_NA12878_exons_11.vcf.gz to 11/1kg_NA12878_exons_11.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/16/1kg_NA12878_exons_16.vcf.gz to 16/1kg_NA12878_exons_16.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/16/1kg_NA12878_exons_16.vcf.gz.tbi to 16/1kg_NA12878_exons_16.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/18/1kg_NA12878_exons_18.vcf.gz to 18/1kg_NA12878_exons_18.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/17/1kg_NA12878_exons_17.vcf.gz.tbi to 17/1kg_NA12878_exons_17.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/17/1kg_NA12878_exons_17.vcf.gz to 17/1kg_NA12878_exons_17.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/2/1kg_NA12878_exons_2.vcf.gz.tbi to 2/1kg_NA12878_exons_2.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/18/1kg_NA12878_exons_18.vcf.gz.tbi to 18/1kg_NA12878_exons_18.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/19/1kg_NA12878_exons_19.vcf.gz.tbi to 19/1kg_NA12878_exons_19.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/2/1kg_NA12878_exons_2.vcf.gz to 2/1kg_NA12878_exons_2.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/21/1kg_NA12878_exons_21.vcf.gz.tbi to 21/1kg_NA12878_exons_21.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/21/1kg_NA12878_exons_21.vcf.gz to 21/1kg_NA12878_exons_21.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/20/1kg_NA12878_exons_20.vcf.gz.tbi to 20/1kg_NA12878_exons_20.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/22/1kg_NA12878_exons_22.vcf.gz to 22/1kg_NA12878_exons_22.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/22/1kg_NA12878_exons_22.vcf.gz.tbi to 22/1kg_NA12878_exons_22.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/20/1kg_NA12878_exons_20.vcf.gz to 20/1kg_NA12878_exons_20.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/3/1kg_NA12878_exons_3.vcf.gz to 3/1kg_NA12878_exons_3.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/3/1kg_NA12878_exons_3.vcf.gz.tbi to 3/1kg_NA12878_exons_3.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/5/1kg_NA12878_exons_5.vcf.gz.tbi to 5/1kg_NA12878_exons_5.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/19/1kg_NA12878_exons_19.vcf.gz to 19/1kg_NA12878_exons_19.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/5/1kg_NA12878_exons_5.vcf.gz to 5/1kg_NA12878_exons_5.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/7/1kg_NA12878_exons_7.vcf.gz.tbi to 7/1kg_NA12878_exons_7.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/4/1kg_NA12878_exons_4.vcf.gz.tbi to 4/1kg_NA12878_exons_4.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/9/1kg_NA12878_exons_9.vcf.gz to 9/1kg_NA12878_exons_9.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/4/1kg_NA12878_exons_4.vcf.gz to 4/1kg_NA12878_exons_4.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/6/1kg_NA12878_exons_6.vcf.gz to 6/1kg_NA12878_exons_6.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/8/1kg_NA12878_exons_8.vcf.gz.tbi to 8/1kg_NA12878_exons_8.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/6/1kg_NA12878_exons_6.vcf.gz.tbi to 6/1kg_NA12878_exons_6.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/7/1kg_NA12878_exons_7.vcf.gz to 7/1kg_NA12878_exons_7.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/9/1kg_NA12878_exons_9.vcf.gz.tbi to 9/1kg_NA12878_exons_9.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/8/1kg_NA12878_exons_8.vcf.gz to 8/1kg_NA12878_exons_8.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/Y/1kg_NA12878_exons_Y.vcf.gz.tbi to Y/1kg_NA12878_exons_Y.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/X/1kg_NA12878_exons_X.vcf.gz to X/1kg_NA12878_exons_X.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/Y/1kg_NA12878_exons_Y.vcf.gz to Y/1kg_NA12878_exons_Y.vcf.gz
+download: s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/data/variants/1kg_NA12878_exons/X/1kg_NA12878_exons_X.vcf.gz.tbi to X/1kg_NA12878_exons_X.vcf.gz.tbi
+download: s3://vg-k8s/users/jsibbesen/vgrna/data/transcripts/gencode29/gencode.v29.primary_assembly.annotation_renamed_full.gff3 to ./transcripts.gff3
+152768
+	Command being timed: "bash -c bcftools concat -O v -f <(for i in $(seq 1 22; echo X; echo Y); do echo ${i}/1kg_NA12878_exons_${i}.vcf.gz; done) > 1kg_NA12878_exons.vcf; grep -v -P "^#" 1kg_NA12878_exons.vcf | wc -l; bgzip 1kg_NA12878_exons.vcf; tabix 1kg_NA12878_exons.vcf.gz"
+	User time (seconds): 0.81
+	System time (seconds): 0.11
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.93
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 14616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 10435
+	Voluntary context switches: 796
+	Involuntary context switches: 19
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24464
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 17 files and 1 in-memory blocks...
+	Command being timed: "bash -c samtools sort -n -O BAM mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1.bam > mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1_rsort.bam"
+	User time (seconds): 1524.41
+	System time (seconds): 22.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 25:49.13
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 909480
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 8657253
+	Voluntary context switches: 3166
+	Involuntary context switches: 4388
+	Swaps: 0
+	File system inputs: 4038648
+	File system outputs: 20169288
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+53993738 + 0 in total (QC-passed reads + QC-failed reads)
+3993738 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+53880285 + 0 mapped (99.79% : N/A)
+0 + 0 paired in sequencing
+0 + 0 read1
+0 + 0 read2
+0 + 0 properly paired (N/A : N/A)
+0 + 0 with itself and mate mapped
+0 + 0 singletons (N/A : N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5)
+	Command being timed: "bash -c samtools flagstat mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1_rsort.bam"
+	User time (seconds): 86.66
+	System time (seconds): 0.91
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:27.59
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 22228
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5290
+	Voluntary context switches: 1
+	Involuntary context switches: 199
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+9a079ecfebe59fe12315084e8fc4f2d1fc1d8b95
+calc_vg_benchmark_stats mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1_rsort.bam 1kg_NA12878_exons_gencode100_allpaths.bam /dev/fd/63 3 transcripts.gff3 null 1kg_NA12878_exons.vcf.gz NA12878 /dev/fd/62
+
+Number of transcript alignments: 513787
+Number of reads: 50000000
+
+Number of splice junctions: 899378
+Number of complex regions: 0
+Number of variant files: 1
+Number of edit distances: 50000000
+
+Number of analysed reads: 10000000
+Number of analysed reads: 20000000
+Number of analysed reads: 30000000
+Number of analysed reads: 40000000
+Number of analysed reads: 50000000
+
+Number of unique reads: 50000000
+Average overlap: 0.997225
+
+Total number of analysed reads: 53993738
+	Command being timed: "bash -c calc_vg_benchmark_stats mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h1_rsort.bam 1kg_NA12878_exons_gencode100_allpaths.bam <(zcat sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h1.txt.gz) 3 transcripts.gff3 null 1kg_NA12878_exons.vcf.gz NA12878 <(zcat sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h1_edit_dist.txt.gz) > mpmap_multi10_gencode100_sim_vg_r3_ENCSR000AED_rep1_uni_bam_ovl3_h1.txt; gzip mpmap_multi10_gencode100_sim_vg_r3_ENCSR000AED_rep1_uni_bam_ovl3_h1.txt"
+	User time (seconds): 16540.98
+	System time (seconds): 433.57
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:42:58
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19742980
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7067423
+	Voluntary context switches: 623211
+	Involuntary context switches: 50548
+	Swaps: 0
+	File system inputs: 11448992
+	File system outputs: 9192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[bam_sort_core] merging from 17 files and 1 in-memory blocks...
+	Command being timed: "bash -c samtools sort -n -O BAM mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2.bam > mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2_rsort.bam"
+	User time (seconds): 1520.96
+	System time (seconds): 17.43
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 25:40.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 912912
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 184172
+	Voluntary context switches: 2625
+	Involuntary context switches: 4385
+	Swaps: 0
+	File system inputs: 6760736
+	File system outputs: 20169256
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+54000564 + 0 in total (QC-passed reads + QC-failed reads)
+4000564 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+53887184 + 0 mapped (99.79% : N/A)
+0 + 0 paired in sequencing
+0 + 0 read1
+0 + 0 read2
+0 + 0 properly paired (N/A : N/A)
+0 + 0 with itself and mate mapped
+0 + 0 singletons (N/A : N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5)
+	Command being timed: "bash -c samtools flagstat mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2_rsort.bam"
+	User time (seconds): 87.66
+	System time (seconds): 1.31
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:29.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 22304
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5289
+	Voluntary context switches: 1
+	Involuntary context switches: 166
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+9a079ecfebe59fe12315084e8fc4f2d1fc1d8b95
+calc_vg_benchmark_stats mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2_rsort.bam 1kg_NA12878_exons_gencode100_allpaths.bam /dev/fd/63 3 transcripts.gff3 null 1kg_NA12878_exons.vcf.gz NA12878 /dev/fd/62
+
+Number of transcript alignments: 513787
+Number of reads: 50000000
+
+Number of splice junctions: 899378
+Number of complex regions: 0
+Number of variant files: 1
+Number of edit distances: 50000000
+
+Number of analysed reads: 10000000
+Number of analysed reads: 20000000
+Number of analysed reads: 30000000
+Number of analysed reads: 40000000
+Number of analysed reads: 50000000
+
+Number of unique reads: 50000000
+Average overlap: 0.997209
+
+Total number of analysed reads: 54000564
+	Command being timed: "bash -c calc_vg_benchmark_stats mpmap_multi10_gencode100_sim_vg_r2_ENCSR000AED_rep1_uni_h2_rsort.bam 1kg_NA12878_exons_gencode100_allpaths.bam <(zcat sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h2.txt.gz) 3 transcripts.gff3 null 1kg_NA12878_exons.vcf.gz NA12878 <(zcat sim_1kg_NA12878_gencode100_ENCSR000AED_rep1_uni_vg_r1_h2_edit_dist.txt.gz) > mpmap_multi10_gencode100_sim_vg_r3_ENCSR000AED_rep1_uni_bam_ovl3_h2.txt; gzip mpmap_multi10_gencode100_sim_vg_r3_ENCSR000AED_rep1_uni_bam_ovl3_h2.txt"
+	User time (seconds): 16587.04
+	System time (seconds): 530.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:45:21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 19742836
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 13924399
+	Voluntary context switches: 617322
+	Involuntary context switches: 59526
+	Swaps: 0
+	File system inputs: 13306872
+	File system outputs: 9272
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+upload: ./mpmap_multi10_gencode100_sim_vg_r3_ENCSR000AED_rep1_uni_bam_ovl3_h1.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg_r3/ENCSR000AED_rep1_uni/mpmap_multi10/gencode100/mpmap_multi10_gencode100_sim_vg_r3_ENCSR000AED_rep1_uni_bam_ovl3_h1.txt.gz
+upload: ./mpmap_multi10_gencode100_sim_vg_r3_ENCSR000AED_rep1_uni_bam_ovl3_h2.txt.gz to s3://vg-k8s/users/jsibbesen/vgrna/benchmark/whole_genome/mapping/vg/stats/polya_rna/sim_vg_r3/ENCSR000AED_rep1_uni/mpmap_multi10/gencode100/mpmap_multi10_gencode100_sim_vg_r3_ENCSR000AED_rep1_uni_bam_ovl3_h2.txt.gz
+---
